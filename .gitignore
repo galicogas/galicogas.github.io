@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+_site
+
+# Ignore local Ruby / Bundler files
+Gemfile
+Gemfile.lock
+.bundle/
