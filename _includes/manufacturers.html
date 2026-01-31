@@ -1,0 +1,27 @@
+<section class="manufacturers-section py-5" id="manufacturers">
+    <div class="container">
+        <div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Trusted by Leading Manufacturers</h2>
+                <p class="section-subtitle">
+                    Certified partners and authorized installers for top industry brands
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-end wow fadeInUp" data-wow-delay="0.3s">
+            {% for manufacturer in site.data.manufacturers %}
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="manufacturer-card position-relative">
+                    <img src="/assets/img/manufacturers/{{ manufacturer.logo }}" alt="{{ manufacturer.name }}" class="img-fluid">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+
+
+</style>

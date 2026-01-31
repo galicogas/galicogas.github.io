@@ -1,0 +1,19 @@
+{% assign promo = site.data.promotions.disclaimer_banner %}
+
+{% if promo.enabled %}
+<div
+  id="disclaimer-banner"
+  style="background-color: {{ promo.background }}">
+
+  {{ promo.message }}
+
+  {% if promo.link_url %}
+    <a
+      href="{{ promo.link_url | relative_url }}"
+      class="promo-link">
+      {{ promo.link_text }}
+   </a>
+  {% endif %}
+
+</div>
+{% endif %}

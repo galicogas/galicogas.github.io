@@ -1,0 +1,11 @@
+{% for review in site.data.reviews %}
+<div class="testimonial-item">
+    <img class="img-fluid mb-4" src="/assets/img/testimonials/{{review.image}}" alt="Photo of {{ review.name }}">
+    <p class="fs-5">
+        {{ review.content }} (<a href="{{ review.source.url }}" target="_blank" rel="noopener noreferrer">source</a>).
+    </p>
+    <div class="bg-primary mb-3" style="width: 60px; height: 5px"></div>
+    <h5>{{ review.name }}</h5>
+    <span>{{ review.location }}</span>
+</div>
+{% endfor %}

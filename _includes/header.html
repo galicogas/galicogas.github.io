@@ -1,38 +1,117 @@
 <!-- Header -->
-<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
-  <div class="container">
+
   
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-    <a class="navbar-brand wow fadeInDownBig" href="index.html"><img class="office-logo" src="../assets/img/slider/Office.png" alt="Office"></a>      
-  </div>
-
-  <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav pull-right">
-      <li class="active">
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/about.html">About</a>
-      </li>
-      <li>
-        <a href="/blog.html">Blog</a>
-      </li>
-      <li>
-        <a href="/team.html">Team</a>
-      </li>
-      <li>
-        <a href="/contact.html"><span>Contact</span></a>
-      </li>
-    </ul>         
-  </div>
-  </div>
-</nav>
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+    >
+      <a href="https://galico.ca" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <img src="{{'/assets/img/logo/logo.jpg' | relative_url }}" alt="Galico logo">
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-3 py-lg-0">
+          <a href="https://galico.ca" class="nav-item nav-link">Home</a>
+		   <div class="nav-item dropdown">
+            <a href="/hot-water/" class="nav-link d-inline-flex align-items-center">
+               Hot Water Systems
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+              <a href="/hot-water/installation/" class="dropdown-item">Water Heater Installation</a>
+              <a href="/hot-water/replacement/" class="dropdown-item">Water Heater Replacement</a>
+			  <a href="/hot-water/gas/" class="dropdown-item">Tankless Water Heaters</a>
+			  <a href="/hot-water/tankless/" class="dropdown-item">Electric Water Heaters</a>
+			  <a href="/hot-water/electric/" class="dropdown-item">Financing & Monthly Plans</a>
+			  <a href="/hot-water/financing/" class="dropdown-item">Rent vs Buy</a>
+			  <a href="/hot-water/rent-vs-buy/" class="dropdown-item">Get Hot Water Quote</a>
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a href="/gasfitting/" class="nav-link d-inline-flex align-items-center">
+               Gasfitting
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  <a href="/gasfitting/gas-line-installation/" class="dropdown-item">Gas Line Installation</a>
+              <a href="/gasfitting/gas-appliance-installation/" class="dropdown-item">Gas Appliance Installation</a>
+			  <a href="/gasfitting/gas-water-heater-installation/" class="dropdown-item">Gas Water Heater Installation</a>
+              <a href="/gasfitting/gas-safety-inspection/" class="dropdown-item">Gas Safety Inspections</a>
+			  <a href="/gasfitting/gas-leak-detection/" class="dropdown-item">Gas Leak Detection</a>
+			  <a href="/gasfitting/gas-pressure-testing/" class="dropdown-item">Gas Pressure Testing</a>
+			  <a href="/gasfitting/licensed-gasfitter/" class="dropdown-item">Licensed Gasfitter</a>
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a href="/heating/" class="nav-link d-inline-flex align-items-center">
+               Heating
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  <a href="/heating/furnaces/" class="dropdown-item">Gas Furnace Installation</a>
+              <a href="/heating/boilers/" class="dropdown-item">Boiler Installation</a>
+			  <a href="/heating/hydronic/" class="dropdown-item">Hydronic Heating</a>
+              <a href="/heating/radiant-floor/" class="dropdown-item">Radiant Floor Heating</a>
+			  <a href="/heating/maintenance/" class="dropdown-item">Heating Maintenance</a>
+			  <a href="/heating/contractor/" class="dropdown-item">Heating Contractor</a>
+            </div>
+          </div>
+<!-- 		  <div class="nav-item dropdown">
+            <a href="/service-areas/" class="nav-link d-inline-flex align-items-center">
+               Service Areas
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+              <a href="/service-areas/almonte/" class="dropdown-item">Almonte</a>
+			  <a href="/service-areas/arnprior/" class="dropdown-item">Arnprior</a>
+			  <a href="/service-areas/carleton-place" class="dropdown-item">Carleton Place</a>
+			  <a href="/service-areas/carp" class="dropdown-item">Carp</a>
+			  <a href="/service-areas/kanata" class="dropdown-item">Kanata</a>
+			  <a href="/service-areas/mississippi-mills/" class="dropdown-item">Mississippi Mills</a>
+			  <a href="/service-areas/nepean/" class="dropdown-item">Nepean</a>
+              <a href="/service-areas/ottawa/" class="dropdown-item">Ottawa</a>
+			  <a href="/service-areas/perth/" class="dropdown-item">Perth</a>
+			  <a href="/service-areas/smiths-falls/" class="dropdown-item">Smiths Falls</a>
+			  <a href="/service-areas/stittsville/" class="dropdown-item">Stittsville</a>
+            </div>
+          </div> -->
+<!-- 		  <div class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pricing & Fiancing</a>
+            <div class="dropdown-menu bg-light m-0">
+              <a href="/pricing/" class="dropdown-item">Installed Pricing Explained</a>
+			  <a href="/financing/" class="dropdown-item">Financing Options</a>
+			  <a href="/subscription/" class="dropdown-item">Monthly Subcription Plan</a>
+			  <a href="/installation-included/" class="dropdown-item">What's Included in Installation</a>
+			  <a href="/promotions/" class="dropdown-item">Promotions</a>
+            </div>
+          </div> -->
+		  <div class="nav-item dropdown">
+            <a href="/about/" class="nav-link d-inline-flex align-items-center">
+               About
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  <a href="/about/#accreditation" class="dropdown-item">Licensed & Insurred</a>
+			  <a href="/about/#community" class="dropdown-item">Community Involvement</a>
+			  <a href="/about/#manufacturers" class="dropdown-item">Manufacturers</a>
+			  <a href="/about/#guarantee" class="dropdown-item">Service Guarantee</a>
+			  <a href="/service-area/" class="dropdown-item">Service Areas</a>
+              <a href="/about/faq/" class="dropdown-item">FAQs</a>
+			  <a href="https://substack.com/@galico" target="_blank" class="dropdown-item">Blog</a>
+			  <a href="#contact" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
+          <a href="tel:+13434642219" class="nav-item nav-link"><span class="border border-primary px-2 py-2">(343) 464-2219</span></a>
+        </div>
+      </div>
+    </nav>
 
 <!-- End Header -->

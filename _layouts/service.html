@@ -1,0 +1,16 @@
+{% assign service = site.data.services[page.service_key] %}
+
+{% include hero.html
+  h1=service.hero.h1
+  h2=service.hero.h2
+%}
+
+<p>{{ service.intro }}</p>
+
+{% comment %}
+{% include trust.html points=service.trust_points %} -->
+
+{% include technical.html content=service.technical %}
+{% endcomment %}
+
+{% include cta.html %}

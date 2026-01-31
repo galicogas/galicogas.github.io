@@ -1,0 +1,11 @@
+{% assign img = site.data.images[include.type][include.key] %}
+{% assign defaults = site.data.images.defaults %}
+
+<img
+  src="{{ img.src }}"
+  alt="{{ img.alt }}"
+  width="{{ defaults.width }}"
+  height="{{ defaults.height }}"
+  loading="{{ defaults.loading }}"
+  decoding="async"
+/>

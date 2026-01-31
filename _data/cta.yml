@@ -1,0 +1,14 @@
+primary:
+  phone: "343-464-2219"
+  phone_display: "(343)464-2219"
+  button_text: Get a Hot Water Quote
+  url: /contact/
+
+secondary:
+  button_text: Request Service
+  url: /contact/
+
+trust:
+  - Licensed Gasfitter
+  - Fully Insured
+  - Residential Specialists

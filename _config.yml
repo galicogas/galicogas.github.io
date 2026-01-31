@@ -50,3 +50,16 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include:
+ - _data
+ - _includes
+ - _layouts
+ - _service-areas
+ - _services
+ - _site
+ - _pages
+  
+exclude:
+ - node_modules
+ - package.json

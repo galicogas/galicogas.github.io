@@ -1,0 +1,19 @@
+{% assign cta = site.data.cta.primary %}
+
+<section class="cta">
+  <h2>Need Hot Water Today?</h2>
+
+  <p>
+    Speak with a licensed gasfitter or request a fast installation quote.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="tel:{{ cta.phone }}" class="btn btn-primary">
+      Call {{ cta.phone_display }}
+    </a>
+
+    <a href="{{ cta.url }}" class="btn btn-outline">
+      {{ cta.button_text }}
+    </a>
+  </div>
+</section>

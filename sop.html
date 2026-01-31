@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Operation Procedures</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 300px;
+      padding: 20px;
+    }
+
+    .button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #c82333;
+    }
+
+    .button:active {
+      background-color: #a71d2a;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 600px) {
+      .button-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    /* Second Button List Styling */
+    .second-list {
+      margin-top: 30px;
+    }
+
+    .second-list .button {
+      background-color: #007bff; /* Green color for distinction */
+    }
+
+    .second-list .button:hover {
+      background-color: #0056b3;
+    }
+
+    .second-list .button:active {
+      background-color: #004085;
+    }
+  </style>
+</head>
+<body>
+  <h1>TSSA Report Forms</h1>
+  <!-- First List of Buttons -->
+  <div class="button-container">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx2lu_pC4tHkzeLabuFIeXPnAIeeVAo0-77vFfl0C-GUUUiw/viewform?usp=sharing" class="button" target="_blank">Installation Report</a>
+    <a href="https://www.example.com/page-b" class="button" target="_blank">Non-Compliance Report (WIP)</a>
+    <a href="https://www.example.com/page-c" class="button" target="_blank">Incident Report (WIP)</a>
+  </div>
+  
+  <h1>Check Lists</h1>
+  <!-- Second List of Buttons -->
+  <div class="button-container second-list">
+    <a href="https://galico.ca/review.html" class="button" target="_blank">Van Inventory (WIP)</a>
+    <a href="https://www.example.com/page-y" class="button" target="_blank">Job Readiness (WIP)</a>
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSezKrCZ6zkefkKB_y8Iz3xDXfa_dyF3Xqo0ldu_07lwaCCkSA/viewform?usp=publish-editor" class="button" target="_blank">Butler Inspection</a>
+  </div>
+
+  <h1>Quick Links</h1>
+  <!-- Second List of Buttons -->
+  <div class="button-container second-list">
+    <a href="https://galico.ca/review.html" class="button" target="_blank">Review</a>
+	<a href="ecobeepin.pdf" class="button" target="_blank">Ecobee PIN 923338</a>
+	<a href="http://sms=343-600-7674" class="button" target="_blank">DigelAir's Text Line 343-600-7674</a>
+  </div>
+  </div>
+</body>
+</html>

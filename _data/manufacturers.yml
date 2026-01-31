@@ -1,0 +1,27 @@
+- name: "Rheem"
+  logo: "rheem-logo.png"
+  category: "Water Heaters"
+  badge: "Partner"
+  badge_type: "primary"
+
+- name: "A.O. Smith"
+  logo: "ao-smith-logo.png"
+  category: "Water Heaters"
+  badge: "Certified"
+  badge_type: "success"
+
+- name: "Bradford White"
+  logo: "bradford-white-logo.png"
+  category: "Water Heaters"
+  badge: "Authorized"
+  badge_type: "info"
+
+- name: "Honeywell"
+  logo: "honeywell-logo.png"
+  category: "Thermostats"
+  badge: "Official"
+
+- name: "Ecobee"
+  logo: "ecobee-logo.png"
+  category: "Smart Thermostats"
+  badge: null

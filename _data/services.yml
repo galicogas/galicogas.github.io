@@ -1,0 +1,55 @@
+gas_water_heater_installation:
+  name: Gas Water Heater Installation
+  slug: gas-water-heater-installation
+  category: hot-water
+  primary_keyword: gas water heater installation
+  secondary_keywords:
+    - gas technician
+    - gas fitter
+    - gas installation service
+
+  hero:
+    h1: Gas Water Heater Installation
+    h2: Licensed Gas Installation Service
+
+  intro: >
+    Professional gas water heater installation performed by licensed
+    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+
+  trust_points:
+    - Licensed residential gasfitter
+    - Code-compliant installations
+    - Manufacturer-approved venting
+    - Full commissioning & testing
+
+  technical: >
+    Gas water heater installations require proper gas sizing,
+    venting verification, combustion testing, and safety inspection.
+
+tankless water heater installation:
+  name: Tankless Water Heater Installation
+  slug: tankless-water-heater-installation
+  category: hot-water
+  primary_keyword: tankless water heater installation
+  secondary_keywords:
+    - gas technician
+    - gas fitter
+    - gas installation service
+
+  hero:
+    h1: Tankless Water Heater Installation
+    h2: Licensed Gas Installation Service
+
+  intro: >
+    Professional tankless water heater installation performed by licensed
+    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+
+  trust_points:
+    - Licensed residential gasfitter
+    - Code-compliant installations
+    - Manufacturer-approved venting
+    - Full commissioning & testing
+
+  technical: >
+    tankless water heater installations require proper gas sizing,
+    venting verification, combustion testing, and safety inspection.

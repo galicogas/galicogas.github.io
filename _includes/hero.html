@@ -1,0 +1,17 @@
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>{{ include.h1 }}</h1>
+    <h2>{{ include.h2 }}</h2>
+
+    {% include cta.html %}
+  </div>
+
+  <div class="hero-image">
+    {% include image.html
+      type=include.image_type
+      key=include.image_key
+    %}
+  </div>
+
+</section>

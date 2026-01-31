@@ -1,0 +1,72 @@
+arnprior:
+  name: Arnprior
+  region: Ontario
+  slug: arnprior
+  image: arnprior.jpg
+
+almonte:
+  name: Almonte
+  region: Ontario
+  slug: almonte
+  image: almonte.jpg
+
+beckwith:
+  name: Beckwith
+  region: Ontario
+  slug: beckwith
+  image: beckwith.jpg
+
+carp:
+  name: Carp
+  region: Ontario
+  slug: carp
+  image: carp.jpg
+
+carleton_place:
+  name: Carleton Place
+  region: Ontario
+  slug: carleton-place
+  image: carleton-place.jpg
+  
+mississippi_mills:
+  name: Mississippi Mills
+  region: Ontario
+  slug: mississippi-mills
+  image: mississippi-mills.jpg
+ 
+kanata:
+  name: Kanata
+  region: Ontario
+  slug: kanata
+  image: kanata.jpg
+  
+nepean:
+  name: Nepean
+  region: Ontario
+  slug: nepean
+  image: nepean.jpg
+  
+ottawa:
+  name: Ottawa
+  region: Ontario
+  slug: ottawa
+  image: ottawa.jpg
+  
+perth:
+  name: Perth
+  region: Ontario
+  slug: perth
+  image: perth.jpg
+  
+smiths_falls:
+  name: Smiths Falls
+  region: Ontario
+  slug: smiths-falls
+  image: smiths-falls.jpg
+
+stittsville:
+  name: Stittsville
+  region: Ontario'
+  slug: stittsville
+  image: stittsville.jpg
+  

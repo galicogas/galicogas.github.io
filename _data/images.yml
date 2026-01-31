@@ -1,0 +1,23 @@
+defaults:
+  width: 1200
+  height: 800
+  loading: lazy
+  format: webp
+
+services:
+  gas_water_heater_installation:
+    src: /assets/img/services/gas-water-heater.webp
+    alt: Gas water heater installation by licensed gasfitter
+
+  tankless_water_heater_installation:
+    src: /assets/img/services/tankless.webp
+    alt: Tankless hot water system installation
+
+  gasfitting:
+    src: /assets/img/services/gasfitting.webp
+    alt: Residential gas installation service
+
+areas:
+  carp:
+    src: /assets/img/areas/carp.webp
+    alt: Hot water system installation in Carp Ontario

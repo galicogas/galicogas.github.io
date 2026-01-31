@@ -1,56 +1,87 @@
-<!-- Footer -->
-<footer> 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h3><i class="fa fa-map-marker"></i> Contact:</h3>
-        <p class="footer-contact">
-          {{ site.company_name }} <br>
-          Phone: {{ site.telephone_number }} <br>
-          Fax: {{ site.fax_number }} <br>
-          Email: {{ site.company_email }}<br>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h3><i class="fa fa-external-link"></i> Links</h3>
-        <p><a href="/about"> About ( Who we are )</a></p>
-        <p><a href="/about"> Services ( What we do )</a></p>
-        <p><a href="/contact"> Contact ( Feel free to contact )</a></p>
-        <p><a href="/blog"> Blog ( Write to us )</a></p>
-        <p><a href="/team"> Team ( Meet the Team )</a></p> 
-      </div>
-      <div class="col-md-4">
-        <h3><i class="fa fa-heart"></i> Socialize</h3>
-        <div id="social-icons">
-          {% if site.googleplus_link %}
-            <a href="{{ site.googleplus_link }}" class="btn-group google-plus">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          {% endif %}
-
-          {% if site.linkedin_link %}
-            <a href="{{ site.linkedin_link }}" class="btn-group linkedin">
-              <i class="fa fa-linkedin-square"></i>
-            </a>
-          {% endif %}
-
-          {% if site.facebook_link %}
-            <a href="{{ site.twitter_link }}" class="btn-group twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          {% endif %}
-
-          {% if site.facebook_link %}
-            <a href="{{ site.facebook_link }}" class="btn-group facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          {% endif %}
-        </div>
-      </div>    
-    </div>
+<!-- Footer Start -->
+<div
+  class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
+  data-wow-delay="0.1s"
+  id="contact"
+>
+  <div class="container py-5">
+	<div class="row g-5">
+	  <div class="col-lg-3 col-md-6">
+		<!-- <h1 class="text-white mb-4">
+		  Galico
+		</h1> -->
+		<h4 class="text-light mb-4">About {{ site.company_name }}</h4>
+		<p>
+		  We are a <b>Ga</b>s <b>li</b>censed <b>co</b>mpany (<b>Galico</b>) that specialized in natural gas and liquid propane applications including, water heater installation, gas fitting, gas appliance connection/hookup, and heating/hydronic. Located in Almonte, Ontario, we serve Ottawa, Arnprior, Carleton Place, Perth, Smiths Falls, and the surrounding areas.
+		</p>
+		<div class="d-flex pt-2">
+		  <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/galicogas/" target="_blank" rel="noopener noreferrer"
+			><i class="fab fa-facebook-f"></i
+		  ></a>
+		  <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/galicogas/" target="_blank" rel="noopener noreferrer"
+			><i class="fab fa-instagram"></i
+		  ></a>
+		</div>
+	  </div>
+	  <div class="col-lg-3 col-md-6">
+		<h4 class="text-light mb-4">Contact</h4>
+		<p><i class="fa fa-map-marker-alt me-3"></i>Almonte, Ontario</p>
+		<p><i class="fa fa-phone-alt me-3"></i><a href="tel:+1{{ site.telephone_number }}">{{ site.telephone_number }}</a></p>
+		<p><i class="fa fa-envelope me-3"></i><a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a></p>
+	  </div>
+<!--           <div class="col-lg-3 col-md-6">
+		<h4 class="text-light mb-4">Quick Links</h4>
+		<a class="btn btn-link" href="#services" class="nav-item nav-link">Our Services</a>
+		<a class="btn btn-link" href="#testimonial" class="nav-item nav-link">Testimonial</a>
+		<a class="btn btn-link" href="#about" class="nav-item nav-link">About Us</a>
+		<a class="btn btn-link" href="#blog" class="nav-item nav-link">Blog</a>
+		<a class="btn btn-link" href="faq.html" class="nav-item nav-link">FAQs</a>
+	  </div> -->
+	  <div class="col-lg-3 col-md-6">
+        <h4 class="text-light mb-4">Service Areas</h4>
+            <p>
+			  <a href="/service-areas/arnprior/">Arnprior</a>,
+			  <a href="/service-areas/carleton-place">Carleton Place</a>,
+			  <a href="/service-areas/mississippi-mills/">Mississippi Mills</a> (<a href="/service-areas/almonte/">Almonte</a>),
+              <a href="/service-areas/ottawa/">Ottawa</a> (<a href="/service-areas/carp/">Carp</a>, <a href="/service-areas/kanata">Kanata</a>, <a href="/service-areas/nepean/">Nepean</a>, <a href="/service-areas/stittsville/">Stittsville</a>),
+			  <a href="/service-areas/perth/">Perth</a>,
+			  <a href="/service-areas/smiths-falls/">Smiths Falls</a>.
+			</p>
+          </div>
+	  <div class="col-lg-3 col-md-6">
+		<h4 class="text-light mb-4">TSSA Heating Fuel Contractor</h4>
+		<p>FS-R-52509</p>
+	  </div>
+<!-- 	  <div class="col-lg-3 col-md-6">
+		<h4 class="text-light mb-4">Member of</h4>
+		<a href="https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755" target="_blank"><img src="../assets/img/community/cpcc.png" class="img-fluid" alt="Member of the Carelton Place and Districts Chamber of Commerce"></a>
+	  </div> -->
+	</div>
   </div>
-
-  <div class="copyright text center">
-    <p>&copy; Copyright {{ site.time | date: '%Y' }}, <a href="#">Your Website Link</a>. <br>Theme ported by <a href="https://melvinchng.github.io/" target="_blank">Melvin Ch'ng</a></p>
+<!-- <div class="container">
+	<p>Gas Appliance Installation ¡¤	Gas BBQ Installation ¡¤ Gas BBQ Connection ¡¤ Gas Cooktop Connection ¡¤ Gas Grill Installation ¡¤ Gas Fire pit Installation ¡¤ Gas Fireplace Installation ¡¤ Gas Fitter ¡¤ Gas Range Hookup ¡¤ Gas Oven Installation ¡¤ Gas Pipe Installation and Repair ¡¤ Gas Technician ¡¤ Gas Water Heaters ¡¤ Hot Water Tanks ¡¤ Hydronic Heating System Installation ¡¤ Furnace Installation ¡¤ Furnance Maintenance ¡¤  Natural Gas Installation ¡¤ Running Gas Line ¡¤ Switch from Electric to Natural Gas ¡¤ Radiant Floor Installation ¡¤ Smart Thermostat installation ¡¤ Standby Generator Installation ¡¤ Tankless Water Heater Installation
+	</p>
+  </div> -->
+  <div class="container py-5">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-light">
+		  &copy; {{ site.time | date: '%Y' }}, Galico Home Comfort Inc., All Right Reserved.
+		</div>
+		
+		<div class="col-md-6 text-center text-md-end">
+		  <!--/*** This template is free as long as you keep the footer author¡¯s credit link/attribution link/backlink. If you'd like to use the template without the footer author¡¯s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+		  Designed By: <a href="https://htmlcodex.com">HTML Codex</a>
+		  <br />
+		  Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+		</div>
+	  </div>
+	</div>
   </div>
-</footer>
+</div>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+  ><i class="bi bi-arrow-up"></i
+></a>

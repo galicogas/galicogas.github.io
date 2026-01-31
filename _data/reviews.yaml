@@ -1,0 +1,80 @@
+- name: "Luc"
+  location: "Riverside South"
+  image: "testimonial-luc.jpg"
+  content: "Galico is very punctual and the work is professional. Absolutely no worries about the quality, very reasonably priced and they certified the work. The fact that I hired them more than once speaks for itself."
+  source:
+    text: "source"
+    url: "https://g.co/kgs/NEEEtt"
+    type: "google"
+
+- name: "Sandra"
+  location: "Carleton Place"
+  image: "testimonial-1.jpg"
+  content: "Needed help quick to hook up our BBQ. Eric's customer service was outstanding. His swift response and quality of work were unparalleled. He provided options that best suited our needs and ended up being safer."
+  source:
+    text: "source"
+    url: "https://www.facebook.com/galicogas/reviews"
+    type: "facebook"
+
+- name: "Sarah"
+  location: "Kanata"
+  image: "testimonial-2.jpg"
+  content: "My experience with Eric at Galico was superb! Eric was professional, very knowledgeable and patient with all my questions. The work was very clean and done efficiently. I'm very happy to have found a reliable gas technician that I can trust."
+  source:
+    text: "source"
+    url: "https://g.co/kgs/uWiv3v"
+    type: "google"
+
+- name: "Chris"
+  location: "Carleton Place"
+  image: "testimonial-3.jpg"
+  content: "Galico is the way to go for home gas solutions. His work is clean and top quality. I am glad we went with him for our gas hook up."
+  source:
+    text: "source"
+    url: "https://www.facebook.com/galicogas/reviews"
+    type: "facebook"
+
+- name: "Pam"
+  location: "Arnprior"
+  image: "testimonial-4.jpg"
+  content: "Much thanks to Eric for converting my fire table yesterday! It worked perfect last night 🔥. If you require any gas services, we highly recommend you give him a call."
+  source:
+    text: "source"
+    url: "https://www.facebook.com/galicogas/posts/134040116425777:1034373121270905?ref=embed_post"
+    type: "facebook"
+
+- name: "Deep"
+  location: "Carleton Place"
+  image: "deep.jpg"
+  content: "I would definitely suggest him. He is very professional and talented guy. He is also very Responsive and punctual. We just got new house and we were looking someone urgently for our gas line installation and he gave quicker response and we booked time and done. It was very easy and smooth process to deal with him."
+  source:
+    text: "source"
+    url: "https://g.co/kgs/2gA1at"
+    type: "google"
+
+- name: "Slava"
+  location: "Barrhaven"
+  image: "slava.jpg"
+  content: "Hard working, well equipped and reasonable. What else you can ask for."
+  source:
+    text: "source"
+    url: "https://g.co/kgs/X7YVsz"
+    type: "google"
+
+- name: "Wesley"
+  location: "Stittsville"
+  image: "wesley.jpg"
+  content: "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly and answered all my questions."
+  source:
+    text: "source"
+    url: "https://maps.app.goo.gl/rUgCkCuJx1rnb4ye7"
+    type: "google"
+
+- name: "Travis"
+  location: "Ottawa"
+  image: "travis.jpg"
+  content: "Contacted Galico for a gas connection for my tri-fuel generator. Eric provided a service that went over and above what I was expecting and made sure I was happy with the results. I would definitely recommend."
+  source:
+    text: "source"
+    url: "https://maps.app.goo.gl/qoQDitoYzfr6yKLu8"
+    type: "google"
