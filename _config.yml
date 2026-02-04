@@ -56,10 +56,81 @@ include:
  - _includes
  - _layouts
  - _service-areas
- - _services
- - _site
- - _pages
+ - _heating
+ - _hot-water
+ - _gasfitting
+ - _plumbing
   
 exclude:
  - node_modules
  - package.json
+ 
+collections:
+  hot-water:
+    output: true
+    permalink: /hot-water/:name/
+    # Optional: Default front matter
+    defaults:
+      - scope:
+          path: ""
+          type: hot-water
+        values:
+          layout: service
+          category: "hot-water"
+          hero_image: /assets/images/hot-water-default.jpg
+          schema:
+            service_type: "WaterHeaterInstallation"
+
+  gasfitting:
+    output: true
+    permalink: /gasfitting/:name/
+    defaults:
+      - scope:
+          path: ""
+          type: gasfitting
+        values:
+          layout: service
+          category: "gasfitting"
+          hero_image: /assets/images/gasfitting-default.jpg
+          schema:
+            service_type: "GasFitting"
+
+  heating:
+    output: true
+    permalink: /heating/:name/
+    defaults:
+      - scope:
+          path: ""
+          type: heating
+        values:
+          layout: service
+          category: "heating"
+          hero_image: /assets/images/heating-default.jpg
+          schema:
+            service_type: "HeatingSystemInstallation"
+
+# SEO settings
+defaults:
+  - scope:
+      path: "_hot-water"
+      type: hot-water
+    values:
+      meta_description: "Professional hot water system installation, repair, and maintenance services in Ontario. Reliable and efficient solutions for your home or business."
+      og_type: "article"
+      og_section: "Hot Water Systems"
+  
+  - scope:
+      path: "_gasfitting"
+      type: gasfitting
+    values:
+      meta_description: "Licensed gasfitting services including gas line installation, appliance hookup, and leak detection. Certified technicians serving the Ottawa and West of Ottawa."
+      og_type: "article"
+      og_section: "Gasfitting"
+  
+  - scope:
+      path: "_heating"
+      type: heating
+    values:
+      meta_description: "Expert heating system installation services. Hydronic heating, furnaces, and radiant floor heating solutions for maximum comfort."
+      og_type: "article"
+      og_section: "Heating Services"

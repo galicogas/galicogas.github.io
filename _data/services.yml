@@ -1,7 +1,7 @@
-gas_water_heater_installation:
+gas-water-heater-installation:
   name: Gas Water Heater Installation
   slug: gas-water-heater-installation
-  category: hot-water
+  category: Hot Water Systems
   primary_keyword: gas water heater installation
   secondary_keywords:
     - gas technician
@@ -12,7 +12,7 @@ gas_water_heater_installation:
     h1: Gas Water Heater Installation
     h2: Licensed Gas Installation Service
 
-  intro: >
+  intro: 
     Professional gas water heater installation performed by licensed
     gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
 

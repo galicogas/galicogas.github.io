@@ -1,16 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+  {% include header.html %}
+  {% include disclaimer-banner.html %}
+  {% include script.html %}
+
+  <body>
 {% assign service = site.data.services[page.service_key] %}
 
-{% include hero.html
-  h1=service.hero.h1
-  h2=service.hero.h2
-%}
+<!-- Offer Page Start -->
+<div class="container-xxl py-5" id="offer">
+  <section id="Offer" class="container-xxl py-5">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-5 align-items-end mb-5">
+          <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h6 class="text-body text-uppercase mb-2">{{service.category}}</h6>
+              <h1 class="display-6 mb-0">
+                {{service.hero.h1}}
+              </h1>
+            </div>
+          </div>
+        </div>
+		<div class="row g-5 mb-5">
+			<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+				<p>{{service.intro}}</p>
+			</div>
 
-<p>{{ service.intro }}</p>
+			<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+				<div class="position-relative overflow-hidden" style="min-height: 300px">
+					<img
+						class="position-absolute w-100 h-100"
+						src="{{'assets/img/service-1.jpg' | relative_url}}"
+						alt="{{service.name}}"
+						style="object-fit: cover"
+					/>
+				</div>
 
-{% comment %}
-{% include trust.html points=service.trust_points %} -->
+				<div class="border-top mt-4 pt-4">
+				  <div class="row g-4">
+					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
+					  <i class="fa fa-wrench fa-2x text-primary flex-shrink-0 me-3"></i>
+					  <h6 class="mb-0">New Gas Line Installation</h6>
+					</div>
+					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
+					  <i class="fa fa-tools fa-2x text-primary flex-shrink-0 me-3"></i>
+					  <h6 class="mb-0">Gas Line Repairs & Relocations</h6>
+					</div>
+					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
+					  <i class="fa fa-shield-alt fa-2x text-primary flex-shrink-0 me-3"></i>
+					  <h6 class="mb-0">TSSA-Certified & Pressure Tested</h6>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{% for key in site.data.top_categories %}
+	  {% assign s = key[1] %}
+	  {% assign row_position = forloop.index0 | modulo: 3 %}
+	  {% assign delay = row_position | times: 0.2 %}
+			  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}s">
+				<div class="service-item bg-light overflow-hidden h-100">
+				  <img class="img-fluid" src="{{'assets/img/{{s.image' | relative_url}}" alt="{{s.name}}" />
+				  <div class="service-text position-relative text-center h-100 p-4">
+					<h2 class="mb-3">{{s.name}}</h2>
+					<p>{{s.desc}}</p>
+					<a href="" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
+				  </div>
+				</div>
+			  </div>
+	{% endfor %}
 
-{% include technical.html content=service.technical %}
-{% endcomment %}
+  <div class="row g-4 justify-content-center">
+		  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img class="img-fluid" src="img/virtualmeeting.jpg" alt=""/>
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h2 class="mb-3">Virtual Consultation</h2>
+                <p>Schedule a free virtual evaluation of your project, using your smart phone/tablet.</p>
+				<!-- Calendly link widget begin -->
+				<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+				<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+				<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eric-pythago/virtual-consultation'});return false;" class="btn btn-primary py-3 px-5">Book Now</a>
+				<!-- Calendly link widget end -->
+				<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZM6WNvFSnC-TlXvvKD_TiPBq2IFSKaqWWFSdXL5KiQOHWQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Request a Quote</a> -->
+              </div>
+            </div>
+          </div>	
+		  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img class="img-fluid" src="img/onsiteestimate.jpg" alt=""/>
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h2 class="mb-3">Onsite Consultation</h2>
+                <p>Schedule an onsite visit for evaluating your project and provide an estimate.</p>
+				<!-- Calendly link widget begin -->
+				<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+				<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+				<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eric-pythago/galico-estimate'});return false;" class="btn btn-primary py-3 px-5">Book Now</a>
+				<!-- Calendly link widget end -->
+				<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZM6WNvFSnC-TlXvvKD_TiPBq2IFSKaqWWFSdXL5KiQOHWQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Request a Quote</a> -->
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+</section>
 
-{% include cta.html %}
+<!-- Offer Page End -->
+
+  </body>
+
+{% include footer.html %}
+</html>

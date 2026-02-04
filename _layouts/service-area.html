@@ -20,57 +20,90 @@
 
 <div class="container-xxl py-5" id="services">
       <div class="container">
-        <div class="row g-12 align-items-end mb-5">
-			<p>
-			Homeowners in {{ city.name }}, Ontario trust Galico for professional hot water system
-			installation and replacement. We specialize exclusively in residential water heaters, including
-			gas, electric, and tankless systems. Our licensed gasfitters ensure every installation is safe,
-			code‑compliant, and built for long‑term reliability.
-			</p>
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 600px">
+				<p>
+				Homeowners in {{ city.name }}, Ontario trust Galico for professional hot water system
+				installation and replacement. We specialize exclusively in residential water heaters, including
+				gas, electric, and tankless systems. Our licensed gasfitters ensure every installation is safe,
+				code‑compliant, and built for long‑term reliability.
+				</p>
 
-			{% for key in site.data.services %}
-			  {% assign s = key[1] %}
-			  <h2>{{ s.name }} in {{ city.name }}</h2>
-			  <p>
-				Professional {{ s.primary_keyword }} services
-				available throughout {{ city.name }} and surrounding areas.
-			  </p>
-			{% endfor %}
+				{% for key in site.data.services %}
+				  {% assign s = key[1] %}
+				  <h2>{{ s.name }} in {{ city.name }}</h2>
+				  <p>
+					Professional {{ s.primary_keyword }} services
+					available throughout {{ city.name }} and surrounding areas.
+				  </p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+			<img 
+			  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
+			  src="{{ '/assets/img/mascot/galico_dragon_tools.png' | relative_url }}" 
+			  alt="Galico mascot"
+			/>
+			<div class="border-top mt-4 pt-4">
+                <div class="row g-4">
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">On Time Service</h6>
+                  </div>
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">Evenings & Weekends</h6>
+                  </div>
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">TSSA Certified</h6>
+                  </div>
+                </div>
+              </div>
+		</div>
 
-				<!-- Services Start -->
-				<div class="container-xxl py-5" id="products">
-				  <div class="container">
-					<div class="row g-5 align-items-end mb-5">
-					  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-						<div class="border-start border-5 border-primary ps-4">
-						  <h6 class="text-body text-uppercase mb-2">Trusted Professional</h6>
-						  <h1 class="display-6 mb-0">
-							Additional Services
-						  </h1>
-						</div>
-					  </div>
-					</div>
-					<div class="row g-4 justify-content-center">
-					   {% assign content = site.data.other_categories[page.category_key] %}
-							{% for key in site.data.other_categories %}
-							  {% assign s = key[1] %}
-							  {% assign row_position = forloop.index0 | modulo: 3 %}
-							  {% assign delay = row_position | times: 0.2 %}
-									  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}s">
-										<div class="service-item bg-light overflow-hidden h-100">
-										  <img class="img-fluid" src="/assets/img/{{s.image}}" alt="{{s.name}}" />
-										  <div class="service-text position-relative text-center h-100 p-4">
-											<h2 class="mb-3">{{s.name}}</h2>
-											<p>{{s.desc}}</p>
-											<a href="" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
-										  </div>
-										</div>
-									  </div>
-							{% endfor %}
-					</div>
-				  </div>
+		<!-- Services Start -->
+		<div class="container-xxl py-5" id="products">
+		  <div class="container">
+			<div class="row g-5 align-items-end mb-5">
+			  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+				<div class="border-start border-5 border-primary ps-4">
+				  <h6 class="text-body text-uppercase mb-2">Trusted Professional</h6>
+				  <h1 class="display-6 mb-0">
+					Our Services
+				  </h1>
 				</div>
-			<!-- Services End -->
+			  </div>
+			</div>
+			<div class="row g-4 justify-content-center">
+			   {% assign content = site.data.top_categories[page.category_key] %}
+					{% for key in site.data.top_categories %}
+					  {% assign s = key[1] %}
+					  {% assign row_position = forloop.index0 | modulo: 3 %}
+					  {% assign delay = row_position | times: 0.2 %}
+							  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}s">
+								<div class="service-item bg-light overflow-hidden h-100">
+								  <img class="img-fluid" src="/assets/img/{{s.image}}" alt="{{s.name}}" />
+								  <div class="service-text position-relative text-center h-100 p-4">
+									<h2 class="mb-3">{{s.name}}</h2>
+									<p>{{s.desc}}</p>
+									<a href="" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
+								  </div>
+								</div>
+							  </div>
+					{% endfor %}
+			</div>
+		  </div>
+		</div>
+		<!-- Services End -->
 
 		</div>
 	</div>

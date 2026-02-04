@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Hot Water System Services | Galico Heating & Cooling"
+meta_description: "Professional hot water system installation, repair, and maintenance. Boiler installation, tankless water heaters, and water heater repairs across Ontario."
+permalink: /services/hot-water-systems/
+---
+
+<section class="category-hero bg-primary text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h1>Hot Water System Services</h1>
+        <p class="lead">Reliable installation, repair, and maintenance of boilers, tankless water heaters, and traditional water heating systems. Serving the Greater Toronto Area with certified expertise.</p>
+        <a href="/contact/" class="btn btn-light btn-lg mt-3">Get Free Quote</a>
+      </div>
+      <div class="col-lg-5">
+        <img src="/assets/images/hot-water-systems-hero.jpg" alt="Hot Water System Services" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-grid py-5">
+  <div class="container">
+    <div class="row g-4">
+      {% assign hot_water_services = site.hot-water-systems | sort: 'title' %}
+      {% for service in hot_water_services %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ service.url }}" class="service-card text-decoration-none">
+          <div class="card h-100 border-0 shadow-sm hover-lift">
+            {% if service.hero.image %}
+            <img src="{{ service.hero.image }}" class="card-img-top" alt="{{ service.title }}">
+            {% endif %}
+            <div class="card-body p-4">
+              <h2 class="h4 mb-2">{{ service.title }}</h2>
+              <p class="text-muted">{{ service.intro | strip_html | truncate: 100 }}</p>
+              <span class="btn btn-sm btn-outline-primary">Learn More →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-section bg-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-3">Need Hot Water System Service?</h2>
+    <p class="lead mb-4">Contact Galico today for a free consultation and quote</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Schedule Service</a>
+  </div>
+</section>
