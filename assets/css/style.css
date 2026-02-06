@@ -309,6 +309,7 @@ address {
     margin: 0;
     text-align: left;
 }
+
 .header a.brand {
 
     font-family: 'PT Sans', sans-serif;
@@ -784,3 +785,14 @@ footer h3 {
 .testimonial-carousel .owl-nav .owl-next:hover {
     color: #FFFFFF;
     background: var(--primary);
+}
+
+
+
+
+
+.footer a {
+  color: #428BCA; /* or whatever color you want */
+}
+
+

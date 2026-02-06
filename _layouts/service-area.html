@@ -18,8 +18,8 @@
     </div>
     <!-- Page Header End -->  
 
-<div class="container-xxl py-5" id="services">
-      <div class="container">
+	<div class="container-xxl py-5" id="services">
+<div class="container">
         <div class="row g-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 600px">
@@ -28,11 +28,14 @@
 				installation and replacement. We specialize exclusively in residential water heaters, including
 				gas, electric, and tankless systems. Our licensed gasfitters ensure every installation is safe,
 				code‑compliant, and built for long‑term reliability.
+				{% if city.chamber %}
+						Galico is a proud member of the {{ city.chamber }} community.
+				{% endif %}
 				</p>
-
-				{% for key in site.data.services %}
+				<p>We offer the following services to the homeowners of {{ city.name }}:</p>
+				{% for key in site.data.hot-water-services %}
 				  {% assign s = key[1] %}
-				  <h2>{{ s.name }} in {{ city.name }}</h2>
+				  <h2><a href="{{'/hot-water/{{ city.slug }}' | relative_url }}" class="link-primary">{{ s.name }} in {{ city.name }}</a></h2>
 				  <p>
 					Professional {{ s.primary_keyword }} services
 					available throughout {{ city.name }} and surrounding areas.
@@ -41,11 +44,13 @@
 			</div>
 		</div>
 		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-			<img 
-			  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
-			  src="{{ '/assets/img/mascot/galico_dragon_tools.png' | relative_url }}" 
-			  alt="Galico mascot"
-			/>
+			<a href="{{ '/onboarding/' | relative_url }}">
+				<img 
+				  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
+				  src="{{ '/assets/img/mascot/galico_dragon_subscription.png' | relative_url }}"
+				  alt="Galico mascot"
+				/>
+			</a>
 			<div class="border-top mt-4 pt-4">
                 <div class="row g-4">
                   <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
@@ -70,6 +75,19 @@
               </div>
 		</div>
 
+		<!-- Subcription -->
+		<div class="container">
+			<div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
+				<div class="col-12 text-center">
+					<h3 class="section-title">Stuck in a Water Heater Rental Contract?</h3>
+					<p class="section-subtitle">
+						Learn more about our <a href="{{ '/onboarding/' | relative_url }}" class="text-primary">Subscription Onboarding Program</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Subscription End -->
+
 		<!-- Services Start -->
 		<div class="container-xxl py-5" id="products">
 		  <div class="container">
@@ -78,14 +96,14 @@
 				<div class="border-start border-5 border-primary ps-4">
 				  <h6 class="text-body text-uppercase mb-2">Trusted Professional</h6>
 				  <h1 class="display-6 mb-0">
-					Our Services
+					Other Services
 				  </h1>
 				</div>
 			  </div>
 			</div>
 			<div class="row g-4 justify-content-center">
-			   {% assign content = site.data.top_categories[page.category_key] %}
-					{% for key in site.data.top_categories %}
+			   {% assign content = site.data.other_categories[page.category_key] %}
+					{% for key in site.data.other_categories %}
 					  {% assign s = key[1] %}
 					  {% assign row_position = forloop.index0 | modulo: 3 %}
 					  {% assign delay = row_position | times: 0.2 %}
@@ -95,7 +113,7 @@
 								  <div class="service-text position-relative text-center h-100 p-4">
 									<h2 class="mb-3">{{s.name}}</h2>
 									<p>{{s.desc}}</p>
-									<a href="" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
+									<a href="{{ s.url }}" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
 								  </div>
 								</div>
 							  </div>
@@ -108,4 +126,5 @@
 		</div>
 	</div>
 </div>
+
 {% include footer.html %}

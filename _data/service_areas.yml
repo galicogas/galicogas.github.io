@@ -1,20 +1,16 @@
-arnprior:
-  name: Arnprior
-  region: Ontario
-  slug: arnprior
-  image: arnprior.jpg
-
 almonte:
   name: Almonte
   region: Ontario
   slug: almonte
   image: almonte.jpg
-
-beckwith:
-  name: Beckwith
+  chamber: <a href="https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755" target="_blank" class="link-primary">Carleton Place and District Chamber of Commerce</a>
+  
+arnprior:
+  name: Arnprior
   region: Ontario
-  slug: beckwith
-  image: beckwith.jpg
+  slug: arnprior
+  image: arnprior.jpg
+  chamber: <a href="https://upperottawavalleychamber.com/find-a-member/#/action/Listing/value/547/searchID/76944/cid/1836/id/1501/Galico-Home-Comfort-Inc" target="_blank" class="link-primary">Upper Ottawa Valley Chamber of Commerce</a>
 
 carp:
   name: Carp
@@ -27,12 +23,7 @@ carleton_place:
   region: Ontario
   slug: carleton-place
   image: carleton-place.jpg
-  
-mississippi_mills:
-  name: Mississippi Mills
-  region: Ontario
-  slug: mississippi-mills
-  image: mississippi-mills.jpg
+  chamber: <a href="https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755" target="_blank" class="link-primary">Carleton Place and District Chamber of Commerce</a>
  
 kanata:
   name: Kanata
@@ -45,18 +36,13 @@ nepean:
   region: Ontario
   slug: nepean
   image: nepean.jpg
-  
-ottawa:
-  name: Ottawa
-  region: Ontario
-  slug: ottawa
-  image: ottawa.jpg
-  
+
 perth:
   name: Perth
   region: Ontario
   slug: perth
   image: perth.jpg
+  chamber: <a href="https://members.perthchamber.com/list/member/galico-2741" target="_blank" class="link-primary">Perth & District Chamber of Commerce</a>
   
 smiths_falls:
   name: Smiths Falls
