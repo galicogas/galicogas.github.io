@@ -1,13 +1,14 @@
-
 {% for key in site.data.service_areas %}
   {% assign s = key[1] %}
   {% assign row_position = forloop.index0 | modulo: 3 %}
   {% assign delay = row_position + 1 | times: 0.2 %}
-      <a href="{{s.slug}}" class="col-md-6 col-lg-4">
-        <div class="card service-card h-100 shadow-sm">
-          <div class="card-body">
-            <h2 class="card-title text-center">{{s.name}}, ON</h2>
-          </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card service-card shadow-sm">
+			<a href="{{s.slug}}">
+			  <div class="card-body">
+				<h2 class="card-title text-center">{{s.name}}, ON</h2>
+			  </div>
+			</a>
         </div>
-      </a>
+      </div>
 {% endfor %}

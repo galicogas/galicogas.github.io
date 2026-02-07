@@ -46,23 +46,28 @@ permalink: /about
     </div>
 </section>
 
-
-<section class="affiliations-section py-5" id="affiliations">
+<section class="py-5" id="affiliations">
     <div class="container">
         <div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-12 text-center">
                 <h2 class="section-title">Affiliations</h2>
                 <p class="section-subtitle">
-                    We are proud member of the following associations.
+                    We are proud member of the following affilliations.
                 </p>
             </div>
         </div>
 
         <div class="row g-4 align-items-end wow fadeInUp" data-wow-delay="0.3s">
-            {% for manufacturer in site.data.manufacturers %}
+            {% for m in site.data.affiliations %}
             <div class="col-lg-2 col-md-3 col-sm-6">
-                <div class="manufacturer-card position-relative">
-                    <img src="/assets/img/manufacturers/{{ manufacturer.logo }}" alt="{{ manufacturer.name }}" class="img-fluid">
+                <div class="affiliations-card position-relative">
+                    <a href="{{ m.url }}" target="_blank" alt="{{ m.name }}">
+						<img 
+							src="/assets/img/community/{{ m.logo }}" 
+							alt="{{ m.name }}" 
+							class="img-fluid"
+						>
+					</a>
                 </div>
             </div>
             {% endfor %}
@@ -70,22 +75,28 @@ permalink: /about
     </div>
 </section>
 
-<section class="accreditations-section py-5" id="accreditations">
+<section class="py-5" id="accreditation">
     <div class="container">
         <div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-12 text-center">
                 <h2 class="section-title">Accreditations</h2>
                 <p class="section-subtitle">
-                    We activilty engage with the following affiliations.
+                    We are accredited by following groups.
                 </p>
             </div>
         </div>
 
-        <div class="row g-4 align-items-end wow fadeInUp" data-wow-delay="0.3s">
-            {% for manufacturer in site.data.manufacturers %}
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            {% for m in site.data.accreditations %}
             <div class="col-lg-2 col-md-3 col-sm-6">
-                <div class="manufacturer-card position-relative">
-                    <img src="/assets/img/manufacturers/{{ manufacturer.logo }}" alt="{{ manufacturer.name }}" class="img-fluid">
+                <div class="text-center">
+                    <a href="{{ m.url }}" target="_blank" title="{{ m.name }}">
+						<img 
+							src="/assets/img/{{ m.logo }}" 
+							alt="{{ m.name }}" 
+							class="img-fluid"
+						>
+					</a>
                 </div>
             </div>
             {% endfor %}
@@ -93,9 +104,11 @@ permalink: /about
     </div>
 </section>
 
+
+
 <!-- Manufacturer Start -->
 	
- {% include manufacturers.html %}	
+<!--  {% include manufacturers.html %}	 -->
 	
 <!-- Manufacturer End -->
 

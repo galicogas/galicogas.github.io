@@ -3,25 +3,30 @@
   category: "Water Heaters"
   badge: "Partner"
   badge_type: "primary"
+  url: ""
 
 - name: "A.O. Smith"
   logo: "ao-smith-logo.png"
   category: "Water Heaters"
   badge: "Certified"
   badge_type: "success"
+  url: ""
 
 - name: "Bradford White"
   logo: "bradford-white-logo.png"
   category: "Water Heaters"
   badge: "Authorized"
   badge_type: "info"
+  url: ""
 
 - name: "Honeywell"
   logo: "honeywell-logo.png"
   category: "Thermostats"
   badge: "Official"
+  url: ""
 
 - name: "Ecobee"
   logo: "ecobee-logo.png"
   category: "Smart Thermostats"
   badge: null
+  url: ""

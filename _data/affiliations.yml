@@ -1,0 +1,42 @@
+- name: "Carleton Place & District Chamber of Commerce"
+  logo: "cpcc.png"
+  category: "Chamber"
+  badge: "Member"
+  badge_type: "primary"
+  url: "https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755"
+
+- name: "Perth & District Chamber of Commerce"
+  logo: "pcc.png"
+  category: "Chamber"
+  badge: "Member"
+  badge_type: "primary"
+  url: "https://members.perthchamber.com/list/member/galico-2741"
+
+- name: "Upper Ottawa Valley Chamber of Commerce"
+  logo: "uovcc-logo.png"
+  category: "Chamber"
+  badge: "Member"
+  badge_type: "primary"
+  url: "https://upperottawavalleychamber.com/find-a-member/#/action/Listing/value/547/searchID/77010/cid/1836/id/1501/Galico-Home-Comfort-Inc"
+
+- name: "HomeStars"
+  logo: "homestars-logo.png"
+  category: "Pro"
+  badge: "Registered"
+  badge_type: "info"
+  url: "https://www.homestars.com/profile/galico-home-comfort-inc"
+
+- name: "Yelp"
+  logo: "yelp_logo.png"
+  category: "Contractor"
+  badge: "Registered"
+  badge_type: "info"
+  url: "https://www.yelp.com/biz/galico-almonte-2"
+
+- name: "TrustedPros"
+  logo: "trustedpros_logo.png"
+  category: "Pro"
+  badge: "Official"
+  url: "https://trustedpros.ca/company/galico-home-comfort-inc"
+
+

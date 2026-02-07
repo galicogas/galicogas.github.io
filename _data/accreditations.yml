@@ -1,0 +1,15 @@
+- name: "TSSA"
+  logo: "tssa_logo.png"
+  category: "Safety"
+  badge: "Certification"
+  badge_type: "primary"
+  url: ""
+
+- name: "Better Business Bureau"
+  logo: "BBB.png"
+  category: "Business"
+  badge: "Accrediated"
+  badge_type: "primary"
+  url: ""
+
+

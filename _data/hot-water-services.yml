@@ -1,12 +1,15 @@
 tank water heater installation:
   name: Tank Water Heater Installation
   slug: tank-water-heater-installation
+  image: tank-water-heater-installation.jpg  
   category: Hot Water Systems
   primary_keyword: tank water heater installation
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
+
+
 
   hero:
     h1: Tank Water Heater Installation
@@ -25,10 +28,13 @@ tank water heater installation:
   technical: >
     Tank water heater installations require proper gas sizing,
     venting verification, combustion testing, and safety inspection.
-
+  
+  cta: Book Now
+  
 tankless water heater installation:
   name: Tankless Water Heater Installation
   slug: tankless-water-heater-installation
+  image: tankless-water-heater-installation.jpg
   category: hot-water
   primary_keyword: tankless water heater installation
   secondary_keywords:
@@ -53,10 +59,13 @@ tankless water heater installation:
   technical: >
     tankless water heater installations require proper gas sizing,
     venting verification, combustion testing, and safety inspection.
-    
+  
+  cta: Book Now
+      
 water heater replacement:
   name: Water Heater Replacement
   slug: water-heater-replacement
+  image: water-heater-replacement.jpg
   category: Hot Water Systems
   primary_keyword: water heater replacement
   secondary_keywords:
@@ -81,7 +90,9 @@ water heater replacement:
   technical: >
     Gas water heater installations require proper gas sizing,
     venting verification, combustion testing, and safety inspection.
-
+  
+  cta: Book Now
+  
 gas water heater installation:
   name: Gas Water Heater Installation
   slug: gas-water-heater-installation
@@ -109,7 +120,9 @@ gas water heater installation:
   technical: >
     Gas water heater installations require proper gas sizing,
     venting verification, combustion testing, and safety inspection.
-    
+  
+  cta: Book Now
+      
 electric water heater installation:
   name: Electric Water Heater Installation
   slug: electric-water-heater-installation
@@ -137,3 +150,6 @@ electric water heater installation:
   technical: >
     Gas water heater installations require proper gas sizing,
     venting verification, combustion testing, and safety inspection.
+  
+  cta: Book Now
+  

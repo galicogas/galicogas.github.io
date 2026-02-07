@@ -1,0 +1,31 @@
+---
+layout: default_style
+title: Hot Water System Services | Galico
+permalink: /hot-water/
+---
+	<!-- Services Start -->
+    <div class="container-xxl py-5" id="services">
+      <div class="container">
+        <div class="row g-5 align-items-end mb-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h6 class="text-body text-uppercase mb-2">Trusted Professional</h6>
+              <h1 class="display-6 mb-0">
+                Hot Water System
+              </h1>
+            </div>
+          </div>
+        </div>
+		<div class="row g-4 justify-content-center">
+		{% assign content = site.data.top_categories[page.category_key] %}
+        {% for key in site.data.hot-water-services %}
+		   {% include card2.html %}
+		{% endfor %}
+		</div>
+      </div>
+    </div>
+<!-- Services End -->
+
+<!-- Manufacturer Start -->
+<!--  {% include manufacturers.html %}	 -->
+<!-- Manufacturer End -->
