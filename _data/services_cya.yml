@@ -1,0 +1,904 @@
+gas water heater installation:
+  name: Gas Water Heater Installation
+  slug: gas-water-heater-installation
+  category: Hot Water System
+  primary_keyword: gas water heater installation
+  secondary_keywords:
+    - gas technician
+    - gas fitter
+    - gas installation service
+
+  hero:
+    h1: Gas Water Heater Installation
+    h2: Licensed Gas Installation Service
+
+  intro: 
+    Professional gas water heater installation performed by licensed
+    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+
+  description:
+    - Galico is a dedicated hot water system supplier specializing in residential water heater installation, replacement, and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
+    - We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
+    - Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+    
+  technical: >
+    Gas water heater installations require proper gas sizing, venting verification, combustion testing, and safety inspection.
+
+tank water heater installation:
+  name: 
+  slug: 
+  category: Hot Water System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+tankless water heater installation:
+  name: 
+  slug: 
+  category: Hot Water System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+water heater replacement:
+  name: 
+  slug: 
+  category: Hot Water System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+  
+  subsection:
+    - title: tank
+      anchor: tank
+      description:
+      image:
+      url: 
+    - title: tankless
+      anchor: tankless
+      description:
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+electric water heater installation:
+  name: 
+  slug: 
+  category: Hot Water System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+gas line installation:
+  name: 
+  slug: 
+  category: Gasfitting
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Flexible Gas Line
+      anchor: flexible
+      description:
+      image:
+      url: 
+    - title: Outdoor
+      anchor: outdoor
+      description:
+      image:
+      url:
+    - title: Underground
+      anchor: underground
+      description:
+      image:
+      url:
+     
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+gas appliance installation:
+  name: 
+  slug: 
+  category: Gasfitting
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+  
+  subsection:
+    - title: Range
+      anchor: range
+      description:
+      image:
+      url: 
+    - title: Oven
+      anchor: oven
+      description:
+      image:
+      url:
+    - title: Cooktop
+      anchor: cooktop
+      description:
+      image:
+      url:
+    - title: Dryer
+      anchor: dryer
+      description:
+      image:
+      url:
+    - title: Disconnection
+      anchor: disconnection
+      description:
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+natural gas services:
+  name: 
+  slug: 
+  category: Gasfitting
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Enbridge Gas Meter installation
+      anchor: gas-meter
+      description:
+      image:
+      url: 
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+propane gas services:
+  name: 
+  slug: 
+  category: Gasfitting
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+  
+  subsection:
+    - title: Cylinder
+      anchor: cylinder
+      description:
+      image:
+      url: 
+    - title: Liquid Propane Gas
+      anchor: lpg
+      description:
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+gas safety inspection:
+  name: 
+  slug: 
+  category: Gasfitting
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Annual
+      anchor: #annual
+      description:
+      image:
+      url: 
+    - title: Gas Pressure Testing
+      #pressure-testing
+      description:
+      image:
+      url:
+    - title: Gas Leak Detection
+      anchor: #leak
+      description:
+      image:
+      url:
+    - title: Certification
+      anchor: #certificate
+      description: 
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+heating system installation:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+gas furnace installation:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+boiler installation:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+hydronic heating:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Radian Floor
+      anchor: radian-floor 
+      description:
+      image:
+      url: 
+    - title: Zone Control
+      anchor: zone-control
+      description:
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+heating maintenance:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Inspection
+      anchor: inspection
+      description:
+      image:
+      url: 
+    - title: Tuning
+      anchor: tuning
+      description:
+      image:
+      url:
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    
+thermostats:
+  name: 
+  slug: 
+  category: Heating System
+  primary_keyword: 
+  secondary_keywords:
+
+  hero:
+    h1: 
+    h2: 
+
+  intro: 
+
+  description:
+
+  subsection:
+    - title: Installation
+      anchor: 
+      description:
+      image:
+      url: 
+    - title: Repair
+      anchor: 
+      description:
+      image:
+      url:
+    - title: Smart Thermostats
+      anchor: smarth
+      description:
+      image:
+      url:      
+
+  trust_points:
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+    - title: 
+      icon: 
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+   
+  technical: >
+    

@@ -18,7 +18,7 @@ carp:
   slug: carp
   image: carp.jpg
 
-carleton_place:
+carleton place:
   name: Carleton Place
   region: Ontario
   slug: carleton-place
@@ -44,7 +44,7 @@ perth:
   image: perth.jpg
   chamber: <a href="https://members.perthchamber.com/list/member/galico-2741" target="_blank" class="link-primary">Perth & District Chamber of Commerce</a>
   
-smiths_falls:
+smiths falls:
   name: Smiths Falls
   region: Ontario
   slug: smiths-falls

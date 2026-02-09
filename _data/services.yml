@@ -1,55 +1,919 @@
-gas-water-heater-installation:
-  name: Gas Water Heater Installation
-  slug: gas-water-heater-installation
-  category: Hot Water Systems
-  primary_keyword: gas water heater installation
+tank water heater installation:
+  name: Tank Water Heater Installation
+  slug: tank-water-heater-installation
+  category: Hot Water System
+  primary_keyword: tank water heater installation
   secondary_keywords:
-    - gas technician
-    - gas fitter
-    - gas installation service
+    - hot water tank installation
+    - natural gas water heater
+    - water heater installer Ontario
 
   hero:
-    h1: Gas Water Heater Installation
-    h2: Licensed Gas Installation Service
+    h1: Hot Water Tank Installation
+    h2: Safe, code-compliant gas hot water systems installed by licensed gas technicians
 
-  intro: 
-    Professional gas water heater installation performed by licensed
-    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+  intro: >
+    Reliable hot water starts with a properly installed gas water heater. Galico specializes in
+    residential gas water heater installation and replacement, ensuring safety, efficiency,
+    and long-term performance.
+
+  description:
+    - Galico is a dedicated hot water system supplier specializing in residential water heater installation and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
+    - We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
+    - Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
 
   trust_points:
-    - Licensed residential gasfitter
-    - Code-compliant installations
-    - Manufacturer-approved venting
-    - Full commissioning & testing
+    - title: Licensed Gas Technician (TSSA)
+      icon: fa-check
+    - title: Code-Compliant Installations
+      icon: fa-check
+    - title: Local, Trusted Service
+      icon: fa-map
 
-  technical: >
-    Gas water heater installations require proper gas sizing,
-    venting verification, combustion testing, and safety inspection.
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
 
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+
+gas water heater installation:
+  name: Gas Water Heater Installation
+  slug: gas-water-heater-installation
+  category: Hot Water System
+  primary_keyword: gas water heater installation
+  secondary_keywords:
+    - gas hot water tank installation
+    - natural gas water heater
+    - water heater installer Ontario
+
+  hero:
+    h1: Gas Water Heater Installation & Replacement
+    h2: Safe, code-compliant gas hot water systems installed by licensed gas technicians
+
+  intro: >
+    Reliable hot water starts with a properly installed gas water heater. Galico specializes in
+    residential gas water heater installation and replacement, ensuring safety, efficiency,
+    and long-term performance.
+
+  description:
+    - Galico is a dedicated hot water system supplier specializing in residential water heater installation, replacement, and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
+    - We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
+    - Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
+
+  trust_points:
+    - title: Licensed Gas Technician (TSSA)
+      icon: fa-shield
+    - title: Code-Compliant Installations
+      icon: fa-check
+    - title: Local, Trusted Service
+      icon: fa-map
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
 tankless water heater installation:
   name: Tankless Water Heater Installation
   slug: tankless-water-heater-installation
-  category: hot-water
+  category: Hot Water System
   primary_keyword: tankless water heater installation
   secondary_keywords:
-    - gas technician
-    - gas fitter
-    - gas installation service
+    - on-demand water heater
+    - gas tankless water heater
+    - high efficiency water heater
 
   hero:
     h1: Tankless Water Heater Installation
-    h2: Licensed Gas Installation Service
+    h2: Endless hot water with high-efficiency tankless systems
 
   intro: >
-    Professional tankless water heater installation performed by licensed
-    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+    Upgrade to endless hot water and improved energy efficiency with a professionally installed
+    tankless water heater.
+
+  description: >
+    Tankless water heaters heat water on demand, eliminating standby losses and saving space.
+    We assess gas supply, venting, and household demand to ensure your system is sized and
+    installed correctly.
 
   trust_points:
-    - Licensed residential gasfitter
-    - Code-compliant installations
-    - Manufacturer-approved venting
-    - Full commissioning & testing
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
 
-  technical: >
-    tankless water heater installations require proper gas sizing,
-    venting verification, combustion testing, and safety inspection.
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+water heater replacement:
+  name: Water Heater Replacement
+  slug: water-heater-replacement
+  category: Hot Water System
+  primary_keyword: water heater replacement
+  secondary_keywords:
+    - hot water tank replacement
+    - emergency water heater replacement
+
+  hero:
+    h1: Water Heater Replacement Services
+    h2: Fast replacement when your hot water tank fails
+
+  intro: >
+    A failing water heater can disrupt your entire home. We provide prompt, professional
+    replacement services to restore hot water quickly.
+
+  description: >
+    Whether your tank is leaking, underperforming, or beyond repair, we handle full replacements
+    including disposal, upgrades, and system improvements.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+electric water heater installation:
+  name: Electric Water Heater Installation
+  slug: electric-water-heater-installation
+  category: Hot Water System
+  primary_keyword: electric water heater installation
+  secondary_keywords:
+    - electric hot water tank
+    - electric water heater replacement
+
+  hero:
+    h1: Electric Water Heater Installation
+    h2: Reliable electric hot water systems installed safely
+
+  intro: >
+    Electric water heaters offer a dependable solution where gas is unavailable or not desired.
+
+  description: >
+    We install electric water heaters with proper electrical connections, safety controls,
+    and capacity sizing to meet your household needs.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+gas line installation:
+  name: Gas Line Installation
+  slug: gas-line-installation
+  category: Gasfitting
+  primary_keyword: gas line installation
+  secondary_keywords:
+    - natural gas line installation
+    - gas piping installation
+
+  hero:
+    h1: Gas Line Installation Services
+    h2: Safe gas piping for appliances and heating systems
+
+  intro: >
+    Proper gas line installation is critical for safety and performance.
+
+  description: >
+    We design and install gas piping for new appliances, renovations, and home upgrades,
+    following all code and pressure-testing requirements.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+gas appliance installation:
+  name: Gas Appliance Installation
+  slug: gas-appliance-installation
+  category: Gasfitting
+  primary_keyword: gas appliance installation
+  secondary_keywords:
+    - gas range installation
+    - gas dryer installation
+
+  hero:
+    h1: Gas Appliance Installation
+    h2: Professional installation of residential gas appliances
+
+  intro: >
+    Installing gas appliances requires licensed expertise to ensure safety.
+
+  description: >
+    From ranges and dryers to fireplaces, we install and commission gas appliances
+    according to manufacturer specifications.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+ 
+natural gas services:
+  name: Natural Gas Services
+  slug: natural-gas-services
+  category: Gasfitting
+  primary_keyword: natural gas services
+  secondary_keywords:
+    - natural gas installation
+    - gas service upgrade
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  hero:
+    h1: Residential Natural Gas Services
+    h2: End-to-end natural gas solutions for your home
+
+  intro: >
+    Natural gas provides efficient energy for heating and appliances.
+
+  description: >
+    We assist with new gas services, meter connections, and system expansions
+    in coordination with utility providers.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+propane gas services:
+  name: Propane Gas Services
+  slug: propane-gas-services
+  category: Gasfitting
+  primary_keyword: propane gas services
+  secondary_keywords:
+    - propane installation
+    - propane gas line
+
+  hero:
+    h1: Propane Gas Installation & Service
+    h2: Safe propane systems for rural and off-grid homes
+
+  intro: >
+    Propane is a versatile energy source for rural properties.
+
+  description: >
+    We install and service propane systems, including cylinders and LPG connections,
+    with a focus on safety and reliability.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+gas safety inspection:
+  name: Gas Safety Inspection
+  slug: gas-safety-inspection
+  category: Gasfitting
+  primary_keyword: gas safety inspection
+  secondary_keywords:
+    - gas pressure test
+    - gas leak detection
+
+  hero:
+    h1: Gas Safety Inspections & Testing
+    h2: Protect your home with certified gas safety checks
+
+  intro: >
+    Regular gas safety inspections reduce risk and ensure compliance.
+
+  description: >
+    Our inspections include pressure testing, leak detection, and certification
+    for peace of mind.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+heating system installation:
+  name: Heating System Installation
+  slug: heating-system-installation
+  category: Heating System
+  primary_keyword: heating system installation
+  secondary_keywords:
+    - home heating installation
+    - residential heating systems
+
+  hero:
+    h1: Heating System Installation
+    h2: Efficient heating systems designed for Ontario winters
+
+  intro: >
+    A properly installed heating system ensures comfort and efficiency.
+
+  description: >
+    We install residential heating systems tailored to your home size,
+    layout, and energy goals.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+gas furnace installation:
+  name: Gas Furnace Installation
+  slug: gas-furnace-installation
+  category: Heating System
+  primary_keyword: gas furnace installation
+  secondary_keywords:
+    - high efficiency furnace
+    - furnace replacement
+
+  hero:
+    h1: Gas Furnace Installation
+    h2: High-efficiency furnaces for dependable home heating
+
+  intro: >
+    Modern gas furnaces offer reliable and cost-effective heating.
+
+  description: >
+    We install and replace gas furnaces with proper venting,
+    airflow balancing, and startup commissioning.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+boiler installation:
+  name: Boiler Installation
+  slug: boiler-installation
+  category: Heating System
+  primary_keyword: boiler installation
+  secondary_keywords:
+    - hydronic boiler
+    - residential boiler installation
+
+  hero:
+    h1: Boiler Installation Services
+    h2: Hydronic heating systems built for comfort
+
+  intro: >
+    Boilers provide even, comfortable heat through hydronic systems.
+
+  description: >
+    We install residential boilers with careful system design,
+    zoning, and efficiency optimization.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+hydronic heating:
+  name: Hydronic Heating
+  slug: hydronic-heating
+  category: Heating System
+  primary_keyword: hydronic heating
+  secondary_keywords:
+    - radiant floor heating
+    - hydronic systems
+
+  hero:
+    h1: Hydronic & Radiant Heating Systems
+    h2: Comfortable, efficient heat delivered through water
+
+  intro: >
+    Hydronic heating offers quiet, even warmth throughout your home.
+
+  description: >
+    At Galico, we install high-efficiency hydronic heating systems—including radiant floor heating—for homes and businesses across Ottawa, Carleton Place, Arnprior, Perth, and Smiths Falls. Unlike traditional forced-air systems, hydronic heating uses hot water circulated through a network of PEX tubing installed beneath your floors, delivering even, quiet, and energy-efficient warmth from the ground up. Whether you’re building a new home or upgrading your existing heating system, our certified technicians create custom hydronic solutions that maximize comfort, reduce energy bills, and eliminate cold spots. We specialize in radiant floor heating for tile, hardwood, and concrete slabs, as well as hydronic baseboard, all integrated with modern, high-efficiency boilers or heat sources. Every system we install meets Ontario building codes, includes proper zoning controls, and is thoroughly pressure-tested for reliability and safety. As trusted heating professionals serving Ottawa, we understand the region’s climate demands and prioritize durable, low-maintenance systems that provide years of dependable comfort. If you’re looking for a cleaner, quieter, and more efficient way to heat your space with radiant floor or hydronic heating, contact Galico today for a free consultation and expert service you can count on.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Synergy3 Construction"
+      location: "Almonte"
+      rating: 5.0
+      text: "We engaged Galico to install a complete hydronic heating system for a large custom home, and the results were outstanding. The project involved gas fitting, boiler, radiant floor heating for both the basement and garage, indirect hot water tank, and fireplace. Galico's team was professional and meticulous from start to finish. We have the highest confidence in Galico and would not hesitate to recommend them for any complex heating project."
+      image: "hydronic-1.jpg"
+
+  cta: "Learn More"
+  
+heating maintenance:
+  name: Heating Maintenance
+  slug: heating-maintenance
+  category: Heating System
+  primary_keyword: heating maintenance
+  secondary_keywords:
+    - furnace maintenance
+    - heating system inspection
+
+  hero:
+    h1: Heating Maintenance Services
+    h2: Keep your heating system running efficiently
+
+  intro: >
+    Routine maintenance improves performance and extends equipment life.
+
+  description: >
+    We inspect, tune, and maintain residential heating systems
+    to prevent breakdowns and improve efficiency.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  
+thermostats:
+  name: Thermostat Services
+  slug: thermostats
+  category: Heating System
+  primary_keyword: thermostat installation
+  secondary_keywords:
+    - smart thermostat
+    - thermostat replacement
+
+  hero:
+    h1: Thermostat Installation & Upgrades
+    h2: Precise temperature control for your home
+
+  intro: >
+    Modern thermostats improve comfort and energy savings.
+
+  description: >
+    We install and replace thermostats, including smart models,
+    ensuring proper integration with your heating system.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+  

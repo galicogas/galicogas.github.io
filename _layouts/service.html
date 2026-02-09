@@ -1,13 +1,9 @@
-<!doctype html>
-<html lang="en">
+{% assign service = site.data.services[page.service_key] %}
 
   {% include head.html %}
   {% include header.html %}
   {% include disclaimer-banner.html %}
   {% include script.html %}
-
-  <body>
-{% assign service = site.data.services[page.service_key] %}
 
 <!-- Offer Page Start -->
 <div class="container-xxl py-5" id="offer">
@@ -17,7 +13,7 @@
           <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.1s">
             <div class="border-start border-5 border-primary ps-4">
               <h6 class="text-body text-uppercase mb-2">{{service.category}}</h6>
-              <h1 class="display-6 mb-0">
+              <h1 class="display-12 mb-0">
                 {{service.hero.h1}}
               </h1>
             </div>
@@ -25,7 +21,9 @@
         </div>
 		<div class="row g-5 mb-5">
 			<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-				<p>{{service.intro}}</p>
+				{% for paragraph in service.description %}
+					<p>{{ paragraph }}</p>
+				{% endfor %}
 			</div>
 
 			<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -40,76 +38,96 @@
 
 				<div class="border-top mt-4 pt-4">
 				  <div class="row g-4">
-					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
-					  <i class="fa fa-wrench fa-2x text-primary flex-shrink-0 me-3"></i>
-					  <h6 class="mb-0">New Gas Line Installation</h6>
-					</div>
-					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
-					  <i class="fa fa-tools fa-2x text-primary flex-shrink-0 me-3"></i>
-					  <h6 class="mb-0">Gas Line Repairs & Relocations</h6>
-					</div>
-					<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
-					  <i class="fa fa-shield-alt fa-2x text-primary flex-shrink-0 me-3"></i>
-					  <h6 class="mb-0">TSSA-Certified & Pressure Tested</h6>
-					</div>
+					{% for trust in service.trust_points %}
+					{% assign delay = forloop.index0 | times: 0.2 | append: 's' %}
+						<div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="{{ delay }}">
+							<i class="fa {{ trust.icon }} fa-2x text-primary flex-shrink-0 me-3"></i>
+							<h6 class="mb-0">{{ trust.title }}</h6>
+						</div>
+					{% endfor %}
 				  </div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	{% for key in site.data.top_categories %}
-	  {% assign s = key[1] %}
-	  {% assign row_position = forloop.index0 | modulo: 3 %}
-	  {% assign delay = row_position | times: 0.2 %}
-			  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}s">
-				<div class="service-item bg-light overflow-hidden h-100">
-				  <img class="img-fluid" src="{{'assets/img/{{s.image' | relative_url}}" alt="{{s.name}}" />
-				  <div class="service-text position-relative text-center h-100 p-4">
-					<h2 class="mb-3">{{s.name}}</h2>
-					<p>{{s.desc}}</p>
-					<a href="" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
-				  </div>
-				</div>
-			  </div>
-	{% endfor %}
-
   <div class="row g-4 justify-content-center">
-		  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src="img/virtualmeeting.jpg" alt=""/>
-              <div class="service-text position-relative text-center h-100 p-4">
-                <h2 class="mb-3">Virtual Consultation</h2>
-                <p>Schedule a free virtual evaluation of your project, using your smart phone/tablet.</p>
-				<!-- Calendly link widget begin -->
-				<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-				<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-				<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eric-pythago/virtual-consultation'});return false;" class="btn btn-primary py-3 px-5">Book Now</a>
-				<!-- Calendly link widget end -->
-				<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZM6WNvFSnC-TlXvvKD_TiPBq2IFSKaqWWFSdXL5KiQOHWQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Request a Quote</a> -->
-              </div>
-            </div>
-          </div>	
-		  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src="img/onsiteestimate.jpg" alt=""/>
-              <div class="service-text position-relative text-center h-100 p-4">
-                <h2 class="mb-3">Onsite Consultation</h2>
-                <p>Schedule an onsite visit for evaluating your project and provide an estimate.</p>
-				<!-- Calendly link widget begin -->
-				<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-				<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-				<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eric-pythago/galico-estimate'});return false;" class="btn btn-primary py-3 px-5">Book Now</a>
-				<!-- Calendly link widget end -->
-				<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSctZM6WNvFSnC-TlXvvKD_TiPBq2IFSKaqWWFSdXL5KiQOHWQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Request a Quote</a> -->
-              </div>
-            </div>
-          </div>
+  {% for item in service.cards %}
+  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ item.delay }}">
+    <div class="service-item bg-light overflow-hidden h-100">
+      <img 
+        class="img-fluid" 
+        src="/assets/img/{{ item.image }}"
+        alt="{{ item.alt | default: item.title }}"
+      >
+      <div class="service-text position-relative text-center h-100 p-4">
+        <h2 class="mb-3">{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+        <!-- Calendly Button (Relies on GLOBAL assets) -->
+        <a 
+          href="#" 
+          onclick="Calendly.initPopupWidget({url: '{{ item.calendly_url }}'}); return false;"
+          class="btn btn-primary py-3 px-5"
+          aria-label="Book {{ item.title }}"
+        >
+          {{ item.cta }}
+        </a>
+        <!-- 
+        Optional: Uncomment later if adding Google Forms toggle
+        {% if item.button_type == "google-forms" %}
+        <a href="{{ item.form_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">
+          Request a Quote
+        </a>
+        {% endif %}
+        -->
+      </div>
     </div>
-</div>
-</div>
-</section>
+  </div>
+  {% endfor %}
+  </div>
 
+</div>
+<!-- Reviews Section -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <h3 class="text-center mb-4">Customer Reviews</h3>
+		{% for testimonial in service.testimonials %}
+		<div class="border rounded p-4 mb-4">
+		  {% if testimonial.image %}
+		  <div class="text-center mb-3">
+			<img 
+			  src="/assets/img/testimonials/{{ testimonial.image }}" 
+			  alt="{{ testimonial.name }} testimonial photo" 
+			  class="img-fluid rounded" 
+			  style="max-height: 200px; object-fit: cover;"
+			>
+		  </div>
+		  {% endif %}
+		  
+		  <div class="d-flex align-items-center justify-content-center mb-3">
+			<div class="me-3" aria-label="{{ testimonial.rating }} out of 5 stars" role="img">
+			  {% for i in (1..5) %}
+				{% assign current = i | plus: 0 %}
+				{% assign half_step = i | minus: 0.5 %}
+				{% if testimonial.rating >= current %}
+				  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+				{% elsif testimonial.rating >= half_step %}
+				  <i class="bi bi-star-half text-warning" aria-hidden="true"></i>
+				{% else %}
+				  <i class="bi bi-star text-warning" aria-hidden="true"></i>
+				{% endif %}
+			  {% endfor %}
+			</div>
+			<small class="text-muted"><b>{{ testimonial.name }}</b> in {{ testimonial.location }}, ON</small>
+		  </div>
+		  
+		  <p class="text-center mb-0">"{{ testimonial.text }}"</p>
+		</div>
+		{% endfor %}
+	</div>
+  </div>
+</div>
 <!-- Offer Page End -->
 
   </body>

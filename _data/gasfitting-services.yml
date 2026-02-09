@@ -1,9 +1,9 @@
-tank water heater installation:
-  name: Tank Water Heater Installation
-  slug: tank-water-heater-installation
-  image: tank-water-heater-installation.jpg  
-  category: Hot Water Systems
-  primary_keyword: tank water heater installation
+gas line installation:
+  name: Gas Line Installation
+  slug: gas-line-installation
+  image: gas-line-installation.jpg  
+  category: gasfitting
+  primary_keyword: gas line installation
   secondary_keywords:
     - gas technician
     - gas fitter
@@ -29,12 +29,12 @@ tank water heater installation:
   
   cta: Book Now
   
-tankless water heater installation:
-  name: Tankless Water Heater Installation
-  slug: tankless-water-heater-installation
-  image: tankless-water-heater-installation.jpg
-  category: hot-water
-  primary_keyword: tankless water heater installation
+gas appliance installation:
+  name: Gas Appliance Installation
+  slug: gas-appliance-installation
+  image: gas-appliance-installation.jpg
+  category: gasfitting
+  primary_keyword: gas appliance installation
   secondary_keywords:
     - gas technician
     - gas fitter
@@ -60,19 +60,19 @@ tankless water heater installation:
   
   cta: Book Now
       
-water heater replacement:
-  name: Water Heater Replacement
-  slug: water-heater-replacement
-  image: water-heater-replacement.jpg
-  category: Hot Water Systems
-  primary_keyword: water heater replacement
+natural gas services:
+  name: Natural Gas Services
+  slug: natural-gas-services
+  image: natural-gas-services.jpg
+  category: gasfitting
+  primary_keyword: natural gas services
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Water Heater Replacement
+    h1: Natural Gas Services
     h2: Licensed Gas Installation Service
 
   intro: 
@@ -91,18 +91,18 @@ water heater replacement:
   
   cta: Book Now
   
-gas water heater installation:
-  name: Gas Water Heater Installation
-  slug: gas-water-heater-installation
-  category: Hot Water Systems
-  primary_keyword: gas water heater installation
+propane gas services:
+  name: Propane Gas Services
+  slug: propane-gas-services
+  category: gasfitting
+  primary_keyword: propane gas services
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Gas Water Heater Installation
+    h1: Propane Gas Services
     h2: Licensed Gas Installation Service
 
   intro: 
@@ -121,18 +121,18 @@ gas water heater installation:
   
   cta: Book Now
       
-electric water heater installation:
-  name: Electric Water Heater Installation
-  slug: electric-water-heater-installation
-  category: Hot Water Systems
-  primary_keyword: electric water heater installation
+gas safety inspection:
+  name: Gas Safety Inpection
+  slug: gas-safety-inspection
+  category: gasfitting
+  primary_keyword: gas safety inspection
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Electric Water Heater Installation
+    h1: Gas Safety Inspection
     h2: Licensed Gas Installation Service
 
   intro: 

@@ -1,0 +1,42 @@
+---
+layout: default_style
+title: Services | Galico
+permalink: /services
+---
+
+		<!-- Services Start -->
+		<div class="container-xxl py-5" id="products">
+		  <div class="container">
+			<div class="row g-5 align-items-end mb-5">
+			  <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+				<div class="border-start border-5 border-primary ps-4">
+				  <h6 class="text-body text-uppercase mb-2">Trusted Professional</h6>
+				  <h1 class="display-6 mb-0">
+					Our Services
+				  </h1>
+				</div>
+			  </div>
+			</div>
+			<div class="row g-4 justify-content-center">
+			   {% assign content = site.data.top_categories[page.category_key] %}
+					{% for key in site.data.top_categories %}
+					  {% assign s = key[1] %}
+					  {% assign row_position = forloop.index0 | modulo: 3 %}
+					  {% assign delay = row_position | times: 0.2 %}
+							  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ delay }}s">
+								<div class="service-item bg-light overflow-hidden h-100">
+								  <img class="img-fluid" src="/assets/img/{{s.image}}" alt="{{s.name}}" />
+								  <div class="service-text position-relative text-center h-100 p-4">
+									<h2 class="mb-3">{{s.name}}</h2>
+									<p>{{s.desc}}</p>
+									<a href="{{ s.url }}" class="btn btn-primary py-3 px-5">{{s.cta}}</a>
+								  </div>
+								</div>
+							  </div>
+					{% endfor %}
+			</div>
+		  </div>
+		</div>
+		<!-- Services End -->
+
+

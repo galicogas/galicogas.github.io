@@ -1,7 +1,7 @@
 ---
 layout: default_style
-title: Hot Water System Services | Galico
-permalink: /hot-water/
+title: Heating System | Galico
+permalink: /heating/
 ---
 	<!-- Services Start -->
     <div class="container-xxl py-5" id="services">
@@ -9,9 +9,9 @@ permalink: /hot-water/
         <div class="row g-6 align-items-end mb-5">
           <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
             <div class="border-start border-5 border-primary ps-4">
-              <h6 class="text-body text-uppercase mb-2">Residential Hot Water Systems You Can Rely On</h6>
+              <h6 class="text-body text-uppercase mb-2">Efficient Heating Systems Designed for Ontario Homes</h6>
               <h1 class="display-12 mb-0">
-                Hot Water System Installation & Replacement Specialists
+                Residential Heating Installation & Hydronic Heating Services
               </h1>
             </div>
 		  </div>
@@ -23,20 +23,20 @@ permalink: /hot-water/
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 600px">
 			   <p>
-			   Galico is a dedicated hot water system supplier specializing in residential water heater installation, replacement, and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
+			   As a residential heating contractor, Galico provides heating installation and upgrade services that support comfort, efficiency, and long‑term system performance. Our work focuses on heating systems commonly paired with gas and hydronic applications, allowing us to deliver integrated solutions rather than disconnected services.
 			  </p>
 			  <p>
-			  We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
+			  We install and service gas furnaces, boilers, and hydronic heating systems, including radiant floor heating and zoning solutions. These systems are designed to deliver consistent indoor comfort while reducing energy waste and operating costs.
 			  </p>
-			  Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
+			  Our heating services are especially valuable for homeowners upgrading older equipment or planning system replacements alongside gas or hot water system installations. By coordinating heating and gasfitting expertise, we ensure systems are sized correctly, installed safely, and optimized for real‑world use. Galico approaches heating projects with the same discipline and attention to detail that define our gas and hot water work.
 			  <p>
 			</div>
 		  </div>
 		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 				<img 
 				  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
-				  src="{{ '/assets/img/tankless-water-heater-installation.jpg' | relative_url }}"
-				  alt="Hot Water System Installation"
+				  src="{{ '/assets/img/heating-system.jpg' | relative_url }}"
+				  alt="Cozy family"
 				/>
 			<div class="border-top mt-4 pt-4">
                 <div class="row g-4">
@@ -62,16 +62,20 @@ permalink: /hot-water/
               </div>
 		</div>
 		
-		
+	<div class="container">
 		<div class="row g-4 justify-content-center">
 		<!-- {% assign content = site.data.top_categories[page.category_key] %} -->
         {% for key in site.data.services %}
-		  {% if key[1].category == "Hot Water System" %}
-			{% include card2.html %}
+		  {% if key[1].category == "Heating System" %}
+		  <div class="row g-6 align-items-end mb-5">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+		  <div class="border-start border-5 border-primary ps-4">
+              <a href="/heating/{{ key[1].slug }}"><h4 class="display-12 mb-0">{{ key[1].hero.h1 }}</h4></a>
+	      </div></div></div>
 		  {% endif %}
 		{% endfor %}
 		</div>
-      </div>
+      </div></div>
     </div>
  </div>
 <!-- Services End -->

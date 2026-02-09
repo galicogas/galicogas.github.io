@@ -1,16 +1,16 @@
-tank water heater installation:
-  name: Tank Water Heater Installation
-  slug: tank-water-heater-installation
-  image: tank-water-heater-installation.jpg  
-  category: Hot Water Systems
-  primary_keyword: tank water heater installation
+heating system installation:
+  name: Heating System Installation
+  slug: heating-system-installation
+  image: heating-system-installation.jpg  
+  category: heating
+  primary_keyword: heating system installation
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Tank Water Heater Installation
+    h1: Heating System Installation
     h2: Licensed Gas Installation Service
 
   intro: 
@@ -29,19 +29,19 @@ tank water heater installation:
   
   cta: Book Now
   
-tankless water heater installation:
-  name: Tankless Water Heater Installation
-  slug: tankless-water-heater-installation
-  image: tankless-water-heater-installation.jpg
-  category: hot-water
-  primary_keyword: tankless water heater installation
+gas furnace installation:
+  name: Gas Furnace Installation
+  slug: gas-furnace-installation
+  image: gas-furnace-installation.jpg
+  category: heating
+  primary_keyword: gas furnace installation
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Tankless Water Heater Installation
+    h1: Gas Furnace Installation
     h2: Licensed Gas Installation Service
 
   intro: >
@@ -60,19 +60,19 @@ tankless water heater installation:
   
   cta: Book Now
       
-water heater replacement:
-  name: Water Heater Replacement
-  slug: water-heater-replacement
-  image: water-heater-replacement.jpg
-  category: Hot Water Systems
-  primary_keyword: water heater replacement
+boiler installation:
+  name: Boiler Installation
+  slug: boiler-installation
+  image: boiler-installation.jpg
+  category: heating
+  primary_keyword: boiler installation
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Water Heater Replacement
+    h1: Boiler Installation
     h2: Licensed Gas Installation Service
 
   intro: 
@@ -91,18 +91,18 @@ water heater replacement:
   
   cta: Book Now
   
-gas water heater installation:
-  name: Gas Water Heater Installation
-  slug: gas-water-heater-installation
-  category: Hot Water Systems
-  primary_keyword: gas water heater installation
+hydronic heating:
+  name: Hydronic Heating
+  slug: hydronic-heating
+  category: heating
+  primary_keyword: hydronic heating
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Gas Water Heater Installation
+    h1: Hydronic Heating
     h2: Licensed Gas Installation Service
 
   intro: 
@@ -121,18 +121,48 @@ gas water heater installation:
   
   cta: Book Now
       
-electric water heater installation:
-  name: Electric Water Heater Installation
-  slug: electric-water-heater-installation
-  category: Hot Water Systems
-  primary_keyword: electric water heater installation
+heating maintenance:
+  name: Heating Maintenance
+  slug: heating-maintenance
+  category: heating
+  primary_keyword: heating maintenance
   secondary_keywords:
     - gas technician
     - gas fitter
     - gas installation service
 
   hero:
-    h1: Electric Water Heater Installation
+    h1: Heating Maintenance
+    h2: Licensed Gas Installation Service
+
+  intro: 
+    Professional electric water heater installation performed by licensed
+    gasfitters and experienced gas technicians serving Ottawa and West Ottawa.
+
+  trust_points:
+    - Licensed residential gasfitter
+    - Code-compliant installations
+    - Manufacturer-approved venting
+    - Full commissioning & testing
+
+  technical: >
+    Gas water heater installations require proper gas sizing,
+    venting verification, combustion testing, and safety inspection.
+  
+  cta: Book Now
+  
+Thermostats:
+  name: Thermostats
+  slug: thermostats
+  category: heating
+  primary_keyword: thermostats
+  secondary_keywords:
+    - gas technician
+    - gas fitter
+    - gas installation service
+
+  hero:
+    h1: Thermostats
     h2: Licensed Gas Installation Service
 
   intro: 
