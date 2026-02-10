@@ -59,6 +59,66 @@ tank water heater installation:
 
   cta: "Learn More"
 
+tankless water heater installation:
+  name: Tankless Water Heater Installation
+  slug: tankless-water-heater-installation
+  category: Hot Water System
+  primary_keyword: tankless water heater installation
+  secondary_keywords:
+    - on-demand water heater
+    - gas tankless water heater
+    - high efficiency water heater
+
+  hero:
+    h1: Tankless Water Heater Installation
+    h2: Endless hot water with high-efficiency tankless systems
+
+  intro: >
+    Upgrade to endless hot water and improved energy efficiency with a professionally installed
+    tankless water heater.
+
+  description: >
+    Tankless water heaters heat water on demand, eliminating standby losses and saving space.
+    We assess gas supply, venting, and household demand to ensure your system is sized and
+    installed correctly.
+
+  trust_points:
+    - title: Licensed residential gasfitter
+      icon: fa-wrench
+    - title: Code-compliant installations
+      icon: fa-tools
+    - title: Full commissioning & testing
+      icon: fa-check
+
+  cards:
+    - title: "Virtual Consultation"
+      image: "virtualmeeting.jpg"
+      alt: "Virtual meeting on tablet"
+      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
+      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
+      cta: "Book Now"
+
+    - title: "Onsite Consultation"
+      image: "onsiteestimate.jpg"
+      alt: "Technician onsite estimate"
+      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
+      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
+      cta: "Book Now"
+
+  testimonials:  
+    - name: "Andree Condie"
+      location: "Kanata"
+      rating: 5.0
+      text: "Professionnel, meticulous, clean attentive service would highly recommend"
+      image: "andree.jpg"  # Optional - omit this line if no image
+      
+    - name: "Vyacheslav Zavadsky"
+      location: "Nepean"
+      rating: 5.0
+      text: "Hard working, well equipped and reasonable. What else you can ask for..."
+
+  cta: "Learn More"
+
 gas water heater installation:
   name: Gas Water Heater Installation
   slug: gas-water-heater-installation
@@ -120,28 +180,25 @@ gas water heater installation:
 
   cta: "Learn More"
   
-tankless water heater installation:
-  name: Tankless Water Heater Installation
-  slug: tankless-water-heater-installation
+electric water heater installation:
+  name: Electric Water Heater Installation
+  slug: electric-water-heater-installation
   category: Hot Water System
-  primary_keyword: tankless water heater installation
+  primary_keyword: electric water heater installation
   secondary_keywords:
-    - on-demand water heater
-    - gas tankless water heater
-    - high efficiency water heater
+    - electric hot water tank
+    - electric water heater replacement
 
   hero:
-    h1: Tankless Water Heater Installation
-    h2: Endless hot water with high-efficiency tankless systems
+    h1: Electric Water Heater Installation
+    h2: Reliable electric hot water systems installed safely
 
   intro: >
-    Upgrade to endless hot water and improved energy efficiency with a professionally installed
-    tankless water heater.
+    Electric water heaters offer a dependable solution where gas is unavailable or not desired.
 
   description: >
-    Tankless water heaters heat water on demand, eliminating standby losses and saving space.
-    We assess gas supply, venting, and household demand to ensure your system is sized and
-    installed correctly.
+    We install electric water heaters with proper electrical connections, safety controls,
+    and capacity sizing to meet your household needs.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -179,7 +236,7 @@ tankless water heater installation:
       text: "Hard working, well equipped and reasonable. What else you can ask for..."
 
   cta: "Learn More"
-  
+    
 water heater replacement:
   name: Water Heater Replacement
   slug: water-heater-replacement
@@ -200,63 +257,6 @@ water heater replacement:
   description: >
     Whether your tank is leaking, underperforming, or beyond repair, we handle full replacements
     including disposal, upgrades, and system improvements.
-
-  trust_points:
-    - title: Licensed residential gasfitter
-      icon: fa-wrench
-    - title: Code-compliant installations
-      icon: fa-tools
-    - title: Full commissioning & testing
-      icon: fa-check
-
-  cards:
-    - title: "Virtual Consultation"
-      image: "virtualmeeting.jpg"
-      alt: "Virtual meeting on tablet"
-      description: "Schedule a free virtual evaluation of your project, using your smart phone/tablet."
-      calendly_url: "https://calendly.com/eric-pythago/virtual-consultation"
-      cta: "Book Now"
-
-    - title: "Onsite Consultation"
-      image: "onsiteestimate.jpg"
-      alt: "Technician onsite estimate"
-      description: "Schedule an onsite visit for evaluating your project and provide an estimate."
-      calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
-      cta: "Book Now"
-
-  testimonials:  
-    - name: "Andree Condie"
-      location: "Kanata"
-      rating: 5.0
-      text: "Professionnel, meticulous, clean attentive service would highly recommend"
-      image: "andree.jpg"  # Optional - omit this line if no image
-      
-    - name: "Vyacheslav Zavadsky"
-      location: "Nepean"
-      rating: 5.0
-      text: "Hard working, well equipped and reasonable. What else you can ask for..."
-
-  cta: "Learn More"
-  
-electric water heater installation:
-  name: Electric Water Heater Installation
-  slug: electric-water-heater-installation
-  category: Hot Water System
-  primary_keyword: electric water heater installation
-  secondary_keywords:
-    - electric hot water tank
-    - electric water heater replacement
-
-  hero:
-    h1: Electric Water Heater Installation
-    h2: Reliable electric hot water systems installed safely
-
-  intro: >
-    Electric water heaters offer a dependable solution where gas is unavailable or not desired.
-
-  description: >
-    We install electric water heaters with proper electrical connections, safety controls,
-    and capacity sizing to meet your household needs.
 
   trust_points:
     - title: Licensed residential gasfitter

@@ -1,17 +1,20 @@
 hot-water:
   name: Hot Water System
   desc: Need hot water you can rely on? Request a professional installation or replacement quote today.
-  image: service-installation.jpg
+  image: hot-water-system.jpg
+  url: /hot-water/
   cta: Learn More
  
 gasfitting:
   name: Gasfitting
-  desc: Looking for a licensed gasfitter? Book a safe, code‑compliant gas installation today.
-  image: service-1.jpg
+  desc: Looking for a licensed gas technician? Book a safe, code‑compliant gas installation today.
+  image: gasfitting.jpg
+  url: /gasfitting/
   cta: Learn More
   
 heating:
-  name: Heating
+  name: Heating System
   desc: Planning a heating upgrade? Talk to a specialist who understands gas, water, and heat together.
-  image: hydronic-1.jpg
+  image: heating-system.jpg
+  url: /heating/
   cta: Learn More

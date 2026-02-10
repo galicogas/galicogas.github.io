@@ -35,7 +35,7 @@ permalink: /hot-water/
 		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 				<img 
 				  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
-				  src="{{ '/assets/img/tankless-water-heater-installation.jpg' | relative_url }}"
+				  src="{{ '/assets/img/hot-water-system.jpg' | relative_url }}"
 				  alt="Hot Water System Installation"
 				/>
 			<div class="border-top mt-4 pt-4">
@@ -63,17 +63,70 @@ permalink: /hot-water/
 		</div>
 		
 		
-		<div class="row g-4 justify-content-center">
-		<!-- {% assign content = site.data.top_categories[page.category_key] %} -->
-        {% for key in site.data.services %}
-		  {% if key[1].category == "Hot Water System" %}
-			{% include card2.html %}
-		  {% endif %}
-		{% endfor %}
-		</div>
+<!-- Services Start -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h2 class="display-6 fw-bold">Our Hot Water Solutions</h2>
+        <p class="lead text-muted">Explore our specialized services</p>
       </div>
     </div>
- </div>
+    
+        {% for key in site.data.services %}
+		  {% if key[1].category == "Hot Water System" %}
+    <a 
+      href="/hot-water/{{ key[1].slug }}" 
+      class="d-block text-decoration-none mb-4"
+    >
+      <div class="border rounded p-4 hover-lift">
+        <div class="d-flex align-items-center mb-3">
+          <div class="flex-shrink-0 me-4">
+            <div style="width: 60px; height: 60px;">
+              <img 
+                src="/assets/img/logo/favicon.jpg" 
+                alt="Galico Heating" 
+                class="img-fluid"
+                style="width: 40px; height: 40px; object-fit: contain;"
+              >
+            </div>
+          </div>
+          <div class="flex-grow-1">
+            <h2 class="fw-bold mb-1">{{ key[1].name }}</h2>
+            <p class="text-muted mb-0 lead">
+              {{ key[1].hero.h2 | default: 'Professional heating solutions for your home' }}
+            </p>
+          </div>
+          <div class="flex-shrink-0 text-primary">
+            <i class="fa fa-arrow-right fa-2x"></i>
+          </div>
+        </div>
+        
+<!--         <div class="d-flex align-items-center text-muted small">
+          <span class="me-3">
+            <i class="fa fa-list me-1"></i>
+            {{ heating_services | where_exp: "s", "s[1].subcategory == subcategory" | size }} services
+          </span>
+          <span>
+            <i class="fa fa-clock me-1"></i>
+            Free consultation available
+          </span>
+        </div> -->
+      </div>
+    </a>
+		  {% endif %}
+		{% endfor %}
+  </div>
+</section>
+
+<style>
+.hover-lift:hover {
+  border-color: #0d6efd !important;
+  box-shadow: 0 5px 20px rgba(13, 110, 253, 0.1);
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+</style>
 <!-- Services End -->
 
 <!-- Manufacturer Start -->

@@ -18,16 +18,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-3 py-lg-0">
-			<a href="https://galico.ca" class="nav-item nav-link">Home</a>
+			<!-- <a href="https://galico.ca" class="nav-item nav-link">Home</a> -->
 		  <div class="nav-item dropdown">
-            <a href="/services" class="nav-link d-inline-flex align-items-center">
-               Services
+            <a href="/hot-water/" class="nav-link d-inline-flex align-items-center">
+               Hot Water
                <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
             </a>
             <div class="dropdown-menu bg-light m-0">
-			  <a href="/hot-water/" class="dropdown-item">Hot Water System</a>
-              <a href="/gasfitting/" class="dropdown-item">Gasfitting</a>
-			  <a href="/heating/" class="dropdown-item">Heating</a>
+			  {% for key in site.data.services %}
+		      {% if key[1].category == "Hot Water System" %}
+			     <a href="/hot-water/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
+              {% endif %}
+			  {% endfor %}
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a href="/gasfitting/" class="nav-link d-inline-flex align-items-center">
+               Gasfitting
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  {% for key in site.data.services %}
+		      {% if key[1].category == "Gasfitting" %}
+			     <a href="/gasfitting/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
+              {% endif %}
+			  {% endfor %}
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a href="/heating/" class="nav-link d-inline-flex align-items-center">
+               Heating
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  {% for key in site.data.services %}
+		      {% if key[1].category == "Heating System" %}
+			     <a href="/heating/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
+              {% endif %}
+			  {% endfor %}
             </div>
           </div>
 		  <div class="nav-item dropdown">
