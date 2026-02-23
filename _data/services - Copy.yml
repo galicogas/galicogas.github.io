@@ -7,6 +7,7 @@ tank water heater installation:
     - hot water tank installation
     - natural gas water heater
     - water heater installer Ontario
+  image: ../assets/img/tank-water-heater-installation.jpg
 
   hero:
     h1: Hot Water Tank Installation
@@ -18,9 +19,13 @@ tank water heater installation:
     and long-term performance.
 
   description:
-    - Galico is a dedicated hot water system supplier specializing in residential water heater installation and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
-    - We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
-    - Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
+    - Tank water heaters remain one of the most reliable and cost-effective hot water solutions for homes in the Ottawa Valley. Galico specializes in professional tank water heater installation, providing homeowners with dependable hot water systems designed for long service life and consistent performance.
+
+    - We install both gas and electric tank water heaters, carefully sized to match your household’s hot water demand. Proper sizing is critical — an undersized tank leads to frequent cold-water complaints, while an oversized unit wastes energy and space. Our installation process accounts for household size, usage patterns, fuel availability, and local water conditions to ensure the system performs as expected.
+
+    - In hard-water areas, tank systems offer a key advantage; they are more forgiving of mineral buildup than compact heat exchangers found in tankless units. We take additional steps during installation to support long-term reliability, including proper venting, safe connections, and commissioning to manufacturer specifications. When applicable, we also advise on maintenance practices that help extend tank lifespan.
+
+    - Whether you’re replacing a failed water heater or upgrading an aging system, our focus is on safe installation, predictable performance, and clear expectations — so you can count on hot water without surprises.
 
   trust_points:
     - title: Licensed Gas Technician (TSSA)
@@ -68,7 +73,8 @@ tankless water heater installation:
     - on-demand water heater
     - gas tankless water heater
     - high efficiency water heater
-
+  image: ../assets/img/tankless-water-heater-installation.jpg
+  
   hero:
     h1: Tankless Water Heater Installation
     h2: Endless hot water with high-efficiency tankless systems
@@ -77,10 +83,14 @@ tankless water heater installation:
     Upgrade to endless hot water and improved energy efficiency with a professionally installed
     tankless water heater.
 
-  description: >
-    Tankless water heaters heat water on demand, eliminating standby losses and saving space.
-    We assess gas supply, venting, and household demand to ensure your system is sized and
-    installed correctly.
+  description: 
+    - Tankless water heaters provide hot water on demand and are an excellent option for homes looking to reduce energy use and free up floor space. Galico installs tankless water heaters with a focus on proper sizing, fuel compatibility, and long-term reliability — especially in Ottawa Valley water conditions.
+
+    - Unlike tank systems, tankless units rely on compact heat exchangers that must be correctly matched to household demand. Galico evaluates the number of occupants, peak hot water usage, available fuel, and incoming water temperature to determine the appropriate unit capacity. For gas systems, this includes confirming gas supply sizing and venting requirements before installation.
+
+    - In areas with hard water, tankless systems require thoughtful planning. Galico ensures installations are completed to manufacturer specifications and explains realistic maintenance expectations, including periodic descaling to protect efficiency and lifespan. When installed and maintained properly, tankless systems can deliver continuous hot water with excellent performance.
+
+    - Tankless water heater installation is ideal for homeowners who value efficiency, space savings, and consistent hot water — and Galico ensures the system is installed correctly from day one.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -121,14 +131,15 @@ tankless water heater installation:
 
 gas water heater installation:
   name: Gas Water Heater Installation
-  slug: gas-water-heater-installation
+  slug: gas-water-heater
   category: Hot Water System
   primary_keyword: gas water heater installation
   secondary_keywords:
     - gas hot water tank installation
     - natural gas water heater
     - water heater installer Ontario
-
+  image: ../assets/img/gas-water-heater-installation.jpg
+  
   hero:
     h1: Gas Water Heater Installation & Replacement
     h2: Safe, code-compliant gas hot water systems installed by licensed gas technicians
@@ -139,9 +150,13 @@ gas water heater installation:
     and long-term performance.
 
   description:
-    - Galico is a dedicated hot water system supplier specializing in residential water heater installation, replacement, and upgrades across Ottawa and West Ottawa. Unlike general plumbing companies, our focus is entirely on hot water systems — allowing us to deliver deeper expertise, better product guidance, and safer installations.
-    - We install and replace gas, electric, and tankless hot water systems for homeowners who want reliable performance, predictable operating costs, and code‑compliant workmanship. Whether your existing water heater is aging, leaking, or no longer meeting household demand, we provide clear recommendations based on your home, fuel type, and usage patterns.
-    - Our team handles removal of old equipment, proper venting, gas or electrical connections, and final commissioning to ensure your new system operates efficiently from day one. We also work with leading manufacturers to offer dependable equipment backed by strong warranties. For homeowners looking for long‑term reliability rather than quick fixes, Galico provides a focused, professional approach to hot water system installation and replacement.
+    - Gas water heaters are a popular choice for Ottawa Valley homes due to their fast recovery times and ability to handle high hot water demand. Galico provides professional gas water heater installation with a focus on safety, performance, and long-term reliability.
+
+    - Every gas water heater installation begins with proper system selection. Galico evaluates household size, usage patterns, and existing gas infrastructure to ensure the unit is correctly sized and compatible with the home. Correct sizing is essential for maintaining consistent hot water while avoiding unnecessary energy consumption.
+
+    - Gas water heaters are particularly well suited to hard-water areas, as tank-style systems are more forgiving of mineral buildup over time. Galico completes each installation with careful attention to venting, gas connections, combustion air requirements, and final commissioning. All work is performed to applicable codes and manufacturer standards.
+
+    - Whether installing a new system or replacing an existing unit, Galico’s gas water heater installations are designed to deliver dependable hot water, safe operation, and predictable performance for years to come.
 
   trust_points:
     - title: Licensed Gas Technician (TSSA)
@@ -188,6 +203,7 @@ electric water heater installation:
   secondary_keywords:
     - electric hot water tank
     - electric water heater replacement
+  image: ../assets/img/electric-water-heater-installation.jpg
 
   hero:
     h1: Electric Water Heater Installation
@@ -196,9 +212,14 @@ electric water heater installation:
   intro: >
     Electric water heaters offer a dependable solution where gas is unavailable or not desired.
 
-  description: >
-    We install electric water heaters with proper electrical connections, safety controls,
-    and capacity sizing to meet your household needs.
+  description: 
+  - Electric water heaters offer a straightforward and cost-effective solution for many homes, particularly where gas service is unavailable. Galico installs electric water heaters with a focus on correct sizing, safe electrical connections, and long-term reliability.
+
+    - Proper sizing is critical for electric systems. Galico evaluates household size and hot water usage to recommend a tank capacity that delivers consistent performance without excessive operating costs. In hard-water regions, electric systems require careful consideration, as heating elements can accumulate mineral scale more quickly if undersized or improperly installed.
+
+    - Each electric water heater installation includes verification of electrical capacity, proper circuit protection, secure plumbing connections, and commissioning to manufacturer specifications. Galico ensures the system is installed safely and operates as intended from the first day of use.
+
+    - Electric water heaters are well suited for smaller households, municipal water supplies, and homes seeking a reliable hot water solution with lower upfront cost. Galico’s installation process ensures dependable performance and clear expectations for operation and maintenance.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -245,6 +266,7 @@ water heater replacement:
   secondary_keywords:
     - hot water tank replacement
     - emergency water heater replacement
+  image: ../assets/img/water-heater-replacement.jpg
 
   hero:
     h1: Water Heater Replacement Services
@@ -254,9 +276,14 @@ water heater replacement:
     A failing water heater can disrupt your entire home. We provide prompt, professional
     replacement services to restore hot water quickly.
 
-  description: >
-    Whether your tank is leaking, underperforming, or beyond repair, we handle full replacements
-    including disposal, upgrades, and system improvements.
+  description: 
+    - When a water heater begins to leak, lose efficiency, or fail unexpectedly, timely replacement is essential. Galico provides professional water heater replacement services focused on minimizing downtime while ensuring the new system is properly selected and installed.
+
+    - Replacement projects are more than simple swaps. Galico evaluates why the existing system failed, confirms current household needs, and ensures the replacement unit is correctly sized and compatible with the home’s fuel and plumbing configuration. This approach helps prevent repeat issues and improves long-term reliability.
+
+    - In hard-water areas, replacement installations often include recommendations that help protect the new system from premature wear. Galico ensures proper connections, venting, and commissioning are completed to current standards rather than reusing outdated or unsafe configurations.
+
+    - Whether replacing a tank or upgrading to a different system type, Galico’s water heater replacement service focuses on safety, performance, and realistic expectations — delivering reliable hot water without unnecessary complications.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -303,7 +330,8 @@ gas line installation:
   secondary_keywords:
     - natural gas line installation
     - gas piping installation
-
+  image: ../assets/img/gas-line-installation.jpg
+  
   hero:
     h1: Gas Line Installation Services
     h2: Safe gas piping for appliances and heating systems
@@ -311,9 +339,14 @@ gas line installation:
   intro: >
     Proper gas line installation is critical for safety and performance.
 
-  description: >
-    We design and install gas piping for new appliances, renovations, and home upgrades,
-    following all code and pressure-testing requirements.
+  description: 
+    -  Proper gas line installation is essential for the safe and reliable operation of gas-fired appliances. Galico provides professional residential gas line installation services designed to meet current codes, manufacturer requirements, and real-world usage needs.
+
+    - Every gas line installation begins with an evaluation of the home’s existing gas supply, appliance demand, and future expansion plans. Correct pipe sizing is critical — undersized lines can cause poor appliance performance, ignition issues, and long-term reliability problems. Galico ensures gas lines are properly sized, routed, and supported to deliver consistent fuel flow under peak demand.
+
+    - Installations may include new interior gas piping, outdoor gas lines for BBQs or heaters, appliance connections, or system extensions for renovations and upgrades. Galico completes all required pressure testing and safety checks before placing any system into service.
+
+    - Gas line installation is not just about getting fuel from point A to point B — it’s about ensuring long-term safety, performance, and compliance. Galico’s disciplined approach ensures gas systems are installed correctly the first time, with clear documentation and dependable results.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -360,7 +393,8 @@ gas appliance installation:
   secondary_keywords:
     - gas range installation
     - gas dryer installation
-
+  image: ../assets/img/gas-appliance-installation.jpg
+  
   hero:
     h1: Gas Appliance Installation
     h2: Professional installation of residential gas appliances
@@ -368,10 +402,15 @@ gas appliance installation:
   intro: >
     Installing gas appliances requires licensed expertise to ensure safety.
 
-  description: >
-    From ranges and dryers to fireplaces, we install and commission gas appliances
-    according to manufacturer specifications.
+  description: 
+    - Gas appliances require precise installation to operate safely and efficiently. Galico provides professional gas appliance installation services for residential homes, supporting appliances such as water heaters, boilers, fireplaces, ranges, stoves, and outdoor gas equipment.
 
+    - Each gas appliance installation begins with verifying that the existing gas supply is properly sized and suitable for the appliance being installed. Galico ensures correct gas pressure, secure connections, appropriate venting, and compliance with manufacturer specifications. These steps are critical for safe combustion, reliable ignition, and long-term performance.
+
+    - Improperly installed gas appliances can lead to inefficiency, nuisance shutdowns, or safety risks. Galico addresses these concerns by performing pressure testing, leak checks, and final commissioning before the appliance is placed into service.
+
+    - Whether installing a new appliance or replacing an existing unit, Galico focuses on safe operation, clean workmanship, and clear communication. Homeowners can be confident that their gas appliance has been installed to professional standards and is ready for dependable everyday use.
+  
   trust_points:
     - title: Licensed residential gasfitter
       icon: fa-wrench
@@ -417,7 +456,8 @@ natural gas services:
   secondary_keywords:
     - natural gas installation
     - gas service upgrade
-
+  image: ../assets/img/natural-gas-services.jpg
+  
   trust_points:
     - title: Licensed residential gasfitter
       icon: fa-wrench
@@ -433,9 +473,14 @@ natural gas services:
   intro: >
     Natural gas provides efficient energy for heating and appliances.
 
-  description: >
-    We assist with new gas services, meter connections, and system expansions
-    in coordination with utility providers.
+  description: 
+    - Natural gas systems form the backbone of many residential comfort and hot water installations. Galico provides professional natural gas services designed to support safe, efficient operation of gas-fired equipment throughout the home.
+
+    - Galico’s natural gas services include gas line installation, appliance connections, system modifications, pressure testing, and safety inspections. Each service is performed with careful attention to gas supply capacity, appliance requirements, and applicable codes. Proper planning ensures that multiple gas appliances can operate simultaneously without performance issues.
+
+    - Natural gas systems require precise installation and verification to maintain safety over time. Galico evaluates existing infrastructure, confirms correct pipe sizing, and performs thorough testing before returning systems to service.
+
+    - Whether supporting a new water heater, heating system, or appliance upgrade, Galico’s natural gas services are focused on reliability, safety, and long-term performance. Homeowners benefit from gas systems that operate smoothly, efficiently, and in compliance with current standards.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -482,7 +527,8 @@ propane gas services:
   secondary_keywords:
     - propane installation
     - propane gas line
-
+  image: ../assets/img/propane-gas-services.jpg
+  
   hero:
     h1: Propane Gas Installation & Service
     h2: Safe propane systems for rural and off-grid homes
@@ -490,9 +536,14 @@ propane gas services:
   intro: >
     Propane is a versatile energy source for rural properties.
 
-  description: >
-    We install and service propane systems, including cylinders and LPG connections,
-    with a focus on safety and reliability.
+  description: 
+    - Propane gas systems are common in rural and semi-rural homes and require specialized attention to ensure safe operation. Galico provides professional propane gas services tailored to residential applications, including appliance installation, gas line work, and system inspections.
+
+    - Propane systems differ from natural gas in pressure, storage, and regulation requirements. Galico ensures propane piping, regulators, and appliance connections are correctly configured for safe and efficient operation. Proper sizing and layout are especially important to prevent performance issues and maintain consistent fuel delivery.
+
+    - Galico’s propane gas services include new installations, system upgrades, appliance connections, and safety checks. Each service includes leak testing and verification before appliances are placed into operation.
+
+    - By focusing on correct installation and careful commissioning, Galico helps homeowners rely on propane systems with confidence. Whether supporting hot water, heating, or cooking appliances, Galico’s propane gas services are designed for safety, durability, and dependable performance.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -539,7 +590,8 @@ gas safety inspection:
   secondary_keywords:
     - gas pressure test
     - gas leak detection
-
+  image: ../assets/img/gas-safety-inspection.jpg
+  
   hero:
     h1: Gas Safety Inspections & Testing
     h2: Protect your home with certified gas safety checks
@@ -547,9 +599,14 @@ gas safety inspection:
   intro: >
     Regular gas safety inspections reduce risk and ensure compliance.
 
-  description: >
-    Our inspections include pressure testing, leak detection, and certification
-    for peace of mind.
+  description: 
+    - Gas safety inspections are essential for protecting homes, occupants, and equipment. Galico provides professional residential gas safety inspections to verify that gas systems are operating safely and in compliance with applicable standards.
+
+    - A gas safety inspection includes evaluating gas piping, appliance connections, shutoff valves, venting, and combustion air where applicable. Galico also performs leak detection and pressure testing to confirm system integrity. These inspections help identify issues such as improper installations, aging components, or changes made over time.
+
+    - Gas safety inspections are especially important after renovations, appliance replacements, or when purchasing a home. They provide peace of mind that gas systems are functioning as intended and do not present hidden risks.
+
+    - Galico’s gas safety inspections focus on clear findings, practical recommendations, and straightforward communication. Homeowners receive an honest assessment of their system’s condition and any steps required to maintain safe, reliable operation.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -596,7 +653,8 @@ heating system installation:
   secondary_keywords:
     - home heating installation
     - residential heating systems
-
+  image: ../assets/img/heating-system-installation.jpg
+  
   hero:
     h1: Heating System Installation
     h2: Efficient heating systems designed for Ontario winters
@@ -604,9 +662,14 @@ heating system installation:
   intro: >
     A properly installed heating system ensures comfort and efficiency.
 
-  description: >
-    We install residential heating systems tailored to your home size,
-    layout, and energy goals.
+  description: 
+    - A properly designed heating system is essential for comfort, efficiency, and long-term reliability. Galico provides professional residential heating system installation services tailored to the home’s size, layout, insulation level, and energy source.
+
+    - Every installation begins with evaluating heat loss, fuel availability, and homeowner comfort priorities. Galico selects and installs heating equipment that is correctly sized — avoiding common issues like short cycling, uneven heating, and excessive energy use. Systems are installed to manufacturer specifications and current codes, ensuring dependable operation from day one.
+
+    - Heating system installations may include forced-air systems, boilers, or hydronic heating solutions. Galico also ensures proper airflow, venting, and control integration so the entire system works as intended.
+
+    - A heating system is a long-term investment. Galico focuses on clean workmanship, careful commissioning, and clear explanations so homeowners understand how their system operates and how to get the most from it throughout the heating season.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -653,7 +716,8 @@ gas furnace installation:
   secondary_keywords:
     - high efficiency furnace
     - furnace replacement
-
+  image: ../assets/img/gas-furnace-installation.jpg
+  
   hero:
     h1: Gas Furnace Installation
     h2: High-efficiency furnaces for dependable home heating
@@ -661,9 +725,14 @@ gas furnace installation:
   intro: >
     Modern gas furnaces offer reliable and cost-effective heating.
 
-  description: >
-    We install and replace gas furnaces with proper venting,
-    airflow balancing, and startup commissioning.
+  description: 
+    - Gas furnaces remain one of the most common and reliable heating options in Ontario homes. Galico provides professional gas furnace installation services focused on safety, efficiency, and consistent comfort.
+
+    - Each gas furnace installation starts with proper load calculations to ensure the furnace is correctly sized for the home. Oversized or undersized furnaces can cause comfort issues, higher operating costs, and premature wear. Galico installs furnaces that match the home’s heating demand and duct system capabilities.
+
+    - Installation includes secure gas connections, proper venting, airflow setup, and thermostat integration. Galico also verifies gas pressure, combustion performance, and system operation before commissioning.
+
+    - Whether replacing an aging furnace or installing one in a new home, Galico ensures the system operates quietly, efficiently, and reliably. Homeowners benefit from steady heat, predictable performance, and professional installation done right the first time.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -710,7 +779,8 @@ boiler installation:
   secondary_keywords:
     - hydronic boiler
     - residential boiler installation
-
+  image: ../assets/img/boiler-installation.jpg
+  
   hero:
     h1: Boiler Installation Services
     h2: Hydronic heating systems built for comfort
@@ -718,9 +788,14 @@ boiler installation:
   intro: >
     Boilers provide even, comfortable heat through hydronic systems.
 
-  description: >
-    We install residential boilers with careful system design,
-    zoning, and efficiency optimization.
+  description: 
+    - Boilers provide quiet, even heat and are a trusted solution for many homes. Galico offers professional boiler installation services for residential properties using hot water or hydronic heating systems.
+
+    - A successful boiler installation depends on proper system design. Galico evaluates heating zones, radiation types, and piping layout to ensure efficient heat delivery throughout the home. The boiler is sized to match the home’s heating requirements, avoiding short cycling and energy waste.
+
+    - Installation includes proper gas or electrical connections, circulator setup, safety controls, and system balancing. Galico also ensures expansion tanks, relief valves, and venting systems are installed correctly for safe operation.
+
+    - Boiler systems are valued for comfort and durability. Galico’s careful installation process ensures smooth operation, reliable performance, and a heating system built to last through many winters.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -767,7 +842,8 @@ hydronic heating:
   secondary_keywords:
     - radiant floor heating
     - hydronic systems
-
+  image: ../assets/img/hydronic-heating.jpg
+  
   hero:
     h1: Hydronic & Radiant Heating Systems
     h2: Comfortable, efficient heat delivered through water
@@ -775,8 +851,10 @@ hydronic heating:
   intro: >
     Hydronic heating offers quiet, even warmth throughout your home.
 
-  description: >
-    At Galico, we install high-efficiency hydronic heating systems—including radiant floor heating—for homes and businesses across Ottawa, Carleton Place, Arnprior, Perth, and Smiths Falls. Unlike traditional forced-air systems, hydronic heating uses hot water circulated through a network of PEX tubing installed beneath your floors, delivering even, quiet, and energy-efficient warmth from the ground up. Whether you’re building a new home or upgrading your existing heating system, our certified technicians create custom hydronic solutions that maximize comfort, reduce energy bills, and eliminate cold spots. We specialize in radiant floor heating for tile, hardwood, and concrete slabs, as well as hydronic baseboard, all integrated with modern, high-efficiency boilers or heat sources. Every system we install meets Ontario building codes, includes proper zoning controls, and is thoroughly pressure-tested for reliability and safety. As trusted heating professionals serving Ottawa, we understand the region’s climate demands and prioritize durable, low-maintenance systems that provide years of dependable comfort. If you’re looking for a cleaner, quieter, and more efficient way to heat your space with radiant floor or hydronic heating, contact Galico today for a free consultation and expert service you can count on.
+  description:
+    - At Galico, we install high-efficiency hydronic heating systems—including radiant floor heating—for homes and businesses across Ottawa, Carleton Place, Arnprior, Perth, and Smiths Falls. Unlike traditional forced-air systems, hydronic heating uses hot water circulated through a network of PEX tubing installed beneath your floors, delivering even, quiet, and energy-efficient warmth from the ground up. 
+    - Whether you’re building a new home or upgrading your existing heating system, our certified technicians create custom hydronic solutions that maximize comfort, reduce energy bills, and eliminate cold spots. We specialize in radiant floor heating for tile, hardwood, and concrete slabs, as well as hydronic baseboard, all integrated with modern, high-efficiency boilers or heat sources. Every system we install meets Ontario building codes, includes proper zoning controls, and is thoroughly pressure-tested for reliability and safety. As trusted heating professionals serving Ottawa, we understand the region’s climate demands and prioritize durable, low-maintenance systems that provide years of dependable comfort. 
+    - If you’re looking for a cleaner, quieter, and more efficient way to heat your space with radiant floor or hydronic heating, contact Galico today for a free consultation and expert service you can count on.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -811,7 +889,8 @@ heating maintenance:
   secondary_keywords:
     - furnace maintenance
     - heating system inspection
-
+  image: ../assets/img/heating-maintenance.jpg
+  
   hero:
     h1: Heating Maintenance Services
     h2: Keep your heating system running efficiently
@@ -819,9 +898,14 @@ heating maintenance:
   intro: >
     Routine maintenance improves performance and extends equipment life.
 
-  description: >
-    We inspect, tune, and maintain residential heating systems
-    to prevent breakdowns and improve efficiency.
+  description: 
+    - Regular heating maintenance is key to system reliability, efficiency, and safety. Galico provides professional heating maintenance services designed to keep residential heating systems operating at their best.
+
+    - Maintenance includes inspecting key components, checking safety controls, verifying airflow or water circulation, and identifying wear before it leads to breakdowns. Proper maintenance helps reduce energy use, improve comfort, and extend the life of heating equipment.
+
+    - Galico services gas furnaces, boilers, and hydronic systems, ensuring each system is cleaned, adjusted, and tested according to manufacturer guidelines. Issues are clearly explained so homeowners can make informed decisions about repairs or future upgrades.
+
+    - Heating maintenance is especially important before the winter season. Galico’s proactive approach helps prevent unexpected failures and ensures systems are ready to perform when temperatures drop.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -846,39 +930,31 @@ heating maintenance:
       calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
       cta: "Book Now"
 
-  testimonials:  
-    - name: "Andree Condie"
-      location: "Kanata"
-      rating: 5.0
-      text: "Professionnel, meticulous, clean attentive service would highly recommend"
-      image: "andree.jpg"  # Optional - omit this line if no image
-      
-    - name: "Vyacheslav Zavadsky"
-      location: "Nepean"
-      rating: 5.0
-      text: "Hard working, well equipped and reasonable. What else you can ask for..."
-
-  cta: "Learn More"
-  
-thermostats:
+thermostat:
   name: Thermostat Services
-  slug: thermostats
+  slug: thermostat
   category: Heating System
-  primary_keyword: thermostat installation
+  primary_keyword: heating maintenance
   secondary_keywords:
-    - smart thermostat
-    - thermostat replacement
-
+    - furnace maintenance
+    - heating system inspection
+  image: ../assets/img/heating-maintenance.jpg
+  
   hero:
-    h1: Thermostat Installation & Upgrades
-    h2: Precise temperature control for your home
+    h1: Heating Maintenance Services
+    h2: Keep your heating system running efficiently
 
   intro: >
-    Modern thermostats improve comfort and energy savings.
+    Routine maintenance improves performance and extends equipment life.
 
-  description: >
-    We install and replace thermostats, including smart models,
-    ensuring proper integration with your heating system.
+  description: 
+    - Thermostats play a critical role in heating system comfort and efficiency. Galico provides professional thermostat installation services to ensure accurate temperature control and proper system operation.
+
+    - Whether installing a basic thermostat or upgrading to a programmable or smart model, Galico ensures compatibility with the existing heating system. Proper wiring, configuration, and calibration are essential for reliable performance.
+
+    - A correctly installed thermostat helps maintain consistent indoor temperatures, reduces unnecessary system cycling, and can improve energy efficiency. Galico also educates homeowners on thermostat settings and features so they can get the most from their system.
+
+    - Thermostat installation may seem simple, but incorrect setup can cause comfort issues or system malfunctions. Galico ensures thermostats are installed correctly and integrated seamlessly with the heating system.
 
   trust_points:
     - title: Licensed residential gasfitter
@@ -902,18 +978,3 @@ thermostats:
       description: "Schedule an onsite visit for evaluating your project and provide an estimate."
       calendly_url: "https://calendly.com/eric-pythago/galico-estimate"
       cta: "Book Now"
-
-  testimonials:  
-    - name: "Andree Condie"
-      location: "Kanata"
-      rating: 5.0
-      text: "Professionnel, meticulous, clean attentive service would highly recommend"
-      image: "andree.jpg"  # Optional - omit this line if no image
-      
-    - name: "Vyacheslav Zavadsky"
-      location: "Nepean"
-      rating: 5.0
-      text: "Hard working, well equipped and reasonable. What else you can ask for..."
-
-  cta: "Learn More"
-  

@@ -33,19 +33,6 @@
             </div>
           </div>
 		  <div class="nav-item dropdown">
-            <a href="/gasfitting/" class="nav-link d-inline-flex align-items-center">
-               Gasfitting
-               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
-            </a>
-            <div class="dropdown-menu bg-light m-0">
-			  {% for key in site.data.services %}
-		      {% if key[1].category == "Gasfitting" %}
-			     <a href="/gasfitting/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
-              {% endif %}
-			  {% endfor %}
-            </div>
-          </div>
-		  <div class="nav-item dropdown">
             <a href="/heating/" class="nav-link d-inline-flex align-items-center">
                Heating
                <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
@@ -54,6 +41,19 @@
 			  {% for key in site.data.services %}
 		      {% if key[1].category == "Heating System" %}
 			     <a href="/heating/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
+              {% endif %}
+			  {% endfor %}
+            </div>
+          </div>
+		  <div class="nav-item dropdown">
+            <a href="/gasfitting/" class="nav-link d-inline-flex align-items-center">
+               Gasfitting
+               <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
+            </a>
+            <div class="dropdown-menu bg-light m-0">
+			  {% for key in site.data.services %}
+		      {% if key[1].category == "Gasfitting" %}
+			     <a href="/gasfitting/{{ key[1].slug }}" class="dropdown-item">{{ key[1].name }}</a>
               {% endif %}
 			  {% endfor %}
             </div>
@@ -92,7 +92,7 @@
                <span class="dropdown-toggle ms-1" data-bs-toggle="dropdown"></span>
             </a>
             <div class="dropdown-menu bg-light m-0">
-			  <a href="/about" class="dropdown-item">About Galico</a>
+			  <a href="/about" class="dropdown-item">About Us</a>
 			  <!-- <a href="/about/#accreditation" class="dropdown-item">Licensed & Insurred</a>
 			  <a href="/about/#community" class="dropdown-item">Community Involvement</a>
 			  <a href="/about/#manufacturers" class="dropdown-item">Manufacturers</a>

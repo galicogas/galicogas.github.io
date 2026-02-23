@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>furnace</title>
+    <g id="furnace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="130" height="130"></rect>
+        <g transform="translate(22.000000, 5.000000)" stroke="#231F20">
+            <polygon id="path61" stroke-width="3.18178682" stroke-linecap="round" stroke-linejoin="round" points="42.937565 120 0.000214974886 95.9631972 0.000214974886 25.1451175 42.937565 49.1819219"></polygon>
+            <polygon id="path65" stroke-width="3.18178682" stroke-linecap="round" stroke-linejoin="round" points="43.1695229 120 86.1068702 95.9631972 86.1068702 25.1451175 43.1695229 49.1819219"></polygon>
+            <polygon id="path69" stroke-width="3.18178682" stroke-linecap="round" stroke-linejoin="round" points="43.1695229 49.1817451 0 24.5905809 43.1695229 0 86.1068702 24.5905809"></polygon>
+            <path d="M57.0345762,24.886474 C57.0345762,28.5262407 50.4914683,31.4769938 42.4205173,31.4769938 C34.3489876,31.4769938 27.8058962,28.5262407 27.8058962,24.886474 C27.8058962,21.2467072 34.3489876,18.2959541 42.4205173,18.2959541 C50.4914683,18.2959541 57.0345762,21.2467072 57.0345762,24.886474 Z" id="path81" stroke-width="2.54542585" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M72.3500816,24.87884 C72.3500816,26.167682 70.1665155,27.2128609 67.4730952,27.2128609 C64.7790795,27.2128609 62.5955135,26.167682 62.5955135,24.87884 C62.5955135,23.589998 64.7790795,22.5454023 67.4730952,22.5454023 C70.1665155,22.5454023 72.3500816,23.589998 72.3500816,24.87884 Z" id="path85" stroke-width="1.90906488"></path>
+            <line x1="48.3694677" y1="56.8063696" x2="61.5612527" y2="49.1817451" id="path89" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="48.3694677" y1="66.8493096" x2="61.5612527" y2="59.224685" id="path93" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="48.3694677" y1="76.8922479" x2="61.5612527" y2="69.2676233" id="path97" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="48.3694677" y1="86.9351812" x2="61.5612527" y2="79.3105566" id="path101" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="66.765001" y1="46.3161011" x2="79.956786" y2="38.6914765" id="path105" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="66.765001" y1="56.3590972" x2="79.956786" y2="48.7344727" id="path109" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="66.765001" y1="66.4019744" x2="79.956786" y2="58.7773498" id="path113" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="66.765001" y1="76.4449688" x2="79.956786" y2="68.8203443" id="path117" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="44.1128988" y1="100.083106" x2="84.8363521" y2="76.5458713" id="path121" stroke-width="1.90906488" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
+    </g>
+</svg>

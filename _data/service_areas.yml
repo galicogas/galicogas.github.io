@@ -4,6 +4,7 @@ almonte:
   slug: almonte
   image: almonte.jpg
   chamber: <a href="https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755" target="_blank" class="link-primary">Carleton Place and District Chamber of Commerce</a>
+  description: Galico provides professional water heater installation and replacement services in Almonte, helping local homeowners maintain dependable hot water through every season. From traditional tank-style water heaters to modern tankless systems, each installation is carefully sized, installed, and commissioned for long-term performance and efficiency. Almonte’s water supply is naturally hard, which can accelerate sediment buildup in traditional tanks and scaling in tankless systems. We factor these conditions into every recommendation, ensuring your water heater is selected and installed with longevity in mind. Gas-fired water heaters are installed by a licensed gas technician and completed to Ontario safety and manufacturer standards. Based in the area and familiar with Almonte’s mix of older homes and newer developments, we approach every project with attention to detail, clean workmanship, and straightforward recommendations. In addition to hot water systems, we also provide supporting gasfitting and heating services when required, ensuring your home’s mechanical systems are installed safely and correctly.
   
 arnprior:
   name: Arnprior
@@ -11,12 +12,14 @@ arnprior:
   slug: arnprior
   image: arnprior.jpg
   chamber: <a href="https://upperottawavalleychamber.com/find-a-member/#/action/Listing/value/547/searchID/76944/cid/1836/id/1501/Galico-Home-Comfort-Inc" target="_blank" class="link-primary">Upper Ottawa Valley Chamber of Commerce</a>
+  description: Galico provides professional water heater installation and replacement services in Arnprior, helping homeowners maintain reliable hot water year-round. We install both tank and tankless water heaters, with careful attention to proper sizing, venting, and long-term efficiency. Arnprior’s water is considered hard, which means mineral buildup inside tanks and heat exchangers can shorten equipment lifespan if not properly managed. We take this into account when recommending water heaters, anode protection, and maintenance intervals, helping homeowners avoid premature failures and performance issues. All gas-fired water heater installations are completed by a licensed gas technician and commissioned to Ontario safety and manufacturer standards. In addition to hot water systems, we also provide related gasfitting and heating services when required, ensuring your home’s mechanical systems are installed safely, correctly, and built to last.
 
 carp:
   name: Carp
   region: Ontario
   slug: carp
   image: carp.jpg
+  description: Homeowners in Carp often require dependable hot water solutions that suit larger properties and rural-style homes. Galico specializes in water heater installation and replacement in Carp, offering both tank and tankless systems selected for performance, efficiency, and reliability. We carefully assess venting, fuel supply, and usage patterns to ensure each installation is completed correctly the first time. Carp is known for very hard water, particularly in homes on private wells, which can significantly impact water heater lifespan without proper planning. We address this by recommending appropriate system types, protective measures, and realistic maintenance expectations. Gas water heaters are installed by a licensed gas technician and commissioned to Ontario safety standards. We also provide related gasfitting and heating services when needed, making us a reliable partner for rural and semi-rural properties.
 
 carleton place:
   name: Carleton Place
@@ -24,35 +27,40 @@ carleton place:
   slug: carleton-place
   image: carleton-place.jpg
   chamber: <a href="https://members.cpchamber.com/directory/Details/galico-home-comfort-inc-4196755" target="_blank" class="link-primary">Carleton Place and District Chamber of Commerce</a>
- 
+  description: Galico provides professional water heater installation and replacement services in Carleton Place, supporting homeowners with reliable hot water systems designed for efficiency and long-term performance. We install both tank and tankless water heaters, ensuring each system is properly sized for household demand and installed to manufacturer and Ontario safety standards. Gas-fired water heaters are completed by a licensed gas technician and fully commissioned before use. With Carleton Place’s mix of established neighbourhoods and newer residential developments, we tailor each installation to the home rather than applying one-size-fits-all solutions. Carleton Place experiences hard water conditions, which can affect water heater performance over time if systems are not properly matched to the home. We account for mineral content when sizing equipment and advising on maintenance, helping extend system life and maintain efficiency. Supporting gasfitting and heating services are also available when required as part of a complete installation.
+  
 kanata:
   name: Kanata
   region: Ontario
   slug: kanata
   image: kanata.jpg
+  description: Galico delivers professional water heater installation services in Kanata, with a focus on modern, energy-efficient systems that suit newer homes and growing families. We install both traditional tank water heaters and high-efficiency tankless systems, ensuring proper sizing, venting, and performance. Kanata’s municipal water is moderately hard, which still affects water heaters over time through mineral buildup and component wear. We consider these factors when selecting equipment and explaining maintenance needs, helping homeowners get the most from their investment. All gas-fired water heater installations are completed by a licensed gas technician and tested to Ontario code requirements. As many Kanata homes are well-suited for efficiency upgrades, we regularly assist homeowners with system improvements while also providing supporting gasfitting and heating services as part of a complete home comfort solution.
   
 nepean:
   name: Nepean
   region: Ontario
   slug: nepean
   image: nepean.jpg
-
+  description: Residents of Nepean trust Galico for professional water heater installation and replacement, delivered with careful attention to safety, efficiency, and long-term reliability. We install tank and tankless water heaters for a wide range of home types, from established neighbourhoods to updated properties. Nepean’s water supply is moderately hard, which can still contribute to scale buildup and reduced efficiency over time. We factor local water conditions into our recommendations to help protect system performance and lifespan. Gas-fired systems are installed by a licensed gas technician and commissioned to meet manufacturer and provincial safety standards. When required, we also provide gasfitting and heating services related to the installation, ensuring a seamless and code-compliant result.
+  
 perth:
   name: Perth
   region: Ontario
   slug: perth
   image: perth.jpg
   chamber: <a href="https://members.perthchamber.com/list/member/galico-2741" target="_blank" class="link-primary">Perth & District Chamber of Commerce</a>
+  description: Homes in Perth often require a thoughtful approach to hot water system upgrades, particularly in older or heritage-style properties. Galico specializes in water heater installation and replacement in Perth, providing tank and tankless solutions that are carefully adapted to existing infrastructure. Gas-fired water heaters are installed by a licensed gas technician and commissioned to Ontario safety standards, with close attention to venting and system compatibility. Perth experiences very hard water, which can be especially demanding on water heaters without proper planning. We factor these conditions into equipment selection and installation practices to help reduce scale-related issues and extend system life. We also provide supporting gasfitting and heating services when required, ensuring installations are safe, efficient, and appropriate for the home.
   
 smiths falls:
   name: Smiths Falls
   region: Ontario
   slug: smiths-falls
   image: smiths-falls.jpg
-
+  description: Galico offers professional water heater installation services in Smiths Falls, helping homeowners replace aging systems and improve hot water reliability. We install tank and tankless water heaters with a focus on durability, proper sizing, and efficient operation. Smiths Falls is known for very hard water, which can accelerate sediment buildup and wear inside water heaters. We take this into account when recommending systems and maintenance expectations, helping homeowners avoid premature breakdowns. All gas-fired installations are completed by a licensed gas technician and tested to meet Ontario safety and manufacturer requirements. Supporting gasfitting and heating services are available when needed, allowing homeowners to address multiple system upgrades through a single, trusted contractor.
+  
 stittsville:
   name: Stittsville
   region: Ontario'
   slug: stittsville
   image: stittsville.jpg
-  
+  description: Galico provides dependable water heater installation services in Stittsville, helping homeowners maintain consistent hot water for daily living. We install both tank-style and tankless water heaters, selecting systems based on household demand, efficiency goals, and available fuel sources. Stittsville’s water is considered hard, meaning mineral accumulation can impact water heater efficiency if not addressed. We account for this during system selection and installation, ensuring homeowners understand maintenance needs and expected performance. Gas water heaters are installed by a licensed gas technician and tested for proper operation and safety. With many Stittsville homes built in recent decades, we often support efficiency-focused upgrades while offering related gasfitting and heating services when part of the project scope.

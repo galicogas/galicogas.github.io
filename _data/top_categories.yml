@@ -5,16 +5,16 @@ hot-water:
   url: /hot-water/
   cta: Learn More
  
-gasfitting:
-  name: Gasfitting
-  desc: Looking for a licensed gas technician? Book a safe, code‑compliant gas installation today.
-  image: gasfitting.jpg
-  url: /gasfitting/
-  cta: Learn More
-  
 heating:
   name: Heating System
   desc: Planning a heating upgrade? Talk to a specialist who understands gas, water, and heat together.
   image: heating-system.jpg
   url: /heating/
+  cta: Learn More
+
+gasfitting:
+  name: Gasfitting
+  desc: Looking for a licensed gas technician? Book a safe, code‑compliant gas installation today.
+  image: gasfitting.jpg
+  url: /gasfitting/
   cta: Learn More

@@ -21,29 +21,56 @@
 	<div class="container-xxl py-5" id="services">
       <div class="container">
         <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
             <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 600px">
 				<p>
-				Homeowners in {{ city.name }} trust Galico for professional hot water system
-				installation and replacement. We specialize exclusively in residential water heaters, including
-				gas, electric, and tankless systems. Our licensed gasfitters ensure every installation is safe,
-				code‑compliant, and built for long‑term reliability.
+				{{ city.description }}
 				{% if city.chamber %}
+					<p>
 						Galico is a proud member of the {{ city.chamber }} community.
+					</p>
 				{% endif %}
 				</p>
 				<p>We offer the following services to the homeowners of {{ city.name }}:</p>
-				{% for key in site.data.hot-water-services %}
-				  {% assign s = key[1] %}
-				  <h2>{{ s.name }} in {{ city.name }}</h2>
-				  <p>
-					Professional {{ s.primary_keyword }} services
-					available throughout {{ city.name }} and surrounding areas.
-				  </p>
+				
+				{% for key in site.data.services %}
+				{% if key[1].category == "Hot Water System" %}
+					<a 
+					  href="/hot-water/{{ key[1].slug }}" 
+					  class="d-block text-decoration-none mb-4"
+					>
+					  <div class="border rounded p-4 hover-lift">
+						<div class="d-flex align-items-center mb-3">
+						  <div class="flex-shrink-0 me-4">
+							<div style="width: 60px; height: 60px;">
+							  <img 
+								src="/assets/img/logo/favicon.png" 
+								alt="Galico Heating" 
+								class="img-fluid"
+								style="width: 40px; height: 40px; object-fit: contain;"
+							  >
+							</div>
+						  </div>
+						  <div class="flex-grow-1">
+							<h2 class="fw-bold mb-1">{{ key[1].name }}</h2>
+							<p class="text-muted mb-0 lead">
+							  {{ key[1].hero.h2 | default: 'Professional heating solutions for your home' }}
+							</p>
+						  </div>
+						  <div class="flex-shrink-0 text-primary">
+							<i class="fa fa-arrow-right fa-2x"></i>
+						  </div>
+						</div>
+					  </div>
+					</a>
+				{% endif %}
 				{% endfor %}
 			</div>
 		</div>
-		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+		</div>
+		</div>
+		</div>
+<!-- 		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 			<a href="{{ '/onboarding/' | relative_url }}">
 				<img 
 				  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
@@ -73,9 +100,10 @@
                   </div>
                 </div>
               </div>
-		</div>
+		</div> -->
 
 		<!-- Subcription -->
+		<section class="py-5 bg-white">
 		<div class="container">
 			<div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
 				<div class="col-12 text-center">
@@ -86,6 +114,7 @@
 				</div>
 			</div>
 		</div>
+		</section>
 		<!-- Subscription End -->
 
 		<!-- Services Start -->
