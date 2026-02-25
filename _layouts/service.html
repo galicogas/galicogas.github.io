@@ -1,9 +1,9 @@
 {% assign service = site.data.services[page.service_key] %}
 
-  {% include head.html %}
-  {% include header.html %}
-  {% include disclaimer-banner.html %}
-  {% include script.html %}
+{% include head.html %}
+{% include header.html %}
+{% include disclaimer-banner.html %}
+{% include script.html %}
 
 <!-- Offer Page Start -->
 <div class="container-xxl py-5" id="offer">
@@ -50,7 +50,9 @@
 			</div>
 		</div>
 	</div>
-	
+</div>
+
+<div class="container-xxl py-5" id="offer">
   <div class="row g-4 justify-content-center">
   {% for item in service.cards %}
   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ item.delay }}">
@@ -85,52 +87,52 @@
   </div>
   {% endfor %}
   </div>
+</div>
 
-</div>
 <!-- Reviews Section -->
-<div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-8 col-md-10">
-      <h3 class="text-center mb-4">Customer Reviews</h3>
-		{% for testimonial in service.testimonials %}
-		<div class="border rounded p-4 mb-4">
+{% assign all_testimonials = site.data.testimonials | default: empty %}
+{% assign service_testimonials = all_testimonials | where: "services", page.service_key %}
+
+{% if service_testimonials.size > 0 %}
+<section class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <h3 class="text-center mb-4">What Our Customers Say</h3>
+        
+        {% for testimonial in service_testimonials %}
+        <div class="border rounded p-4 mb-4 shadow-sm">
 		  {% if testimonial.image %}
-		  <div class="text-center mb-3">
-			<img 
-			  src="/assets/img/testimonials/{{ testimonial.image }}" 
-			  alt="{{ testimonial.name }} testimonial photo" 
-			  class="img-fluid rounded" 
-			  style="max-height: 200px; object-fit: cover;"
-			>
-		  </div>
-		  {% endif %}
-		  
-		  <div class="d-flex align-items-center justify-content-center mb-3">
-			<div class="me-3" aria-label="{{ testimonial.rating }} out of 5 stars" role="img">
-			  {% for i in (1..5) %}
-				{% assign current = i | plus: 0 %}
-				{% assign half_step = i | minus: 0.5 %}
-				{% if testimonial.rating >= current %}
-				  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-				{% elsif testimonial.rating >= half_step %}
-				  <i class="bi bi-star-half text-warning" aria-hidden="true"></i>
-				{% else %}
-				  <i class="bi bi-star text-warning" aria-hidden="true"></i>
-				{% endif %}
-			  {% endfor %}
-			</div>
-			<small class="text-muted"><b>{{ testimonial.name }}</b> in {{ testimonial.location }}, ON</small>
-		  </div>
-		  
-		  <p class="text-center mb-0">"{{ testimonial.text }}"</p>
-		</div>
-		{% endfor %}
-	</div>
+          <div class="text-center mt-3">
+            <img src="{{ '/assets/img/testimonials/' | relative_url }}{{ testimonial.image }}" alt="{{ testimonial.name }}" style="width: 120px; height: 120px; object-fit: cover;">
+          </div>
+          {% endif %}
+          <div class="d-flex align-items-center justify-content-center mb-3 flex-wrap">
+            <div class="me-3" aria-label="{{ testimonial.rating }} out of 5 stars" role="img">
+              {% for i in (1..5) %}
+                {% assign half_threshold = i | minus: 0.5 %}
+                {% if testimonial.rating >= i %}
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                {% elsif testimonial.rating >= half_threshold %}
+                  <i class="bi bi-star-half text-warning" aria-hidden="true"></i>
+                {% else %}
+                  <i class="bi bi-star text-warning" aria-hidden="true"></i>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <small class="text-muted"><b>{{ testimonial.name }}</b> from {{ testimonial.location }}</small>
+          </div>
+          <p class="text-center mb-0 fst-italic">"{{ testimonial.text }}"</p>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
   </div>
-</div>
+</section>
+{% endif %}
+
 <!-- Offer Page End -->
 {% include footer.html %}
   </body>
-
-
 </html>

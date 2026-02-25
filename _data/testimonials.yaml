@@ -1,0 +1,187 @@
+- name: Andree Condie
+  location: Kanata
+  rating: 5
+  text: 'Professionnel, meticulous, clean attentive service would highly recommend'
+  image: andree.jpg
+  categories:
+    - Hot Water System
+  services:
+    - tank water heater installation
+    - gas water heater installation
+    - water heater replacement
+- name: Vyacheslav Zavadsky
+  location: Nepean
+  rating: 5
+  text: 'Hard working, well equipped and reasonable. What else you can ask for...'
+  image: null
+  cta: Learn More
+  categories:
+    - Hot Water System
+  services:
+    - tank water heater installation
+    - gas water heater installation
+    - water heater replacement
+- name: Jeremy Luke
+  location: Carleton Place
+  rating: 5
+  text: >-
+    Eric was great, communicated well to narrow down the scope of the project,
+    provided detail quotes and easy online payment. His work was clean and tidy
+    and he arrived exactly when he said he would.
+  image: null
+  categories:
+    - Hot Water System
+  services:
+    - tankless water heater installation
+- name: Joseph Dewolfe
+  location: Carleton Place
+  rating: 5
+  text: >-
+    Excellent service! Thank you Eric at Galico for fixing my hot water problem
+    so quickly!
+  image: null
+  categories:
+    - Hot Water System
+  services:
+    - water heater replacement
+- name: Donna Morris
+  location: Lanark Highland
+  rating: 5
+  text: >-
+    I hired Galico to install a propane fridge at my off-grid cottage. I was
+    very pleased with the professional and friendly service I received and I
+    highly recommend Galico. Thank you, Eric, for your diligence and attention
+    to detail.
+  image: gasfitting-donna.jpg
+  categories:
+    - Gasfitting
+  services:
+    - gas line installation
+    - propane gas services
+- name: Scott Rose
+  location: Stittsville
+  rating: 5
+  text: >-
+    Eric was phenomenal, really cares about the quality of his work and gives
+    honest feedback about upgrades. I'd highly recommend!
+  image: null
+  categories:
+    - Gasfitting
+  services:
+    - gas line installation
+- name: Maureen Hamilton
+  location: Carleton Place
+  rating: 5
+  text: >-
+    Galico Home Comfort came to disconnect the gas line from my stove, and the
+    technician was quick, efficient, and very reasonably priced. We thought we
+    had a minor issue afterward, but he resolved it right away — no stress at
+    all. He was kind, understanding, and clearly takes pride in his work. I'd
+    absolutely hire them again for future projects or home solutions. Highly
+    recommend!
+  image: gasconnection-6.jpg
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Abhishek Sharma
+  location: Nepean
+  rating: 5
+  text: >-
+    Eric did a good job installing our new gas stove. He was quick, efficient,
+    and communicated everything clearly throughout the process. He arrived on
+    time, completed the installation smoothly, and made sure everything was
+    safely set up. He took time to give us a demo after the installation, making
+    sure we understood how to use the appliance correctly. Highly recommend Eric
+    and Galico Home Comfort for anyone looking for reliable and skilled gas
+    appliance services!
+  image: gasconnection-5.jpg
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Scott Fewer
+  location: Kanata
+  rating: 5
+  text: >-
+    Professional service! Arrived on time. Great explanation of work to be
+    completed. Technician is really nice and polite. Costs were very reasonable.
+    I would use this service again and have no reservations in recommending to
+    others.
+  image: gasconnection-4.jpg
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Lorne Leech
+  location: Stittsville
+  rating: 5
+  text: >-
+    Galico (Eric) provides very quick and eficient service at a very reasonable
+    price. We recently had to swap out our old gas range for a new one and Eric
+    came by to disconnect the old one so it could be taken away by the delivery
+    service and then returned on a very timely basis to connect the new one
+    after we advised him it had been delivered. Eric is very responsive and
+    communicative. We highly recommend Galico!
+  image: gasconnection-7.jpg
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Gregory Belinson
+  location: Almonte
+  rating: 5
+  text: >-
+    Great work from Galico helping us to install the stove. Thanks to Eric for
+    his professional work and courtesy!
+  image: null
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Sophie Laliberté
+  location: Beckwith
+  rating: 5
+  text: >-
+    Great service, very professional and knowledgeable. Éric really takes the
+    time and effort to do things properly. We have retained his services twice
+    now for our gas cookers and we're very satisfied.
+  image: gasconnection-8.jpg
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
+- name: Synergy3 Construction
+  location: Almonte
+  rating: 5
+  text: >-
+    We engaged Galico to install a complete hydronic heating system for a large
+    custom home, and the results were outstanding. The project involved gas
+    fitting, boiler, radiant floor heating for both the basement and garage,
+    indirect hot water tank, and fireplace. Galico's team was professional and
+    meticulous from start to finish. We have the highest confidence in Galico
+    and would not hesitate to recommend them for any complex heating project.
+  image: hydronic-1.jpg
+  cta: Learn More
+  categories:
+    - Heating System
+  services:
+    - heating system installation
+    - boiler installation
+    - hydronic heating
+- name: Sarah Mansell
+  location: Kanata
+  rating: 5
+  text: >-
+    I cannot recommend Galico highly enough! We had been dealing with a frustrating issue with our gas furnace for weeks. Another company in Kanata came out multiple times, charged us for service calls, and honestly, just couldn't figure it out. They either misdiagnosed the problem or left it running poorly. I called Galico as a last resort, and the difference was night and day. Their technician arrived on time, took the time to properly diagnose the system, and found the root cause that the previous guys missed. He fixed it on the spot, and our furnace has been running perfectly ever since. If you live in Kanata and need a reliable HVAC company that actually knows what they are doing, save yourself the runaround and call Galico. They earned a customer for life.
+  image: sarah.jpg
+  cta: Learn More
+  categories:
+    - Heating System
+  services:
+    - heating maintenance

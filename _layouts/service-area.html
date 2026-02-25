@@ -31,7 +31,11 @@
 					</p>
 				{% endif %}
 				</p>
-				<p>We offer the following services to the homeowners of {{ city.name }}:</p>
+
+
+				
+				
+				<h3 class="text-center mb-4">We offer the following services to the homeowners of {{ city.name }}:</h3>
 				
 				{% for key in site.data.services %}
 				{% if key[1].category == "Hot Water System" %}
@@ -70,37 +74,6 @@
 		</div>
 		</div>
 		</div>
-<!-- 		<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-			<a href="{{ '/onboarding/' | relative_url }}">
-				<img 
-				  class="img-fluid w-100 h-150 object-fit-cover object-position-center"
-				  src="{{ '/assets/img/mascot/galico_dragon_subscription.png' | relative_url }}"
-				  alt="Galico mascot"
-				/>
-			</a>
-			<div class="border-top mt-4 pt-4">
-                <div class="row g-4">
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
-                    <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
-                    ></i>
-                    <h6 class="mb-0">Worry-free Subscription</h6>
-                  </div>
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
-                    <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
-                    ></i>
-                    <h6 class="mb-0">No Lock-in Contract</h6>
-                  </div>
-                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
-                    <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
-                    ></i>
-                    <h6 class="mb-0">No Extra Charges</h6>
-                  </div>
-                </div>
-              </div>
-		</div> -->
 
 		<!-- Subcription -->
 		<section class="py-5 bg-white">
@@ -150,10 +123,52 @@
 			</div>
 		  </div>
 		</div>
-		<!-- Services End -->
 
-		</div>
-	</div>
-</div>
+<!-- Collect ALL testimonials filtered by city -->
+<section class="py-5 bg-white">
+				{% assign all_testimonials = site.data.testimonials | default: empty %}
+				{% assign city_testimonials = all_testimonials | where: "location", city.name %}
 
+				{% if city_testimonials.size > 0 %}
+
+				  <div class="container py-5">
+					<div class="row justify-content-center">
+					  <div class="col-lg-8 col-md-10">
+						<h3 class="text-center mb-4"><i>See what {{ city.name }} has to say...</h3>
+						
+						{% for testimonial in city_testimonials %}
+						<div class="border rounded p-4 mb-4 shadow-sm">
+						  <div class="d-flex align-items-center justify-content-center mb-3 flex-wrap">
+							<div class="me-3" aria-label="{{ testimonial.rating }} out of 5 stars" role="img">
+							  {% for i in (1..5) %}
+								{% assign half_threshold = i | minus: 0.5 %}
+								{% if testimonial.rating >= i %}
+								  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+								{% elsif testimonial.rating >= half_threshold %}
+								  <i class="bi bi-star-half text-warning" aria-hidden="true"></i>
+								{% else %}
+								  <i class="bi bi-star text-warning" aria-hidden="true"></i>
+								{% endif %}
+							  {% endfor %}
+							</div>
+							<small class="text-muted"><b>{{ testimonial.name }}</b></small>
+						  </div>
+						  <p class="text-center mb-0 fst-italic">"{{ testimonial.text }}"</p>
+						  
+						  {% if testimonial.categories %}
+						  <div class="text-center mt-2">
+							{% for category in testimonial.categories limit: 3 %}
+							  <span class="badge bg-light text-dark me-1">{{ category }}</span>
+							{% endfor %}
+						  </div>
+						  {% endif %}
+						</div>
+						{% endfor %}
+						
+					  </div>
+					</div>
+				  </div>
+
+				{% endif %}
+</section>
 {% include footer.html %}

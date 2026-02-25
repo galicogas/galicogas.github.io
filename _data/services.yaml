@@ -60,17 +60,6 @@ tank water heater installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
 tankless water heater installation:
   name: Tankless Water Heater Installation
   slug: tankless-water-heater-installation
@@ -132,11 +121,7 @@ tankless water heater installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Jeremy Luke
-      location: Carleton Place
-      rating: 5
-      text: "Eric was great, communicated well to narrow down the scope of the project, provided detail quotes and easy online payment. His work was clean and tidy and he arrived exactly when he said he would."
+
 gas water heater installation:
   name: Gas Water Heater Installation
   slug: gas-water-heater
@@ -195,17 +180,7 @@ gas water heater installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 electric water heater installation:
   name: Electric Water Heater Installation
   slug: electric-water-heater-installation
@@ -265,17 +240,7 @@ electric water heater installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 water heater replacement:
   name: Water Heater Replacement
   slug: water-heater-replacement
@@ -335,17 +300,7 @@ water heater replacement:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Joseph Dewolfe
-      location: Carleton Place
-      rating: 5
-      text: "Excellent service! Thank you Eric at Galico for fixing my hot water problem so quickly!"
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 gas line installation:
   name: Gas Line Installation
   slug: gas-line-installation
@@ -404,16 +359,6 @@ gas line installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Donna Morris
-      location: Lanark Highland
-      rating: 5
-      text: "I hired Galico to install a propane fridge at my off-grid cottage. I was very pleased with the professional and friendly service I received and I highly recommend Galico. Thank you, Eric, for your diligence and attention to detail."
-      image: gasfitting-donna.jpg
-    - name: Scott Rose
-      location: Stittsville
-      rating: 5
-      text: "Eric was phenomenal, really cares about the quality of his work and gives honest feedback about upgrades. I’d highly recommend!"
 
 gas appliance installation:
   name: Gas Appliance Installation
@@ -485,41 +430,7 @@ gas appliance installation:
       alt: natural gas bbq
       calendly_url: https://calendly.com/eric-pythago/bbq-quickconnect
       cta: Book Now
-  testimonials:
-    - name: Maureen Hamilton
-      location: Carleton Place
-      rating: 5
-      text: "Galico Home Comfort came to disconnect the gas line from my stove, and the technician was quick, efficient, and very reasonably priced. We thought we had a minor issue afterward, but he resolved it right away — no stress at all. He was kind, understanding, and clearly takes pride in his work. I’d absolutely hire them again for future projects or home solutions. Highly recommend!"
-      image: gasconnection-6.jpg
-    - name: Abhishek Sharma
-      location: Nepean
-      rating: 5
-      text: "Eric did a good job installing our new gas stove. He was quick, efficient, and communicated everything clearly throughout the process. He arrived on time, completed the installation smoothly, and made sure everything was safely set up. He took time to give us a demo after the installation, making sure we understood how to use the appliance correctly. Highly recommend Eric and Galico Home Comfort for anyone looking for reliable and skilled gas appliance services!"
-      image: gasconnection-5.jpg
-      cta: Learn More
-    - name: Scott Fewer
-      location: Kanata
-      rating: 5
-      text: "Professional service! Arrived on time. Great explanation of work to be completed. Technician is really nice and polite. Costs were very reasonable. I would use this service again and have no reservations in recommending to others."
-      image: gasconnection-4.jpg
-      cta: Learn More
-    - name: Lorne Leech
-      location: Stittsville
-      rating: 5
-      text: "Galico (Eric) provides very quick and eficient service at a very reasonable price. We recently had to swap out our old gas range for a new one and Eric came by to disconnect the old one so it could be taken away by the delivery service and then returned on a very timely basis to connect the new one after we advised him it had been delivered. Eric is very responsive and communicative. We highly recommend Galico!"
-      image: gasconnection-7.jpg
-      cta: Learn More
-    - name: Gregory Belinson
-      location: Almonte
-      rating: 5
-      text: "Great work from Galico helping us to install the stove. Thanks to Eric for his professional work and courtesy!"
-      cta: Learn More
-    - name: Sophie Laliberté
-      location: Beckwith
-      rating: 5
-      text: "Great service, very professional and knowledgeable. Éric really takes the time and effort to do things properly. We have retained his services twice now for our gas cookers and we’re very satisfied."
-      image: gasconnection-8.jpg
-      cta: Learn More
+
 natural gas services:
   name: Natural Gas Services
   slug: natural-gas-services
@@ -645,17 +556,7 @@ propane gas services:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 gas safety inspection:
   name: Gas Safety Inspection
   slug: gas-safety-inspection
@@ -714,17 +615,7 @@ gas safety inspection:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 heating system installation:
   name: Heating System Installation
   slug: heating-system-installation
@@ -783,17 +674,7 @@ heating system installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 gas furnace installation:
   name: Gas Furnace Installation
   slug: gas-furnace-installation
@@ -849,17 +730,7 @@ gas furnace installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 boiler installation:
   name: Boiler Installation
   slug: boiler-installation
@@ -915,17 +786,7 @@ boiler installation:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 hydronic heating:
   name: Hydronic Heating
   slug: hydronic-heating
@@ -979,19 +840,7 @@ hydronic heating:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Synergy3 Construction
-      location: Almonte
-      rating: 5
-      text: We engaged Galico to install a complete hydronic heating system for a
-        large custom home, and the results were outstanding. The project
-        involved gas fitting, boiler, radiant floor heating for both the
-        basement and garage, indirect hot water tank, and fireplace. Galico's
-        team was professional and meticulous from start to finish. We have the
-        highest confidence in Galico and would not hesitate to recommend them
-        for any complex heating project.
-      image: hydronic-1.jpg
-      cta: Learn More
+
 heating maintenance:
   name: Heating Maintenance
   slug: heating-maintenance
@@ -1046,17 +895,7 @@ heating maintenance:
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Book Now
-  testimonials:
-    - name: Andree Condie
-      location: Kanata
-      rating: 5
-      text: Professionnel, meticulous, clean attentive service would highly recommend
-      image: andree.jpg
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More
+
 thermostat:
   name: Thermostat Services
   slug: thermostat
@@ -1104,10 +943,3 @@ thermostat:
       description: Schedule a thermostat installation.
       calendly_url: https://calendly.com/eric-pythago/smart-thermostat
       cta: Book Now
-
-  testimonials:
-    - name: Vyacheslav Zavadsky
-      location: Nepean
-      rating: 5
-      text: Hard working, well equipped and reasonable. What else you can ask for...
-      cta: Learn More

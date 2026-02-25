@@ -5,14 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Galico">
-<!--     <link rel="canonical" href="https://galico.ca">
-    <meta property="og:title" content="Galico | Professional Gas Installation">
-    <meta property="og:description" content="Providing reliable gas services for home builders and homeowners in West Ottawa, Ontario.">
-    <meta property="og:image" content="https://galico.ca/img/Galico_logo_240px.png">
-    <meta property="og:url" content="https://galico.ca">
-    <meta property="og:type" content="website"> -->
-
+  <link rel="canonical" href="https://galico.ca">
+  <meta property="og:title" content="Galico | Water Heater & Heating">
+  <meta property="og:description" content="Providing reliable w homeowners in West Ottawa, Ontario.">
+  <meta property="og:image" content="https://galico.ca/img/Galico_logo_240px.png">
+  <meta property="og:url" content="https://galico.ca">
+  <meta property="og:type" content="website">
   <meta name="keywords" content="Gas services in Almonte, Arnprior, Carleton Place, Carp, Kanata, Nepean, Perth, Stittsville, Smiths Falls; trusted gas technician, gas range installation, gas stove installation, tankless water heater installation, radiant floor installation, gas BBQ connection." />
+
+  {% if page.noindex == true or layout.noindex == true %}
+  <meta name="robots" content="noindex, nofollow" />
+  {% endif %}
+
+  <!-- Canonical URL -->
+  {% unless page.noindex == true and page.canonical_url == nil %}
+  {% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url | absolute_url }}" />
+  {% elsif page.url == "/index.html" or page.url == "/" %}
+  <link rel="canonical" href="{{ '/' | absolute_url }}" />
+  {% else %}
+  {% assign clean_url = page.url | replace: "/index.html", "/" | replace: ".html", "" %}
+  <link rel="canonical" href="{{ clean_url | absolute_url }}" />
+  {% endif %}
+  {% endunless %}
 
   <!-- Favicon and touch icons -->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
@@ -59,5 +74,25 @@
   href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
   rel="stylesheet"
 />
+
+  <!-- LOCAL SEO SCHEMA -->
+{% if page.url contains '/service-area/' and page.url != '/service-area/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "{{ site.title }}",
+    "url": "{{ page.url | absolute_url }}",
+	"logo": "{{ 'assets/img/logo/Galico_logo_900px.png' | absolute_url }}",
+    "description": "{{ page.description | default: site.description }}",
+    "areaServed": {
+      "@type": "Place",
+      "name": "{{ page.title }}"
+    },
+    "serviceType": ["Water Heater Installation", "Gas Fitting"],
+    "telephone": "{{ site.telephone_number }}"
+  }
+  </script>
+{% endif %}
 
 </head>
