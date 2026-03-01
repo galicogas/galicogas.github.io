@@ -185,3 +185,14 @@
     - Heating System
   services:
     - heating maintenance
+- name: Joseph Dewolfe
+  location: Carleton Place
+  rating: 5
+  text: >
+    Excellent service! Thank you Eric at Galico for fixing my hot water problem so quickly!
+  image: none
+  cta: Learn More
+  categories:
+    - Water Heater Replacement
+  services:
+    - wather heater replacement

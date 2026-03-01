@@ -52,14 +52,14 @@ tank water heater installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 tankless water heater installation:
   name: Tankless Water Heater Installation
   slug: tankless-water-heater-installation
@@ -72,7 +72,7 @@ tankless water heater installation:
     - high-efficiency gas water heater
   image: ../assets/img/tankless-water-heater-installation.jpg
   hero:
-    h1: Tankless Water Heater Installation
+    h1: Tankless Water Heater Installation & Replacement
     h2: Endless hot water with space-saving, high-efficiency on-demand systems
   intro: >
     Upgrade to continuous hot water and lower energy bills with Galico's
@@ -113,14 +113,14 @@ tankless water heater installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 gas water heater installation:
   name: Gas Water Heater Installation
@@ -172,14 +172,14 @@ gas water heater installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 electric water heater installation:
   name: Electric Water Heater Installation
@@ -232,14 +232,14 @@ electric water heater installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 water heater replacement:
   name: Water Heater Replacement
@@ -292,14 +292,14 @@ water heater replacement:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 gas line installation:
   name: Gas Line Installation
@@ -351,14 +351,14 @@ gas line installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 gas appliance installation:
   name: Gas Appliance Installation
@@ -481,14 +481,21 @@ natural gas services:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
+    - title: Leak Detection
+      image: gas-leak.jpg
+      alt: Natural Gas Leak Detection
+      description: Call us if you suspect a gas leak.
+      calendly_url: tel:+13434642219
+      cta: (343) 464-2219
+ 
   testimonials:
     - name: Andree Condie
       location: Kanata
@@ -500,6 +507,13 @@ natural gas services:
       rating: 5
       text: Hard working, well equipped and reasonable. What else you can ask for...
       cta: Learn More
+    - title: Leak Detection
+      image: gas-leak.jpg
+      alt: Natural Gas Leak Detection
+      description: Call us if you suspect a gas leak.
+      calendly_url: tel:+13434642219
+      cta: (343) 464-2219
+      
 propane gas services:
   name: Propane Gas Services
   slug: propane-gas-services
@@ -536,27 +550,32 @@ propane gas services:
       services are designed for safety, durability, and dependable performance.
   trust_points:
     - title: Propane System Specialist
-      icon: fa-gas-pump
+      icon: fa-check-circle
     - title: Regulator & Tank Setup
       icon: fa-cogs
     - title: Rural Service Coverage
       icon: fa-map-marker-alt
   cards:
-    - title: Virtual Consultation
-      image: virtualmeeting.jpg
-      alt: Virtual meeting on tablet
-      description: Schedule a free virtual evaluation of your project, using your
-        smart phone/tablet.
-      calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
+      cta: Request a Quote
+    - title: Leak Detection
+      image: gas-leak.jpg
+      alt: Natural Gas Leak Detection
+      description: Call us if you suspect a gas leak.
+      calendly_url: tel:+13434642219
+      cta: (343) 464-2219
+    - title: Propane Tank Certification
+      image: propane-tank-certification.jpg
+      alt: Propane Tank
+      description: Schedule an onsite visit for certify an existing propane tank
+      calendly_url: https://calendly.com/eric-pythago/propane-tank-inspection
       cta: Book Now
-
+      
 gas safety inspection:
   name: Gas Safety Inspection
   slug: gas-safety-inspection
@@ -601,19 +620,17 @@ gas safety inspection:
     - title: Safety Compliance Verified
       icon: fa-check-double
   cards:
-    - title: Virtual Consultation
-      image: virtualmeeting.jpg
-      alt: Virtual meeting on tablet
-      description: Schedule a free virtual evaluation of your project, using your
-        smart phone/tablet.
-      calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
-    - title: Onsite Consultation
-      image: onsiteestimate.jpg
-      alt: Technician onsite estimate
-      description: Schedule an onsite visit for evaluating your project and provide an
-        estimate.
-      calendly_url: https://calendly.com/eric-pythago/galico-estimate
+    - title: Leak Detection
+      image: gas-leak.jpg
+      alt: Natural Gas Leak Detection
+      description: Call us if you suspect a gas leak.
+      calendly_url: tel:+13434642219
+      cta: (343) 464-2219
+    - title: Propane Tank Certification
+      image: propane-tank-certification.jpg
+      alt: Propane Tank
+      description: Schedule an onsite visit for certify an existing propane tank
+      calendly_url: https://calendly.com/eric-pythago/propane-tank-inspection
       cta: Book Now
 
 heating system installation:
@@ -666,14 +683,14 @@ heating system installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 gas furnace installation:
   name: Gas Furnace Installation
@@ -722,14 +739,14 @@ gas furnace installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 boiler installation:
   name: Boiler Installation
@@ -778,14 +795,14 @@ boiler installation:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 hydronic heating:
   name: Hydronic Heating
@@ -839,7 +856,7 @@ hydronic heating:
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
+      cta: Request a Quote
 
 heating maintenance:
   name: Heating Maintenance
@@ -887,15 +904,14 @@ heating maintenance:
       description: Schedule a free virtual evaluation of your project, using your
         smart phone/tablet.
       calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Book Now
+      cta: Request a Quote
     - title: Onsite Consultation
       image: onsiteestimate.jpg
       alt: Technician onsite estimate
       description: Schedule an onsite visit for evaluating your project and provide an
         estimate.
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Book Now
-
+      cta: Request a Quote
 thermostat:
   name: Thermostat Services
   slug: thermostat
