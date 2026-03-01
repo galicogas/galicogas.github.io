@@ -40,6 +40,7 @@
 		"reviewCount": "26"
 	  },
 	  "serviceArea": [
+	    {"@type": "AdministrativeArea", "name": "Ontario"},
 		{ "@type": "Place", "name": "Almonte" },
 		{ "@type": "Place", "name": "Arnprior" },
 		{ "@type": "Place", "name": "Carleton Place" },
@@ -50,92 +51,13 @@
 		{ "@type": "Place", "name": "Stittsville" },
 		{ "@type": "Place", "name": "Smiths Falls" }
 	  ],
-	  "makesOffer": [
-		{
-		  "@type": "Offer",
-		  "itemOffered": {
-			"@type": "Service",
-			"name": "Gas Range Installation",
-			"serviceType": "Residential Gas Fitting Installation",
-			"description": "Professional gas line installation services."
-		  },
-		  "areaServed": [
-			{ "@type": "Place", "name": "Almonte" },
-			{ "@type": "Place", "name": "Arnprior" },
-			{ "@type": "Place", "name": "Carleton Place" },
-			{ "@type": "Place", "name": "Carp" },
-			{ "@type": "Place", "name": "Kanata" },
-			{ "@type": "Place", "name": "Nepean" },
-			{ "@type": "Place", "name": "Perth" },
-			{ "@type": "Place", "name": "Stittsville" },
-			{ "@type": "Place", "name": "Smiths Falls" }
-		  ]
-		},
-		{
-		  "@type": "Offer",
-		  "itemOffered": {
-			"@type": "Service",
-			"name": "Hot Water Tank Installation",
-			"serviceType": "Residential Water Heater Installation",
-			"description": "Expert installation of tank type water heaters."
-		  },
-		  "areaServed": [
-			{ "@type": "Place", "name": "Almonte" },
-			{ "@type": "Place", "name": "Arnprior" },
-			{ "@type": "Place", "name": "Carleton Place" },
-			{ "@type": "Place", "name": "Carp" },
-			{ "@type": "Place", "name": "Kanata" },
-			{ "@type": "Place", "name": "Nepean" },
-			{ "@type": "Place", "name": "Perth" },
-			{ "@type": "Place", "name": "Stittsville" },
-			{ "@type": "Place", "name": "Smiths Falls" }
-		  ]
-		},
-		{
-		  "@type": "Offer",
-		  "itemOffered": {
-			"@type": "Service",
-			"name": "Tankless Water Heater Installation",
-			"serviceType": "Residential Water Heater Installation",
-			"description": "Expert installation of tankless water heaters."
-		  },
-		  "areaServed": [
-			{ "@type": "Place", "name": "Almonte" },
-			{ "@type": "Place", "name": "Arnprior" },
-			{ "@type": "Place", "name": "Carleton Place" },
-			{ "@type": "Place", "name": "Carp" },
-			{ "@type": "Place", "name": "Kanata" },
-			{ "@type": "Place", "name": "Nepean" },
-			{ "@type": "Place", "name": "Perth" },
-			{ "@type": "Place", "name": "Stittsville" },
-			{ "@type": "Place", "name": "Smiths Falls" }
-		  ]
-		},
-		{
-		  "@type": "Offer",
-		  "itemOffered": {
-			"@type": "Service",
-			"name": "Radiant Floor Installation",
-			"serviceType": "Residential Hydronic Installation",
-			"description": "Install efficient radiant heating systems."
-		  },
-		  "areaServed": [
-			{ "@type": "Place", "name": "Almonte" },
-			{ "@type": "Place", "name": "Arnprior" },
-			{ "@type": "Place", "name": "Carleton Place" },
-			{ "@type": "Place", "name": "Carp" },
-			{ "@type": "Place", "name": "Kanata" },
-			{ "@type": "Place", "name": "Nepean" },
-			{ "@type": "Place", "name": "Perth" },
-			{ "@type": "Place", "name": "Stittsville" },
-			{ "@type": "Place", "name": "Smiths Falls" }
-		  ]
-		}
-	  ],
 	  "sameAs": [
 		"https://www.facebook.com/galicogas",
 		"https://www.instagram.com/galicogas"
 	  ],
+	  "serviceType": ["Hot Water System Supplier", "Gas Installation Service", "Gasfitter", "Heating Contractor"],
+	  "telephone": "{{ site.telephone_number }}",
+	  "hasMap": "https://maps.google.com/?q={{ page.location_name | url_encode }},ON",	  
 	  "review": [
 		{
 		  "@type": "Review",

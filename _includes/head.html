@@ -7,7 +7,7 @@
   <meta name="author" content="Galico">
   <link rel="canonical" href="https://galico.ca">
   <meta property="og:title" content="Galico | Water Heater & Heating">
-  <meta property="og:description" content="Providing reliable w homeowners in West Ottawa, Ontario.">
+  <meta property="og:description" content="Providing reliable water heater and heating services to homeowners in West Ottawa, Ontario.">
   <meta property="og:image" content="https://galico.ca/img/Galico_logo_240px.png">
   <meta property="og:url" content="https://galico.ca">
   <meta property="og:type" content="website">
@@ -76,6 +76,7 @@
 />
 
   <!-- LOCAL SEO SCHEMA -->
+
 {% if page.url contains '/service-area/' and page.url != '/service-area/' %}
   <script type="application/ld+json">
   {
@@ -84,15 +85,114 @@
     "name": "{{ site.title }}",
     "url": "{{ page.url | absolute_url }}",
 	"logo": "{{ 'assets/img/logo/Galico_logo_900px.png' | absolute_url }}",
-    "description": "{{ page.description | default: site.description }}",
-    "areaServed": {
-      "@type": "Place",
-      "name": "{{ page.title }}"
-    },
-    "serviceType": ["Water Heater Installation", "Gas Fitting"],
-    "telephone": "{{ site.telephone_number }}"
-  }
+    "description": "{{ page.description | default: site.description | xml_escape }}",
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ page.city_key }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    }
+  },
+  "serviceType": ["Hot Water System Supplier", "Gas Installation Service", "Gasfitter", "Heating Contractor"],
+  "telephone": "{{ site.telephone_number }}",
+  "hasMap": "https://maps.google.com/?q={{ page.location_name | url_encode }},ON"
+}
   </script>
+{% elsif page.url contains '/hot-water/' %}
+<script>
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "{{ site.title }}",
+  "url": "{{ page.url | absolute_url }}",
+  "description": "{{ page.description  }}",
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "serviceType": "Hot Water System Supplier",
+      "areaServed": 
+		{"@type": "AdministrativeArea", "name": "Ontario"},
+		{ "@type": "Place", "name": "Almonte" },
+		{ "@type": "Place", "name": "Arnprior" },
+		{ "@type": "Place", "name": "Carleton Place" },
+		{ "@type": "Place", "name": "Carp" },
+		{ "@type": "Place", "name": "Kanata" },
+		{ "@type": "Place", "name": "Nepean" },
+		{ "@type": "Place", "name": "Perth" },
+		{ "@type": "Place", "name": "Stittsville" },
+		{ "@type": "Place", "name": "Smiths Falls" }
+    }
+  },
+  "telephone": "{{ site.telephone_number }}"
+}
+</script> 
+{% elsif page.url contains '/gasfitting/' %}
+<script>
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "{{ site.title }}",
+  "url": "{{ page.url | absolute_url }}",
+  "description": "{{ page.description }}",
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+  "serviceType": ["Gas Installation Service", "Gasfitter"],
+      "areaServed": 
+		{"@type": "AdministrativeArea", "name": "Ontario"},
+		{ "@type": "Place", "name": "Almonte" },
+		{ "@type": "Place", "name": "Arnprior" },
+		{ "@type": "Place", "name": "Carleton Place" },
+		{ "@type": "Place", "name": "Carp" },
+		{ "@type": "Place", "name": "Kanata" },
+		{ "@type": "Place", "name": "Nepean" },
+		{ "@type": "Place", "name": "Perth" },
+		{ "@type": "Place", "name": "Stittsville" },
+		{ "@type": "Place", "name": "Smiths Falls" }
+    }
+  },
+  "telephone": "{{ site.telephone_number }}"
+}
+</script> 
+{% elsif page.url contains '/heating/' %}
+<script>
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "{{ site.title }}",
+  "url": "{{ page.url | absolute_url }}",
+  "description": "{{ page.description }}",
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "serviceType": "Heating Contractor",
+      "areaServed": 
+		{"@type": "AdministrativeArea", "name": "Ontario"},
+		{ "@type": "Place", "name": "Almonte" },
+		{ "@type": "Place", "name": "Arnprior" },
+		{ "@type": "Place", "name": "Carleton Place" },
+		{ "@type": "Place", "name": "Carp" },
+		{ "@type": "Place", "name": "Kanata" },
+		{ "@type": "Place", "name": "Nepean" },
+		{ "@type": "Place", "name": "Perth" },
+		{ "@type": "Place", "name": "Stittsville" },
+		{ "@type": "Place", "name": "Smiths Falls" }
+    }
+  },
+  "telephone": "{{ site.telephone_number }}"
+}
+</script> 
 {% endif %}
 
 </head>
