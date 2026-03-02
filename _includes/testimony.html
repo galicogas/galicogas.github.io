@@ -1,4 +1,5 @@
-{% for review in site.data.reviews %}
+{% assign review = site.data.testimonials %}
+{% if review.rating == 5 %}
 <div class="testimonial-item">
     <img class="img-fluid mb-4" src="/assets/img/testimonials/{{review.image}}" alt="Photo of {{ review.name }}">
     <p class="fs-5">
@@ -8,4 +9,4 @@
     <h5>{{ review.name }}</h5>
     <span>{{ review.location }}</span>
 </div>
-{% endfor %}
+{% endif %}
