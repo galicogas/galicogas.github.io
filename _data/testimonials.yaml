@@ -196,3 +196,14 @@
     - Water Heater Replacement
   services:
     - wather heater replacement
+- name: Mischa Harper
+  location: Nepean
+  rating: 5
+  text: >
+    Galico Home Comfort came to disconnect the gas line from my stove, and the technician was quick, efficient, and very reasonably priced. We thought we had a minor issue afterward, but he resolved it right away — no stress at all. He was kind, understanding, and clearly takes pride in his work. I’d absolutely hire them again for future projects or home solutions. Highly recommend!
+  image: none
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas line installation
