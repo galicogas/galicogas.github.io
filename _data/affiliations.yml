@@ -12,6 +12,13 @@
   badge_type: "primary"
   url: "https://members.perthchamber.com/list/member/galico-2741"
 
+- name: "Smiths Falls & District Chamber of Commerce"
+  logo: "sfcc.png"
+  category: "Chamber"
+  badge: "Member"
+  badge_type: "primary"
+  url: "https://smithsfallschamber.com/"
+
 - name: "Upper Ottawa Valley Chamber of Commerce"
   logo: "uovcc-logo.png"
   category: "Chamber"
