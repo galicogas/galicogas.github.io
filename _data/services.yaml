@@ -253,7 +253,7 @@ water heater replacement:
     - water heater upgrade service
   image: ../assets/img/water-heater-replacement.jpg
   hero:
-    h1: Water Heater Replacement Services
+    h1: Water Heater Repair & Replacement Services
     h2: Fast, professional replacement when your hot water system fails
   intro: >
     Don't stay without hot water. Galico provides prompt water heater
@@ -441,7 +441,7 @@ natural gas services:
     - gas service upgrade residential
     - natural gas meter installation
     - gas infrastructure services
-  image: ../assets/img/gasfitting.jpg
+  image: ../assets/img/about.jpg
   hero:
     h1: Residential Natural Gas Services
     h2: Complete natural gas solutions from connection to appliance hookup
