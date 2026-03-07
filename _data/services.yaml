@@ -898,20 +898,12 @@ heating maintenance:
     - title: Efficiency Optimization
       icon: fa-chart-line
   cards:
-    - title: Virtual Consultation
-      image: virtualmeeting.jpg
-      alt: Virtual meeting on tablet
-      description: Schedule a free virtual evaluation of your project, using your
-        smart phone/tablet.
-      calendly_url: https://calendly.com/eric-pythago/virtual-consultation
-      cta: Request a Quote
-    - title: Onsite Consultation
-      image: onsiteestimate.jpg
-      alt: Technician onsite estimate
-      description: Schedule an onsite visit for evaluating your project and provide an
-        estimate.
-      calendly_url: https://calendly.com/eric-pythago/galico-estimate
-      cta: Request a Quote
+    - title: Heating Maintenance Service
+      image: heating-maintenance1.jpg
+      alt: Heating Maintenance Service
+      description: Schedule your seasonal gas furnace, boiler or fireplace service and tune-up.
+      calendly_url: https://calendly.com/eric-pythago/gas-appliance-inspection
+      cta: Book Now
 thermostat:
   name: Thermostat Services
   slug: thermostat
