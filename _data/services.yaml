@@ -8,9 +8,9 @@ tank water heater installation:
     - gas water heater replacement
     - residential water heater installer
     - TSSA certified water heater installation
-  image: ../assets/img/tank-water-heater-installation.jpg
+  image: ../assets/img/tank-water-heater-installation-kanata.jpg
   hero:
-    h1: Tank Water Heater Installation & Replacement
+    h1: Hot Water Tank Installation & Replacement
     h2: Licensed TSSA technicians installing reliable hot water tanks across Ottawa
       Valley
   intro: >
@@ -124,7 +124,7 @@ tankless water heater installation:
 
 gas water heater installation:
   name: Gas Water Heater Installation
-  slug: gas-water-heater
+  slug: gas-water-heater-installation
   category: Hot Water System
   primary_keyword: gas water heater installation
   secondary_keywords:
@@ -132,7 +132,7 @@ gas water heater installation:
     - gas hot water tank installation
     - emergency gas water heater replacement
     - certified gasfitter water heater
-  image: ../assets/img/gas-water-heater-installation.jpg
+  image: ../assets/img/gas-water-heater-installation-kanata.jpg
   hero:
     h1: Gas Water Heater Installation & Replacement
     h2: Fast recovery, high-capacity gas hot water systems by licensed professionals
@@ -191,7 +191,7 @@ electric water heater installation:
     - electric water heater replacement
     - residential electric water heater
     - heat pump water heater installation
-  image: ../assets/img/electric-water-heater-installation.jpg
+  image: ../assets/img/electric-water-heater-installation-almonte.jpg
   hero:
     h1: Electric Water Heater Installation
     h2: Safe, efficient electric hot water systems for homes without gas service
@@ -251,7 +251,7 @@ water heater replacement:
     - same-day water heater replacement
     - old water heater removal
     - water heater upgrade service
-  image: ../assets/img/water-heater-replacement.jpg
+  image: ../assets/img/water-heater-replacement-kanata.jpg
   hero:
     h1: Water Heater Repair & Replacement Services
     h2: Fast, professional replacement when your hot water system fails
@@ -311,7 +311,7 @@ gas line installation:
     - gas line extension service
     - BBQ gas line installation
     - residential gas piping contractor
-  image: ../assets/img/gas-line-installation.jpg
+  image: ../assets/img/gas-line-installation-stittsville.jpg
   hero:
     h1: Gas Line Installation Services
     h2: Safe, code-compliant natural gas piping for appliances and outdoor equipment
@@ -441,7 +441,7 @@ natural gas services:
     - gas service upgrade residential
     - natural gas meter installation
     - gas infrastructure services
-  image: ../assets/img/about.jpg
+  image: ../assets/img/natural-gas-service-carleton_place.jpg
   hero:
     h1: Residential Natural Gas Services
     h2: Complete natural gas solutions from connection to appliance hookup
@@ -524,7 +524,7 @@ propane gas services:
     - rural propane gas service
     - propane appliance conversion
     - off-grid propane systems
-  image: ../assets/img/propane-gas-services.jpg
+  image: ../assets/img/propane-gas-services-carp.jpg
   hero:
     h1: Propane Gas Installation & Service
     h2: Safe propane systems for rural, off-grid, and non-serviced properties
@@ -643,7 +643,7 @@ heating system installation:
     - residential heating contractor
     - new heating system Ontario
     - energy efficient heating installation
-  image: ../assets/img/heating-system-installation.jpg
+  image: ../assets/img/heating-system-installation-almonte.jpg
   hero:
     h1: Heating System Installation
     h2: Custom heating solutions designed for Ontario's harsh winters
@@ -702,7 +702,7 @@ gas furnace installation:
     - furnace replacement service
     - condensing furnace installation
     - residential furnace contractor
-  image: ../assets/img/gas-furnace-installation.jpg
+  image: ../assets/img/gas-furnace-installation-kanata.jpg
   hero:
     h1: Gas Furnace Installation
     h2: High-efficiency furnaces delivering reliable warmth all winter long
@@ -868,7 +868,7 @@ heating maintenance:
     - heating system tune-up
     - boiler maintenance service
     - pre-winter heating inspection
-  image: ../assets/img/heating-maintenance.jpg
+  image: ../assets/img/heating-maintenance-kanata.jpg
   hero:
     h1: Heating Maintenance Services
     h2: Extend equipment life and improve efficiency with regular maintenance
