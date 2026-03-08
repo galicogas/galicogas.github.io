@@ -85,11 +85,17 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Galico",
+  "@graph": [
+
+{
+  "@type": "HVACBusiness",
+  "@id": "https://galico.ca/#business",
+  "name": "Galico Home Comfort Inc.",
   "url": "https://galico.ca",
   "logo": "https://galico.ca/img/Galico_logo_240px.png",
   "image": "https://galico.ca/img/about.jpg",
+  "telephone": "+1-343-464-2219",
+  "priceRange": "$$",
 
   "address": {
     "@type": "PostalAddress",
@@ -99,7 +105,17 @@
     "addressCountry": "CA"
   },
 
-  "telephone": "+1-343-464-2219",
+  "areaServed": [
+    {"@type": "Place","name": "Almonte"},
+    {"@type": "Place","name": "Arnprior"},
+    {"@type": "Place","name": "Carleton Place"},
+    {"@type": "Place","name": "Carp"},
+    {"@type": "Place","name": "Kanata"},
+    {"@type": "Place","name": "Nepean"},
+    {"@type": "Place","name": "Perth"},
+    {"@type": "Place","name": "Stittsville"},
+    {"@type": "Place","name": "Smiths Falls"}
+  ],
 
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -115,591 +131,163 @@
     "closes": "20:00"
   },
 
-  "priceRange": "$$",
-
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "27"
-  },
-
-  "serviceArea": [
-    {"@type": "AdministrativeArea", "name": "Ontario"},
-    {"@type": "Place", "name": "Almonte"},
-    {"@type": "Place", "name": "Arnprior"},
-    {"@type": "Place", "name": "Carleton Place"},
-    {"@type": "Place", "name": "Carp"},
-    {"@type": "Place", "name": "Kanata"},
-    {"@type": "Place", "name": "Nepean"},
-    {"@type": "Place", "name": "Perth"},
-    {"@type": "Place", "name": "Stittsville"},
-    {"@type": "Place", "name": "Smiths Falls"}
-  ],
-
   "sameAs": [
     "https://www.facebook.com/galicogas",
     "https://www.instagram.com/galicogas",
     "https://x.com/Galicogas"
   ],
 
-  "serviceType": [
-    "Hot Water System Supplier",
-    "Gas Installation Service",
-    "Gasfitter",
-    "Heating Contractor"
-  ],
-
-  "hasMap": "https://www.google.com/maps/d/u/0/embed?mid=1YRFncpURiRz9x6D3Kz8TEosX4ITicm8&ehbc=2E312F&noprof=1",
-
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Water Heaters & Home Comfort",
-    "itemListElement": [
-      {
-        "@type": "OfferCatalog",
-        "name": "Hot Water System Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Tank Water Heater Installation",
-              "description": "Professional installation of traditional tank-style water heaters. Available in gas and electric models. Includes proper sizing, gas/electrical connections, and code-compliant venting.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/hot-water/tank-water-heater-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Hot Water System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Tankless Water Heater Installation",
-              "description": "Expert installation of energy-efficient tankless water heaters. Endless hot water on demand. Includes gas line sizing, venting, and proper unit selection for your home's needs.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/hot-water/tankless-water-heater-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Hot Water System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gas Water Heater Installation",
-              "description": "Expert installation of gas-fired water heaters by certified gas technicians. Includes gas line connection, venting, and safety testing.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/hot-water/gas-water-heater",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Hot Water System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Electric Water Heater Installation",
-              "description": "Professional installation of electric water heaters. Ideal for homes without natural gas. Includes proper electrical connections and temperature regulation.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/hot-water/electric-water-heater-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Hot Water System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Water Heater Replacement",
-              "description": "Complete replacement of your existing water heater. We safely remove and dispose of your old unit and install your new water heater with professional care.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/hot-water/water-heater-replacement",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Hot Water System"
-          }
-        ]
-      },
-      {
-        "@type": "OfferCatalog",
-        "name": "Heating System Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Heating System Installation",
-              "description": "Complete installation of new residential heating systems. Expert assessment, proper sizing, and professional installation of gas-fired heating equipment for optimal comfort and efficiency.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/heating-system-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gas Furnace Installation",
-              "description": "Professional installation of high-efficiency gas furnaces. Expert sizing, secure gas line connections, proper venting, and thermostat integration for reliable whole-home heating.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/gas-furnace-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Boiler Installation",
-              "description": "Expert installation of gas-fired boilers for hydronic heating systems. Includes proper sizing, gas connection, venting, and integration with radiators or in-floor heating.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/boiler-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hydronic Heating Installation",
-              "description": "Professional installation of hydronic heating systems, including in-floor radiant heat and baseboard systems. Complete gas boiler connection, piping, and zone control setup.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/hydronic-heating",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Heating Maintenance",
-              "description": "Comprehensive maintenance for gas heating systems. Includes inspection, cleaning, tune-ups, and safety checks to ensure efficient operation and extend equipment life.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/heating-maintenance",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Thermostat Services",
-              "description": "Professional thermostat installation, setup, and repair. Includes programmable and smart thermostats with proper wiring, configuration, and integration with your gas heating system.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/heating/thermostat",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Heating System"
-          }
-        ]
-      },
-      {
-        "@type": "OfferCatalog",
-        "name": "Gas Installation Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gas Line Installation",
-              "description": "Professional gas line installation for any residential application. Expert sizing, safe routing, and code-compliant connections for natural gas or propane systems. Includes pressure testing and leak inspection.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/gasfitting/gas-line-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Gas Installation"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gas Appliance Installation",
-              "description": "Expert installation of gas-powered appliances. Includes connection, venting, and safety testing for gas ranges, cooktops, dryers, fireplaces, and more. Certified gas technicians ensure code compliance.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/gasfitting/gas-appliance-installation",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Gas Installation"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Natural Gas Services",
-              "description": "Complete natural gas solutions for your home. From new line installation to appliance connection and system modifications. Certified gas fitters serving residential properties with safety and expertise.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/gasfitting/natural-gas-services",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Gas Installation"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Propane Gas Services",
-              "description": "Professional propane gas services for residential properties. Includes propane line installation, appliance connection, tank hookup, and system maintenance. Serving homes beyond the natural gas grid.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/gasfitting/propane-gas-services",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Gas Installation"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gas Safety Inspection",
-              "description": "Thorough gas safety inspection for your home's entire gas system. Includes leak testing, pressure checks, appliance venting verification, and code compliance assessment. Peace of mind for homeowners.",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Galico",
-                "url": "https://galico.ca"
-              },
-              "areaServed": [
-                { "@type": "Place", "name": "Almonte" },
-                { "@type": "Place", "name": "Arnprior" },
-                { "@type": "Place", "name": "Carleton Place" },
-                { "@type": "Place", "name": "Carp" },
-                { "@type": "Place", "name": "Kanata" },
-                { "@type": "Place", "name": "Nepean" },
-                { "@type": "Place", "name": "Perth" },
-                { "@type": "Place", "name": "Stittsville" },
-                { "@type": "Place", "name": "Smiths Falls" }
-              ]
-            },
-            "url": "https://galico.ca/gasfitting/gas-safety-inspection",
-            "price": "Call for Estimate",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
-            "category": "Gas Installation"
-          }
-        ]
-      }
-    ]
-  },
-    "hasMerchantReturnPolicy": {
-    "@type": "MerchantReturnPolicy",
-    "name": "Water Heater Promotion: Free 3-Night Stay",
-    "description": "Purchase any water heater installation from Galico and receive a complimentary 3-night stay",
-    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-    "merchantReturnLink": "https://galico.ca/freevacation"
-  },
-  
-  "offers": {
-    "@type": "Offer",
-    "name": "Free 3-Night Stay with Water Heater Purchase",
-    "description": "Buy a water heater and get a FREE 3-night stay!",
-    "price": "0",
-    "priceCurrency": "CAD",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-03-01",
-    "validThrough": "2026-04-30",
-    "url": "https://galico.ca/freevacation"
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "27"
   }
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Luc" },
-      "reviewBody": "Galico is very punctual and the work is professional. Absolutely no worries about the quality, very reasonably priced and they certified the work. The fact that I hired them more than once speaks for itself.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Wesley" },
-      "reviewBody": "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly and answered all my questions.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Deep" },
-      "reviewBody": "I would definitely suggest him. He is very professional and talented guy. He is also very responsive and punctual. We just got a new house and we were looking for someone urgently for our gas line installation, and he gave a quicker response and we booked time and done. It was very easy and smooth process to deal with him.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Slava" },
-      "reviewBody": "Hard working, well equipped and reasonable. What else can you ask for?",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    }
+},
+
+{
+  "@type": "Service",
+  "@id": "https://galico.ca/#tank-water-heater",
+  "name": "Tank Water Heater Installation",
+  "description": "Professional installation of gas and electric tank-style water heaters including sizing, venting, and code-compliant connections.",
+  "provider": {
+    "@id": "https://galico.ca/#business"
+  },
+  "areaServed": "Ottawa and surrounding communities",
+  "url": "https://galico.ca/hot-water/tank-water-heater-installation"
+},
+
+{
+  "@type": "Service",
+  "@id": "https://galico.ca/#tankless-water-heater",
+  "name": "Tankless Water Heater Installation",
+  "description": "Installation of energy-efficient tankless water heaters providing continuous hot water with proper gas sizing and venting.",
+  "provider": {
+    "@id": "https://galico.ca/#business"
+  },
+  "areaServed": "Ottawa and surrounding communities",
+  "url": "https://galico.ca/hot-water/tankless-water-heater-installation"
+},
+
+{
+  "@type": "FAQPage",
+  "@id": "https://galico.ca/#faq",
+  "mainEntity": [
+
+	{
+	  "@type": "Question",
+	  "name": "How much does water heater installation cost in Ottawa?",
+	  "acceptedAnswer": {
+		"@type": "Answer",
+		"text": "Water heater installation costs depend on the size, type, and venting requirements. Most installations range from standard tank replacements to tankless systems that require upgraded gas lines and venting. Contact Galico for a personalized estimate."
+	  }
+	},
+
+	{
+	  "@type": "Question",
+	  "name": "Do you install tankless water heaters?",
+	  "acceptedAnswer": {
+		"@type": "Answer",
+		"text": "Yes. Galico installs high-efficiency tankless water heaters for homes across Ottawa, Almonte, Kanata, and surrounding areas. Tankless systems provide endless hot water and improved energy efficiency."
+	  }
+	},
+
+	{
+	  "@type": "Question",
+	  "name": "Can you install gas lines for BBQs or stoves?",
+	  "acceptedAnswer": {
+		"@type": "Answer",
+		"text": "Yes. Galico provides licensed gas line installation for BBQs, gas stoves, fireplaces, dryers, and outdoor appliances."
+	  }
+	},
+
+	{
+	  "@type": "Question",
+	  "name": "Do you service propane homes?",
+	  "acceptedAnswer": {
+		"@type": "Answer",
+		"text": "Yes. Galico installs and services propane appliances and gas systems for rural homes outside the natural gas grid."
+	  }
+	}
+
   ]
+}
+
+{
+  "@type": "Service",
+  "@id": "https://galico.ca/#gas-line-installation",
+  "name": "Gas Line Installation",
+  "description": "Professional installation of natural gas and propane lines for residential appliances including BBQs, stoves, fireplaces, and heating systems.",
+  "provider": {
+    "@id": "https://galico.ca/#business"
+  },
+  "areaServed": "Ottawa and surrounding communities",
+  "url": "https://galico.ca/gasfitting/gas-line-installation"
+},
+
+{
+  "@type": "Service",
+  "@id": "https://galico.ca/#boiler-installation",
+  "name": "Boiler Installation",
+  "description": "Expert installation of gas boilers for hydronic heating systems including radiators and radiant floor heating.",
+  "provider": {
+    "@id": "https://galico.ca/#business"
+  },
+  "areaServed": "Ottawa and surrounding communities",
+  "url": "https://galico.ca/heating/boiler-installation"
+},
+
+{
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Luc"
+  },
+  "reviewBody": "Galico is very punctual and the work is professional. Absolutely no worries about the quality and very reasonably priced.",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "itemReviewed": {
+    "@id": "https://galico.ca/#business"
+  }
+},
+
+{
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Wesley"
+  },
+  "reviewBody": "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly.",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "itemReviewed": {
+    "@id": "https://galico.ca/#business"
+  }
+},
+
+{
+  "@type": "Review",
+  "author": {
+    "@type": "Person",
+    "name": "Deep"
+  },
+  "reviewBody": "Very professional and responsive. The gas line installation process was smooth and easy.",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "itemReviewed": {
+    "@id": "https://galico.ca/#business"
+  }
+}
+
+]
 }
 </script>
 
