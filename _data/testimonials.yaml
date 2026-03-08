@@ -206,3 +206,14 @@
     - Gasfitting
   services:
     - gas line installation
+- name: Denise Ballermann
+  location: Almonte
+  rating: 5
+  text: >
+    I was very impressed with Eric from his initial phone call and he did not disappoint. Eric is people person and his service is amazing. He took time to brief me on a few gas operations coupled with his customer care, professionalism and being on time for his appointments is what impressed me the most. He easily dealt with my changing the disconnect gas line time a few time to coincide with delivery and made sure he was available to hook the new gas stove up same day. I highly recommend Eric for any of his services.
+  image: gasconnection-9.jpg
+  cta: Learn More
+  categories:
+    - Gasfitting
+  services:
+    - gas appliance installation
