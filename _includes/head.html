@@ -86,208 +86,137 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
-{
-  "@type": "HVACBusiness",
-  "@id": "https://galico.ca/#business",
-  "name": "Galico Home Comfort Inc.",
-  "url": "https://galico.ca",
-  "logo": "https://galico.ca/img/Galico_logo_240px.png",
-  "image": "https://galico.ca/img/about.jpg",
-  "telephone": "+1-343-464-2219",
-  "priceRange": "$$",
-
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Almonte",
-    "addressRegion": "ON",
-    "postalCode": "K0A 1A0",
-    "addressCountry": "CA"
-  },
-
-  "areaServed": [
-    {"@type": "Place","name": "Almonte"},
-    {"@type": "Place","name": "Arnprior"},
-    {"@type": "Place","name": "Carleton Place"},
-    {"@type": "Place","name": "Carp"},
-    {"@type": "Place","name": "Kanata"},
-    {"@type": "Place","name": "Nepean"},
-    {"@type": "Place","name": "Perth"},
-    {"@type": "Place","name": "Stittsville"},
-    {"@type": "Place","name": "Smiths Falls"}
-  ],
-
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "08:00",
-    "closes": "20:00"
-  },
-
-  "sameAs": [
-    "https://www.facebook.com/galicogas",
-    "https://www.instagram.com/galicogas",
-    "https://x.com/Galicogas"
-  ],
-
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "27"
-  }
-},
-
-{
-  "@type": "Service",
-  "@id": "https://galico.ca/#tank-water-heater",
-  "name": "Tank Water Heater Installation",
-  "description": "Professional installation of gas and electric tank-style water heaters including sizing, venting, and code-compliant connections.",
-  "provider": {
-    "@id": "https://galico.ca/#business"
-  },
-  "areaServed": "Ottawa and surrounding communities",
-  "url": "https://galico.ca/hot-water/tank-water-heater-installation"
-},
-
-{
-  "@type": "Service",
-  "@id": "https://galico.ca/#tankless-water-heater",
-  "name": "Tankless Water Heater Installation",
-  "description": "Installation of energy-efficient tankless water heaters providing continuous hot water with proper gas sizing and venting.",
-  "provider": {
-    "@id": "https://galico.ca/#business"
-  },
-  "areaServed": "Ottawa and surrounding communities",
-  "url": "https://galico.ca/hot-water/tankless-water-heater-installation"
-},
-
-{
-  "@type": "FAQPage",
-  "@id": "https://galico.ca/#faq",
-  "mainEntity": [
-
-	{
-	  "@type": "Question",
-	  "name": "How much does water heater installation cost in Ottawa?",
-	  "acceptedAnswer": {
-		"@type": "Answer",
-		"text": "Water heater installation costs depend on the size, type, and venting requirements. Most installations range from standard tank replacements to tankless systems that require upgraded gas lines and venting. Contact Galico for a personalized estimate."
-	  }
-	},
-
-	{
-	  "@type": "Question",
-	  "name": "Do you install tankless water heaters?",
-	  "acceptedAnswer": {
-		"@type": "Answer",
-		"text": "Yes. Galico installs high-efficiency tankless water heaters for homes across Ottawa, Almonte, Kanata, and surrounding areas. Tankless systems provide endless hot water and improved energy efficiency."
-	  }
-	},
-
-	{
-	  "@type": "Question",
-	  "name": "Can you install gas lines for BBQs or stoves?",
-	  "acceptedAnswer": {
-		"@type": "Answer",
-		"text": "Yes. Galico provides licensed gas line installation for BBQs, gas stoves, fireplaces, dryers, and outdoor appliances."
-	  }
-	},
-
-	{
-	  "@type": "Question",
-	  "name": "Do you service propane homes?",
-	  "acceptedAnswer": {
-		"@type": "Answer",
-		"text": "Yes. Galico installs and services propane appliances and gas systems for rural homes outside the natural gas grid."
-	  }
-	}
-
+    {
+      "@type": "HVACBusiness",
+      "@id": "https://galico.ca/#business",
+      "name": "Galico Home Comfort Inc.",
+      "url": "https://galico.ca",
+      "logo": "https://galico.ca/img/Galico_logo_240px.png",
+      "image": "https://galico.ca/img/about.jpg",
+      "telephone": "+1-343-464-2219",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Almonte",
+        "addressRegion": "ON",
+        "postalCode": "K0A 1A0",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        {"@type": "Place", "name": "Almonte"},
+        {"@type": "Place", "name": "Arnprior"},
+        {"@type": "Place", "name": "Carleton Place"},
+        {"@type": "Place", "name": "Carp"},
+        {"@type": "Place", "name": "Kanata"},
+        {"@type": "Place", "name": "Nepean"},
+        {"@type": "Place", "name": "Perth"},
+        {"@type": "Place", "name": "Stittsville"},
+        {"@type": "Place", "name": "Smiths Falls"}
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://maps.app.goo.gl/E1Hcrvv1N43HyDGP7",
+		"https://www.facebook.com/galicogas",
+        "https://www.instagram.com/galicogas",
+        "https://x.com/Galicogas"
+      ]
+      /* aggregateRating removed - won't generate stars for LocalBusiness */
+    },
+    {
+      "@type": "Service",
+      "@id": "https://galico.ca/#tank-water-heater",
+      "name": "Tank Water Heater Installation",
+      "description": "Professional installation of gas and electric tank-style water heaters including sizing, venting, and code-compliant connections.",
+      "provider": {
+        "@id": "https://galico.ca/#business"
+      },
+      "areaServed": "Ottawa and surrounding communities",
+      "url": "https://galico.ca/hot-water/tank-water-heater-installation"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://galico.ca/#tankless-water-heater",
+      "name": "Tankless Water Heater Installation",
+      "description": "Installation of energy-efficient tankless water heaters providing continuous hot water with proper gas sizing and venting.",
+      "provider": {
+        "@id": "https://galico.ca/#business"
+      },
+      "areaServed": "Ottawa and surrounding communities",
+      "url": "https://galico.ca/hot-water/tankless-water-heater-installation"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://galico.ca/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does water heater installation cost in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Water heater installation costs depend on the size, type, and venting requirements. Most installations range from standard tank replacements to tankless systems that require upgraded gas lines and venting. Contact Galico for a personalized estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install tankless water heaters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Galico installs high-efficiency tankless water heaters for homes across Ottawa, Almonte, Kanata, and surrounding areas. Tankless systems provide endless hot water and improved energy efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you install gas lines for BBQs or stoves?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Galico provides licensed gas line installation for BBQs, gas stoves, fireplaces, dryers, and outdoor appliances."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you service propane homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Galico installs and services propane appliances and gas systems for rural homes outside the natural gas grid."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://galico.ca/#gas-line-installation",
+      "name": "Gas Line Installation",
+      "description": "Professional installation of natural gas and propane lines for residential appliances including BBQs, stoves, fireplaces, and heating systems.",
+      "provider": {
+        "@id": "https://galico.ca/#business"
+      },
+      "areaServed": "Ottawa and surrounding communities",
+      "url": "https://galico.ca/gasfitting/gas-line-installation"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://galico.ca/#boiler-installation",
+      "name": "Boiler Installation",
+      "description": "Expert installation of gas boilers for hydronic heating systems including radiators and radiant floor heating.",
+      "provider": {
+        "@id": "https://galico.ca/#business"
+      },
+      "areaServed": "Ottawa and surrounding communities",
+      "url": "https://galico.ca/heating/boiler-installation"
+    }
   ]
-}
-
-{
-  "@type": "Service",
-  "@id": "https://galico.ca/#gas-line-installation",
-  "name": "Gas Line Installation",
-  "description": "Professional installation of natural gas and propane lines for residential appliances including BBQs, stoves, fireplaces, and heating systems.",
-  "provider": {
-    "@id": "https://galico.ca/#business"
-  },
-  "areaServed": "Ottawa and surrounding communities",
-  "url": "https://galico.ca/gasfitting/gas-line-installation"
-},
-
-{
-  "@type": "Service",
-  "@id": "https://galico.ca/#boiler-installation",
-  "name": "Boiler Installation",
-  "description": "Expert installation of gas boilers for hydronic heating systems including radiators and radiant floor heating.",
-  "provider": {
-    "@id": "https://galico.ca/#business"
-  },
-  "areaServed": "Ottawa and surrounding communities",
-  "url": "https://galico.ca/heating/boiler-installation"
-},
-
-{
-  "@type": "Review",
-  "author": {
-    "@type": "Person",
-    "name": "Luc"
-  },
-  "reviewBody": "Galico is very punctual and the work is professional. Absolutely no worries about the quality and very reasonably priced.",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "itemReviewed": {
-    "@id": "https://galico.ca/#business"
-  }
-},
-
-{
-  "@type": "Review",
-  "author": {
-    "@type": "Person",
-    "name": "Wesley"
-  },
-  "reviewBody": "Prompt, friendly, and efficient installation. Got my Natural Gas BBQ up and running quickly.",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "itemReviewed": {
-    "@id": "https://galico.ca/#business"
-  }
-},
-
-{
-  "@type": "Review",
-  "author": {
-    "@type": "Person",
-    "name": "Deep"
-  },
-  "reviewBody": "Very professional and responsive. The gas line installation process was smooth and easy.",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "itemReviewed": {
-    "@id": "https://galico.ca/#business"
-  }
-}
-
-]
 }
 </script>
 
