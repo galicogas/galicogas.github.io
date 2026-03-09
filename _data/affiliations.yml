@@ -26,13 +26,20 @@
   badge_type: "primary"
   url: "https://upperottawavalleychamber.com/find-a-member/#/action/Listing/value/547/searchID/77010/cid/1836/id/1501/Galico-Home-Comfort-Inc"
 
+- name: "Ottawa Contruction Network"
+  logo: "ocn.png"
+  category: "Pro"
+  badge: "Verified"
+  badge_type: "info"
+  url: "https://justynrookcontracting.com/directory/listing/galico-home-comfort-inc"
+
 - name: "HomeStars"
   logo: "homestars-logo.png"
   category: "Pro"
   badge: "Registered"
   badge_type: "info"
   url: "https://www.homestars.com/profile/galico-home-comfort-inc"
-
+  
 - name: "Yelp"
   logo: "yelp_logo.png"
   category: "Contractor"
