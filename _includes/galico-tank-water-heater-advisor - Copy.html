@@ -622,7 +622,7 @@
                     </div>
                     <div class="row g-3">
                         <div class="col-4 col-md-2">
-                            <div class="selection-card" onclick="selectSingle('waterSource', 'city', this)" data-group="waterSource">
+                            <div class="selection-card" onclick="selectSingle('water', 'city', this)" data-group="water">
                                 <div class="card-image-area">
                                     <i class="bi bi-droplet"></i>
                                 </div>
@@ -632,7 +632,7 @@
                             </div>
                         </div>
                         <div class="col-4 col-md-2">
-                            <div class="selection-card" onclick="selectSingle('waterSource', 'well', this)" data-group="waterSource">
+                            <div class="selection-card" onclick="selectSingle('water', 'well', this)" data-group="water">
                                 <div class="card-image-area">
                                     <i class="bi bi-droplet-fill"></i>
                                 </div>
@@ -668,17 +668,15 @@
 				<div class="col-md-4 border-end">
 					<h6 class="text-muted text-uppercase small">Peak Demand</h6>
 					<h3 class="text-primary fw-bold" id="peakDemand">--</h3>
-					<h6 class="text-muted" id="peakDemandImperial"></h6>
 				</div>
 				<div class="col-md-4 border-end">
 					<h6 class="text-muted text-uppercase small">Recommended Tank</h6>
 					<h3 class="text-primary fw-bold" id="tankSize">--</h3>
-					<h6 class="text-muted" id="tankSizeImperial"></h6>
 				</div>
 				<div class="col-md-4">
 					<h6 class="text-muted text-uppercase small">Fuel Type</h6>
 					<h3 class="text-dark fw-bold" id="fuelType">--</h3>
-					<h6 class="text-muted" id="ventingType"></h6>
+					<h6 class="text-dark" id="ventingType">--</h6>
 				</div>
 			</div>
 
@@ -703,15 +701,14 @@
 </div>
 
 <!-- Logic Script -->
-<!-- Stripe Buy Button Script -->
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-<!-- Pass Jekyll data to JavaScript -->
-<script>
- var waterHeaterData = {{ site.data.water-heaters | jsonify }};
-var stripePublishableKey = "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu";
-</script>
-
+  <!-- Stripe Buy Button Script -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  
+  <!-- Pass Jekyll data to JavaScript -->
+  <script>
+     var waterHeaterData = {{ site.data.water-heaters | jsonify }};
+    var stripePublishableKey = "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu";
+  </script>
 <script>
 // ============================================
 // WATER HEATER CALCULATOR - COMPLETE JAVASCRIPT
@@ -727,7 +724,7 @@ var formData = {
     laundry: 0,
     dishwasher: 0,
     location: "",
-    waterSource: ""
+	water: ""
 };
 
 // Venting options configuration based on fuel type
@@ -823,7 +820,7 @@ function selectSingle(group, value, element) {
 
     element.classList.add('active');
     
-    // If bathrooms changed, update shower options
+    // NEW: If bathrooms changed, update shower options
     if (group === 'bathrooms') {
         updateShowerOptions();
     }
@@ -833,18 +830,23 @@ function updateShowerOptions() {
     var bathrooms = formData.bathrooms;
     var showerCards = document.querySelectorAll('.selection-card[data-group="showers"]');
     
+    // Map card values to numbers for comparison
+    // '1' = 1, '2' = 2, '3' = 3+
     for (var i = 0; i < showerCards.length; i++) {
         var card = showerCards[i];
         var cardValue = parseInt(card.getAttribute('onclick').match(/'showers', '([^']+)'"/)[1]);
         var bathroomCount = bathrooms === '3' ? 3 : parseInt(bathrooms);
         
+        // If no bathroom selected yet, enable all
         if (!bathrooms) {
             card.classList.remove('disabled');
             continue;
         }
         
+        // Disable shower options that exceed bathroom count
         if (cardValue > bathroomCount) {
             card.classList.add('disabled');
+            // If this option was previously selected, clear it
             if (card.classList.contains('active')) {
                 card.classList.remove('active');
                 formData.showers = '';
@@ -853,42 +855,6 @@ function updateShowerOptions() {
             card.classList.remove('disabled');
         }
     }
-}
-
-function handleLocationSelect(selectElement) {
-    var wrapper = document.getElementById('locationWrapper');
-    var value = selectElement.value;
-    
-    formData.location = value;
-    
-    if (wrapper) {
-        if (value) {
-            wrapper.classList.add('active');
-        } else {
-            wrapper.classList.remove('active');
-        }
-    }
-}
-
-function handleWaterSourceSelect(selectElement) {
-    var wrapper = document.getElementById('waterSourceWrapper');
-    var value = selectElement.value;
-    
-    formData.waterSource = value;
-    
-    if (wrapper) {
-        if (value) {
-            wrapper.classList.add('active');
-        } else {
-            wrapper.classList.remove('active');
-        }
-    }
-}
-
-// Convert US Gallons to Imperial Gallons
-// 1 US Gallon = 0.832674 Imperial Gallons
-function usToImperialGallons(usGallons) {
-    return (usGallons * 0.832674).toFixed(1);
 }
 
 // ============================================
@@ -920,6 +886,18 @@ function calculateHeater() {
         if (bathroomsCard) bathroomsCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
     }
+
+	// Validate showers don't exceed bathrooms
+	if (formData.bathrooms && formData.showers) {
+		var bathroomCount = formData.bathrooms === '3' ? 3 : parseInt(formData.bathrooms);
+		var showerCount = formData.showers === '3' ? 3 : parseInt(formData.showers);
+		
+		if (showerCount > bathroomCount) {
+			alert("You cannot have more simultaneous showers than bathrooms. Please adjust your selections.");
+			document.querySelector('.selection-card[data-group="showers"]').scrollIntoView({ behavior: 'smooth', block: 'center' });
+			return;
+		}
+	}
     
     if (!formData.showers) {
         alert("Please select simultaneous showers (Step 4)");
@@ -928,20 +906,6 @@ function calculateHeater() {
         return;
     }
     
-    // Validate showers don't exceed bathrooms
-    if (formData.bathrooms && formData.showers) {
-        var bathroomCount = formData.bathrooms === '3' ? 3 : parseInt(formData.bathrooms);
-        var showerCount = formData.showers === '3' ? 3 : parseInt(formData.showers);
-        
-        if (showerCount > bathroomCount) {
-            alert("You cannot have more simultaneous showers than bathrooms. Please adjust your selections.");
-            var showersCard = document.querySelector('.selection-card[data-group="showers"]');
-            if (showersCard) showersCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            return;
-        }
-    }
-    
-    // Validate venting if fuel is gas or propane
     if ((formData.fuel === 'natural-gas' || formData.fuel === 'propane') && !formData.venting) {
         alert("Please select a venting type for your " + 
               (formData.fuel === 'natural-gas' ? 'Natural Gas' : 'Propane') + " water heater.");
@@ -951,16 +915,16 @@ function calculateHeater() {
     }
     
     if (!formData.location) {
-        alert("Please select your location (Step 7)");
+        alert("Please select your service area (Step 7)");
         var locationSelect = document.getElementById('location');
         if (locationSelect) locationSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
     }
-    
-    if (!formData.waterSource) {
+	
+	if (!formData.water) {
         alert("Please select your water source (Step 8)");
-        var waterSourceSelect = document.getElementById('waterSource');
-        if (waterSourceSelect) waterSourceSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var locationSelect = document.getElementById('water');
+        if (locationSelect) locationSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
     }
 
@@ -971,49 +935,26 @@ function calculateHeater() {
 
     var showerDemand = showers * 20;
     var peakDemand = showerDemand + laundry + dishwasher;
+	
+	var fuelType = formData.fuel;
+	var ventType = formData.venting;
+	var waterSource = formData.water;
 
-    // Get recommended models from YAML data
-    var models = getRecommendedModels(peakDemand, formData.fuel, formData.venting);
-    var tankSize = models.length > 0 ? models[0].tank_size : "N/A";
+    var tankSize = "";
+    var models = [];
 
-	// Update UI Results - with US and Imperial Gallons
-	var peakDemandEl = document.getElementById("peakDemand");
-	var peakDemandImperialEl = document.getElementById("peakDemandImperial");
-	var tankSizeEl = document.getElementById("tankSize");
-	var tankSizeImperialEl = document.getElementById("tankSizeImperial");
-	var fuelTypeEl = document.getElementById("fuelType");
 
-	// Peak Demand (US + Imperial)
-	if (peakDemandEl) {
-		peakDemandEl.innerText = peakDemand + " US Gallon";
-	}
-	if (peakDemandImperialEl) {
-		var imperialPeak = usToImperialGallons(peakDemand);
-		peakDemandImperialEl.innerText = "(" + imperialPeak + " Imperial Gallon)";
-	}
 
-	// Tank Size - handle both numeric and text values
-	if (tankSizeEl) {
-		tankSizeEl.innerText = tankSize;
-	}
-	if (tankSizeImperialEl) {
-		// Extract numeric value from tankSize (e.g., "40 Gallon" → 40)
-		var tankNumeric = parseInt(tankSize);
-		if (!isNaN(tankNumeric)) {
-			var imperialTank = usToImperialGallons(tankNumeric);
-			tankSizeImperialEl.innerText = "(" + imperialTank + " Imperial Gallon)";
-		} else if (tankSize.toLowerCase().includes("tankless")) {
-			tankSizeImperialEl.innerText = "(N/A - Tankless)";
-		} else {
-			tankSizeImperialEl.innerText = "";
-		}
-	}
-
-// Fuel Type
-if (fuelTypeEl) {
+    // Update UI Results
+    var peakDemandEl = document.getElementById("peakDemand");
+    var tankSizeEl = document.getElementById("tankSize");
+    var fuelTypeEl = document.getElementById("fuelType");
+    
+    if (peakDemandEl) peakDemandEl.innerText = peakDemand + " gal";
+    if (tankSizeEl) tankSizeEl.innerText = tankSize;
+    
     var fuelText = formData.fuel === "natural-gas" ? "Natural Gas" : (formData.fuel === "propane" ? "Liquid Propane" : "Electric");
-    fuelTypeEl.innerText = fuelText;
-}
+    if (fuelTypeEl) fuelTypeEl.innerText = fuelText;
 
     // Show Venting Type if applicable
     var ventingResult = document.getElementById("ventingResult");
@@ -1029,50 +970,47 @@ if (fuelTypeEl) {
         if (ventingResult) ventingResult.style.display = "none";
     }
 
-    // Populate Stripe Buy Button Cards
-    var modelsContainer = document.getElementById("modelsContainer");
-    if (modelsContainer) {
-        modelsContainer.innerHTML = "";
+	// Populate Stripe Buy Button Cards
+	var modelsContainer = document.getElementById("modelsContainer");
+	if (modelsContainer) {
+		modelsContainer.innerHTML = "";
 
-        if (models.length === 0) {
-            modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No matching models found. Please adjust your selections.</div></div>';
-        } else {
-            for (var i = 0; i < models.length; i++) {
-                var model = models[i];
-                var card = document.createElement("div");
-                card.className = "col-md-4";
-                if (i === 0) card.className += " model-recommended";
-                
-                var featuresHTML = "";
-                for (var j = 0; j < model.features.length; j++) {
-                    featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
-                }
-                
-                // Generate Stripe Buy Button web component
-                var stripeButtonHTML = model.stripe_buy_button_id ? 
-                    '<stripe-buy-button\n' +
-                    '  buy-button-id="' + model.stripe_buy_button_id + '"\n' +
-                    '  publishable-key="' + stripePublishableKey + '"\n' +
-                    '  class="w-100 d-block"\n' +
-                    '>\n' +
-                    '</stripe-buy-button>' : 
-                    '<button class="btn btn-secondary w-100" disabled>Contact for Pricing</button>';
-                
-                card.innerHTML = '<div class="model-card">' +
-                    '<div class="model-card-header">' +
-                    '</div>' +
-                    '<div class="model-card-body">' +
-                    '<span class="model-card-brand">' + model.brand + '</span>' +
-                    '<h6 class="model-card-title">' + model.name + '</h6>' +
-                    '<div class="mt-4">' + stripeButtonHTML + '</div>' +
-                    '<ul class="model-card-features">' + featuresHTML + '</ul>' +
-					'<small  class="text-muted d-block mt-2"><i class="bi bi-truck me-1"> Only shipping to Arnprior, Carleton Place, Mississippi Mills, Ottawa, Perth and Smiths Falls, in Ontario.</small>' +
-                    '</div>' +
-                    '</div>';
-                modelsContainer.appendChild(card);
-            }
-        }
-    }
+		for (var i = 0; i < models.length; i++) {
+			var model = models[i];
+			var card = document.createElement("div");
+			card.className = "col-md-4";
+			if (i === 0) card.className += " model-recommended";
+			
+			var featuresHTML = "";
+			for (var j = 0; j < model.features.length; j++) {
+				featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
+			}
+			
+			// Generate Stripe Buy Button web component
+			var stripeButtonHTML = model.stripe_buy_button_id ? 
+				'<stripe-buy-button\n' +
+				'  buy-button-id="' + model.stripe_buy_button_id + '"\n' +
+				'  publishable-key="' + stripePublishableKey + '"\n' +
+				'  class="w-100 d-block"\n' +
+				'>\n' +
+				'</stripe-buy-button>' : 
+				'<button class="btn btn-secondary w-100" disabled>Contact for Pricing</button>';
+			
+			card.innerHTML = '<div class="model-card">' +
+				'<div class="model-card-header">' +
+				'<img src="' + model.image + '" alt="' + model.name + '" class="model-card-img" onerror="this.style.display=\'none\'">' +
+				'</div>' +
+				'<div class="model-card-body">' +
+				'<span class="model-card-brand">' + model.brand + '</span>' +
+				'<div class="mt-4">' + stripeButtonHTML + '</div>' +
+				// '<small class="text-muted d-block mt-2"><i class="bi bi-shield-check me-1"></i>Secure checkout by Stripe</small>' +
+				'<ul class="model-card-features">' + featuresHTML + '</ul>' +
+				'<small  class="text-muted d-block mt-2"><i class="bi bi-truck me-1"> Only shipping to Arnprior, Carleton Place, Mississippi Mills, Ottawa, Perth and Smiths Falls, in Ontario.</small>' +
+				'</div>' +
+				'</div>';
+			modelsContainer.appendChild(card);
+		}
+	}
 
     // Show Result Card with smooth scroll
     var resultsCard = document.getElementById("resultsCard");
@@ -1083,15 +1021,43 @@ if (fuelTypeEl) {
 }
 
 // ============================================
-// MODEL FILTERING FUNCTION
+// UTILITY FUNCTIONS
 // ============================================
 
-function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
-    if (!waterHeaterData || !waterHeaterData.water_heaters) {
-        console.error('Water heater data not loaded');
-        return [];
+function resetCalculator() {
+    formData = {
+        fuel: "",
+        venting: "",
+        people: "",
+        bathrooms: "",
+        showers: "",
+        laundry: 0,
+        dishwasher: 0,
+        location: ""
+    };
+
+    var activeCards = document.querySelectorAll('.selection-card.active');
+    for (var i = 0; i < activeCards.length; i++) {
+        activeCards[i].classList.remove('active');
     }
-    
+
+    var ventingSection = document.getElementById('ventingSection');
+    if (ventingSection) ventingSection.classList.remove('show');
+
+    var resultsCard = document.getElementById('resultsCard');
+    if (resultsCard) resultsCard.style.display = 'none';
+
+    var locationSelect = document.getElementById('location');
+    if (locationSelect) {
+        locationSelect.value = '';
+        var locationWrapper = document.getElementById('locationWrapper');
+        if (locationWrapper) locationWrapper.classList.remove('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
     var allHeaters = waterHeaterData.water_heaters;
     var matches = [];
     
@@ -1117,55 +1083,14 @@ function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
     matches.sort(function(a, b) {
         if (a.tank_type === 'tankless' && b.tank_type !== 'tankless') return 1;
         if (a.tank_type !== 'tankless' && b.tank_type === 'tankless') return -1;
-        return a.peak_demand_max - b.peak_demand_max;
+        return a.brand.localeCompare(b.brand);
     });
     
     return matches.slice(0, 3);
 }
 
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-
-function resetCalculator() {
-    formData = {
-        fuel: "",
-        venting: "",
-        people: "",
-        bathrooms: "",
-        showers: "",
-        laundry: 0,
-        dishwasher: 0,
-        location: "",
-        waterSource: ""
-    };
-
-    var activeCards = document.querySelectorAll('.selection-card.active');
-    for (var i = 0; i < activeCards.length; i++) {
-        activeCards[i].classList.remove('active');
-    }
-
-    var ventingSection = document.getElementById('ventingSection');
-    if (ventingSection) ventingSection.classList.remove('show');
-
-    var resultsCard = document.getElementById('resultsCard');
-    if (resultsCard) resultsCard.style.display = 'none';
-
-    var locationSelect = document.getElementById('location');
-    if (locationSelect) {
-        locationSelect.value = '';
-        var locationWrapper = document.getElementById('locationWrapper');
-        if (locationWrapper) locationWrapper.classList.remove('active');
-    }
-
-    var waterSourceSelect = document.getElementById('waterSource');
-    if (waterSourceSelect) {
-        waterSourceSelect.value = '';
-        var waterSourceWrapper = document.getElementById('waterSourceWrapper');
-        if (waterSourceWrapper) waterSourceWrapper.classList.remove('active');
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+function printResults() {
+    window.print();
 }
 
 // ============================================
@@ -1174,8 +1099,6 @@ function resetCalculator() {
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Water Heater Calculator Ready');
-    console.log('Water Heater Data:', waterHeaterData);
-    console.log('Stripe Publishable Key:', stripePublishableKey ? 'Loaded' : 'Missing');
     
     // Test button click
     var calcButton = document.querySelector('button[onclick="calculateHeater()"]');
@@ -1185,7 +1108,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Calculate button NOT found - check HTML');
     }
 });
+
 </script>
 
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

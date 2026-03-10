@@ -1,0 +1,377 @@
+# _data/water-heater.yaml
+# Water heater product data for Galico Tank Water Heater Advisor
+
+water_heaters:
+  # 40 Gallon Tank Models - Natural Gas
+  - name: "Bradford White RG240-ATM"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9"
+    image: "/images/bradford-rg240-atm.jpg"
+    features:
+      - "40 US Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  - name: "Bradford White RG240-PV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1ABC123..."
+    image: "/images/bradford-rg240-pv.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  - name: "Bradford White RG240-DV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1DEF456..."
+    image: "/images/bradford-rg240-dv.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Direct Vent Sealed Combustion"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  - name: "Rheem PROG40-ATM"
+    brand: "Rheem"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1GHI789..."
+    image: "/images/rheem-prog40-atm.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  - name: "Giant UG40-PV"
+    brand: "Giant"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1JKL012..."
+    image: "/images/giant-ug40-pv.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Canadian Made"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  # 40 Gallon Tank Models - Propane
+  - name: "Bradford White RG240-LP-ATM"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1MNO345..."
+    image: "/images/bradford-rg240-lp-atm.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Propane Optimized"
+      - "6-Year Warranty"
+    peak_demand_max: 40
+
+  - name: "Bradford White RG240-LP-PV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1PQR678..."
+    image: "/images/bradford-rg240-lp-pv.jpg"
+    features:
+      - "40 Gallon Capacity"
+      - "Propane Optimized"
+      - "Power Venting"
+    peak_demand_max: 40
+
+  # 50 Gallon Tank Models - Natural Gas
+  - name: "Bradford White RG250-ATM"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1STU901..."
+    image: "/images/bradford-rg250-atm.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  - name: "Bradford White RG250-PV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1VWX234..."
+    image: "/images/bradford-rg250-pv.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  - name: "Bradford White RG250-DV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1YZA567..."
+    image: "/images/bradford-rg250-dv.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Direct Vent Sealed Combustion"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  - name: "Rheem PROG50-ATM"
+    brand: "Rheem"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1BCD890..."
+    image: "/images/rheem-prog50-atm.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Professional Grade"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  - name: "Giant UG50-PV"
+    brand: "Giant"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1EFG123..."
+    image: "/images/giant-ug50-pv.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Canadian Made"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  # 50 Gallon Tank Models - Propane
+  - name: "Bradford White RG250-LP-ATM"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1HIJ456..."
+    image: "/images/bradford-rg250-lp-atm.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Propane Optimized"
+      - "6-Year Warranty"
+    peak_demand_max: 65
+
+  - name: "Bradford White RG250-LP-PV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1KLM789..."
+    image: "/images/bradford-rg250-lp-pv.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Propane Optimized"
+      - "Power Venting"
+    peak_demand_max: 65
+
+  # 75 Gallon Tank Models - Natural Gas
+  - name: "Bradford White RG275-ATM"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "75 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1NOP012..."
+    image: "/images/bradford-rg275-atm.jpg"
+    features:
+      - "75 Gallon Capacity"
+      - "High Recovery Rate"
+      - "6-Year Warranty"
+    peak_demand_max: 999
+
+  - name: "Bradford White RG275-PV"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "75 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1QRS345..."
+    image: "/images/bradford-rg275-pv.jpg"
+    features:
+      - "75 Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Warranty"
+    peak_demand_max: 999
+
+  - name: "Rheem PROG75-ATM"
+    brand: "Rheem"
+    tank_type: "tank"
+    tank_size: "75 Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1TUV678..."
+    image: "/images/rheem-prog75-atm.jpg"
+    features:
+      - "75 Gallon Capacity"
+      - "Professional Grade"
+      - "6-Year Warranty"
+    peak_demand_max: 999
+
+  # Tankless Models - Navien (Natural Gas)
+  - name: "Navien NPE-240A"
+    brand: "Navien"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1WXY901..."
+    image: "/images/navien-npe-240a.jpg"
+    features:
+      - "Endless Hot Water"
+      - "95% AFUE Efficiency"
+      - "12-Year Heat Exchanger Warranty"
+      - "Condensing Technology"
+    peak_demand_max: 999
+    flow_rate_gpm: "11.5 GPM"
+
+  - name: "Navien NPE-180A"
+    brand: "Navien"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1ZAB234..."
+    image: "/images/navien-npe-180a.jpg"
+    features:
+      - "Endless Hot Water"
+      - "93% AFUE Efficiency"
+      - "12-Year Heat Exchanger Warranty"
+      - "Compact Wall-Mount Design"
+    peak_demand_max: 999
+    flow_rate_gpm: "9.2 GPM"
+
+  # Tankless Models - Navien (Propane)
+  - name: "Navien NPN-190A"
+    brand: "Navien"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["propane"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1CDE567..."
+    image: "/images/navien-npn-190a.jpg"
+    features:
+      - "Endless Hot Water"
+      - "93% AFUE Efficiency"
+      - "12-Year Heat Exchanger Warranty"
+      - "Propane Optimized"
+    peak_demand_max: 999
+    flow_rate_gpm: "9.5 GPM"
+
+  # Tankless Models - A.O. Smith (Natural Gas)
+  - name: "A.O. Smith AT-120"
+    brand: "A.O. Smith"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1FGH890..."
+    image: "/images/ao-smith-at-120.jpg"
+    features:
+      - "Endless Hot Water"
+      - "96% Thermal Efficiency"
+      - "10-Year Heat Exchanger Warranty"
+      - "Self-Modulating Technology"
+    peak_demand_max: 999
+    flow_rate_gpm: "10.0 GPM"
+
+  - name: "A.O. Smith AT-150"
+    brand: "A.O. Smith"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1IJK123..."
+    image: "/images/ao-smith-at-150.jpg"
+    features:
+      - "Endless Hot Water"
+      - "96% Thermal Efficiency"
+      - "10-Year Heat Exchanger Warranty"
+      - "High Flow Rate for Large Homes"
+    peak_demand_max: 999
+    flow_rate_gpm: "11.0 GPM"
+
+  # Tankless Models - A.O. Smith (Propane)
+  - name: "A.O. Smith AP-140"
+    brand: "A.O. Smith"
+    tank_type: "tankless"
+    tank_size: "Tankless"
+    fuel_compatibility: ["propane"]
+    venting_type: "direct-vent"
+    stripe_buy_button_id: "buy_btn_1LMN456..."
+    image: "/images/ao-smith-ap-140.jpg"
+    features:
+      - "Endless Hot Water"
+      - "95% Thermal Efficiency"
+      - "10-Year Heat Exchanger Warranty"
+      - "Propane Optimized"
+    peak_demand_max: 999
+    flow_rate_gpm: "9.8 GPM"
+
+  # Electric Tank Models (No Venting Required)
+  - name: "Rheem PROE50 T2 DH"
+    brand: "Rheem"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    stripe_buy_button_id: "buy_btn_1OPQ789..."
+    image: "/images/rheem-proe50-electric.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Electric Element"
+      - "6-Year Warranty"
+      - "No Venting Required"
+    peak_demand_max: 65
+
+  - name: "Bradford White RE250T6"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 Gallon"
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    stripe_buy_button_id: "buy_btn_1RST012..."
+    image: "/images/bradford-re250t6-electric.jpg"
+    features:
+      - "50 Gallon Capacity"
+      - "Dual Electric Elements"
+      - "6-Year Warranty"
+      - "No Venting Required"
+    peak_demand_max: 65
