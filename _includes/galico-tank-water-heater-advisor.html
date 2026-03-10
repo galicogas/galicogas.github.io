@@ -304,6 +304,14 @@
 			box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
 			transform: translateY(-6px);
 		}
+		
+		.model-card-img {
+		width: 100%;           /* Fill the card width */
+		height: 200px;         /* Fixed height for consistency */
+		object-fit: contain;   /* Fits entire image inside box (no cropping) */
+		padding: 1rem;         /* Adds whitespace around the product */
+		background: #fff;      /* White background behind the image */
+}
     </style>
 </head>
 <body class="bg-light">
@@ -1023,8 +1031,169 @@ function calculateHeater() {
 			}
 			
 	} 
-	else if (peakDemand <= 65) {
+	else if (peakDemand <= 50) {
         tankSize = "50 Gallon";
+			if (fuelType == "natural-gas"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				} 
+				else if (ventType == "power"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Direct Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			else if (fuelType == "propane"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Power Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			// Electric
+			else {
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+			}
+		
+    } 
+	else if (peakDemand <= 65) {
+        tankSize = "60 Gallon";
 			if (fuelType == "natural-gas"){
 				if (ventType == "atmospheric"){
 					models = [
@@ -1194,6 +1363,7 @@ function calculateHeater() {
 							brand: "Bradford White", 
 							price: "$1,299", 
 							url: "https://example.com/bradford-rg240", 
+							image: "../assets/img/products/atmosphericdhw.jpg",
 							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
 						},
 						{ 
@@ -1201,6 +1371,7 @@ function calculateHeater() {
 							brand: "Rheem", 
 							price: "$1,149", 
 							url: "https://example.com/rheem-prog40", 
+							image: "../assets/img/products/atmosphericdhw.jpg",
 							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
 						},
 						{ 
@@ -1208,6 +1379,7 @@ function calculateHeater() {
 							brand: "Giant", 
 							price: "$1,099", 
 							url: "https://example.com/giant-ug40", 
+							image: "../assets/img/products/atmosphericdhw.jpg",
 							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
 						}
 					];
@@ -1392,7 +1564,7 @@ function calculateHeater() {
 			card.innerHTML = '<a href="' + model.url + '" target="_blank" class="model-card-link">' +
 				'<div class="model-card">' +
 				'<div class="model-card-header">' +
-				'<i class="bi bi-box-seam"></i>' +
+				'<img src="' + model.image + '" alt="' + model.name + '" class="model-card-img">' +
 				'</div>' +
 				'<div class="model-card-body">' +
 				'<span class="model-card-brand">' + model.brand + '</span>' +
