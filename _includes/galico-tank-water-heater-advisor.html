@@ -107,6 +107,23 @@
             font-size: 0.9rem;
         }
 
+		/* Disabled Card State */
+		.selection-card.disabled {
+			opacity: 0.4;
+			cursor: not-allowed;
+			pointer-events: none;
+			background: #f8f9fa;
+		}
+
+		.selection-card.disabled .card-image-area i {
+			color: #adb5bd;
+		}
+
+		.selection-card.disabled .card-content-area span,
+		.selection-card.disabled .card-content-area small {
+			color: #6c757d;
+		}
+
         /* Input Groups */
         .input-group-label {
             font-size: 0.85rem;
@@ -684,6 +701,14 @@
 </div>
 
 <!-- Logic Script -->
+  <!-- Stripe Buy Button Script -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  
+  <!-- Pass Jekyll data to JavaScript -->
+  <script>
+     var waterHeaterData = {{ site.data.water-heater | jsonify }};
+    var stripePublishableKey = "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu";
+  </script>
 <script>
 // ============================================
 // WATER HEATER CALCULATOR - COMPLETE JAVASCRIPT
@@ -794,8 +819,43 @@ function selectSingle(group, value, element) {
     }
 
     element.classList.add('active');
+    
+    // NEW: If bathrooms changed, update shower options
+    if (group === 'bathrooms') {
+        updateShowerOptions();
+    }
 }
 
+function updateShowerOptions() {
+    var bathrooms = formData.bathrooms;
+    var showerCards = document.querySelectorAll('.selection-card[data-group="showers"]');
+    
+    // Map card values to numbers for comparison
+    // '1' = 1, '2' = 2, '3' = 3+
+    for (var i = 0; i < showerCards.length; i++) {
+        var card = showerCards[i];
+        var cardValue = parseInt(card.getAttribute('onclick').match(/'showers', '([^']+)'"/)[1]);
+        var bathroomCount = bathrooms === '3' ? 3 : parseInt(bathrooms);
+        
+        // If no bathroom selected yet, enable all
+        if (!bathrooms) {
+            card.classList.remove('disabled');
+            continue;
+        }
+        
+        // Disable shower options that exceed bathroom count
+        if (cardValue > bathroomCount) {
+            card.classList.add('disabled');
+            // If this option was previously selected, clear it
+            if (card.classList.contains('active')) {
+                card.classList.remove('active');
+                formData.showers = '';
+            }
+        } else {
+            card.classList.remove('disabled');
+        }
+    }
+}
 
 // ============================================
 // CALCULATION FUNCTION
@@ -826,6 +886,18 @@ function calculateHeater() {
         if (bathroomsCard) bathroomsCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
     }
+
+	// Validate showers don't exceed bathrooms
+	if (formData.bathrooms && formData.showers) {
+		var bathroomCount = formData.bathrooms === '3' ? 3 : parseInt(formData.bathrooms);
+		var showerCount = formData.showers === '3' ? 3 : parseInt(formData.showers);
+		
+		if (showerCount > bathroomCount) {
+			alert("You cannot have more simultaneous showers than bathrooms. Please adjust your selections.");
+			document.querySelector('.selection-card[data-group="showers"]').scrollIntoView({ behavior: 'smooth', block: 'center' });
+			return;
+		}
+	}
     
     if (!formData.showers) {
         alert("Please select simultaneous showers (Step 4)");
@@ -880,21 +952,24 @@ function calculateHeater() {
 							name: "Bradford White RG240", 
 							brand: "Bradford White", 
 							price: "$1,299", 
-							url: "https://example.com/bradford-rg240", 
-							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							features: ["40 Imperial Gallon Capacity", "6-Year Warranty + 1-Year Labour", "Installation Included", "30-Day Money Back"] 
 						},
 						{ 
 							name: "Rheem PROG40-40N", 
 							brand: "Rheem", 
 							price: "$1,149", 
-							url: "https://example.com/rheem-prog40", 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9", 
 							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
 						},
 						{ 
 							name: "Giant UG40", 
 							brand: "Giant", 
 							price: "$1,099", 
-							url: "https://example.com/giant-ug40", 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9", 
 							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
 						}
 					];
@@ -905,7 +980,8 @@ function calculateHeater() {
 							name: "Bradford White RG240", 
 							brand: "Bradford White", 
 							price: "$1,299", 
-							url: "https://example.com/bradford-rg240", 
+							url: "https://example.com/bradford-rg240",
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",							
 							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
 						},
 						{ 
@@ -913,6 +989,7 @@ function calculateHeater() {
 							brand: "Rheem", 
 							price: "$1,149", 
 							url: "https://example.com/rheem-prog40", 
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
 							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
 						},
 						{ 
@@ -932,6 +1009,7 @@ function calculateHeater() {
 							brand: "Bradford White", 
 							price: "$1,299", 
 							url: "https://example.com/bradford-rg240", 
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
 							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
 						},
 						{ 
@@ -939,6 +1017,7 @@ function calculateHeater() {
 							brand: "Rheem", 
 							price: "$1,149", 
 							url: "https://example.com/rheem-prog40", 
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
 							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
 						},
 						{ 
@@ -946,6 +1025,7 @@ function calculateHeater() {
 							brand: "Giant", 
 							price: "$1,099", 
 							url: "https://example.com/giant-ug40", 
+							stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
 							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
 						}
 					];
@@ -958,21 +1038,24 @@ function calculateHeater() {
 							name: "Bradford White RG240", 
 							brand: "Bradford White", 
 							price: "$1,299", 
-							url: "https://example.com/bradford-rg240", 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							key: "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu", 
 							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
 						},
 						{ 
 							name: "Rheem PROG40-40N", 
 							brand: "Rheem", 
 							price: "$1,149", 
-							url: "https://example.com/rheem-prog40", 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							key: "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu",  
 							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
 						},
 						{ 
 							name: "Giant UG40", 
 							brand: "Giant", 
 							price: "$1,099", 
-							url: "https://example.com/giant-ug40", 
+							url: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9",
+							key: "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu",  
 							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
 						}
 					];
@@ -1544,10 +1627,10 @@ function calculateHeater() {
         if (ventingResult) ventingResult.style.display = "none";
     }
 
-    // Populate Model Cards
-    var modelsContainer = document.getElementById("modelsContainer");
-    if (modelsContainer) {
-        modelsContainer.innerHTML = "";
+	// Populate Stripe Buy Button Cards
+	var modelsContainer = document.getElementById("modelsContainer");
+	if (modelsContainer) {
+		modelsContainer.innerHTML = "";
 
 		for (var i = 0; i < models.length; i++) {
 			var model = models[i];
@@ -1560,24 +1643,31 @@ function calculateHeater() {
 				featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
 			}
 			
-			// Updated Inner HTML with Link and Price
-			card.innerHTML = '<a href="' + model.url + '" target="_blank" class="model-card-link">' +
-				'<div class="model-card">' +
+			// Generate Stripe Buy Button web component
+			var stripeButtonHTML = model.stripe_buy_button_id ? 
+				'<stripe-buy-button\n' +
+				'  buy-button-id="' + model.stripe_buy_button_id + '"\n' +
+				'  publishable-key="' + stripePublishableKey + '"\n' +
+				'  class="w-100 d-block"\n' +
+				'>\n' +
+				'</stripe-buy-button>' : 
+				'<button class="btn btn-secondary w-100" disabled>Contact for Pricing</button>';
+			
+			card.innerHTML = '<div class="model-card">' +
 				'<div class="model-card-header">' +
-				'<img src="' + model.image + '" alt="' + model.name + '" class="model-card-img">' +
+				'<img src="' + model.image + '" alt="' + model.name + '" class="model-card-img" onerror="this.style.display=\'none\'">' +
 				'</div>' +
 				'<div class="model-card-body">' +
 				'<span class="model-card-brand">' + model.brand + '</span>' +
-				'<h6 class="model-card-title">' + model.name + '</h6>' +
-				'<div class="model-price">' + model.price + '</div>' +
+				'<div class="mt-4">' + stripeButtonHTML + '</div>' +
+				// '<small class="text-muted d-block mt-2"><i class="bi bi-shield-check me-1"></i>Secure checkout by Stripe</small>' +
 				'<ul class="model-card-features">' + featuresHTML + '</ul>' +
-				'<div class="model-card-action"><small>Click to view details <i class="bi bi-arrow-right"></i></small></div>' +
+				'<small  class="text-muted d-block mt-2"><i class="bi bi-truck me-1"> Only shipping to Arnprior, Carleton Place, Mississippi Mills, Ottawa, Perth and Smiths Falls, in Ontario.</small>' +
 				'</div>' +
-				'</div>' +
-				'</a>';
+				'</div>';
 			modelsContainer.appendChild(card);
 		}
-    }
+	}
 
     // Show Result Card with smooth scroll
     var resultsCard = document.getElementById("resultsCard");
