@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Heater Calculator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* Card Selection Styles */
+        .selection-card {
+            cursor: pointer;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            transition: all 0.3s ease-in-out;
+            background: #fff;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .selection-card:hover {
+            border-color: #adb5bd;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* Image Placeholder Area */
+        .card-image-area {
+            height: 120px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .card-image-area i {
+            font-size: 3rem;
+            color: #6c757d;
+        }
+
+        .card-image-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Hidden by default, show when you add images */
+        }
+
+        /* Card Content Area */
+        .card-content-area {
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .card-content-area span {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.95rem;
+            display: block;
+        }
+
+        .card-content-area small {
+            color: #6c757d;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        /* Active State Styling */
+        .selection-card.active {
+			border-color: #0d6efd; /* Bootstrap Primary Blue */
+			background-color: #f0f7ff; /* Very Light Blue Background */
+			box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2); /* Blue Shadow */
+        }
+
+        .selection-card.active .card-image-area {
+            background: linear-gradient(135deg, #cfe2ff 0%, #b6d4fe 100%); /* Light Blue Gradient */
+        }
+
+        .selection-card.active .card-image-area i {
+            color: #0d6efd; /* Blue Icon */
+        }
+
+        .selection-card.active .card-content-area span {
+            color: #084298; /* Dark Blue Text */
+        }
+
+        /* Checkmark indicator for active cards */
+        .selection-card.active::after {
+            content: "✓";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #0d6efd; /* Blue Checkmark Circle */
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Input Groups */
+        .input-group-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #8D9297;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+		/* Conditional Section Styling */
+		.conditional-section {
+			display: none;
+			animation: slideDown 0.3s ease-out;
+		}
+
+		.conditional-section.show {
+			display: block;
+		}
+
+		@keyframes slideDown {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Disabled card state */
+		.selection-card.disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+
+		/* Info badge for fuel types */
+		.fuel-badge {
+			display: inline-block;
+			padding: 0.25rem 0.5rem;
+			border-radius: 20px;
+			font-size: 0.7rem;
+			font-weight: 600;
+			margin-top: 0.5rem;
+		}
+
+		.fuel-badge.gas { background: #e7f1ff; color: #084298; }
+		.fuel-badge.propane { background: #fff3cd; color: #664d03; }
+		.fuel-badge.electric { background: #e2e3e5; color: #41464b; }
+		
+		/* Model Card Styling */
+		.model-card {
+			border: 2px solid #e9ecef;
+			border-radius: 16px;
+			overflow: hidden;
+			transition: all 0.3s ease-in-out;
+			height: 100%;
+			background: #fff;
+		}
+
+		.model-card:hover {
+			border-color: #0d6efd;
+			box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+			transform: translateY(-4px);
+		}
+
+		.model-card-header {
+			background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+			padding: 1rem;
+			text-align: center;
+			border-bottom: 1px solid #dee2e6;
+		}
+
+		.model-card-header i {
+			font-size: 2.5rem;
+			color: #0d6efd;
+		}
+
+		.model-card-body {
+			padding: 1.25rem;
+			text-align: center;
+		}
+
+		.model-card-title {
+			font-weight: 700;
+			color: #212529;
+			font-size: 1.1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.model-card-brand {
+			display: inline-block;
+			background: #e7f1ff;
+			color: #084298;
+			padding: 0.25rem 0.75rem;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			font-weight: 600;
+			margin-bottom: 0.75rem;
+		}
+
+		.model-card-features {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: left;
+		}
+
+		.model-card-features li {
+			padding: 0.4rem 0;
+			color: #6c757d;
+			font-size: 0.9rem;
+			border-bottom: 1px solid #f8f9fa;
+		}
+
+		.model-card-features li:last-child {
+			border-bottom: none;
+		}
+
+		.model-card-features li i {
+			color: #00adef;
+			margin-right: 0.5rem;
+		}
+
+		/* Recommended Badge */
+		.model-recommended {
+			position: relative;
+		}
+
+		.model-recommended::after {
+			content: "BEST MATCH";
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: #198754;
+			color: white;
+			padding: 0.25rem 0.75rem;
+			border-radius: 20px;
+			font-size: 0.7rem;
+			font-weight: 700;
+			z-index: 1;
+		}
+		
+		/* Make the entire card clickable */
+		.model-card-link {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			height: 100%;
+		}
+
+		.model-card-link:hover {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		/* Price Styling */
+		.model-price {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #198754; /* Green for price */
+			margin: 0.75rem 0;
+		}
+
+		/* Call to Action Text */
+		.model-card-action {
+			margin-top: 1rem;
+			color: #0d6efd;
+			font-weight: 600;
+			opacity: 0.8;
+			transition: opacity 0.3s;
+		}
+
+		.model-card:hover .model-card-action {
+			opacity: 1;
+		}
+
+		/* Enhanced Hover Effect for Clickable Cards */
+		.model-card-link:hover .model-card {
+			border-color: #0d6efd;
+			box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
+			transform: translateY(-6px);
+		}
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white py-4">
+            <div class="d-flex align-items-center">
+                <div>
+                    <h3 class="mb-0">Water Heater Size Calculator</h3>
+                    <h6 class="text-white-50">Find the right replacement tank for your home.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body p-4 p-md-5">
+            <form id="heaterForm">
+
+                <!-- 1. Fuel Type -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">1</span>Fuel Source
+					</div>
+					<div class="row g-3">
+						<!-- Natural Gas -->
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectFuel('natural-gas', this)" data-group="fuel">
+								<div class="card-image-area">
+									<i class="fa fa-fire"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Natural Gas</span>
+								</div>
+							</div>
+						</div>
+						<!-- Propane -->
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectFuel('propane', this)" data-group="fuel">
+								<div class="card-image-area">
+									<i class="bi bi-fire"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Liquid Propane</span>
+								</div>
+							</div>
+						</div>
+						<!-- Electric -->
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectFuel('electric', this)" data-group="fuel">
+								<div class="card-image-area">
+									<i class="bi bi-lightning-charge-fill"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Electric</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 1b. Venting Options (Conditional - appears after fuel selection) -->
+				<div id="ventingSection" class="conditional-section mb-5">
+					<div class="input-group-label">
+						<span class="step-number">1b</span>Existing Venting<small class="text-muted ms-2" id="ventingHint"></small>
+					</div>
+					<div class="row g-3" id="ventingOptions">
+						<!-- Options injected by JavaScript -->
+					</div>
+				</div>
+
+                <!-- 2. Household Size -->
+                <div class="mb-5">
+                    <div class="input-group-label">
+                        <span class="step-number">2</span>Household Size
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('people', '1', this)" data-group="people">
+                                <div class="card-image-area">
+                                    <i class="bi bi-person-fill"></i><b>x 2</b>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>1-2 People</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('people', '2', this)" data-group="people">
+                                <div class="card-image-area">
+                                    <i class="bi bi-person-fill"></i><b>x 4</b>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>3-4 People</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('people', '3', this)" data-group="people">
+                                <div class="card-image-area">
+                                    <i class="bi bi-person-fill"></i><b>x 5+</b>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>5+ People</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Bathrooms -->
+                <div class="mb-5">
+                    <div class="input-group-label">
+                        <span class="step-number">3</span>Number of Bathrooms
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('bathrooms', '1', this)" data-group="bathrooms">
+                                <div class="card-image-area">
+                                    <i class="fa fa-bath"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>1 Bathroom</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('bathrooms', '2', this)" data-group="bathrooms">
+                                <div class="card-image-area">
+                                    <i class="fa fa-bath"></i><i class="fa fa-bath"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>2 Bathrooms</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('bathrooms', '3', this)" data-group="bathrooms">
+                                <div class="card-image-area">
+                                    <i class="fa fa-bath"></i><i class="fa fa-bath"></i><i class="fa fa-bath"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>3+ Bathrooms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Simultaneous Showers -->
+                <div class="mb-5">
+                    <div class="input-group-label">
+                        <span class="step-number">4</span>Simultaneous Showers
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('showers', '1', this)" data-group="showers">
+                                <div class="card-image-area">
+                                    <i class="fa fa-shower"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>1 Shower</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('showers', '2', this)" data-group="showers">
+                                <div class="card-image-area">
+                                    <i class="fa fa-shower"></i><i class="fa fa-shower"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>2 Showers</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('showers', '3', this)" data-group="showers">
+                                <div class="card-image-area">
+                                    <i class="fa fa-shower"></i><i class="fa fa-shower"></i><i class="fa fa-shower"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>3+ Showers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Appliances (Mutually Exclusive within each type) -->
+                <div class="mb-5">
+                    <div class="input-group-label">
+                        <span class="step-number">5</span>Running Appliances During Showers
+                    </div>
+                    <div class="row g-3">
+                        <!-- Laundry Options -->
+                        <div class="col-6 col-md-3">
+                            <div class="selection-card" onclick="selectSingle('laundry', '0', this)" data-group="laundry">
+                                <div class="card-image-area">
+                                    <i class="bi bi-x-lg"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>No Laundry</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="selection-card" onclick="selectSingle('laundry', '25', this)" data-group="laundry">
+                                <div class="card-image-area">
+                                    <i class="bi bi-instagram"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>Laundry Running</span>
+                                    <small>+25 gal demand</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dishwasher Options -->
+                        <div class="col-6 col-md-3">
+                            <div class="selection-card" onclick="selectSingle('dishwasher', '0', this)" data-group="dishwasher">
+                                <div class="card-image-area">
+                                    <i class="bi bi-x-lg"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>No Dishwasher</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="selection-card" onclick="selectSingle('dishwasher', '15', this)" data-group="dishwasher">
+                                <div class="card-image-area">
+                                    <i class="bi bi-water"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>Dishwasher Running</span>
+                                    <small>+15 gal demand</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- 7. Location -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">7</span>Service Area
+					</div>
+					<div class="row g-3">
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'arnprior', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Arnprior</span></div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'carleton_place', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Carleton Place</span></div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'mississippi_mills', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Mississippi Mills</span></div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'ottawa', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Ottawa</span></div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'perth', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Perth</span></div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'smiths_falls', this)" data-group="location">
+								<div class="card-image-area"><i class="bi bi-geo-alt"></i></div>
+								<div class="card-content-area"><span>Smiths Falls</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 8. Water Source -->
+				<div class="mb-5">
+                    <div class="input-group-label">
+                        <span class="step-number">8</span>Water Source
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('water', 'city', this)" data-group="water">
+                                <div class="card-image-area">
+                                    <i class="bi bi-droplet"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>City Water</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2">
+                            <div class="selection-card" onclick="selectSingle('water', 'well', this)" data-group="water">
+                                <div class="card-image-area">
+                                    <i class="bi bi-droplet-fill"></i>
+                                </div>
+                                <div class="card-content-area">
+                                    <span>Well Water</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm" onclick="calculateHeater()">
+                        <i class="bi bi-calculator me-2"></i> Calculate Tank Size
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+	<!-- RESULT -->
+	<div id="resultsCard" class="card mt-4 border-success shadow-lg" style="display:none;">
+		<div class="card-header bg-success text-white py-3">
+			<h4 class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Recommended Water Heaters</h4>
+		</div>
+
+		<div class="card-body p-4">
+			<!-- Summary Stats -->
+			<div class="row text-center mb-5 bg-light p-4 rounded-3 border">
+				<div class="col-md-4 border-end">
+					<h6 class="text-muted text-uppercase small">Peak Demand</h6>
+					<h3 class="text-primary fw-bold" id="peakDemand">--</h3>
+				</div>
+				<div class="col-md-4 border-end">
+					<h6 class="text-muted text-uppercase small">Recommended Tank</h6>
+					<h3 class="text-primary fw-bold" id="tankSize">--</h3>
+				</div>
+				<div class="col-md-4">
+					<h6 class="text-muted text-uppercase small">Fuel Type</h6>
+					<h3 class="text-dark fw-bold" id="fuelType">--</h3>
+					<h6 class="text-dark" id="ventingType">--</h6>
+				</div>
+			</div>
+
+			<!-- Model Cards - THIS IS THE KEY SECTION -->
+			<h5 class="fw-bold mb-4">Suggested Tank Models</h5>
+			<div class="row g-4" id="modelsContainer">
+				<!-- Model cards will be injected here by JavaScript -->
+			</div>
+
+			<!-- Print/Reset Options -->
+			<div class="text-center mt-5">
+				<!-- <button class="btn btn-outline-primary me-2" onclick="window.print()">
+					<i class="bi bi-printer me-2"></i>Print Results
+				</button> -->
+				<button class="btn btn-outline-secondary" onclick="resetCalculator()">
+					<i class="bi bi-arrow-counterclockwise me-2"></i>Start Over
+				</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Logic Script -->
+<script>
+// ============================================
+// WATER HEATER CALCULATOR - COMPLETE JAVASCRIPT
+// ============================================
+
+// Store all form selection values
+var formData = {
+    fuel: "",
+    venting: "",
+    people: "",
+    bathrooms: "",
+    showers: "",
+    laundry: 0,
+    dishwasher: 0,
+    location: "",
+	water: ""
+};
+
+// Venting options configuration based on fuel type
+var ventingConfig = {
+    'natural-gas': [
+        { value: 'atmospheric', label: 'Atmospheric', desc: 'Chimney / B-vent', icon: 'bi-cloud' },
+        { value: 'power-vent', label: 'Power Vent', desc: 'Side-wall exhaust', icon: 'bi-fan' },
+        { value: 'direct-vent', label: 'Direct Vent', desc: 'Sealed combustion', icon: 'bi-shield-check' }
+    ],
+    'propane': [
+        { value: 'atmospheric', label: 'Atmospheric', desc: 'Chimney / B-vent', icon: 'bi-cloud' },
+        { value: 'power-vent', label: 'Power Vent', desc: 'Side-wall exhaust', icon: 'bi-fan' }
+    ],
+    'electric': []
+};
+
+// ============================================
+// SELECTION FUNCTIONS
+// ============================================
+
+function selectFuel(fuelType, element) {
+    formData.fuel = fuelType;
+    
+    var allFuelCards = document.querySelectorAll('.selection-card[data-group="fuel"]');
+    for (var i = 0; i < allFuelCards.length; i++) {
+        allFuelCards[i].classList.remove('active');
+    }
+    element.classList.add('active');
+    
+    handleVentingDisplay(fuelType);
+}
+
+function handleVentingDisplay(fuelType) {
+    var ventingSection = document.getElementById('ventingSection');
+    var ventingOptions = document.getElementById('ventingOptions');
+    var ventingHint = document.getElementById('ventingHint');
+    
+    if (!ventingSection || !ventingOptions) return;
+    
+    var options = ventingConfig[fuelType];
+    
+    if (options.length === 0) {
+        ventingSection.classList.remove('show');
+        formData.venting = '';
+        return;
+    }
+    
+    ventingSection.classList.add('show');
+    
+    if (fuelType === 'natural-gas') {
+        ventingHint.textContent = '(Natural Gas options)';
+    } else if (fuelType === 'propane') {
+        ventingHint.textContent = '(Propane options)';
+    }
+    
+    ventingOptions.innerHTML = '';
+    for (var i = 0; i < options.length; i++) {
+        var opt = options[i];
+        var col = document.createElement('div');
+        col.className = 'col-4 col-md-3';
+        col.innerHTML = '<div class="selection-card" onclick="selectSingle(\'venting\', \'' + opt.value + '\', this)" data-group="venting">' +
+            '<div class="card-image-area">' +
+            '<i class="bi ' + opt.icon + '"></i>' +
+            '</div>' +
+            '<div class="card-content-area">' +
+            '<span>' + opt.label + '</span>' +
+            '<small>' + opt.desc + '</small>' +
+            '</div>' +
+            '</div>';
+        ventingOptions.appendChild(col);
+    }
+    
+    formData.venting = '';
+    var ventingCards = document.querySelectorAll('.selection-card[data-group="venting"]');
+    for (var j = 0; j < ventingCards.length; j++) {
+        ventingCards[j].classList.remove('active');
+    }
+}
+
+function selectSingle(group, value, element) {
+    if (element.classList.contains('disabled')) return;
+    
+    if (group === 'laundry' || group === 'dishwasher') {
+        formData[group] = parseInt(value);
+    } else {
+        formData[group] = value;
+    }
+
+    var allInGroup = document.querySelectorAll('.selection-card[data-group="' + group + '"]');
+    for (var i = 0; i < allInGroup.length; i++) {
+        allInGroup[i].classList.remove('active');
+    }
+
+    element.classList.add('active');
+}
+
+
+// ============================================
+// CALCULATION FUNCTION
+// ============================================
+
+function calculateHeater() {
+    console.log('Calculate button clicked');
+    console.log('Form data:', formData);
+    
+    // Validation - check all required fields
+    if (!formData.fuel) {
+        alert("Please select a fuel source (Step 1)");
+        var fuelCard = document.querySelector('.selection-card[data-group="fuel"]');
+        if (fuelCard) fuelCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+    
+    if (!formData.people) {
+        alert("Please select household size (Step 2)");
+        var peopleCard = document.querySelector('.selection-card[data-group="people"]');
+        if (peopleCard) peopleCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+    
+    if (!formData.bathrooms) {
+        alert("Please select number of bathrooms (Step 3)");
+        var bathroomsCard = document.querySelector('.selection-card[data-group="bathrooms"]');
+        if (bathroomsCard) bathroomsCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+    
+    if (!formData.showers) {
+        alert("Please select simultaneous showers (Step 4)");
+        var showersCard = document.querySelector('.selection-card[data-group="showers"]');
+        if (showersCard) showersCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+    
+    if ((formData.fuel === 'natural-gas' || formData.fuel === 'propane') && !formData.venting) {
+        alert("Please select a venting type for your " + 
+              (formData.fuel === 'natural-gas' ? 'Natural Gas' : 'Propane') + " water heater.");
+        var ventingSection = document.getElementById('ventingSection');
+        if (ventingSection) ventingSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+    
+    if (!formData.location) {
+        alert("Please select your service area (Step 7)");
+        var locationSelect = document.getElementById('location');
+        if (locationSelect) locationSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+	
+	if (!formData.water) {
+        alert("Please select your water source (Step 8)");
+        var locationSelect = document.getElementById('water');
+        if (locationSelect) locationSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
+
+    // Calculate peak demand
+    var showers = parseInt(formData.showers);
+    var laundry = formData.laundry;
+    var dishwasher = formData.dishwasher;
+
+    var showerDemand = showers * 20;
+    var peakDemand = showerDemand + laundry + dishwasher;
+	
+	var fuelType = formData.fuel;
+	var ventType = formData.venting;
+	var waterSource = formData.water;
+
+    var tankSize = "";
+    var models = [];
+
+    if (peakDemand <= 40) {
+            tankSize = "40 Gallon";
+			if (fuelType == "natural-gas"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				} 
+				else if (ventType == "power"){
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Direct Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			else if (fuelType == "propane"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Power Venting	
+				} else { 
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			// Electric
+			else {
+					models = [
+						{ 
+							name: "Bradford White RG240", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG40-40N", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG40", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+			}
+			
+	} 
+	else if (peakDemand <= 65) {
+        tankSize = "50 Gallon";
+			if (fuelType == "natural-gas"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				} 
+				else if (ventType == "power"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Direct Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			else if (fuelType == "propane"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Power Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			// Electric
+			else {
+					models = [
+						{ 
+							name: "Bradford White 50", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 50", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 50", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+			}
+		
+    } 
+	else {
+        tankSize = "75 Gallon or Tankless";
+			if (fuelType == "natural-gas"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				} 
+				else if (ventType == "power"){
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Direct Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			else if (fuelType == "propane"){
+				if (ventType == "atmospheric"){
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem 75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant 75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				// else Power Venting	
+				} 
+				else { 
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+				}
+			}
+			// Electric
+			else {
+					models = [
+						{ 
+							name: "Bradford White 75", 
+							brand: "Bradford White", 
+							price: "$1,299", 
+							url: "https://example.com/bradford-rg240", 
+							features: ["40 Gallon Capacity", "Energy Efficient", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Rheem PROG75", 
+							brand: "Rheem", 
+							price: "$1,149", 
+							url: "https://example.com/rheem-prog40", 
+							features: ["40 Gallon Capacity", "Professional Grade", "6-Year Warranty"] 
+						},
+						{ 
+							name: "Giant UG75", 
+							brand: "Giant", 
+							price: "$1,099", 
+							url: "https://example.com/giant-ug40", 
+							features: ["40 Gallon Capacity", "Canadian Made", "6-Year Warranty"] 
+						}
+					];
+			}
+		
+    } 
+
+
+    // Update UI Results
+    var peakDemandEl = document.getElementById("peakDemand");
+    var tankSizeEl = document.getElementById("tankSize");
+    var fuelTypeEl = document.getElementById("fuelType");
+    
+    if (peakDemandEl) peakDemandEl.innerText = peakDemand + " gal";
+    if (tankSizeEl) tankSizeEl.innerText = tankSize;
+    
+    var fuelText = formData.fuel === "natural-gas" ? "Natural Gas" : (formData.fuel === "propane" ? "Liquid Propane" : "Electric");
+    if (fuelTypeEl) fuelTypeEl.innerText = fuelText;
+
+    // Show Venting Type if applicable
+    var ventingResult = document.getElementById("ventingResult");
+    var ventingTypeEl = document.getElementById("ventingType");
+    
+    if (formData.venting) {
+        if (ventingResult) ventingResult.style.display = "block";
+        if (ventingTypeEl) {
+            var ventingDisplay = formData.venting.replace(/-/g, ' ').replace(/\b\w/g, function(l) { return l.toUpperCase(); });
+            ventingTypeEl.innerText = ventingDisplay;
+        }
+    } else {
+        if (ventingResult) ventingResult.style.display = "none";
+    }
+
+    // Populate Model Cards
+    var modelsContainer = document.getElementById("modelsContainer");
+    if (modelsContainer) {
+        modelsContainer.innerHTML = "";
+
+		for (var i = 0; i < models.length; i++) {
+			var model = models[i];
+			var card = document.createElement("div");
+			card.className = "col-md-4";
+			if (i === 0) card.className += " model-recommended";
+			
+			var featuresHTML = "";
+			for (var j = 0; j < model.features.length; j++) {
+				featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
+			}
+			
+			// Updated Inner HTML with Link and Price
+			card.innerHTML = '<a href="' + model.url + '" target="_blank" class="model-card-link">' +
+				'<div class="model-card">' +
+				'<div class="model-card-header">' +
+				'<i class="bi bi-box-seam"></i>' +
+				'</div>' +
+				'<div class="model-card-body">' +
+				'<span class="model-card-brand">' + model.brand + '</span>' +
+				'<h6 class="model-card-title">' + model.name + '</h6>' +
+				'<div class="model-price">' + model.price + '</div>' +
+				'<ul class="model-card-features">' + featuresHTML + '</ul>' +
+				'<div class="model-card-action"><small>Click to view details <i class="bi bi-arrow-right"></i></small></div>' +
+				'</div>' +
+				'</div>' +
+				'</a>';
+			modelsContainer.appendChild(card);
+		}
+    }
+
+    // Show Result Card with smooth scroll
+    var resultsCard = document.getElementById("resultsCard");
+    if (resultsCard) {
+        resultsCard.style.display = "block";
+        resultsCard.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+
+function resetCalculator() {
+    formData = {
+        fuel: "",
+        venting: "",
+        people: "",
+        bathrooms: "",
+        showers: "",
+        laundry: 0,
+        dishwasher: 0,
+        location: ""
+    };
+
+    var activeCards = document.querySelectorAll('.selection-card.active');
+    for (var i = 0; i < activeCards.length; i++) {
+        activeCards[i].classList.remove('active');
+    }
+
+    var ventingSection = document.getElementById('ventingSection');
+    if (ventingSection) ventingSection.classList.remove('show');
+
+    var resultsCard = document.getElementById('resultsCard');
+    if (resultsCard) resultsCard.style.display = 'none';
+
+    var locationSelect = document.getElementById('location');
+    if (locationSelect) {
+        locationSelect.value = '';
+        var locationWrapper = document.getElementById('locationWrapper');
+        if (locationWrapper) locationWrapper.classList.remove('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function printResults() {
+    window.print();
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Water Heater Calculator Ready');
+    
+    // Test button click
+    var calcButton = document.querySelector('button[onclick="calculateHeater()"]');
+    if (calcButton) {
+        console.log('Calculate button found');
+    } else {
+        console.log('Calculate button NOT found - check HTML');
+    }
+});
+
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
