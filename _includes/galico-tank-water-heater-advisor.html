@@ -7,7 +7,7 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <style>
         /* Card Selection Styles */
@@ -47,7 +47,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: none; /* Hidden by default, show when you add images */
         }
 
         /* Card Content Area */
@@ -329,6 +328,76 @@
 		padding: 1rem;         /* Adds whitespace around the product */
 		background: #fff;      /* White background behind the image */
 }
+
+		/* Venting Image Styling */
+		.venting-image {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			padding: 1rem;
+			background: #fff;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.selection-card.active .venting-image {
+			transform: scale(1.05);
+		}
+
+		.card-image-area {
+			height: 120px;
+			background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1px solid #dee2e6;
+			overflow: hidden;
+		}
+
+		/* Fallback icon if image fails to load */
+		.card-image-area i {
+			font-size: 3rem;
+			color: #6c757d;
+		}
+		
+		/* Model Cards Container */
+		#modelsContainer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center; /* Ensures content centers if columns vary */
+		}
+
+		/* Model Card */
+		.model-card {
+			border: 2px solid #e9ecef;
+			border-radius: 16px;
+			overflow: hidden;
+			transition: all 0.3s ease-in-out;
+			height: 100%;
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto; /* Centers card within its column */
+			width: 100%;
+		}
+
+		/* Recommended Badge */
+		.model-recommended {
+			position: relative;
+		}
+
+		.model-recommended::after {
+			content: "BEST MATCH";
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: #198754;
+			color: white;
+			padding: 0.25rem 0.75rem;
+			border-radius: 20px;
+			font-size: 0.7rem;
+			font-weight: 700;
+			z-index: 1;
+		}
     </style>
 </head>
 <body class="bg-light">
@@ -733,13 +802,38 @@ var formData = {
 // Venting options configuration based on fuel type
 var ventingConfig = {
     'natural-gas': [
-        { value: 'atmospheric', label: 'Atmospheric', desc: 'Chimney / B-vent', icon: 'bi-cloud' },
-        { value: 'power-vent', label: 'Power Vent', desc: 'Side-wall exhaust', icon: 'bi-fan' },
-        { value: 'direct-vent', label: 'Direct Vent', desc: 'Sealed combustion', icon: 'bi-shield-check' }
+        { 
+            value: 'atmospheric', 
+            label: 'Atmospheric', 
+            desc: 'Chimney / B-vent', 
+            image: '../assets/img/products/venting-atmospheric.jpg' 
+        },
+        { 
+            value: 'power-vent', 
+            label: 'Power Vent', 
+            desc: 'Side-wall exhaust', 
+            image: '../assets/img/products/venting-power-vent.jpg' 
+        },
+        { 
+            value: 'direct-vent', 
+            label: 'Direct Vent', 
+            desc: 'Sealed combustion', 
+            image: '../assets/img/products/venting-direct-vent.jpg' 
+        }
     ],
     'propane': [
-        { value: 'atmospheric', label: 'Atmospheric', desc: 'Chimney / B-vent', icon: 'bi-cloud' },
-        { value: 'power-vent', label: 'Power Vent', desc: 'Side-wall exhaust', icon: 'bi-fan' }
+        { 
+            value: 'atmospheric', 
+            label: 'Atmospheric', 
+            desc: 'Chimney / B-vent', 
+            image: '../assets/img/products/venting-atmospheric.jpg'
+        },
+        { 
+            value: 'power-vent', 
+            label: 'Power Vent', 
+            desc: 'Side-wall exhaust', 
+            image: '../assets/img/products/venting-power-vent.jpg' 
+        }
     ],
     'electric': []
 };
@@ -783,22 +877,22 @@ function handleVentingDisplay(fuelType) {
         ventingHint.textContent = '(Propane options)';
     }
     
-    ventingOptions.innerHTML = '';
-    for (var i = 0; i < options.length; i++) {
-        var opt = options[i];
-        var col = document.createElement('div');
-        col.className = 'col-4 col-md-3';
-        col.innerHTML = '<div class="selection-card" onclick="selectSingle(\'venting\', \'' + opt.value + '\', this)" data-group="venting">' +
-            '<div class="card-image-area">' +
-            '<i class="bi ' + opt.icon + '"></i>' +
-            '</div>' +
-            '<div class="card-content-area">' +
-            '<span>' + opt.label + '</span>' +
-            '<small>' + opt.desc + '</small>' +
-            '</div>' +
-            '</div>';
-        ventingOptions.appendChild(col);
-    }
+	ventingOptions.innerHTML = '';
+	for (var i = 0; i < options.length; i++) {
+		var opt = options[i];
+		var col = document.createElement('div');
+		col.className = 'col-4 col-md-3';
+		col.innerHTML = '<div class="selection-card" onclick="selectSingle(\'venting\', \'' + opt.value + '\', this)" data-group="venting">' +
+			'<div class="card-image-area">' +
+			'<img src="' + opt.image + '" alt="' + opt.label + ' Venting" class="venting-image">' +
+			'</div>' +
+			'<div class="card-content-area">' +
+			'<span>' + opt.label + '</span>' +
+			'<small>' + opt.desc + '</small>' +
+			'</div>' +
+			'</div>';
+		ventingOptions.appendChild(col);
+	}
     
     formData.venting = '';
     var ventingCards = document.querySelectorAll('.selection-card[data-group="venting"]');
@@ -1034,9 +1128,17 @@ if (fuelTypeEl) {
     if (modelsContainer) {
         modelsContainer.innerHTML = "";
 
-        if (models.length === 0) {
-            modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No matching models found. Please adjust your selections.</div></div>';
-        } else {
+    if (models.length === 0) {
+        modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No matching models found. Please contact us to provide a tailored solution.</div></div>';
+    } else {
+        var colClass = "col-md-4"; // Default for 3 models
+        
+        if (models.length === 1) {
+            colClass = "col-md-6 offset-md-3"; // 1 model = centered with offset
+        } else if (models.length === 2) {
+            colClass = "col-md-6"; // 2 models = 50% each
+        }
+        
             for (var i = 0; i < models.length; i++) {
                 var model = models[i];
                 var card = document.createElement("div");
@@ -1066,7 +1168,9 @@ if (fuelTypeEl) {
                     '<h6 class="model-card-title">' + model.name + '</h6>' +
                     '<div class="mt-4">' + stripeButtonHTML + '</div>' +
                     '<ul class="model-card-features">' + featuresHTML + '</ul>' +
+					'<small  class="text-muted d-block mt-2">*Price includes standard installation only. Additional work may cost extra.</small>' +
 					'<small  class="text-muted d-block mt-2"><i class="bi bi-truck me-1"> Only shipping to Arnprior, Carleton Place, Mississippi Mills, Ottawa, Perth and Smiths Falls, in Ontario.</small>' +
+					
                     '</div>' +
                     '</div>';
                 modelsContainer.appendChild(card);

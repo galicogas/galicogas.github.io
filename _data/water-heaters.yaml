@@ -2,22 +2,110 @@
 # Water heater product data for Galico Tank Water Heater Advisor
 
 water_heaters:
-  # 40 Gallon Tank Models - Natural Gas
-  - name: "Bradford White RG240-ATM"
+  # 40 Gallon Tank Models - Natural Gas - atmospheric
+  - name: "RG240S6N"
     brand: "Bradford White"
     tank_type: "tank"
     tank_size: "40 US Gallon"
     fuel_compatibility: ["natural-gas"]
     venting_type: "atmospheric"
-    stripe_buy_button_id: "buy_btn_1T9RotIhiL9xkbLdYHGzUzA9"
+    stripe_buy_button_id: "buy_btn_1T9v4WIhiL9xkbLdSufHVqPk"
     image: "/images/bradford-rg240-atm.jpg"
     features:
       - "40 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Warranty"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
     peak_demand_max: 40
 
+  - name: "RG250L6N"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1T9v9BIhiL9xkbLd8h5jKaOL"
+    features:
+      - "50 US Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 55
+    
+  - name: "AV60N"
+    brand: "John Wood"
+    tank_type: "tank"
+    tank_size: "60 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1T9vBjIhiL9xkbLdwbVbodPt"
+    features:
+      - "60 US Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 65
 
+  # 40 Gallon Tank Models - Natural Gas - Power Venting
+  - name: "RG1PV40S6N"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1T9yYNIhiL9xkbLdhgyJepBm"
+    features:
+      - "40 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 40
+
+  # 50 Gallon Tank Models - Natural Gas - Power Venting
+  - name: "RG1PV50S6N"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1T9ycPIhiL9xkbLdk7mctIsH"
+    features:
+      - "50 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 50
+
+  # 60 Gallon Tank Models - Natural Gas - Power Venting
+  - name: "PV60N"
+    brand: "John Wood"
+    tank_type: "tank"
+    tank_size: "60 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1T9ypjIhiL9xkbLdah7FhIgq"
+    features:
+      - "60 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 60
+
+  # 75 Gallon Tank Models - Natural Gas - Power Venting
+  - name: "RG2PV75H6N"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "75 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1T9yr6IhiL9xkbLdTRc0cuV3"
+    features:
+      - "75 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty + 1-Year on Labour"
+      - "Installation Included + 30-Day Money Back"
+    peak_demand_max: 75
+    
   # Tankless Models - Navien (Natural Gas)
   - name: "Navien NPE-240A"
     brand: "Navien"
