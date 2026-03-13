@@ -30,7 +30,7 @@ water_heaters:
       - "Atmospheric Venting"
       - "6-Year Manifacturer Warranty + 1-Year on Labour"
       - "Installation Included + 30-Day Money Back"
-    peak_demand_max: 55
+    peak_demand_max: 50
     
   - name: "AV60N"
     brand: "John Wood"

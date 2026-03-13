@@ -639,10 +639,10 @@
                     </div>
                 </div>
 				
-				<!-- 7. Location -->
+				<!-- 6. Location -->
 				<div class="mb-5">
 					<div class="input-group-label">
-						<span class="step-number">7</span>Service Area
+						<span class="step-number">6</span>Service Area
 					</div>
 					<div class="row g-3">
 						<div class="col-4 col-md-2">
@@ -684,10 +684,10 @@
 					</div>
 				</div>
 				
-				<!-- 8. Water Source -->
+				<!-- 7. Water Source -->
 				<div class="mb-5">
                     <div class="input-group-label">
-                        <span class="step-number">8</span>Water Source
+                        <span class="step-number">7</span>Water Source
                     </div>
                     <div class="row g-3">
                         <div class="col-4 col-md-2">
@@ -1045,14 +1045,14 @@ function calculateHeater() {
     }
     
     if (!formData.location) {
-        alert("Please select your location (Step 7)");
+        alert("Please select your location (Step 6)");
         var locationSelect = document.getElementById('location');
         if (locationSelect) locationSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
     }
     
     if (!formData.waterSource) {
-        alert("Please select your water source (Step 8)");
+        alert("Please select your water source (Step 7)");
         var waterSourceSelect = document.getElementById('waterSource');
         if (waterSourceSelect) waterSourceSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -1128,9 +1128,46 @@ if (fuelTypeEl) {
     if (modelsContainer) {
         modelsContainer.innerHTML = "";
 
-    if (models.length === 0) {
-        modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No matching models found. Please contact us to provide a tailored solution.</div></div>';
-    } else {
+	if (models.length === 0) {
+		// Build email subject and body with user selections
+		var emailSubject = encodeURIComponent("Water Heater Recommendation Request - " + formData.location);
+		
+		var fuelText = formData.fuel === "natural-gas" ? "Natural Gas" : (formData.fuel === "propane" ? "Liquid Propane" : "Electric");
+		var ventingText = formData.venting ? formData.venting.replace(/-/g, ' ').replace(/\b\w/g, function(l) { return l.toUpperCase(); }) : "N/A (Electric)";
+		
+		var emailBody = encodeURIComponent(
+			"Hello Galico Team,\n\n" +
+			"I used your Water Heater Calculator and need assistance finding the right model.\n\n" +
+			"MY SELECTIONS:\n" +
+			"----------------\n" +
+			"Fuel Type: " + fuelText + "\n" +
+			"Venting Type: " + ventingText + "\n" +
+			"Household Size: " + formData.people + " people\n" +
+			"Number of Bathrooms: " + formData.bathrooms + "\n" +
+			"Simultaneous Showers: " + formData.showers + "\n" +
+			"Laundry Running: " + (formData.laundry > 0 ? "Yes (+25 gal)" : "No") + "\n" +
+			"Dishwasher Running: " + (formData.dishwasher > 0 ? "Yes (+15 gal)" : "No") + "\n" +
+			"Location: " + formData.location + "\n" +
+			"Water Source: " + formData.waterSource + "\n\n" +
+			"CALCULATED NEEDS:\n" +
+			"-----------------\n" +
+			"Peak Demand: " + peakDemand + " US gal (" + usToImperialGallons(peakDemand) + " Imp gal)\n\n" +
+			"Please recommend a suitable water heater model for my needs.\n\n" +
+			"Thank you!"
+		);
+		
+		modelsContainer.innerHTML = 
+			'<div class="col-12">' +
+				'<div class="alert alert-info text-center">' +
+					'<h5 class="alert-heading"><i class="bi bi-envelope me-2"></i>Need a Custom Recommendation?</h5>' +
+					'<p class="mb-3">We couldn\'t find an exact match for your requirements. Our team can help you find the perfect solution!</p>' +
+					'<a href="mailto:hello@galico.ca?subject=' + emailSubject + '&body=' + emailBody + '" class="btn btn-primary btn-lg">' +
+						'<i class="bi bi-envelope-open me-2"></i>Email Us at hello@galico.ca' +
+					'</a>' +
+					'<p class="small text-muted mt-3 mb-0">We\'ll respond within 1 business day with personalized recommendations.</p>' +
+				'</div>' +
+			'</div>';
+	} else {
         var colClass = "col-md-4"; // Default for 3 models
         
         if (models.length === 1) {
