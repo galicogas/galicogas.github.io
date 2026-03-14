@@ -2,7 +2,7 @@
 # Water heater product data for Galico Tank Water Heater Advisor
 
 water_heaters:
-  # 40 Gallon Tank Models - Natural Gas - atmospheric
+  # Tank Models - Natural Gas - atmospheric
   - name: "RG240S6N"
     brand: "Bradford White"
     tank_type: "tank"
@@ -14,8 +14,9 @@ water_heaters:
     features:
       - "40 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 40
 
   - name: "RG250L6N"
@@ -28,8 +29,9 @@ water_heaters:
     features:
       - "50 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 50
     
   - name: "AV60N"
@@ -42,11 +44,29 @@ water_heaters:
     features:
       - "60 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 65
 
-  # 40 Gallon Tank Models - Natural Gas - Power Venting
+  # Tank Models - Propane - atmospheric
+  - name: "RG240S6X"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "40 US Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "atmospheric"
+    stripe_buy_button_id: "buy_btn_1TAuEBIhiL9xkbLdSCuwZA2O"
+    image: "/images/bradford-rg240-atm.jpg"
+    features:
+      - "40 US Gallon Capacity"
+      - "Atmospheric Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 40
+
+  # Tank Models - Natural Gas - Power Venting
   - name: "RG1PV40S6N"
     brand: "Bradford White"
     tank_type: "tank"
@@ -57,11 +77,11 @@ water_heaters:
     features:
       - "40 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 40
 
-  # 50 Gallon Tank Models - Natural Gas - Power Venting
   - name: "RG1PV50S6N"
     brand: "Bradford White"
     tank_type: "tank"
@@ -72,11 +92,27 @@ water_heaters:
     features:
       - "50 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 50
 
-  # 60 Gallon Tank Models - Natural Gas - Power Venting
+  - name: "RG2PV50H6N19"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["natural-gas"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1TApzGIhiL9xkbLd07FH04r4"
+    features:
+      - "48 US Gallon Capacity"
+      - "High Input with Faster Recovery times"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 50
+    
   - name: "PV60N"
     brand: "John Wood"
     tank_type: "tank"
@@ -87,11 +123,11 @@ water_heaters:
     features:
       - "60 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
-    peak_demand_max: 60
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 65
 
-  # 75 Gallon Tank Models - Natural Gas - Power Venting
   - name: "RG2PV75H6N"
     brand: "Bradford White"
     tank_type: "tank"
@@ -102,110 +138,73 @@ water_heaters:
     features:
       - "75 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty + 1-Year on Labour"
-      - "Installation Included + 30-Day Money Back"
-    peak_demand_max: 75
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 80
+
+  # Tank Models - Propane - Power Venting
+  - name: "PV40P"
+    brand: "John Wood"
+    tank_type: "tank"
+    tank_size: "40 US Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1TArpVIhiL9xkbLds9MHzl4v"
+    features:
+      - "40 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 40
+
+  - name: "RG1PV50S6X"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1TArr2IhiL9xkbLdXwWiX2Ei"
+    features:
+      - "50 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 50
+
+  - name: "PV50P"
+    brand: "John Wood"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1TAtLvIhiL9xkbLdtSxkpMKG"
+    features:
+      - "50 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 60
     
-  # Tankless Models - Navien (Natural Gas)
-  - name: "Navien NPE-240A"
-    brand: "Navien"
-    tank_type: "tankless"
-    tank_size: "Tankless"
-    fuel_compatibility: ["natural-gas"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1WXY901..."
-    image: "/images/navien-npe-240a.jpg"
-    features:
-      - "Endless Hot Water"
-      - "95% AFUE Efficiency"
-      - "12-Year Heat Exchanger Warranty"
-      - "Condensing Technology"
-    peak_demand_max: 999
-    flow_rate_gpm: "11.5 GPM"
-
-  - name: "Navien NPE-180A"
-    brand: "Navien"
-    tank_type: "tankless"
-    tank_size: "Tankless"
-    fuel_compatibility: ["natural-gas"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1ZAB234..."
-    image: "/images/navien-npe-180a.jpg"
-    features:
-      - "Endless Hot Water"
-      - "93% AFUE Efficiency"
-      - "12-Year Heat Exchanger Warranty"
-      - "Compact Wall-Mount Design"
-    peak_demand_max: 999
-    flow_rate_gpm: "9.2 GPM"
-
-  # Tankless Models - Navien (Propane)
-  - name: "Navien NPN-190A"
-    brand: "Navien"
-    tank_type: "tankless"
-    tank_size: "Tankless"
+  - name: "PV60P"
+    brand: "John Wood"
+    tank_type: "tank"
+    tank_size: "60 US Gallon"
     fuel_compatibility: ["propane"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1CDE567..."
-    image: "/images/navien-npn-190a.jpg"
+    venting_type: "power-vent"
+    stripe_buy_button_id: "buy_btn_1TArsaIhiL9xkbLdAyu7SoYR"
     features:
-      - "Endless Hot Water"
-      - "93% AFUE Efficiency"
-      - "12-Year Heat Exchanger Warranty"
-      - "Propane Optimized"
-    peak_demand_max: 999
-    flow_rate_gpm: "9.5 GPM"
+      - "60 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 62
 
-  # Tankless Models - A.O. Smith (Natural Gas)
-  - name: "A.O. Smith AT-120"
-    brand: "A.O. Smith"
-    tank_type: "tankless"
-    tank_size: "Tankless"
-    fuel_compatibility: ["natural-gas"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1FGH890..."
-    image: "/images/ao-smith-at-120.jpg"
-    features:
-      - "Endless Hot Water"
-      - "96% Thermal Efficiency"
-      - "10-Year Heat Exchanger Warranty"
-      - "Self-Modulating Technology"
-    peak_demand_max: 999
-    flow_rate_gpm: "10.0 GPM"
-
-  - name: "A.O. Smith AT-150"
-    brand: "A.O. Smith"
-    tank_type: "tankless"
-    tank_size: "Tankless"
-    fuel_compatibility: ["natural-gas"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1IJK123..."
-    image: "/images/ao-smith-at-150.jpg"
-    features:
-      - "Endless Hot Water"
-      - "96% Thermal Efficiency"
-      - "10-Year Heat Exchanger Warranty"
-      - "High Flow Rate for Large Homes"
-    peak_demand_max: 999
-    flow_rate_gpm: "11.0 GPM"
-
-  # Tankless Models - A.O. Smith (Propane)
-  - name: "A.O. Smith AP-140"
-    brand: "A.O. Smith"
-    tank_type: "tankless"
-    tank_size: "Tankless"
-    fuel_compatibility: ["propane"]
-    venting_type: "direct-vent"
-    stripe_buy_button_id: "buy_btn_1LMN456..."
-    image: "/images/ao-smith-ap-140.jpg"
-    features:
-      - "Endless Hot Water"
-      - "95% Thermal Efficiency"
-      - "10-Year Heat Exchanger Warranty"
-      - "Propane Optimized"
-    peak_demand_max: 999
-    flow_rate_gpm: "9.8 GPM"
-
+    
   # Electric Tank Models (No Venting Required)
   - name: "Electric 40 US Gal. RE240S6-1NCPP"
     brand: "Bradford White"
@@ -217,9 +216,10 @@ water_heaters:
     image: "/images/rheem-proe50-electric.jpg"
     features:
       - "40 US Gallon Capacity"
-      - "Electric Element 240V"
-      - "6-Year Warranty"
-      - "No Venting Required"
+      - "3000W | 240V"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
     peak_demand_max: 40
     
   - name: "Electric 50 US Gal. RE250S6-1NCPP"
@@ -231,7 +231,38 @@ water_heaters:
     stripe_buy_button_id: "buy_btn_1T9rDTIhiL9xkbLd0fO5KLvb"
     features:
       - "50 US Gallon Capacity"
-      - "Electric Element 240V"
-      - "6-Year Warranty"
-      - "No Venting Required"
-    peak_demand_max: 50
+      - "3000W | 240V"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 50'
+    
+  - name: "Electric 61 US Gal. RE265T6-1NCPP"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "61 US Gallon"
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    stripe_buy_button_id: "buy_btn_1T9sHVIhiL9xkbLdpHKrSyIe"
+    features:
+      - "61 US Gallon Capacity"
+      - "3000W | 240V"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 61
+    
+  - name: "Electric 80 US Gal. RE280T6-1NCWW"
+    brand: "Bradford White"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    stripe_buy_button_id: "buy_btn_1TArg7IhiL9xkbLdkcjpyYv0"
+    features:
+      - "80 US Gallon Capacity"
+      - "4500/3500 W | 240/208V"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 80

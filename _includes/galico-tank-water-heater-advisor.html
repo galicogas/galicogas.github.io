@@ -586,58 +586,41 @@
                     </div>
                 </div>
 
-                <!-- 5. Appliances (Mutually Exclusive within each type) -->
-                <div class="mb-5">
-                    <div class="input-group-label">
-                        <span class="step-number">5</span>Running Appliances During Showers
-                    </div>
-                    <div class="row g-3">
-                        <!-- Laundry Options -->
-                        <div class="col-6 col-md-3">
-                            <div class="selection-card" onclick="selectSingle('laundry', '0', this)" data-group="laundry">
-                                <div class="card-image-area">
-                                    <i class="bi bi-x-lg"></i>
-                                </div>
-                                <div class="card-content-area">
-                                    <span>No Laundry</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="selection-card" onclick="selectSingle('laundry', '25', this)" data-group="laundry">
-                                <div class="card-image-area">
-                                    <i class="bi bi-instagram"></i>
-                                </div>
-                                <div class="card-content-area">
-                                    <span>Laundry Running</span>
-                                    <small>+25 gal demand</small>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dishwasher Options -->
-                        <div class="col-6 col-md-3">
-                            <div class="selection-card" onclick="selectSingle('dishwasher', '0', this)" data-group="dishwasher">
-                                <div class="card-image-area">
-                                    <i class="bi bi-x-lg"></i>
-                                </div>
-                                <div class="card-content-area">
-                                    <span>No Dishwasher</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="selection-card" onclick="selectSingle('dishwasher', '15', this)" data-group="dishwasher">
-                                <div class="card-image-area">
-                                    <i class="bi bi-water"></i>
-                                </div>
-                                <div class="card-content-area">
-                                    <span>Dishwasher Running</span>
-                                    <small>+15 gal demand</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<!-- 5. Running Appliances -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">5</span>Running Appliances During Showers
+						<small class="text-muted ms-2">
+							<i class="bi bi-info-circle" title="Select all that apply"></i>
+						</small>
+					</div>
+					<div class="row g-3">
+						<!-- Laundry -->
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleAppliance('laundry', 25, this)" data-group="appliances">
+								<div class="card-image-area">
+									<i class="bi bi-instagram"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Laundry Running</span>
+									<small>+25 gal demand</small>
+								</div>
+							</div>
+						</div>
+						<!-- Dishwasher -->
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleAppliance('dishwasher', 15, this)" data-group="appliances">
+								<div class="card-image-area">
+									<i class="bi bi-cup"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Dishwasher Running</span>
+									<small>+15 gal demand</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<!-- 6. Location -->
 				<div class="mb-5">
@@ -793,8 +776,7 @@ var formData = {
     people: "",
     bathrooms: "",
     showers: "",
-    laundry: 0,
-    dishwasher: 0,
+    appliances: [],
     location: "",
     waterSource: ""
 };
@@ -817,7 +799,7 @@ var ventingConfig = {
         { 
             value: 'direct-vent', 
             label: 'Direct Vent', 
-            desc: 'Sealed combustion', 
+            desc: 'Sealed combustion & Tankless', 
             image: '../assets/img/products/venting-direct-vent.jpg' 
         }
     ],
@@ -833,6 +815,12 @@ var ventingConfig = {
             label: 'Power Vent', 
             desc: 'Side-wall exhaust', 
             image: '../assets/img/products/venting-power-vent.jpg' 
+        },
+		{ 
+            value: 'direct-vent', 
+            label: 'Direct Vent', 
+            desc: 'Sealed combustion & Tankless', 
+            image: '../assets/img/products/venting-direct-vent.jpg' 
         }
     ],
     'electric': []
@@ -923,6 +911,15 @@ function selectSingle(group, value, element) {
     }
 }
 
+	var applianceList = "None";
+	if (formData.appliances.length > 0) {
+		var applianceNames = [];
+		for (var i = 0; i < formData.appliances.length; i++) {
+			applianceNames.push(formData.appliances[i].type === 'laundry' ? 'Laundry' : 'Dishwasher');
+		}
+		applianceList = applianceNames.join(' + ');
+	}
+
 function updateShowerOptions() {
     var bathrooms = formData.bathrooms;
     var showerCards = document.querySelectorAll('.selection-card[data-group="showers"]');
@@ -949,6 +946,26 @@ function updateShowerOptions() {
     }
 }
 
+function toggleAppliance(type, gallons, element) {
+    // Check if appliance is already selected
+    var index = -1;
+    for (var i = 0; i < formData.appliances.length; i++) {
+        if (formData.appliances[i].type === type) {
+            index = i;
+            break;
+        }
+    }
+    
+    if (index === -1) {
+        // Add appliance
+        formData.appliances.push({ type: type, gallons: gallons });
+        element.classList.add('active');
+    } else {
+        // Remove appliance
+        formData.appliances.splice(index, 1);
+        element.classList.remove('active');
+    }
+}
 function handleLocationSelect(selectElement) {
     var wrapper = document.getElementById('locationWrapper');
     var value = selectElement.value;
@@ -1059,12 +1076,13 @@ function calculateHeater() {
     }
 
     // Calculate peak demand
+	var applianceGallons = 0;
+	for (var i = 0; i < formData.appliances.length; i++) {
+		applianceGallons += formData.appliances[i].gallons;
+	}
     var showers = parseInt(formData.showers);
-    var laundry = formData.laundry;
-    var dishwasher = formData.dishwasher;
-
     var showerDemand = showers * 20;
-    var peakDemand = showerDemand + laundry + dishwasher;
+    var peakDemand = showerDemand + applianceGallons;
 
     // Get recommended models from YAML data
     var models = getRecommendedModels(peakDemand, formData.fuel, formData.venting);
@@ -1145,8 +1163,7 @@ if (fuelTypeEl) {
 			"Household Size: " + formData.people + " people\n" +
 			"Number of Bathrooms: " + formData.bathrooms + "\n" +
 			"Simultaneous Showers: " + formData.showers + "\n" +
-			"Laundry Running: " + (formData.laundry > 0 ? "Yes (+25 gal)" : "No") + "\n" +
-			"Dishwasher Running: " + (formData.dishwasher > 0 ? "Yes (+15 gal)" : "No") + "\n" +
+			"Appliances Running: " + applianceList + "\n" +
 			"Location: " + formData.location + "\n" +
 			"Water Source: " + formData.waterSource + "\n\n" +
 			"CALCULATED NEEDS:\n" +
@@ -1159,6 +1176,7 @@ if (fuelTypeEl) {
 		modelsContainer.innerHTML = 
 			'<div class="col-12">' +
 				'<div class="alert alert-info text-center">' +
+					'<p class="mb-2 text-muted fst-italic">"Looks like your hot water demands are... <b>uniquely ambitious</b>."</p>' +
 					'<h5 class="alert-heading"><i class="bi bi-envelope me-2"></i>Need a Custom Recommendation?</h5>' +
 					'<p class="mb-3">We couldn\'t find an exact match for your requirements. Our team can help you find the perfect solution!</p>' +
 					'<a href="mailto:hello@galico.ca?subject=' + emailSubject + '&body=' + emailBody + '" class="btn btn-primary btn-lg">' +
@@ -1236,11 +1254,18 @@ function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
     var allHeaters = waterHeaterData.water_heaters;
     var matches = [];
     
+    // Calculate maximum tank size (peak demand + 10 gallons)
+    var maxTankSize = peakDemand + 10;
+    
     for (var i = 0; i < allHeaters.length; i++) {
         var heater = allHeaters[i];
         
-        // Check peak demand compatibility
+        // Check peak demand compatibility (tank must handle the demand)
         if (peakDemand > heater.peak_demand_max) continue;
+        
+        // Tank size should not exceed peak demand by more than 10 gallons
+        // Tankless models (999) are exempt from this rule
+        if (heater.tank_size !== 999 && heater.tank_size > maxTankSize) continue;
         
         // Check fuel compatibility
         if (heater.fuel_compatibility.indexOf(fuelType) === -1) continue;
@@ -1250,6 +1275,21 @@ function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
         
         // If electric, skip venting check (venting_type is null)
         if (fuelType === 'electric' && heater.venting_type !== null) continue;
+        
+		// ============================================
+		// NEW: Tankless Water Source Rule
+		// ============================================
+		if (heater.tank_type === 'tankless') {
+			if (formData.waterSource === 'well') {
+				// Well Water: ONLY A.O. Smith
+				if (heater.brand !== 'A.O. Smith') {
+					continue; // Skip Navien for well water
+				}
+			}
+			// City Water: Show BOTH A.O. Smith (best) AND Navien
+			// (No filtering needed - both brands pass through)
+		}
+		// ============================================
         
         matches.push(heater);
     }
@@ -1275,8 +1315,7 @@ function resetCalculator() {
         people: "",
         bathrooms: "",
         showers: "",
-        laundry: 0,
-        dishwasher: 0,
+		appliances: [],
         location: "",
         waterSource: ""
     };
