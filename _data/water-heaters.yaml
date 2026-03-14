@@ -235,7 +235,7 @@ water_heaters:
       - "6-Year Manifacturer Warranty"
       - "Installation Included*" 
       - "30-Day Money Back"
-    peak_demand_max: 50'
+    peak_demand_max: 50
     
   - name: "Electric 61 US Gal. RE265T6-1NCPP"
     brand: "Bradford White"
@@ -252,10 +252,10 @@ water_heaters:
       - "30-Day Money Back"
     peak_demand_max: 61
     
-  - name: "Electric 80 US Gal. RE280T6-1NCWW"
-    brand: "Bradford White"
+  - name: "Electric 80 US Gal. E80TE-45240"
+    brand: "John Wood"
     tank_type: "tank"
-    tank_size: "50 US Gallon"
+    tank_size: "80 US Gallon"
     fuel_compatibility: ["electric"]
     venting_type: null
     stripe_buy_button_id: "buy_btn_1TArg7IhiL9xkbLdkcjpyYv0"
