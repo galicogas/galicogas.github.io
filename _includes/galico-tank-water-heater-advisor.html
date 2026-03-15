@@ -1264,6 +1264,11 @@ function getRecommendedModels(peakDemand, fuelType, selectedVenting, peopleCount
     var matches = [];
     var maxTankSize = peakDemand + 10;
 
+	// Ensure maxTankSize is at least the smallest available tank (40 gal)
+	if (maxTankSize < 40) {
+		maxTankSize = 40;
+	}
+
     // Determine minimum tank size based on household size
     var minTankSize = 40;
     if (peopleCount === '2') {
