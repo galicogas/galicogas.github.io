@@ -402,7 +402,7 @@
 </head>
 <body class="bg-light">
 
-<div class="container my-5">
+<div id="tankCalculatorContainer" class="container my-5">
 
     <div class="card shadow-lg border-0">
         <div class="card-header bg-primary text-white py-4">
@@ -1355,7 +1355,10 @@ function resetCalculator() {
         if (waterSourceWrapper) waterSourceWrapper.classList.remove('active');
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var calculatorContainer = document.getElementById('tankCalculatorContainer');
+    if (calculatorContainer) {
+        calculatorContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // ============================================
