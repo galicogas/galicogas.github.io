@@ -71,6 +71,11 @@
 
 <div class="container-xxl py-5" id="offer">
   <div class="row g-4 justify-content-center">
+  {% if page.show_tank_calculator == true %}
+	{% include galico-tank-water-heater-advisor.html %}
+	
+  {% else %}
+	
   {% for item in service.cards %}
   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ item.delay }}">
     <div class="service-item bg-light overflow-hidden h-100">
@@ -103,6 +108,7 @@
     </div>
   </div>
   {% endfor %}
+  {% endif %}
   </div>
 </div>
 

@@ -1085,7 +1085,7 @@ function calculateHeater() {
     var peakDemand = showerDemand + applianceGallons;
 
     // Get recommended models from YAML data
-    var models = getRecommendedModels(peakDemand, formData.fuel, formData.venting);
+    var models = getRecommendedModels(peakDemand, formData.fuel, formData.venting, formData.people);
     var tankSize = models.length > 0 ? models[0].tank_size : "N/A";
 
 	// Update UI Results - with US and Imperial Gallons
@@ -1094,6 +1094,7 @@ function calculateHeater() {
 	var tankSizeEl = document.getElementById("tankSize");
 	var tankSizeImperialEl = document.getElementById("tankSizeImperial");
 	var fuelTypeEl = document.getElementById("fuelType");
+	var peopleCount = document.getElementById("people");
 
 	// Peak Demand (US + Imperial)
 	if (peakDemandEl) {
@@ -1245,7 +1246,15 @@ if (fuelTypeEl) {
 // MODEL FILTERING FUNCTION
 // ============================================
 
-function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
+// Extract numeric value from tank_size string (e.g., "50 US Gallon" → 50)
+function getTankSizeNumeric(tankSizeString) {
+    if (!tankSizeString) return 0;
+    // Match the first number in the string
+    var match = tankSizeString.toString().match(/(\d+)/);
+    return match ? parseInt(match[1], 10) : 0;
+}
+
+function getRecommendedModels(peakDemand, fuelType, selectedVenting, peopleCount) {
     if (!waterHeaterData || !waterHeaterData.water_heaters) {
         console.error('Water heater data not loaded');
         return [];
@@ -1253,48 +1262,44 @@ function getRecommendedModels(peakDemand, fuelType, selectedVenting) {
     
     var allHeaters = waterHeaterData.water_heaters;
     var matches = [];
-    
-    // Calculate maximum tank size (peak demand + 10 gallons)
     var maxTankSize = peakDemand + 10;
+
+    // Determine minimum tank size based on household size
+    var minTankSize = 40;
+    if (peopleCount === '2') {
+        minTankSize = 50;
+    } else if (peopleCount === '3') {
+        minTankSize = 75;
+    }
     
     for (var i = 0; i < allHeaters.length; i++) {
         var heater = allHeaters[i];
         
-        // Check peak demand compatibility (tank must handle the demand)
+        // Extract numeric tank size from string (e.g., "50 US Gallon" → 50)
+        var heaterTankSize = getTankSizeNumeric(heater.tank_size);
+        
+        // Check peak demand compatibility
         if (peakDemand > heater.peak_demand_max) continue;
         
         // Tank size should not exceed peak demand by more than 10 gallons
-        // Tankless models (999) are exempt from this rule
-        if (heater.tank_size !== 999 && heater.tank_size > maxTankSize) continue;
+        if (heaterTankSize !== 999 && heaterTankSize > maxTankSize) continue;
+        
+        // Minimum tank size based on household size
+        if (heaterTankSize < minTankSize) continue;
         
         // Check fuel compatibility
         if (heater.fuel_compatibility.indexOf(fuelType) === -1) continue;
         
-        // Check venting compatibility (if venting selected and model requires venting)
+        // Check venting compatibility
         if (selectedVenting && heater.venting_type && heater.venting_type !== selectedVenting) continue;
         
-        // If electric, skip venting check (venting_type is null)
+        // If electric, skip venting check
         if (fuelType === 'electric' && heater.venting_type !== null) continue;
-        
-		// ============================================
-		// NEW: Tankless Water Source Rule
-		// ============================================
-		if (heater.tank_type === 'tankless') {
-			if (formData.waterSource === 'well') {
-				// Well Water: ONLY A.O. Smith
-				if (heater.brand !== 'A.O. Smith') {
-					continue; // Skip Navien for well water
-				}
-			}
-			// City Water: Show BOTH A.O. Smith (best) AND Navien
-			// (No filtering needed - both brands pass through)
-		}
-		// ============================================
         
         matches.push(heater);
     }
     
-    // Sort: prioritize best matches, tankless last
+    // Sort: tankless last, then by peak_demand_max
     matches.sort(function(a, b) {
         if (a.tank_type === 'tankless' && b.tank_type !== 'tankless') return 1;
         if (a.tank_type !== 'tankless' && b.tank_type === 'tankless') return -1;
