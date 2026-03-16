@@ -221,6 +221,21 @@ water_heaters:
       - "Installation Included*" 
       - "30-Day Money Back"
     peak_demand_max: 40
+ 
+  - name: "Electric 50 US Gal. PROE40"
+    brand: "Rheem"
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    stripe_buy_button_id: "buy_btn_1TBaJrIhiL9xkbLdrpoXg8e3"
+    features:
+      - "50 US Gallon Capacity"
+      - "3000W | 240V"
+      - "6-Year Manifacturer Warranty"
+      - "Installation Included*" 
+      - "30-Day Money Back"
+    peak_demand_max: 50
     
   - name: "Electric 50 US Gal. RE250S6-1NCPP"
     brand: "Bradford White"
