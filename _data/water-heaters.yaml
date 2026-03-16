@@ -97,7 +97,7 @@ water_heaters:
       - "30-Day Money Back"
     peak_demand_max: 50
 
-  - name: "RG2PV50H6N19"
+  - name: "RG2PV50H6N"
     brand: "Bradford White"
     tank_type: "tank"
     tank_size: "50 US Gallon"
