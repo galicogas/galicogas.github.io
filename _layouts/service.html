@@ -53,20 +53,7 @@
 </div>
 
 {% if service.category == "Hot Water System" %}
-<!-- Subcription -->
-<section class="py-5 bg-white">
-<div class="container">
-	<div class="row mb-5 wow fadeInUp" data-wow-delay="0.1s">
-		<div class="col-12 text-center">
-			<h3 class="section-title">Stuck in a Water Heater Rental Contract?</h3>
-			<p class="section-subtitle">
-				Learn more about our <a href="{{ '/onboarding' | relative_url }}" class="text-primary">Subscription Onboarding Program</a>.
-			</p>
-		</div>
-	</div>
-</div>
-</section>
-<!-- Subscription End -->
+	{% include subscription_ad.html %}
 {% endif %}
 
 <div class="container-xxl py-5" id="offer">
