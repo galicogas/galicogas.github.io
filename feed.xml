@@ -1,0 +1,29 @@
+---
+layout: null
+---
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>{{ site.title }} - Water Heater Feed</title>
+    <link>{{ site.url }}</link>
+    <description>Galico Water Heater Product Feed for Google Merchant Center</description>
+    
+    {% for product in site.data.water_heaters.water_heaters %}
+    <item>
+      <g:id>{{ product.id }}</g:id>
+      <g:title>{{ product.name }}</g:title>
+	  <g:product_type>{{ product.category | replace: "-", " " | title }}</g:product_type>
+      <g:description>{{ product.description | default: product.name | xml_escape }}</g:description>
+      <g:link>{{ site.url }}/products/{{ product.id }}.html</g:link>
+      <g:image_link>{{ site.url }}{{ product.image }}</g:image_link>
+      <g:price>{{ product.price }} {{ product.currency }}</g:price>
+      <g:availability>{{ product.availability }}</g:availability>
+      <g:brand>{{ product.brand }}</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Water Heaters &gt; {{ product.tank_type | capitalize }} &gt; {{ product.fuel_compatibility[0] | capitalize }}</g:product_type>
+      <g:energy_efficiency>{% if product.energy_star_certified %}Energy Star{% else %}Standard{% endif %}</g:energy_efficiency>
+      <g:material>{{ product.fuel_compatibility | join: ', ' }}</g:material>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
