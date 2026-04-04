@@ -1,283 +1,606 @@
-# _data/water-heater.yaml
+# _data/water-heaters.yaml
 # Water heater product data for Galico Tank Water Heater Advisor
 
 water_heaters:
-  # Tank Models - Natural Gas - atmospheric
-  - name: "RG240S6N"
+  # ============================================
+  # TANK MODELS - NATURAL GAS - ATMOSPHERIC
+  # ============================================
+  - id: "bw-rg240s6n-atm-ng"
+    name: "Bradford White RG240S6N"
     brand: "Bradford White"
+    model: "RG240S6N"
+    category: "tank-water-heaters"
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "40-gallon natural gas water heater with atmospheric venting. Includes professional installation."
+    stripe_buy_button_id: "buy_btn_1T9v4WIhiL9xkbLdSufHVqPk"
+    image: "../../assets/img/products/atmosphericdhwFV.jpg"
     tank_type: "tank"
     tank_size: "40 US Gallon"
+    tank_capacity_gallons: 40
     fuel_compatibility: ["natural-gas"]
     venting_type: "atmospheric"
-    stripe_buy_button_id: "buy_btn_1T9v4WIhiL9xkbLdSufHVqPk"
-    image: "/images/bradford-rg240-atm.jpg"
+    peak_demand_max: 40
+    recovery_rate_gph: 40
+    first_hour_rating: 64
     features:
       - "40 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 40
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  - name: "RG250L6N"
+  - id: "bw-rg250l6n-atm-ng"
+    name: "Bradford White RG250L6N"
     brand: "Bradford White"
+    model: "RG250L6N"
+    category: "tank-water-heaters"
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    # ... continue pattern for all products
+    description: "50-gallon natural gas water heater with atmospheric venting. Ideal for medium households."
+    stripe_buy_button_id: "buy_btn_1T9v9BIhiL9xkbLd8h5jKaOL"
+    image: "/images/bradford-rg250-atm.jpg"
+    
     tank_type: "tank"
     tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
     fuel_compatibility: ["natural-gas"]
     venting_type: "atmospheric"
-    stripe_buy_button_id: "buy_btn_1T9v9BIhiL9xkbLd8h5jKaOL"
+    peak_demand_max: 50
+    recovery_rate_gph: 44
+    first_hour_rating: 74
+    
     features:
       - "50 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 50
-    
-  - name: "AV60N"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "jw-av60n-atm-ng"
+    name: "John Wood AV60N"
     brand: "John Wood"
+    model: "AV60N"
+    category: "tank-water-heaters"
+    price: 2,695.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "60-gallon natural gas water heater with atmospheric venting. Perfect for large households."
+    stripe_buy_button_id: "buy_btn_1T9vBjIhiL9xkbLdwbVbodPt"
+    image: "/images/johnwood-av60-atm.jpg"
+    
     tank_type: "tank"
     tank_size: "60 US Gallon"
+    tank_capacity_gallons: 60
     fuel_compatibility: ["natural-gas"]
     venting_type: "atmospheric"
-    stripe_buy_button_id: "buy_btn_1T9vBjIhiL9xkbLdwbVbodPt"
+    peak_demand_max: 65
+    recovery_rate_gph: 50
+    first_hour_rating: 88
+    
     features:
       - "60 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 65
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  # Tank Models - Propane - atmospheric
-  - name: "RG240S6X"
+  # ============================================
+  # TANK MODELS - PROPANE - ATMOSPHERIC
+  # ============================================
+  - id: "bw-rg240s6x-atm-lp"
+    name: "Bradford White RG240S6X"
     brand: "Bradford White"
-    tank_type: "tank"
-    tank_size: "40 US Gallon"
-    fuel_compatibility: ["propane"]
-    venting_type: "atmospheric"
+    model: "RG240S6X"
+    category: "tank-water-heaters"
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "40-gallon propane water heater with atmospheric venting."
     stripe_buy_button_id: "buy_btn_1TAuEBIhiL9xkbLdSCuwZA2O"
     image: "/images/bradford-rg240-atm.jpg"
+    
+    tank_type: "tank"
+    tank_size: "40 US Gallon"
+    tank_capacity_gallons: 40
+    fuel_compatibility: ["propane"]
+    venting_type: "atmospheric"
+    peak_demand_max: 40
+    recovery_rate_gph: 40
+    first_hour_rating: 64
+    
     features:
       - "40 US Gallon Capacity"
       - "Atmospheric Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 40
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  # Tank Models - Natural Gas - Power Venting
-  - name: "RG1PV40S6N"
+  # ============================================
+  # TANK MODELS - NATURAL GAS - POWER VENT
+  # ============================================
+  - id: "bw-rg1pv40s6n-pv-ng"
+    name: "Bradford White RG1PV40S6N"
     brand: "Bradford White"
+    model: "RG1PV40S6N"
+    category: "tank-water-heaters"
+    price: 1,996.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "40-gallon natural gas water heater with power venting. Flexible installation options."
+    stripe_buy_button_id: "buy_btn_1T9yYNIhiL9xkbLdhgyJepBm"
+    image: "/images/bradford-rg1pv40-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "40 US Gallon"
+    tank_capacity_gallons: 40
     fuel_compatibility: ["natural-gas"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1T9yYNIhiL9xkbLdhgyJepBm"
+    peak_demand_max: 40
+    recovery_rate_gph: 40
+    first_hour_rating: 64
+    
     features:
       - "40 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 40
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  - name: "RG1PV50S6N"
+  - id: "bw-rg1pv50s6n-pv-ng"
+    name: "Bradford White RG1PV50S6N"
     brand: "Bradford White"
+    model: "RG1PV50S6N"
+    category: "tank-water-heaters"
+    price: 1,796.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon natural gas water heater with power venting."
+    stripe_buy_button_id: "buy_btn_1T9ycPIhiL9xkbLdk7mctIsH"
+    image: "/images/bradford-rg1pv50-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
     fuel_compatibility: ["natural-gas"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1T9ycPIhiL9xkbLdk7mctIsH"
+    peak_demand_max: 50
+    recovery_rate_gph: 44
+    first_hour_rating: 74
+    
     features:
       - "50 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 50
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  - name: "RG2PV50H6N"
+  - id: "bw-rg2pv50h6n-pv-ng"
+    name: "Bradford White RG2PV50H6N"
     brand: "Bradford White"
+    model: "RG2PV50H6N"
+    category: "tank-water-heaters"
+    price: 3,145.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon high-input natural gas water heater with power venting. Faster recovery times."
+    stripe_buy_button_id: "buy_btn_1TApzGIhiL9xkbLd07FH04r4"
+    image: "/images/bradford-rg2pv50h-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "50 US Gallon"
+    tank_capacity_gallons: 48
     fuel_compatibility: ["natural-gas"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1TApzGIhiL9xkbLd07FH04r4"
+    peak_demand_max: 50
+    recovery_rate_gph: 62
+    first_hour_rating: 93
+    
     features:
       - "48 US Gallon Capacity"
-      - "High Input with Faster Recovery times"
+      - "High Input with Faster Recovery Times"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 50
-    
-  - name: "PV60N"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "jw-pv60n-pv-ng"
+    name: "John Wood PV60N"
     brand: "John Wood"
+    model: "PV60N"
+    category: "tank-water-heaters"
+    price: 2,695.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "60-gallon natural gas water heater with power venting."
+    stripe_buy_button_id: "buy_btn_1T9ypjIhiL9xkbLdah7FhIgq"
+    image: "/images/johnwood-pv60-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "60 US Gallon"
+    tank_capacity_gallons: 60
     fuel_compatibility: ["natural-gas"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1T9ypjIhiL9xkbLdah7FhIgq"
+    peak_demand_max: 65
+    recovery_rate_gph: 50
+    first_hour_rating: 88
+    
     features:
       - "60 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 65
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  - name: "RG2PV75H6N"
+  - id: "bw-rg2pv75h6n-pv-ng"
+    name: "Bradford White RG2PV75H6N"
     brand: "Bradford White"
+    model: "RG2PV75H6N"
+    category: "tank-water-heaters"
+    price: 4,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "75-gallon high-input natural gas water heater with power venting. For large households."
+    stripe_buy_button_id: "buy_btn_1T9yr6IhiL9xkbLdTRc0cuV3"
+    image: "/images/bradford-rg2pv75h-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "75 US Gallon"
+    tank_capacity_gallons: 75
     fuel_compatibility: ["natural-gas"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1T9yr6IhiL9xkbLdTRc0cuV3"
+    peak_demand_max: 80
+    recovery_rate_gph: 76
+    first_hour_rating: 117
+    
     features:
       - "75 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 80
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  # Tank Models - Propane - Power Venting
-  - name: "PV40P"
+  # ============================================
+  # TANK MODELS - PROPANE - POWER VENT
+  # ============================================
+  - id: "jw-pv40p-pv-lp"
+    name: "John Wood PV40P"
     brand: "John Wood"
+    model: "PV40P"
+    category: "tank-water-heaters"
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "40-gallon propane water heater with power venting."
+    stripe_buy_button_id: "buy_btn_1TArpVIhiL9xkbLds9MHzl4v"
+    image: "/images/johnwood-pv40-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "40 US Gallon"
+    tank_capacity_gallons: 40
     fuel_compatibility: ["propane"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1TArpVIhiL9xkbLds9MHzl4v"
+    peak_demand_max: 40
+    recovery_rate_gph: 40
+    first_hour_rating: 64
+    
     features:
       - "40 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 40
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-  - name: "RG1PV50S6X"
+  - id: "bw-rg1pv50s6x-pv-lp"
+    name: "Bradford White RG1PV50S6X"
     brand: "Bradford White"
-    tank_type: "tank"
-    tank_size: "50 US Gallon"
-    fuel_compatibility: ["propane"]
-    venting_type: "power-vent"
+    model: "RG1PV50S6X"
+    category: "tank-water-heaters"
+    price: 2,895.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon propane water heater with power venting."
     stripe_buy_button_id: "buy_btn_1TArr2IhiL9xkbLdXwWiX2Ei"
-    features:
-      - "50 US Gallon Capacity"
-      - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
-      - "30-Day Money Back"
-    peak_demand_max: 50
-
-  - name: "PV50P"
-    brand: "John Wood"
+    image: "/images/bradford-rg1pv50-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
     fuel_compatibility: ["propane"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1TAtLvIhiL9xkbLdtSxkpMKG"
+    peak_demand_max: 50
+    recovery_rate_gph: 44
+    first_hour_rating: 74
+    
     features:
       - "50 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 60
-    
-  - name: "PV60P"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "jw-pv50p-pv-lp"
+    name: "John Wood PV50P"
     brand: "John Wood"
+    model: "PV50P"
+    category: "tank-water-heaters"
+    price: 2,695.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon propane water heater with power venting."
+    stripe_buy_button_id: "buy_btn_1TAtLvIhiL9xkbLdtSxkpMKG"
+    image: "/images/johnwood-pv50-pv.jpg"
+    
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
+    fuel_compatibility: ["propane"]
+    venting_type: "power-vent"
+    peak_demand_max: 60
+    recovery_rate_gph: 44
+    first_hour_rating: 74
+    
+    features:
+      - "50 US Gallon Capacity"
+      - "Power Venting"
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
+      - "30-Day Money Back"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "jw-pv60p-pv-lp"
+    name: "John Wood PV60P"
+    brand: "John Wood"
+    model: "PV60P"
+    category: "tank-water-heaters"
+    price: 4,045.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "60-gallon propane water heater with power venting."
+    stripe_buy_button_id: "buy_btn_1TArsaIhiL9xkbLdAyu7SoYR"
+    image: "/images/johnwood-pv60-pv.jpg"
+    
     tank_type: "tank"
     tank_size: "60 US Gallon"
+    tank_capacity_gallons: 60
     fuel_compatibility: ["propane"]
     venting_type: "power-vent"
-    stripe_buy_button_id: "buy_btn_1TArsaIhiL9xkbLdAyu7SoYR"
+    peak_demand_max: 62
+    recovery_rate_gph: 50
+    first_hour_rating: 88
+    
     features:
       - "60 US Gallon Capacity"
       - "Power Venting"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 62
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
 
-    
-  # Electric Tank Models (No Venting Required)
-  - name: "Electric 40 US Gal. RE240S6-1NCPP"
+  # ============================================
+  # ELECTRIC TANK MODELS (NO VENTING REQUIRED)
+  # ============================================
+  - id: "bw-re240s6-electric"
+    name: "Bradford White RE240S6-1NCPP"
     brand: "Bradford White"
+    model: "RE240S6-1NCPP"
+    category: "tank-water-heaters"
+    price: 1,795.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "40-gallon electric water heater. No venting required."
+    stripe_buy_button_id: "buy_btn_1T9r6lIhiL9xkbLdvja3hNJX"
+    image: "/images/bradford-re240-electric.jpg"
+    
     tank_type: "tank"
     tank_size: "40 US Gallon"
+    tank_capacity_gallons: 40
     fuel_compatibility: ["electric"]
     venting_type: null
-    stripe_buy_button_id: "buy_btn_1T9r6lIhiL9xkbLdvja3hNJX"
-    image: "/images/rheem-proe50-electric.jpg"
+    peak_demand_max: 40
+    recovery_rate_gph: 23
+    first_hour_rating: 51
+    electrical_specs:
+      wattage: "3000W"
+      voltage: "240V"
+    
     features:
       - "40 US Gallon Capacity"
       - "3000W | 240V"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 40
- 
-  - name: "Electric 50 US Gal. PROE40"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "rheem-proe40-electric"
+    name: "Rheem PROE40"
     brand: "Rheem"
-    tank_type: "tank"
-    tank_size: "50 US Gallon"
-    fuel_compatibility: ["electric"]
-    venting_type: null
+    model: "PROE40"
+    category: "tank-water-heaters"
+    price: 1,795.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon electric water heater. No venting required."
     stripe_buy_button_id: "buy_btn_1TBaJrIhiL9xkbLdrpoXg8e3"
-    features:
-      - "50 US Gallon Capacity"
-      - "3000W | 240V"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
-      - "30-Day Money Back"
-    peak_demand_max: 50
+    image: "/images/rheem-proe50-electric.jpg"
     
-  - name: "Electric 50 US Gal. RE250S6-1NCPP"
-    brand: "Bradford White"
     tank_type: "tank"
     tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
     fuel_compatibility: ["electric"]
     venting_type: null
-    stripe_buy_button_id: "buy_btn_1T9rDTIhiL9xkbLd0fO5KLvb"
+    peak_demand_max: 50
+    recovery_rate_gph: 23
+    first_hour_rating: 62
+    electrical_specs:
+      wattage: "3000W"
+      voltage: "240V"
+    
     features:
       - "50 US Gallon Capacity"
       - "3000W | 240V"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 50
-    
-  - name: "Electric 61 US Gal. RE265T6-1NCPP"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "bw-re250s6-electric"
+    name: "Bradford White RE250S6-1NCPP"
     brand: "Bradford White"
+    model: "RE250S6-1NCPP"
+    category: "tank-water-heaters"
+    price: 1,795.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "50-gallon electric water heater. No venting required."
+    stripe_buy_button_id: "buy_btn_1T9rDTIhiL9xkbLd0fO5KLvb"
+    image: "/images/bradford-re250-electric.jpg"
+    
+    tank_type: "tank"
+    tank_size: "50 US Gallon"
+    tank_capacity_gallons: 50
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    peak_demand_max: 50
+    recovery_rate_gph: 23
+    first_hour_rating: 62
+    electrical_specs:
+      wattage: "3000W"
+      voltage: "240V"
+    
+    features:
+      - "50 US Gallon Capacity"
+      - "3000W | 240V"
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
+      - "30-Day Money Back"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "bw-re265t6-electric"
+    name: "Bradford White RE265T6-1NCPP"
+    brand: "Bradford White"
+    model: "RE265T6-1NCPP"
+    
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "61-gallon electric water heater. No venting required."
+    stripe_buy_button_id: "buy_btn_1T9sHVIhiL9xkbLdpHKrSyIe"
+    image: "/images/bradford-re265-electric.jpg"
+    
     tank_type: "tank"
     tank_size: "61 US Gallon"
+    tank_capacity_gallons: 61
     fuel_compatibility: ["electric"]
     venting_type: null
-    stripe_buy_button_id: "buy_btn_1T9sHVIhiL9xkbLdpHKrSyIe"
+    peak_demand_max: 61
+    recovery_rate_gph: 23
+    first_hour_rating: 72
+    electrical_specs:
+      wattage: "3000W"
+      voltage: "240V"
+    
     features:
       - "61 US Gallon Capacity"
       - "3000W | 240V"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 61
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "rheem-proe60-electric"
+    name: "Rheem PROE60"
+    brand: "Rheem"
+    model: "PROE60"
+    category: "tank-water-heaters"
+    price: 2,245.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "72-gallon electric water heater. No venting required."
+    stripe_buy_button_id: "buy_btn_1TIVXiIhiL9xkbLdHZlcOC4d"
+    image: "/images/rheem-proe60-electric.jpg"
     
-  - name: "Electric 80 US Gal. E80TE-45240"
-    brand: "John Wood"
     tank_type: "tank"
-    tank_size: "80 US Gallon"
+    tank_size: "72 US Gallon"
+    tank_capacity_gallons: 72
     fuel_compatibility: ["electric"]
     venting_type: null
+    peak_demand_max: 72
+    recovery_rate_gph: 23
+    first_hour_rating: 87
+    electrical_specs:
+      wattage: "4500/3380W"
+      voltage: "240/208V"
+    
+    features:
+      - "50 US Gallon Capacity"
+      - "3000W | 240V"
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
+      - "30-Day Money Back"
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
+
+  - id: "jw-e80te-electric"
+    name: "John Wood E80TE-45240"
+    brand: "John Wood"
+    model: "E80TE-45240"
+    category: "tank-water-heaters"
+    price: 2,645.00
+    currency: "CAD"
+    availability: "InStock"
+    description: "80-gallon electric water heater. No venting required. For large households."
     stripe_buy_button_id: "buy_btn_1TArg7IhiL9xkbLdkcjpyYv0"
+    image: "/images/johnwood-e80-electric.jpg"
+    
+    tank_type: "tank"
+    tank_size: "80 US Gallon"
+    tank_capacity_gallons: 80
+    fuel_compatibility: ["electric"]
+    venting_type: null
+    peak_demand_max: 80
+    recovery_rate_gph: 30
+    first_hour_rating: 99
+    electrical_specs:
+      wattage: "4500/3500W"
+      voltage: "240/208V"
+    
     features:
       - "80 US Gallon Capacity"
-      - "4500/3500 W | 240/208V"
-      - "6-Year Manifacturer Warranty"
-      - "Installation Included*" 
+      - "4500/3500W | 240/208V"
+      - "6-Year Manufacturer Warranty"
+      - "Installation Included*"
       - "30-Day Money Back"
-    peak_demand_max: 80
+    warranty: "6-Year Manufacturer Warranty"
+    energy_star_certified: false
