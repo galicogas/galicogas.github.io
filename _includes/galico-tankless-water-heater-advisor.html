@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tankless Water Heater Calculator | Galico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* Reuse your existing blue theme styles */
+        .selection-card {
+            cursor: pointer;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            transition: all 0.3s ease-in-out;
+            background: #fff;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .selection-card:hover {
+            border-color: #adb5bd;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image-area {
+            height: 120px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .card-image-area i {
+            font-size: 3rem;
+            color: #6c757d;
+        }
+
+        .card-content-area {
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .card-content-area span {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.95rem;
+            display: block;
+        }
+
+        .card-content-area small {
+            color: #6c757d;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        .selection-card.active {
+            border-color: #0d6efd !important;
+            background-color: #f0f7ff !important;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2) !important;
+        }
+
+        .selection-card.active .card-image-area {
+            background: linear-gradient(135deg, #cfe2ff 0%, #b6d4fe 100%) !important;
+        }
+
+        .selection-card.active .card-image-area i {
+            color: #0d6efd !important;
+        }
+
+        .selection-card.active .card-content-area span,
+        .selection-card.active .card-content-area small {
+            color: #084298 !important;
+        }
+
+        .selection-card.active::after {
+            content: "✓";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #0d6efd !important;
+            color: white !important;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .selection-card.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+            background: #f8f9fa;
+        }
+
+        .input-group-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #0d6efd;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+
+        .conditional-section {
+            display: none;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .conditional-section.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Model Card Styling */
+        .model-card {
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .model-card:hover {
+            border-color: #0d6efd;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .model-card-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 0;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .model-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1.5rem;
+            background: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .model-card:hover .model-card-img {
+            transform: scale(1.05);
+        }
+
+        .model-card-body {
+            padding: 1.25rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+        }
+
+        .model-card-brand {
+            display: inline-block;
+            background: #e7f1ff;
+            color: #084298;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .model-card-title {
+            font-weight: 700;
+            color: #212529;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .model-card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .model-card-features li {
+            padding: 0.4rem 0;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f8f9fa;
+        }
+
+        .model-card-features li:last-child {
+            border-bottom: none;
+        }
+
+        .model-card-features li i {
+            color: #198754;
+            margin-right: 0.5rem;
+        }
+
+        .model-recommended {
+            position: relative;
+        }
+
+        .model-recommended::after {
+            content: "BEST MATCH";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #198754;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        stripe-buy-button {
+            display: block !important;
+            width: 100% !important;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white py-4">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-lightning-charge-fill fs-2 me-3"></i>
+                <div>
+                    <h3 class="mb-0">Tankless Water Heater Calculator</h3>
+                    <small class="text-white-50">Size your tankless unit by flow rate (GPM)</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body p-4 p-md-5">
+			<form id="tanklessForm">
+
+				<!-- 1. Unit Type -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">1</span>Unit Type
+					</div>
+					<div class="row g-3">
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('unitType', 'tankless', this)" data-group="unitType">
+								<div class="card-image-area">
+									<i class="bi bi-droplet-half"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Tankless Only</span>
+									<small>Hot water only</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('unitType', 'combi', this)" data-group="unitType">
+								<div class="card-image-area">
+									<i class="bi bi-house-gear"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Combi Unit</span>
+									<small>Hot water + space heating</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. Number of People (REPLACED Fuel Source) -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">2</span>People in Household
+					</div>
+					<div class="row g-3">
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('people', '1', this)" data-group="people">
+								<div class="card-image-area">
+									<i class="bi bi-person"></i>
+								</div>
+								<div class="card-content-area">
+									<span>1-2 People</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('people', '2', this)" data-group="people">
+								<div class="card-image-area">
+									<i class="bi bi-people-fill"></i>
+								</div>
+								<div class="card-content-area">
+									<span>3-4 People</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('people', '3', this)" data-group="people">
+								<div class="card-image-area">
+									<i class="bi bi-people"></i>
+								</div>
+								<div class="card-content-area">
+									<span>5+ People</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. Number of Bathrooms -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">3</span>Number of Bathrooms
+					</div>
+					<div class="row g-3">
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('bathrooms', '1', this)" data-group="bathrooms">
+								<div class="card-image-area">
+									<i class="bi bi-bucket"></i>
+								</div>
+								<div class="card-content-area">
+									<span>1 Bathroom</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('bathrooms', '2', this)" data-group="bathrooms">
+								<div class="card-image-area">
+									<i class="bi bi-bucket"></i>
+								</div>
+								<div class="card-content-area">
+									<span>2 Bathrooms</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('bathrooms', '3', this)" data-group="bathrooms">
+								<div class="card-image-area">
+									<i class="bi bi-bucket"></i>
+								</div>
+								<div class="card-content-area">
+									<span>3+ Bathrooms</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4. Simultaneous Fixtures -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">4</span>Max Simultaneous Fixtures
+					</div>
+					<div class="row g-3">
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('fixtures', '1', this)" data-group="fixtures">
+								<div class="card-image-area">
+									<i class="bi bi-shower"></i>
+								</div>
+								<div class="card-content-area">
+									<span>1 Fixture</span>
+									<small>~2 GPM</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('fixtures', '2', this)" data-group="fixtures">
+								<div class="card-image-area">
+									<i class="bi bi-shower"></i>
+								</div>
+								<div class="card-content-area">
+									<span>2 Fixtures</span>
+									<small>~4 GPM</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('fixtures', '3', this)" data-group="fixtures">
+								<div class="card-image-area">
+									<i class="bi bi-shower"></i>
+								</div>
+								<div class="card-content-area">
+									<span>3 Fixtures</span>
+									<small>~6 GPM</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('fixtures', '4', this)" data-group="fixtures">
+								<div class="card-image-area">
+									<i class="bi bi-shower"></i>
+								</div>
+								<div class="card-content-area">
+									<span>4+ Fixtures</span>
+									<small>~8+ GPM</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5. Fixture Types (CONSTRAINT: Cannot exceed # of fixtures) -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">5</span>Fixture Types (Select All That Apply)
+						<small class="text-muted ms-2">
+							<i class="bi bi-info-circle" title="Cannot exceed simultaneous fixtures"></i>
+						</small>
+					</div>
+					<div class="row g-3">
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleFixtureType('shower', this)" data-group="fixtureTypes">
+								<div class="card-image-area">
+									<i class="bi bi-shower"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Shower</span>
+									<small>2.0 GPM each</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleFixtureType('tub', this)" data-group="fixtureTypes">
+								<div class="card-image-area">
+									<i class="bi bi-droplet"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Soaker Tub</span>
+									<small>4.0 GPM</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleFixtureType('kitchen', this)" data-group="fixtureTypes">
+								<div class="card-image-area">
+									<i class="bi bi-cup-hot"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Kitchen Faucet</span>
+									<small>1.5 GPM</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="toggleFixtureType('laundry', this)" data-group="fixtureTypes">
+								<div class="card-image-area">
+									<i class="bi bi-box-seam"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Laundry</span>
+									<small>2.0 GPM</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="fixtureWarning" class="alert alert-warning mt-3" style="display:none;">
+						<small><i class="bi bi-exclamation-triangle me-1"></i>You cannot select more fixture types than simultaneous fixtures.</small>
+					</div>
+				</div>
+
+				<!-- 6. Fuel Source (MOVED - can be converted) -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">6</span>Current Fuel Source
+						<small class="text-muted ms-2">
+							<i class="bi bi-info-circle" title="Tankless units can be converted between NG and Propane"></i>
+						</small>
+					</div>
+					<div class="row g-3">
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('fuel', 'natural-gas', this)" data-group="fuel">
+								<div class="card-image-area">
+									<i class="bi bi-fire"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Natural Gas</span>
+									<small>Most common</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('fuel', 'propane', this)" data-group="fuel">
+								<div class="card-image-area">
+									<i class="bi bi-droplet-fill"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Liquid Propane</span>
+									<small>LP / Bottled</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<small class="text-muted d-block mt-2">
+						<i class="bi bi-tools me-1"></i>Note: Tankless units can be converted between Natural Gas and Propane with a kit.
+					</small>
+				</div>
+
+				<!-- 7. Location -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">7</span>Service Area
+					</div>
+					<div class="row g-3">
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'arnprior', this)" data-group="location">
+								<div class="card-image-area">
+									<i class="bi bi-geo-alt"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Arnprior</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'ottawa', this)" data-group="location">
+								<div class="card-image-area">
+									<i class="bi bi-geo-alt"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Ottawa</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'perth', this)" data-group="location">
+								<div class="card-image-area">
+									<i class="bi bi-geo-alt"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Perth</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-md-2">
+							<div class="selection-card" onclick="selectSingle('location', 'smithsfalls', this)" data-group="location">
+								<div class="card-image-area">
+									<i class="bi bi-geo-alt"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Smiths Falls</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 8. Water Source -->
+				<div class="mb-5">
+					<div class="input-group-label">
+						<span class="step-number">8</span>Water Source
+					</div>
+					<div class="row g-3">
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('waterSource', 'city', this)" data-group="waterSource">
+								<div class="card-image-area">
+									<i class="bi bi-building"></i>
+								</div>
+								<div class="card-content-area">
+									<span>City Water</span>
+									<small>A.O. Smith + Navien</small>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-3">
+							<div class="selection-card" onclick="selectSingle('waterSource', 'well', this)" data-group="waterSource">
+								<div class="card-image-area">
+									<i class="bi bi-droplet-fill"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Well Water</span>
+									<small>A.O. Smith Only</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 9. Combi Options (conditional) -->
+				<div id="combiSection" class="conditional-section mb-5">
+					<div class="input-group-label">
+						<span class="step-number">9</span>Space Heating Requirements
+					</div>
+					<div class="row g-3">
+						<div class="col-6 col-md-4">
+							<div class="selection-card" onclick="selectSingle('homeSize', 'small', this)" data-group="homeSize">
+								<div class="card-image-area">
+									<i class="bi bi-house"></i>
+								</div>
+								<div class="card-content-area">
+									<span>Up to 1500 sq ft</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div class="selection-card" onclick="selectSingle('homeSize', 'medium', this)" data-group="homeSize">
+								<div class="card-image-area">
+									<i class="bi bi-house-door"></i>
+								</div>
+								<div class="card-content-area">
+									<span>1500–2500 sq ft</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-4">
+							<div class="selection-card" onclick="selectSingle('homeSize', 'large', this)" data-group="homeSize">
+								<div class="card-image-area">
+									<i class="bi bi-building"></i>
+								</div>
+								<div class="card-content-area">
+									<span>2500+ sq ft</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mt-5">
+					<button type="button" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm" onclick="calculateTankless()">
+						<i class="bi bi-calculator me-2"></i> Calculate Tankless Size
+					</button>
+				</div>
+
+			</form>
+        </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="resultsCard" class="card mt-4 border-primary shadow-lg" style="display:none;">
+        <div class="card-header bg-primary text-white py-3">
+            <h4 class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Recommended Tankless Units</h4>
+        </div>
+
+        <div class="card-body p-4">
+            <!-- Summary Stats -->
+            <div class="row text-center mb-5 bg-light p-4 rounded-3 border">
+                <div class="col-md-3 border-end">
+                    <h6 class="text-muted text-uppercase small">Required Flow</h6>
+                    <h3 class="text-primary fw-bold" id="requiredGPM">--</h3>
+                </div>
+                <div class="col-md-3 border-end">
+                    <h6 class="text-muted text-uppercase small">Temp Rise</h6>
+                    <h3 class="text-primary fw-bold" id="tempRise">--</h3>
+                </div>
+                <div class="col-md-3 border-end">
+                    <h6 class="text-muted text-uppercase small">Unit Type</h6>
+                    <h3 class="text-dark fw-bold" id="unitTypeDisplay">--</h3>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-muted text-uppercase small">Fuel Type</h6>
+                    <h3 class="text-dark fw-bold" id="fuelTypeDisplay">--</h3>
+                </div>
+            </div>
+
+            <!-- Model Cards -->
+            <h5 class="fw-bold mb-4"><i class="bi bi-grid-3x3-gap me-2"></i>Recommended Models</h5>
+            <div class="row g-4" id="modelsContainer">
+                <!-- Model cards injected here -->
+            </div>
+
+            <!-- Info Note -->
+            <div class="alert alert-info mt-4">
+                <small><i class="bi bi-info-circle me-1"></i>
+                <strong>Note:</strong> Tankless sizing depends on groundwater temperature. 
+                Ontario homes typically need 70–80°F temperature rise in winter.
+                Professional installation recommended.</small>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary me-2" onclick="window.print()">
+                    <i class="bi bi-printer me-2"></i>Print Results
+                </button>
+                <button class="btn btn-outline-secondary" onclick="resetTanklessCalculator()">
+                    <i class="bi bi-arrow-counterclockwise me-2"></i>Start Over
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stripe Buy Button Script -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<!-- Pass Jekyll data and Stripe key -->
+<script>
+    var tanklessData = {{ site.data.tankless-water-heaters | jsonify }};
+    var stripePublishableKey = "{{ site.stripe.publishable_key }}";
+</script>
+
+<!-- Main JavaScript -->
+<script>
+// ============================================
+// TANKLESS WATER HEATER CALCULATOR
+// ============================================
+
+var formData = {
+    unitType: "",
+    people: "",
+    bathrooms: "",
+    fixtures: "",
+    fixtureTypes: [],
+    fuel: "",
+    location: "",
+    waterSource: "",
+    homeSize: ""
+};
+
+// Fixture flow rates (GPM)
+var fixtureFlowRates = {
+    shower: 2.0,
+    tub: 4.0,
+    kitchen: 1.5,
+    laundry: 2.0
+};
+
+// Location temperature data (Ontario)
+var locationTempData = {
+    arnprior: { winter: 45, summer: 60 },
+    ottawa: { winter: 45, summer: 60 },
+    perth: { winter: 45, summer: 60 },
+    smithsfalls: { winter: 45, summer: 60 }
+};
+
+// ============================================
+// SELECTION FUNCTIONS
+// ============================================
+
+function selectSingle(group, value, element) {
+    if (element.classList.contains('disabled')) return;
+    
+    formData[group] = value;
+
+    var allInGroup = document.querySelectorAll('.selection-card[data-group="' + group + '"]');
+    for (var i = 0; i < allInGroup.length; i++) {
+        allInGroup[i].classList.remove('active');
+    }
+
+    element.classList.add('active');
+    
+    // Show/hide combi section
+    if (group === 'unitType') {
+        toggleCombiSection(value);
+    }
+    
+    // If fixtures changed, validate fixture types
+    if (group === 'fixtures') {
+        validateFixtureTypes();
+    }
+}
+
+function toggleFixtureType(type, element) {
+    var index = formData.fixtureTypes.indexOf(type);
+    var maxFixtures = formData.fixtures ? parseInt(formData.fixtures) : 0;
+    
+    if (index === -1) {
+        // Adding a fixture type
+        if (formData.fixtureTypes.length >= maxFixtures) {
+            // Cannot add more than simultaneous fixtures
+            showFixtureWarning();
+            return;
+        }
+        formData.fixtureTypes.push(type);
+        element.classList.add('active');
+    } else {
+        // Removing a fixture type
+        formData.fixtureTypes.splice(index, 1);
+        element.classList.remove('active');
+    }
+    
+    hideFixtureWarning();
+    validateFixtureTypes();
+}
+
+function validateFixtureTypes() {
+    var maxFixtures = formData.fixtures ? parseInt(formData.fixtures) : 0;
+    var fixtureCards = document.querySelectorAll('.selection-card[data-group="fixtureTypes"]');
+    
+    for (var i = 0; i < fixtureCards.length; i++) {
+        var card = fixtureCards[i];
+        if (formData.fixtureTypes.length >= maxFixtures && !card.classList.contains('active')) {
+            card.classList.add('disabled');
+        } else {
+            card.classList.remove('disabled');
+        }
+    }
+    
+    if (maxFixtures === 0) {
+        for (var i = 0; i < fixtureCards.length; i++) {
+            fixtureCards[i].classList.add('disabled');
+        }
+    }
+}
+
+function showFixtureWarning() {
+    var warning = document.getElementById('fixtureWarning');
+    if (warning) warning.style.display = 'block';
+}
+
+function hideFixtureWarning() {
+    var warning = document.getElementById('fixtureWarning');
+    if (warning) warning.style.display = 'none';
+}
+
+function toggleCombiSection(unitType) {
+    var combiSection = document.getElementById('combiSection');
+    if (unitType === 'combi') {
+        combiSection.classList.add('show');
+    } else {
+        combiSection.classList.remove('show');
+        formData.homeSize = "";
+    }
+}
+
+// ============================================
+// CALCULATION FUNCTION
+// ============================================
+
+function calculateTankless() {
+    console.log('Calculate button clicked');
+    console.log('Form Data:', formData);
+    
+    // Validation
+    if (!formData.unitType) {
+        alert("Please select a unit type (Step 1)");
+        return;
+    }
+    
+    if (!formData.people) {
+        alert("Please select number of people (Step 2)");
+        return;
+    }
+    
+    if (!formData.bathrooms) {
+        alert("Please select number of bathrooms (Step 3)");
+        return;
+    }
+    
+    if (!formData.fixtures) {
+        alert("Please select simultaneous fixtures (Step 4)");
+        return;
+    }
+    
+    if (formData.fixtureTypes.length === 0) {
+        alert("Please select at least one fixture type (Step 5)");
+        return;
+    }
+    
+    if (!formData.fuel) {
+        alert("Please select your current fuel source (Step 6)");
+        return;
+    }
+    
+    if (!formData.location) {
+        alert("Please select your location (Step 7)");
+        return;
+    }
+    
+    if (!formData.waterSource) {
+        alert("Please select your water source (Step 8)");
+        return;
+    }
+
+    // Calculate Required GPM
+    var requiredGPM = calculateRequiredGPM();
+    
+    // Calculate Temperature Rise
+    var tempRise = calculateTempRise();
+    
+    // Get Recommended Models
+    var models = getRecommendedTanklessModels(requiredGPM, tempRise);
+    
+    // Update UI
+    document.getElementById("requiredGPM").innerText = requiredGPM.toFixed(1) + " GPM";
+    document.getElementById("tempRise").innerText = tempRise + "°F";
+    document.getElementById("unitTypeDisplay").innerText = formData.unitType === 'combi' ? 'Combi' : 'Tankless';
+    document.getElementById("fuelTypeDisplay").innerText = formData.fuel === 'natural-gas' ? 'Natural Gas' : 'Propane';
+    
+    // Populate Model Cards
+    var modelsContainer = document.getElementById("modelsContainer");
+    modelsContainer.innerHTML = "";
+    
+    if (models.length === 0) {
+        modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No matching models found. Please contact us for a custom solution.</div></div>';
+    } else {
+        // Calculate column width
+        var colClass = "col-md-4";
+        if (models.length === 1) {
+            colClass = "col-md-6 offset-md-3";
+        } else if (models.length === 2) {
+            colClass = "col-md-6";
+        }
+        
+        for (var i = 0; i < models.length; i++) {
+            var model = models[i];
+            var card = document.createElement("div");
+            card.className = colClass;
+            
+            if (models.length > 1 && i === 0) {
+                card.className += " model-recommended";
+            }
+            
+            var featuresHTML = "";
+            for (var j = 0; j < model.features.length; j++) {
+                featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
+            }
+            
+            var stripeButtonHTML = model.stripe_buy_button_id ? 
+                '<stripe-buy-button\n' +
+                '  buy-button-id="' + model.stripe_buy_button_id + '"\n' +
+                '  publishable-key="' + stripePublishableKey + '"\n' +
+                '  class="w-100 d-block"\n' +
+                '>\n' +
+                '</stripe-buy-button>' : 
+                '<button class="btn btn-secondary w-100" disabled>Contact for Pricing</button>';
+            
+            card.innerHTML = '<div class="model-card">' +
+                '<div class="model-card-header">' +
+                '<img src="' + model.image + '" alt="' + model.name + '" class="model-card-img" onerror="this.style.display=\'none\'">' +
+                '</div>' +
+                '<div class="model-card-body">' +
+                '<span class="model-card-brand">' + model.brand + '</span>' +
+                '<h6 class="model-card-title">' + model.name + '</h6>' +
+                '<ul class="model-card-features">' + featuresHTML + '</ul>' +
+                '<div class="mt-4">' + stripeButtonHTML + '</div>' +
+                '<small class="text-muted d-block mt-2"><i class="bi bi-shield-check me-1"></i>Secure checkout by Stripe</small>' +
+                '</div>' +
+                '</div>';
+            modelsContainer.appendChild(card);
+        }
+    }
+    
+    // Show Results
+    var resultsCard = document.getElementById("resultsCard");
+    resultsCard.style.display = "block";
+    resultsCard.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ============================================
+// HELPER FUNCTIONS
+// ============================================
+
+function calculateRequiredGPM() {
+    var fixtureCount = formData.fixtures ? parseInt(formData.fixtures) : 1;
+    var fixtureTypeCount = formData.fixtureTypes.length;
+    
+    // Prevent division by zero
+    if (fixtureTypeCount === 0) {
+        fixtureTypeCount = 1;
+    }
+    
+    // Distribute fixture count across selected types
+    // Example: 2 fixtures + Shower & Kitchen = 1 shower + 1 kitchen
+    var fixturesPerType = fixtureCount / fixtureTypeCount;
+    
+    var customGPM = 0;
+    for (var i = 0; i < formData.fixtureTypes.length; i++) {
+        var type = formData.fixtureTypes[i];
+        customGPM += fixtureFlowRates[type] * fixturesPerType;
+    }
+    
+    // Add 20% buffer for peak demand
+    return customGPM * 1.2;
+}
+
+function calculateTempRise() {
+    var desiredTemp = 120; // Standard output temperature
+    var incomingTemp = locationTempData[formData.location] ? locationTempData[formData.location].winter : 50;
+    return desiredTemp - incomingTemp;
+}
+
+function getRecommendedTanklessModels(requiredGPM, tempRise) {
+    if (!tanklessData || !tanklessData.tankless_units) {
+        console.error('Tankless data not loaded');
+        return [];
+    }
+    
+    var allUnits = tanklessData.tankless_units;
+    var matches = [];
+    
+    for (var i = 0; i < allUnits.length; i++) {
+        var unit = allUnits[i];
+        
+        // Check unit type match
+        if (formData.unitType !== unit.unit_type) continue;
+        
+        // Check GPM capacity at temperature rise
+        var unitGPM = tempRise <= 45 ? unit.max_gpm_45rise : unit.max_gpm_75rise;
+        if (unitGPM < requiredGPM) continue;
+        
+        // Check water source (A.O. Smith for well, both for city)
+        if (formData.waterSource === 'well' && unit.brand !== 'A.O. Smith') continue;
+        
+        // Check combi heating capacity if combi unit
+        if (formData.unitType === 'combi' && formData.homeSize) {
+            var requiredBTU = 0;
+            if (formData.homeSize === 'small') requiredBTU = 100000;
+            else if (formData.homeSize === 'medium') requiredBTU = 140000;
+            else if (formData.homeSize === 'large') requiredBTU = 180000;
+            
+            if (unit.space_heating_btu && unit.space_heating_btu < requiredBTU) continue;
+        }
+        
+        matches.push(unit);
+    }
+    
+    // Sort: A.O. Smith first, then by GPM capacity
+    matches.sort(function(a, b) {
+        if (a.brand === 'A.O. Smith' && b.brand !== 'A.O. Smith') return -1;
+        if (a.brand !== 'A.O. Smith' && b.brand === 'A.O. Smith') return 1;
+        return b.max_gpm_45rise - a.max_gpm_45rise;
+    });
+    
+    return matches.slice(0, 3);
+}
+
+function resetTanklessCalculator() {
+    formData = {
+        unitType: "",
+        people: "",
+        bathrooms: "",
+        fixtures: "",
+        fixtureTypes: [],
+        fuel: "",
+        location: "",
+        waterSource: "",
+        homeSize: ""
+    };
+    
+    var activeCards = document.querySelectorAll('.selection-card.active');
+    for (var i = 0; i < activeCards.length; i++) {
+        activeCards[i].classList.remove('active');
+    }
+    
+    var combiSection = document.getElementById('combiSection');
+    if (combiSection) combiSection.classList.remove('show');
+    
+    hideFixtureWarning();
+    
+    var resultsCard = document.getElementById('resultsCard');
+    if (resultsCard) resultsCard.style.display = 'none';
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Tankless Water Heater Calculator Ready');
+    console.log('Tankless Data:', tanklessData);
+});
+</script>
+
+</body>
+</html>
