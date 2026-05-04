@@ -1,6 +1,6 @@
 disclaimer_banner:
-  enabled: false   # ← toggle ON/OFF here
-  message: "<b>Limited Time Promotion:</b> Buy a Water Heater and Get a FREE Vacation on Us! Promotion Ends April 30, 2026."
+  enabled: true   # ← toggle ON/OFF here
+  message: "<b>Limited Time Promotion:</b> Buy a Water Heater and Get a FREE Vacation on Us! Promotion Ends June 30, 2026."
   link_text: "View offer"
   link_url: /freevacation
   background: "#ff9913"  # Orange=#ff9913
