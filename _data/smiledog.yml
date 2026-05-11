@@ -1,0 +1,115 @@
+consultation:
+  name: Consultation
+  slug: consultation
+  intro: >
+    Get dependable hot water with professional tank water heater installation
+    from Galico's licensed gas technicians. We ensure safe, code-compliant
+    installations built for Ontario homes.
+  description:
+    - Hot water tank remain one of the most reliable and cost-effective hot
+      water solutions for homes in the Ottawa Valley. Galico specializes in
+      professional tank water heater installation, providing homeowners with
+      dependable hot water systems designed for long service life and consistent
+      performance.
+    - We install both gas and electric tank water heaters, carefully sized to
+      match your household's hot water demand. Proper sizing is critical — an
+      undersized tank leads to frequent cold-water complaints, while an
+      oversized unit wastes energy and space. Our installation process accounts
+      for household size, usage patterns, fuel availability, and local water
+      conditions to ensure the system performs as expected.
+    - In hard-water areas, tank systems offer a key advantage; they are more
+      forgiving of mineral buildup than compact heat exchangers found in
+      tankless units. We take additional steps during installation to support
+      long-term reliability, including proper venting, safe connections, and
+      commissioning to manufacturer specifications. When applicable, we also
+      advise on maintenance practices that help extend tank lifespan.
+    - Whether you're replacing a failed water heater or upgrading an aging
+      system, our focus is on safe installation, predictable performance, and
+      clear expectations — so you can count on hot water without surprises.
+  cards:
+    - title: Virtual Consultation
+      image: inspection.jpg
+      alt: Virtual meeting on tablet
+      description: Book a <b>free</b> virtual evaluation of your project, using your
+        smart phone/tablet and Zoom/Google Meet
+      calendly_url: https://calendly.com/eric-pythago/virtual-consultation
+      cta: Request a Quote
+    - title: Onsite Consultation
+      image: onsiteestimate.jpg
+      alt: Technician onsite estimate
+      description: Book an on-site visit for evaluating your project and provide an
+        estimate. Assessment & Travel fee: <b>$75</b> + HST (will be deducted from final invoice if selected to do the work)
+      calendly_url: https://calendly.com/eric-pythago/galico-estimate
+      cta: Request a Quote
+
+services:
+  name: service
+  slug: service
+  category: Gasfitting
+  intro: >
+    Trust licensed experts for gas appliance installation. Galico ensures
+    safe connections, proper venting, and reliable operation for all gas
+    appliances.
+  description:
+    - Gas appliances require precise installation to operate safely and
+      efficiently. Galico provides professional gas appliance installation
+      services for residential homes, supporting appliances such as water
+      heaters, boilers, fireplaces, ranges, stoves, and outdoor gas equipment.
+    - Each gas appliance installation begins with verifying that the existing
+      gas supply is properly sized and suitable for the appliance being
+      installed. Galico ensures correct gas pressure, secure connections,
+      appropriate venting, and compliance with manufacturer specifications.
+      These steps are critical for safe combustion, reliable ignition, and
+      long-term performance.
+    - Improperly installed gas appliances can lead to inefficiency, nuisance
+      shutdowns, or safety risks. Galico addresses these concerns by performing
+      pressure testing, leak checks, and final commissioning before the
+      appliance is placed into service.
+    - Whether installing a new appliance or replacing an existing unit, Galico
+      focuses on safe operation, clean workmanship, and clear communication.
+      Homeowners can be confident that their gas appliance has been installed to
+      professional standards and is ready for dependable everyday use.
+  cards:
+    - title: Gas Cooking Appliance Connection
+      image: gas-cooking-appliance-connection.jpg
+      alt: gas cooktop
+      description: Connect a gas range/cooktop.  Includes fittings, valve and flex connect pipe.  Work is certified and insurred.
+      calendly_url: https://calendly.com/eric-pythago/appliance-hookup
+      cta: Book Now
+    - title: Gas Dryer Connection
+      image: gas-dryer-connection.jpg
+      alt: gas dryer
+      description: Connect a gas dryer.  Includes fittings, valve and flex connect pipe.  Work is certified and insurred.
+      calendly_url: https://calendly.com/eric-pythago/gas-dryer-hookup
+      cta: Book Now
+    - title: Gas Appliance Conversion
+      image: gas-appliance-conversion.jpg
+      alt: gas cooktop with conversion fittings
+      description: Connect of a gas appliance from Natural Gas to Propane (or vice versa).  Customer Must have the manufacture conversion kit. Can be added back-to-back with Gas connection service call. 
+      calendly_url: https://calendly.com/eric-pythago/gas-conversion
+      cta: Book Now
+    - title: Gas Appliance Disconnect Only
+      image: gas-appliance-disconnect.jpg
+      alt: wrench on a gas line
+      description: Only needed if the gas appliance must be disconnected prior to the new appliances delivery.
+      calendly_url: https://calendly.com/eric-pythago/gas-appliance-disconnect
+      cta: Book Now
+    - title: BBQ Quick Connector Installation
+      image: bbq-quick-connect.jpg
+      alt: natural gas bbq
+      description: Exterior gas rough-in must be present and accessible. Includes fittings, valve and BBQ quick connect.
+      calendly_url: https://calendly.com/eric-pythago/bbq-quickconnect
+      cta: Book Now
+    - title: Propane Tank Certification
+      image: propane-tank-certification.jpg
+      alt: Propane Tank
+      description: Schedule an onsite visit for certify an existing propane tank
+      calendly_url: https://calendly.com/eric-pythago/propane-tank-inspection
+      cta: Book Now
+    - title: Leak Detection
+      image: gas-leak.jpg
+      alt: Natural Gas Leak Detection
+      description: >
+        Instruction: 1) Turn off the Gas Source (or Call Enbrige (1-866-763-5427) for Natural Gas); 2) Open the windows to air out; 3) Do NOT turn-on electrical lights or appliances; 4) Book an appointment with Galico.
+      calendly_url: https://calendly.com/eric-pythago/leak-detection
+      cta: Book Now
