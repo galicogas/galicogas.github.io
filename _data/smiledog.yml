@@ -41,6 +41,11 @@ consultation:
         estimate. Assessment & Travel fee: <b>$75</b> + HST (will be deducted from final invoice if selected to do the work)
       calendly_url: https://calendly.com/eric-pythago/galico-estimate
       cta: Request a Quote
+    - title: Call with Owner (Eric)
+      image: about.jpg
+      alt: Technician onsite
+      calendly_url: https://calendly.com/eric-pythago/call-owner
+      cta: Book a Call
 
 services:
   name: service
