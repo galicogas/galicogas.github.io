@@ -7,18 +7,48 @@
 
 <div id="disclaimer-banner" style="background-color: {{ promo.background }}">Notification: We DO NOT provide 24/7 services - Only Installation</div>
 <!-- Offer Page Start -->
-<div class="container-xxl py-5" id="offer">
+<div class="container-xxl py-2" id="offer">
   <h1 class="center">Portal for SmileDog</h1>
     <div class="container" data-aos="fade-up">
 
 		<div class="row g-5 mb-5">
 			<div class="col-lg-6">
 				<h2>Current Promotions:</h2>
-					<ul>
-						<li>Hero Discount: <b>10% Off</b> for First Responders, Military Personnel, Nurses and Search & Rescue (Have the client mention it during the engagement).</li>
-						<li><a href="https://galico.ca/freevacation" target="_blank">Replace Your Water Heater And Enjoy a Complimentary 3-Night.</a>  <b>Ends June 30, 2026</b>
-						<li>Financing on Appliance Installation: No payment or interest for 6 months.  <b>Ends June 30, 2026</b>. (Have the client request it during the consultation).</li>
-					</ul>
+					<div class="promo-list">
+
+					  <div class="promo-item">
+						<div class="promo-icon">🛡️</div>
+						<div class="promo-content">
+						  <h4>Hero Discount</h4>
+						  <p><strong>10% OFF</strong> for First Responders, Military Personnel, Nurses & Search and Rescue.</p>
+						</div>
+					  </div>
+
+					  <div class="promo-item">
+						<div class="promo-icon">✈️</div>
+						<div class="promo-content">
+						  <h4>
+							<a href="https://galico.ca/freevacation" target="_blank">
+							  Free 3-Night Vacation
+							</a>
+						  </h4>
+						  <p>Replace your water heater and enjoy a <strong>complimentary hotel stay</strong>.</p>
+						  <span class="promo-deadline">Ends June 30, 2026</span>
+						  <small>👉 Book a consultation to lear more.</small>
+						</div>
+					  </div>
+
+					  <div class="promo-item">
+						<div class="promo-icon">💳</div>
+						<div class="promo-content">
+						  <h4>0% Financing</h4>
+						  <p><strong>No payments, no interest for 6 months</strong> on appliance installation.</p>
+						  <span class="promo-deadline">Ends June 30, 2026</span>
+						  <small>👉 Book a consultation to lear more.</small>
+						</div>
+					  </div>
+
+				</div>
 			</div>
 
 			<div class="col-lg-6">
@@ -33,7 +63,7 @@
 		</div>
 	</div>
 </div>
-<div class="container-xxl py-5" id="offer">
+<div class="container-xxl py-2" id="offer">
   <h2>Consultation:</h2>
   <div class="row g-4 justify-content-center">
   {% for item in consultation.cards %}
@@ -71,7 +101,7 @@
   </div>
 </div>
 
-<div class="container-xxl py-5" id="offer">
+<div class="container-xxl py-2" id="offer">
   <h2>Services:</h2>
   <div class="row g-4 justify-content-center">
   {% for item in service.cards %}
