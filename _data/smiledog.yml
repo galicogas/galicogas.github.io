@@ -96,7 +96,7 @@ services:
     - title: Gas Appliance Disconnect Only
       image: gas-appliance-disconnect.jpg
       alt: wrench on a gas line
-      description: Only needed if the gas appliance must be disconnected prior to the new appliances delivery.
+      description: Only needed if the gas appliance must be disconnected at a different visit, prior to the new appliances delivery.
       calendly_url: https://calendly.com/eric-pythago/gas-appliance-disconnect
       cta: Book Now
     - title: BBQ Quick Connector Installation
