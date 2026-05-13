@@ -79,7 +79,7 @@ services:
       image: water-heater-replacement-likeforlike.jpg
       alt: water heater
       description: Replacement of a "like-for-like" water heater (client-provided).  Work is certified and insurred.
-      calendly_url: https://calendly.com/eric-pythago/appliance-hookup
+      calendly_url: https://calendly.com/eric-pythago/water-heater-replacement-labour-only
       cta: Book Now
     - title: Gas Cooking Appliance Connection
       image: gas-cooking-appliance-connection.jpg
