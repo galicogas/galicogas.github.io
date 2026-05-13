@@ -75,6 +75,12 @@ services:
       Homeowners can be confident that their gas appliance has been installed to
       professional standards and is ready for dependable everyday use.
   cards:
+    - title: Water Heater Replacement (Labour & Parts Only)
+      image: water-heater-replacement-likeforlike.jpg
+      alt: water heater
+      description: Replacement of a "like-for-like" water heater (client-provided).  Work is certified and insurred.
+      calendly_url: https://calendly.com/eric-pythago/appliance-hookup
+      cta: Book Now
     - title: Gas Cooking Appliance Connection
       image: gas-cooking-appliance-connection.jpg
       alt: gas cooktop
