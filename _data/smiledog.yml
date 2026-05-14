@@ -96,7 +96,7 @@ services:
     - title: Gas Appliance Conversion
       image: gas-appliance-conversion.jpg
       alt: gas cooktop with conversion fittings
-      description: Connect of a gas appliance from Natural Gas to Propane (or vice versa).  Customer Must have the manufacture conversion kit. Can be added back-to-back with Gas connection service call. 
+      description: Conversion of a gas appliance from Natural Gas to Propane (or vice versa).  Customer Must have the manufacture conversion kit. Can be added back-to-back with Gas connection service call. 
       calendly_url: https://calendly.com/eric-pythago/gas-conversion
       cta: Book Now
     - title: Gas Appliance Disconnect Only
