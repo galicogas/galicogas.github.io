@@ -78,13 +78,13 @@ services:
     - title: Water Heater Replacement
       image: water-heater-replacement-likeforlike.jpg
       alt: water heater
-      description: Replacement of a "like-for-like" water heater (Galico provided).  Work is certified and insurred.
+      description: Replacement of a "like-for-like" water heater (Galico-provided).  <b>Customer must have already payed the 50% deposit before booking.</b> Work is certified and insurred.
       calendly_url: https://calendly.com/eric-pythago/water-heater-replacement
       cta: Book Now
     - title: Water Heater Replacement (Labour & Parts Only)
       image: water-heater-replacement-likeforlike.jpg
       alt: water heater
-      description: Replacement of a "like-for-like" water heater (client-provided).  Work is certified and insurred.
+      description: Replacement of a "like-for-like" water heater (Customer-provided).  Work is certified and insurred.
       calendly_url: https://calendly.com/eric-pythago/water-heater-replacement-labour-only
       cta: Book Now
     - title: Gas Cooking Appliance Connection
