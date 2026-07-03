@@ -3,10 +3,12 @@ Gasfitting:
   name: Gasfitting
   desc: Looking for a licensed gasfitter? Book a safe, code‑compliant gas installation today.
   image: gasfitting.jpg
+  url: /gasfitting/
   cta: Learn More
-  
+
 Heating:
   name: Heating System
   desc: Planning a heating upgrade? Talk to a specialist who understands gas, water, and heat together.
   image: heating-system.jpg
+  url: /heating/
   cta: Learn More
