@@ -78,25 +78,25 @@ services:
     - title: Water Heater Replacement
       image: water-heater-replacement-likeforlike.jpg
       alt: water heater
-      description: Replacement of a "like-for-like" water heater (Galico-provided).  <b>Customer must have already payed the 50% deposit before booking.</b> Work is certified and insurred.
+      description: Replacement of a "like-for-like" water heater (Galico-provided).  <b>Customer must have already paid the 50% deposit before booking.</b> Work is certified and insured.
       calendly_url: https://calendly.com/eric-pythago/water-heater-replacement
       cta: Book Now
     - title: Water Heater Replacement (Labour & Parts Only)
       image: water-heater-replacement-likeforlike.jpg
       alt: water heater
-      description: Replacement of a "like-for-like" water heater (Customer-provided).  Work is certified and insurred.
+      description: Replacement of a "like-for-like" water heater (Customer-provided).  Work is certified and insured.
       calendly_url: https://calendly.com/eric-pythago/water-heater-replacement-labour-only
       cta: Book Now
     - title: Gas Cooking Appliance Connection
       image: gas-cooking-appliance-connection.jpg
       alt: gas cooktop
-      description: Connect a gas range/cooktop.  Includes fittings, valve and flex connect pipe.  Work is certified and insurred.
+      description: Connect a gas range/cooktop.  Includes fittings, valve and flex connect pipe.  Work is certified and insured.
       calendly_url: https://calendly.com/eric-pythago/appliance-hookup
       cta: Book Now
     - title: Gas Dryer Connection
       image: gas-dryer-connection.jpg
       alt: gas dryer
-      description: Connect a gas dryer.  Includes fittings, valve and flex connect pipe.  Work is certified and insurred.
+      description: Connect a gas dryer.  Includes fittings, valve and flex connect pipe.  Work is certified and insured.
       calendly_url: https://calendly.com/eric-pythago/gas-dryer-hookup
       cta: Book Now
     - title: Gas Appliance Conversion
