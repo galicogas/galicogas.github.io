@@ -3,15 +3,13 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="author" content="Galico">
-  <link rel="canonical" href="https://galico.ca">
-  <meta property="og:title" content="Galico | Water Heater & Heating">
-  <meta property="og:description" content="Providing reliable water heater and heating services to homeowners in West Ottawa, Ontario.">
-  <meta property="og:image" content="https://galico.ca/img/Galico_logo_240px.png">
-  <meta property="og:url" content="https://galico.ca">
-  <meta property="og:type" content="website">
-  <meta name="keywords" content="Gas services in Almonte, Arnprior, Carleton Place, Carp, Kanata, Nepean, Perth, Stittsville, Smiths Falls; trusted gas technician, gas range installation, gas stove installation, tankless water heater installation, radiant floor installation, gas BBQ connection." />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:image" content="{{ '/assets/img/logo/Galico_logo_900px.png' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 
   {% if page.noindex == true or layout.noindex == true %}
   <meta name="robots" content="noindex, nofollow" />
@@ -117,8 +115,8 @@
       "@id": "https://galico.ca/#business",
       "name": "Galico Home Comfort Inc.",
       "url": "https://galico.ca",
-      "logo": "https://galico.ca/img/Galico_logo_240px.png",
-      "image": "https://galico.ca/img/about.jpg",
+      "logo": "{{ '/assets/img/logo/Galico_logo_900px.png' | absolute_url }}",
+      "image": "{{ '/assets/img/about.jpg' | absolute_url }}",
       "telephone": "+1-343-464-2219",
       "priceRange": "$$",
       "address": {
@@ -183,44 +181,6 @@
       "url": "https://galico.ca/hot-water/tankless-water-heater-installation"
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://galico.ca/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does water heater installation cost in Ottawa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Water heater installation costs depend on the size, type, and venting requirements. Most installations range from standard tank replacements to tankless systems that require upgraded gas lines and venting. Contact Galico for a personalized estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you install tankless water heaters?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Galico installs high-efficiency tankless water heaters for homes across Ottawa, Almonte, Kanata, and surrounding areas. Tankless systems provide endless hot water and improved energy efficiency."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you install gas lines for BBQs or stoves?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Galico provides licensed gas line installation for BBQs, gas stoves, fireplaces, dryers, and outdoor appliances."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you service propane homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Galico installs and services propane appliances and gas systems for rural homes outside the natural gas grid."
-          }
-        }
-      ]
-    },
-    {
       "@type": "Service",
       "@id": "https://galico.ca/#gas-line-installation",
       "name": "Gas Line Installation",
@@ -270,21 +230,21 @@
 }
   </script>
 {% elsif page.url contains '/hot-water/' %}
-<script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "{{ site.title }}",
   "url": "{{ page.url | absolute_url }}",
-  "description": "{{ page.description  }}",
+  "description": "{{ page.description | default: site.description | xml_escape }}",
   "makesOffer": {
     "@type": "Offer",
     "itemOffered": {
       "@type": "Service",
       "name": "{{ page.title }}",
-      "description": "{{ page.description }}",
+      "description": "{{ page.description | default: site.description | xml_escape }}",
       "serviceType": "Hot Water System Supplier",
-      "areaServed": 
+      "areaServed": [
 		{"@type": "AdministrativeArea", "name": "Ontario"},
 		{ "@type": "Place", "name": "Almonte" },
 		{ "@type": "Place", "name": "Arnprior" },
@@ -295,27 +255,28 @@
 		{ "@type": "Place", "name": "Perth" },
 		{ "@type": "Place", "name": "Stittsville" },
 		{ "@type": "Place", "name": "Smiths Falls" }
+      ]
     }
   },
   "telephone": "{{ site.telephone_number }}"
 }
-</script> 
+</script>
 {% elsif page.url contains '/gasfitting/' %}
-<script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "{{ site.title }}",
   "url": "{{ page.url | absolute_url }}",
-  "description": "{{ page.description }}",
+  "description": "{{ page.description | default: site.description | xml_escape }}",
   "makesOffer": {
     "@type": "Offer",
     "itemOffered": {
       "@type": "Service",
       "name": "{{ page.title }}",
-      "description": "{{ page.description }}",
+      "description": "{{ page.description | default: site.description | xml_escape }}",
   "serviceType": ["Gas Installation Service", "Gasfitter"],
-      "areaServed": 
+      "areaServed": [
 		{"@type": "AdministrativeArea", "name": "Ontario"},
 		{ "@type": "Place", "name": "Almonte" },
 		{ "@type": "Place", "name": "Arnprior" },
@@ -326,27 +287,28 @@
 		{ "@type": "Place", "name": "Perth" },
 		{ "@type": "Place", "name": "Stittsville" },
 		{ "@type": "Place", "name": "Smiths Falls" }
+      ]
     }
   },
   "telephone": "{{ site.telephone_number }}"
 }
-</script> 
+</script>
 {% elsif page.url contains '/heating/' %}
-<script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "{{ site.title }}",
   "url": "{{ page.url | absolute_url }}",
-  "description": "{{ page.description }}",
+  "description": "{{ page.description | default: site.description | xml_escape }}",
   "makesOffer": {
     "@type": "Offer",
     "itemOffered": {
       "@type": "Service",
       "name": "{{ page.title }}",
-      "description": "{{ page.description }}",
+      "description": "{{ page.description | default: site.description | xml_escape }}",
       "serviceType": "Heating Contractor",
-      "areaServed": 
+      "areaServed": [
 		{"@type": "AdministrativeArea", "name": "Ontario"},
 		{ "@type": "Place", "name": "Almonte" },
 		{ "@type": "Place", "name": "Arnprior" },
@@ -357,11 +319,181 @@
 		{ "@type": "Place", "name": "Perth" },
 		{ "@type": "Place", "name": "Stittsville" },
 		{ "@type": "Place", "name": "Smiths Falls" }
+      ]
     }
   },
   "telephone": "{{ site.telephone_number }}"
 }
-</script> 
+</script>
+{% elsif page.url contains '/faq' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What appliances does Galico install?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We install a wide range of appliances, including gas stoves, dryers, and water heaters. Our certified technicians ensure every installation is safe, efficient, and meets local building codes in areas like Ottawa, Arnprior, and Carleton Place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to install a gas appliance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most installations take 1 day, depending on the complexity and type of appliance. We will provide a detailed timeline during your consultation anywhere in Ottawa-West, Perth and Smiths Falls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install appliances in older homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in retrofitting appliances in older homes across Mississippi Mills, Carleton Place, Perth, and Smiths Falls. We will assess your property and recommend the best installation approach for safety and efficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the benefits of a tankless water heater?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tankless water heaters provide hot water on demand, save energy by eliminating standby heat loss, and take up less space compared to traditional tank systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if a tankless water heater is right for my home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since tankless water heaters exert direct heat to the incoming water, this type of unit is not ideal for well water which contains minerals. For this reason, being connected to a municipal water system, such as Ottawa, Mississippi Mills, Carleton Place, Perth, and Smiths Falls, is recommended. Otherwise, annual maintenance and descaling would be in order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you replace my old water heater with a tankless model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We will safely remove your old water heater and upgrade your system to a tankless unit, ensuring all connections meet current codes and standards for homes in Lanark County and Ottawa. Note that the nature of the work may call for a plumber as well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is hydronic radiant floor heating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hydronic radiant floor heating uses warm water pipes installed beneath your floors to evenly heat your home, providing quiet, energy-efficient comfort. It is an excellent choice for new homes in Mississippi Mills, Carleton Place, Perth, and Smiths Falls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of flooring are compatible with radiant heating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radiant heating works well with tile, stone, laminate, and some hardwood flooring. We can assess your flooring and recommend the best approach for homes in Perth and Ottawa-West."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is radiant floor heating energy-efficient?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, radiant heating is highly energy-efficient as it directly warms objects and people in the room without significant heat loss. This makes it a great option for homes throughout Lanark County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install radiant floor heating in an existing home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer solutions for retrofitting radiant heating systems in existing homes. Contact us for a consultation to discuss your options in Ottawa-West, Lanark County, and nearby areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the benefits of a smart thermostat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smart thermostats let you control your home temperature remotely, save energy with adaptive schedules, and provide detailed energy usage reports to help you reduce costs. These features are perfect for homes in Carleton Place, Perth, and Ottawa-West."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install a smart thermostat in my home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we install smart thermostats compatible with most HVAC systems. We will ensure proper installation and guide you on how to use it effectively, whether you are in Lanark County or Ottawa-West."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Wi-Fi for a smart thermostat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most smart thermostats require a Wi-Fi connection to access their full range of features, like remote control and energy monitoring. This applies to all installations in Mississippi Mills, Carleton Place, and beyond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which smart thermostat is best for my HVAC system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We will recommend a smart thermostat based on your current system, energy goals, and preferences. Popular options include models from Nest, Ecobee, and Honeywell, which we install in Ottawa-West and throughout Lanark County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Galico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Galico is a company specialized in residential natural gas and liquid propane applications including water heater installation, gas fitting, gas appliance connection/hookup, and heating/hydronic. We are dedicated to providing high-quality and energy-efficient solutions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you certified for gas installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At Galico, we take pride in being fully registered with the Ontario Technical Standards and Safety Authority (TSSA) and comprehensively insured. This ensures that all our services meet the highest safety and regulatory standards, giving you peace of mind knowing your projects are in trusted hands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your service area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We proudly serve Ottawa (including Carp, Kanata, Nepean, Stittsville), Arnprior, Mississippi Mills, Carleton Place, Perth and Smiths Falls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer a 10% Heroes Discount for eligible customers, including First Responders, Military Personnel, Nurses and Search & Rescue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer financing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we partner with Financeit.ca to offer flexible financing options for your HVAC needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book an estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can schedule a free online estimate through our booking page. There is a $96 charge for an onsite visit, which is discounted if you secure the work with us."
+      }
+    }
+  ]
+}
+</script>
 {% endif %}
 
 </head>
