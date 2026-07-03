@@ -414,7 +414,7 @@ water_heaters:
     category: "tank-water-heaters"
     price: 1,795.00
     currency: "CAD"
-    availability: "InStock"
+    availability: "OutOfStock"
     description: "40-gallon electric water heater. No venting required."
     stripe_buy_button_id: "buy_btn_1T9r6lIhiL9xkbLdvja3hNJX"
     image: "/images/bradford-re240-electric.jpg"
