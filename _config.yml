@@ -16,7 +16,7 @@
 title: Galico | Water Heaters and Home Comfort
 email: hello@galico.ca
 description: > # this means to ignore newlines until "baseurl:"
-  Galico specialized in natural gas and liquid propane applications including, water heater installation, gas fitting, gas appliance connection/hookup, and heating/hydronic. Located in Almonte, Ontario, we serve Ottawa, Arnprior, Carleton Place, Perth, Smiths Falls, and the surrounding areas.
+  Galico specializes in water heater installation, gasfitting and heating for homes in Almonte, Kanata and the Ottawa Valley. Licensed, with upfront pricing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://galico.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -36,6 +36,16 @@ x_link: https://x.com/galicogas
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+
+
+generate_datapages:
+  - data_file: water_heater
+    template: product
+    name: id
+    dir: products
+    extension: .html
+    # This creates URLs like: /products/wh-tankless-01.html
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -58,6 +68,7 @@ include:
  - _hot-water
  - _gasfitting
  - _plumbing
+ - _products
   
 exclude:
  - node_modules
