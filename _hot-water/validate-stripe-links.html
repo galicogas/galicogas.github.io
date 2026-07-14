@@ -1,0 +1,680 @@
+---
+layout: default_style
+sitemap: false
+noindex: true
+title: "Stripe Payment Links - Validation"
+permalink: /hot-water/validate-stripe-links
+---
+
+<style>
+    .validation-table {
+        font-size: 0.85rem;
+    }
+    
+    .validation-table th {
+        background: #f8f9fa;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    
+    .validation-table td {
+        vertical-align: middle;
+    }
+    
+    .stripe-link {
+        font-family: monospace;
+        font-size: 0.75rem;
+        background: #f0f7ff;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        word-break: break-all;
+    }
+    
+    .validation-badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+    
+    .badge-tank { background: #e7f1ff; color: #084298; }
+    .badge-tankless { background: #fff3cd; color: #664d03; }
+    .badge-electric { background: #e2e3e5; color: #41464b; }
+    
+    .test-button {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+    
+    .summary-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .summary-stat {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .summary-stat h3 {
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .summary-stat small {
+        color: #6c757d;
+    }
+    
+    .image-preview {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 4px;
+        background: #fff;
+    }
+    
+    .missing-image {
+        width: 60px;
+        height: 60px;
+        background: #f8f9fa;
+        border: 2px dashed #dee2e6;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 1.5rem;
+    }
+    
+    /* Model Card Styles (same as calculator) */
+    .model-card {
+        border: 2px solid #e9ecef;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .model-card:hover {
+        border-color: #635bff;
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+        transform: translateY(-4px);
+    }
+    
+    .model-card-header {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 0;
+        text-align: center;
+        border-bottom: 1px solid #dee2e6;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .model-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 1.5rem;
+        background: #fff;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .model-card:hover .model-card-img {
+        transform: scale(1.05);
+    }
+    
+    .model-card-body {
+        padding: 1.25rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 320px;
+    }
+    
+    .model-card-brand {
+        display: inline-block;
+        background: #e7f1ff;
+        color: #084298;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+    
+    .model-card-title {
+        font-weight: 700;
+        color: #212529;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .model-card-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        flex-grow: 1;
+    }
+    
+    .model-card-features li {
+        padding: 0.4rem 0;
+        color: #6c757d;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #f8f9fa;
+    }
+    
+    .model-card-features li:last-child {
+        border-bottom: none;
+    }
+    
+    .model-card-features li i {
+        color: #198754;
+        margin-right: 0.5rem;
+    }
+    
+    .model-recommended {
+        position: relative;
+    }
+    
+    .model-recommended::after {
+        content: "BEST MATCH";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #198754;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        z-index: 1;
+    }
+    
+    stripe-buy-button {
+        display: block !important;
+        width: 100% !important;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1><i class="bi bi-check2-square me-2"></i>Stripe Payment Links Validation</h1>
+            <p class="text-muted">Review and test all water heater products and their Stripe payment links.</p>
+        </div>
+    </div>
+
+    <!-- Summary Statistics -->
+    <div class="summary-card">
+        <div class="row text-center">
+            <div class="col-md-3 summary-stat">
+                <h3 class="text-primary" id="totalCount">0</h3>
+                <small>Total Products</small>
+            </div>
+            <div class="col-md-3 summary-stat">
+                <h3 class="text-success" id="tankCount">0</h3>
+                <small>Tank Models</small>
+            </div>
+            <div class="col-md-3 summary-stat">
+                <h3 class="text-info" id="tanklessCount">0</h3>
+                <small>Tankless Models</small>
+            </div>
+            <div class="col-md-3 summary-stat">
+                <h3 class="text-warning" id="electricCount">0</h3>
+                <small>Electric Models</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i>Product Inventory</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover validation-table mb-0">
+                    <thead>
+                        <tr>
+                            <!-- <th>Image</th> -->
+                            <th>Brand</th>
+                            <th>Model Name</th>
+                            <th>Type</th>
+                            <th>Size</th>
+                            <th>Fuel</th>
+                            <th>Venting</th>
+                            <th>Stripe Buy Button ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody">
+                        <!-- Products will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Cards Preview Section -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0"><i class="bi bi-grid-3x3-gap me-2"></i>Model Cards Preview</h5>
+            <small class="text-muted">Test how model cards render with Stripe Buy Buttons</small>
+        </div>
+        <div class="card-body p-4">
+            <!-- Model Cards - THIS IS THE KEY SECTION -->
+            <h5 class="fw-bold mb-4">Suggested Tank Models</h5>
+            <div class="row g-4" id="modelsContainer">
+                <!-- Model cards will be injected here by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary" onclick="renderAllModelCards()">
+                    <i class="bi bi-arrow-clockwise me-2"></i>Refresh Cards
+                </button>
+                <button class="btn btn-outline-secondary ms-2" onclick="clearModelCards()">
+                    <i class="bi bi-trash me-2"></i>Clear Cards
+                </button>
+            </div>
+        </div>
+    </div>
+	
+<!-- Add this section before the closing </div> of container -->
+<div class="card shadow-sm mt-5">
+    <div class="card-header bg-white py-3">
+        <h5 class="mb-0"><i class="bi bi-table me-2"></i>Permutation Analysis (Questions 1-5)</h5>
+        <small class="text-muted">Test all input combinations to identify gaps in product coverage</small>
+    </div>
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <button class="btn btn-primary" onclick="generatePermutationTable()">
+                <i class="bi bi-calculator me-2"></i>Generate Permutation Table
+            </button>
+            <button class="btn btn-outline-secondary ms-2" onclick="clearPermutationTable()">
+                <i class="bi bi-trash me-2"></i>Clear Table
+            </button>
+            <span class="ms-3 text-muted" id="permutationStats"></span>
+        </div>
+        
+        <div class="table-responsive" id="permutationTableContainer" style="display:none;">
+            <table class="table table-sm table-bordered permutation-table">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Fuel</th>
+                        <th>Household</th>
+                        <th>Bathrooms</th>
+                        <th>Showers</th>
+                        <th>Appliances</th>
+                        <th>Peak Demand</th>
+                        <th>Tank Size</th>
+                        <th>Results</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="permutationTableBody">
+                    <!-- Permutations will be generated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .permutation-table {
+        font-size: 0.75rem;
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    
+    .permutation-table th {
+        position: sticky;
+        top: 0;
+        background: #f8f9fa;
+        z-index: 1;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+    
+    .permutation-table td {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    
+    .status-badge {
+        display: inline-block;
+        padding: 0.15rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.65rem;
+        font-weight: 600;
+    }
+    
+    .status-ok { background: #d1e7dd; color: #0f5132; }
+    .status-warning { background: #fff3cd; color: #664d03; }
+    .status-error { background: #f8d7da; color: #842029; }
+    
+    .no-results {
+        background: #fff5f5 !important;
+    }
+</style>
+
+<script>
+function generatePermutationTable() {
+    var container = document.getElementById('permutationTableContainer');
+    var tbody = document.getElementById('permutationTableBody');
+    var stats = document.getElementById('permutationStats');
+    
+    if (!container || !tbody) return;
+    
+    container.style.display = 'block';
+    tbody.innerHTML = '';
+    
+    // Define all possible values for each question
+    var fuels = ['natural-gas', 'propane', 'electric'];
+    var households = ['1', '2', '3']; // 1-2, 3-4, 5+
+    var bathrooms = ['1', '2', '3']; // 1, 2, 3+
+    var showers = ['1', '2', '3']; // 1, 2, 3+
+    var appliances = [
+        { laundry: 0, dishwasher: 0, label: 'None' },
+        { laundry: 25, dishwasher: 0, label: 'Laundry' },
+        { laundry: 0, dishwasher: 15, label: 'Dishwasher' },
+        { laundry: 25, dishwasher: 15, label: 'Both' }
+    ];
+    
+    var totalPermutations = 0;
+    var validPermutations = 0;
+    var noResultsPermutations = 0;
+    var permutationNumber = 1;
+    
+    // Generate all permutations
+    for (var f = 0; f < fuels.length; f++) {
+        for (var h = 0; h < households.length; h++) {
+            for (var b = 0; b < bathrooms.length; b++) {
+                for (var s = 0; s < showers.length; s++) {
+                    for (var a = 0; a < appliances.length; a++) {
+                        totalPermutations++;
+                        
+                        var fuel = fuels[f];
+                        var household = households[h];
+                        var bathroom = bathrooms[b];
+                        var shower = showers[s];
+                        var appliance = appliances[a];
+                        
+                        // Calculate peak demand
+                        var showerDemand = parseInt(shower) * 20;
+                        var peakDemand = showerDemand + appliance.laundry + appliance.dishwasher;
+                        
+                        // Get recommended models
+                        var models = getRecommendedModels(peakDemand, fuel, null); // No venting filter for this test
+                        var tankSize = models.length > 0 ? models[0].tank_size : 'N/A';
+                        var resultsCount = models.length;
+                        
+                        // Determine status
+                        var statusClass = 'status-ok';
+                        var statusText = 'OK';
+                        var rowClass = '';
+                        
+                        if (resultsCount === 0) {
+                            statusClass = 'status-error';
+                            statusText = 'No Results';
+                            rowClass = 'no-results';
+                            noResultsPermutations++;
+                        } else if (resultsCount < 3) {
+                            statusClass = 'status-warning';
+                            statusText = 'Limited (' + resultsCount + ')';
+                        } else {
+                            validPermutations++;
+                        }
+                        
+                        // Create table row
+                        var row = document.createElement('tr');
+                        if (rowClass) row.className = rowClass;
+                        
+                        row.innerHTML = 
+                            '<td>' + permutationNumber + '</td>' +
+                            '<td>' + formatFuel(fuel) + '</td>' +
+                            '<td>' + formatHousehold(household) + '</td>' +
+                            '<td>' + bathroom + (bathroom === '3' ? '+' : '') + '</td>' +
+                            '<td>' + shower + (shower === '3' ? '+' : '') + '</td>' +
+                            '<td>' + appliance.label + '</td>' +
+                            '<td><strong>' + peakDemand + ' gal</strong></td>' +
+                            '<td>' + tankSize + '</td>' +
+                            '<td>' + resultsCount + ' models</td>' +
+                            '<td><span class="status-badge ' + statusClass + '">' + statusText + '</span></td>';
+                        
+                        tbody.appendChild(row);
+                        permutationNumber++;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Update stats
+    stats.innerHTML = '<strong>' + totalPermutations + '</strong> permutations tested | ' +
+                      '<span class="text-success">' + validPermutations + ' OK</span> | ' +
+                      '<span class="text-danger">' + noResultsPermutations + ' No Results</span>';
+    
+    // Scroll to table
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function clearPermutationTable() {
+    var container = document.getElementById('permutationTableContainer');
+    var tbody = document.getElementById('permutationTableBody');
+    var stats = document.getElementById('permutationStats');
+    
+    if (container) container.style.display = 'none';
+    if (tbody) tbody.innerHTML = '';
+    if (stats) stats.textContent = '';
+}
+
+function formatFuel(fuel) {
+    if (fuel === 'natural-gas') return 'Gas';
+    if (fuel === 'propane') return 'Propane';
+    if (fuel === 'electric') return 'Electric';
+    return fuel;
+}
+
+function formatHousehold(household) {
+    if (household === '1') return '1-2';
+    if (household === '2') return '3-4';
+    if (household === '3') return '5+';
+    return household;
+}
+</script>
+	
+</div>
+
+<!-- Stripe Buy Button Script -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<script>
+    // Load water heater data and Stripe key
+    var waterHeaterData = {{ site.data.water-heaters | jsonify }};
+var stripePublishableKey = "pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu";
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        renderProductsTable();
+        updateSummaryStats();
+        renderAllModelCards(); // Auto-render model cards on load
+    });
+    
+    function renderProductsTable() {
+        var tbody = document.getElementById('productsTableBody');
+        var products = waterHeaterData.water_heaters;
+        
+        if (!products || products.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" class="text-center py-4 text-muted">No products found in water-heater.yaml</td></tr>';
+            return;
+        }
+        
+        var html = '';
+        
+        for (var i = 0; i < products.length; i++) {
+            var product = products[i];
+            
+            // Determine badge class
+            var badgeClass = 'badge-tank';
+            if (product.tank_type === 'tankless') badgeClass = 'badge-tankless';
+            else if (product.fuel_compatibility && product.fuel_compatibility.indexOf('electric') !== -1) badgeClass = 'badge-electric';
+            
+            // Format fuel types
+            var fuelText = product.fuel_compatibility ? product.fuel_compatibility.join(', ') : 'N/A';
+            
+            // Format venting type
+            var ventingText = product.venting_type || 'N/A (Electric)';
+            
+            // Image preview
+            var imageHtml = product.image ? 
+                '<img src="' + product.image + '" alt="' + product.name + '" class="image-preview" onerror="this.outerHTML=\'<div class=\\\'missing-image\\\'><i class=\\\'bi bi-image\\\'></i></div>\'">' :
+                '<div class="missing-image"><i class="bi bi-image"></i></div>';
+            
+            html += '<tr>' +
+                '<td>' + imageHtml + '</td>' +
+                '<td><strong>' + (product.brand || 'N/A') + '</strong></td>' +
+                '<td>' + (product.name || 'Unnamed') + '</td>' +
+                '<td><span class="validation-badge ' + badgeClass + '">' + (product.tank_type || 'N/A') + '</span></td>' +
+                '<td>' + (product.tank_size || 'N/A') + '</td>' +
+                '<td>' + fuelText + '</td>' +
+                '<td>' + ventingText + '</td>' +
+                '<td><span class="stripe-link">' + (product.stripe_buy_button_id || '<em class="text-danger">Missing</em>') + '</span></td>' +
+                '<td>' +
+                    '<button class="btn btn-sm btn-outline-primary test-button" onclick="testStripeLink(\'' + product.stripe_buy_button_id + '\')" ' + (product.stripe_buy_button_id ? '' : 'disabled') + '>' +
+                    '<i class="bi bi-box-arrow-up-right me-1"></i>Test' +
+                    '</button>' +
+                '</td>' +
+            '</tr>';
+        }
+        
+        tbody.innerHTML = html;
+    }
+    
+    function updateSummaryStats() {
+        var products = waterHeaterData.water_heaters;
+        
+        if (!products) {
+            document.getElementById('totalCount').textContent = '0';
+            return;
+        }
+        
+        var total = products.length;
+        var tank = 0;
+        var tankless = 0;
+        var electric = 0;
+        
+        for (var i = 0; i < products.length; i++) {
+            var product = products[i];
+            
+            if (product.tank_type === 'tankless') {
+                tankless++;
+            } else if (product.tank_type === 'tank') {
+                tank++;
+                if (product.fuel_compatibility && product.fuel_compatibility.indexOf('electric') !== -1) {
+                    electric++;
+                }
+            }
+        }
+        
+        document.getElementById('totalCount').textContent = total;
+        document.getElementById('tankCount').textContent = tank;
+        document.getElementById('tanklessCount').textContent = tankless;
+        document.getElementById('electricCount').textContent = electric;
+    }
+    
+    function testStripeLink(buyButtonId) {
+        if (!buyButtonId) {
+            alert('No Stripe Buy Button ID found for this product');
+            return;
+        }
+        
+        // Open Stripe buy button in new window for testing
+        var testUrl = 'https://buy.stripe.com/test/' + buyButtonId.replace('buy_btn_', '');
+        window.open(testUrl, '_blank');
+        
+        console.log('Testing Stripe Buy Button:', buyButtonId);
+    }
+    
+    // ============================================
+    // MODEL CARDS RENDERING (Same as Calculator)
+    // ============================================
+    
+    function renderAllModelCards() {
+        var modelsContainer = document.getElementById("modelsContainer");
+        if (!modelsContainer) return;
+        
+        modelsContainer.innerHTML = "";
+        
+        var products = waterHeaterData.water_heaters;
+        if (!products || products.length === 0) {
+            modelsContainer.innerHTML = '<div class="col-12"><div class="alert alert-warning">No products found in water-heater.yaml</div></div>';
+            return;
+        }
+        
+        // Calculate column class based on number of products
+        var colClass = "col-md-4";
+        if (products.length === 1) {
+            colClass = "col-md-6 offset-md-3";
+        } else if (products.length === 2) {
+            colClass = "col-md-6";
+        }
+        
+        for (var i = 0; i < products.length; i++) {
+            var model = products[i];
+            var card = document.createElement("div");
+            card.className = colClass;
+            
+            var featuresHTML = "";
+            for (var j = 0; j < model.features.length; j++) {
+                featuresHTML += '<li><i class="bi bi-check-circle-fill"></i>' + model.features[j] + '</li>';
+            }
+            
+            // Generate Stripe Buy Button web component
+            var stripeButtonHTML = model.stripe_buy_button_id ? 
+                '<stripe-buy-button\n' +
+                '  buy-button-id="' + model.stripe_buy_button_id + '"\n' +
+                '  publishable-key="' + stripePublishableKey + '"\n' +
+                '  class="w-100 d-block"\n' +
+                '>\n' +
+                '</stripe-buy-button>' : 
+                '<button class="btn btn-secondary w-100" disabled>Contact for Pricing</button>';
+            
+            card.innerHTML = '<div class="model-card">' +
+                '<div class="model-card-body">' +
+                '<span class="model-card-brand">' + model.brand + '</span>' +
+                '<h6 class="model-card-title">' + model.name + '</h6>' +
+				'<h6 class="model-card-title">' + model.tank_type + '</h6>' +
+			    '<h6 class="model-card-title">' + model.tank_size + '</h6>' +
+				'<h6 class="model-card-title">' + model.fuel_compatibility + '</h6>' +
+				'<h6 class="model-card-title">' + model.venting_type + '</h6>' +
+				'<div class="mt-4">' + stripeButtonHTML + '</div>' +
+                '<ul class="model-card-features">' + featuresHTML + '</ul>' +
+                '<small class="text-muted d-block mt-2"><i class="bi bi-shield-check me-1"></i>Secure checkout by Stripe</small>' +
+                '</div>' +
+                '</div>';
+            modelsContainer.appendChild(card);
+        }
+    }
+    
+    function clearModelCards() {
+        var modelsContainer = document.getElementById("modelsContainer");
+        if (modelsContainer) {
+            modelsContainer.innerHTML = '<div class="col-12 text-center text-muted py-5">Cards cleared. Click "Refresh Cards" to reload.</div>';
+        }
+    }
+</script>

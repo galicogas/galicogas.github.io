@@ -59,10 +59,10 @@ generate_datapages:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# NOTE: _includes and _layouts must NOT be listed here — including them makes
+# Jekyll publish the raw template files as pages (they were polluting the sitemap).
 include:
  - _data
- - _includes
- - _layouts
  - _service-area
  - _heating
  - _hot-water
