@@ -1,0 +1,136 @@
+---
+layout: default_style
+---
+
+{% comment %}
+  File: _data/water-heaters.yaml → accessed as site.data.water_heaters
+  Products are under the 'water_heaters' key as an array
+{% endcomment %}
+{% assign product = site.data.water-heaters.water_heaters | where: "id", page.product_id | first %}
+
+{% if product %}
+
+<style>
+  .breadcrumb-item a {
+    color: #0d6efd !important;
+  }
+  .breadcrumb-item a:hover {
+    color: #0a58ca !important;
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Stripe JS SDK (required for buy button) -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<div class="container py-5">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/products">Products</a></li>
+	  <li class="breadcrumb-item"><a href="/products/tank-water-heaters/">Tank Water Heaters</a></li>
+      <li class="breadcrumb-item" aria-current="page">{{ product.name }}</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <!-- Product Image -->
+    <div class="col-md-6 mb-4">
+      {% if product.image %}
+        <img src="{{ product.image }}" class="img-fluid rounded" alt="{{ product.name }}">
+      {% else %}
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 400px;">
+          <span class="text-muted">No image available</span>
+        </div>
+      {% endif %}
+	  <br>
+	  <span>
+		  <a href="/hot-water/water-heater-size-calculator-ottawa.html">
+			<img src="/assets/img/water-heater-size-calculator-dragon.png" class="img-fluid rounded" alt="size calculator">
+		  </a>
+	  </span>
+    </div>
+
+
+
+    <!-- Product Details -->
+    <div class="col-md-6">
+      <h1 class="display-6 fw-bold">{{ product.name }}</h1>
+      <p class="text-muted">
+        Brand: {{ product.brand }} 
+        {% if product.model %} | Model: {{ product.model }}{% endif %}
+      </p>
+      <b>Limited Time Promotion: </b><a href="/freevacation.html" target="_blank">Complimentary 3-night Stay</a>
+
+
+      {% if product.description %}
+        <p class="lead">{{ product.description }}</p>
+      {% endif %}
+
+      <!-- Key Features -->
+      {% if product.features %}
+        <h5 class="mt-4">Key Features</h5>
+        <ul class="list-group list-group-flush mb-4">
+          {% for feature in product.features %}
+            <li class="list-group-item">{{ feature }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <!-- Price & Availability (Visible for Google Crawler) -->
+      <div class="my-4 center">
+        <span class="h2 text-primary">${{ product.price }} {{ product.currency }}</span>
+        <!-- <span class="badge bg-success ms-2">{{ product.availability }}</span> -->
+      </div>
+
+      <!-- Stripe Buy Button -->
+      {% if product.stripe_buy_button_id %}
+        <div class="my-4 center">
+          <stripe-buy-button
+            buy-button-id="{{ product.stripe_buy_button_id }}"
+            publishable-key="pk_live_51RBKw8IhiL9xkbLdVwvjpPGu1H5HTmiLr4BGc4YQsPK2XD3H3sQcNKN0XnzpQzNrVUPbKtAc7UEE171JAgcWNhct001qnVHlnu">
+          </stripe-buy-button>
+          <div class="form-text text-center mt-2">
+            <i class="bi bi-lock-fill"></i> Secure checkout powered by Stripe
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Technical Specifications -->
+      <h5 class="mt-4">Specifications</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr><th scope="row">Tank Size</th><td>{{ product.tank_size }}</td></tr>
+          <tr><th scope="row">Fuel Type</th><td>{{ product.fuel_compatibility | join: ", " | capitalize }}</td></tr>
+          <tr><th scope="row">Venting</th><td>{{ product.venting_type | default: "Not Required" | replace: "-", " " | capitalize }}</td></tr>
+          <tr><th scope="row">Peak Demand</th><td>{{ product.peak_demand_max }} Gal</td></tr>
+          <tr><th scope="row">Recovery Rate</th><td>{{ product.recovery_rate_gph }} GPH</td></tr>
+          <tr><th scope="row">First Hour Rating</th><td>{{ product.first_hour_rating }} Gal</td></tr>
+          {% if product.electrical_specs %}
+            <tr><th scope="row">Electrical</th><td>{{ product.electrical_specs.wattage }} | {{ product.electrical_specs.voltage }}</td></tr>
+          {% endif %}
+          {% if product.warranty %}
+            <tr><th scope="row">Warranty</th><td>{{ product.warranty }}</td></tr>
+          {% endif %}
+        </tbody>
+      </table>
+	  <div class="tab-content mt-3">
+		<p><b>Installation Included:</b> Complimentary installation, which includes disconnecting and removal of your old tank and replacing it with your new one. Addtional work may cost extra.</p>
+		<p><b>Shipping:</b> Only shipping to Arnprior, Carleton Place, Mississippi Mills, Ottawa, Perth and Smiths Falls, in Ontario.</p>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product JSON-LD is emitted centrally from _includes/head.html (layout: product) -->
+
+
+{% else %}
+  <!-- Product Not Found Fallback -->
+  <div class="container text-center py-5">
+    <h2 class="mb-3">Product Not Found</h2>
+    <p class="lead">We couldn't find a water heater with ID: <code>{{ page.product_id }}</code></p>
+    <a href="/" class="btn btn-outline-primary">Return Home</a>
+  </div>
+{% endif %}
