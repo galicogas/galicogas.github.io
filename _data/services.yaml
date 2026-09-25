@@ -901,8 +901,8 @@ heating maintenance:
     - title: Heating Maintenance Service
       image: heating-maintenance1.jpg
       alt: Heating Maintenance Service
-      description: Schedule your seasonal gas furnace, boiler or fireplace service and tune-up.
-      calendly_url: https://calendly.com/eric-pythago/gas-appliance-inspection
+      description: Schedule your seasonal gas furnace tune-up.
+      calendly_url: https://calendly.com/eric-pythago/single-appliance-service
       cta: Book Now
 thermostat:
   name: Thermostat Services
